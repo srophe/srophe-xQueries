@@ -240,7 +240,7 @@ declare function syriaca:deprecate-merge-redirect($tei-root as node(),$redirect-
             
     let $title-old := $tei-root/teiHeader/fileDesc/titleStmt/title[@level='a']
     let $title := element title {$title-old/@*,$title-old/node(),' [deprecated]'}
-    let $publication-idno-old := $tei-root/teiHeader/fileDesc/publicationStmt/idno
+    let $publication-idno-old := $tei-root/teiHeader/fileDesc/publicationStmt/idno[@type='URI']
     let $publication-idno := 
         (element idno {$publication-idno-old/@*,$change-attribute,$publication-idno-old/node()},
         element idno {attribute type {'redirect'},$change-attribute,concat($redirect-uri,'/tei')})
@@ -256,7 +256,7 @@ declare function syriaca:deprecate-merge-redirect($tei-root as node(),$redirect-
                 attribute type {'deprecation'},
                 concat('This record has been deprecated and merged into ',$redirect-uri,'.')}
     let $body := element body {$body-old/@*,$body-text,$body-old/node()}
-    let $idno-old := $tei-root/text/body/listPerson/person/idno[text()=$secondary-uri]
+    let $idno-old := $tei-root/text/body/listPerson/person/idno[@type='URI' and text()=$secondary-uri]
     let $idno := 
         (element idno {$idno-old/@*,$change-attribute,$idno-old/node()},
         element idno {attribute type {'redirect'},$change-attribute,$redirect-uri})
@@ -287,36 +287,44 @@ declare function syriaca:write-new-relations ($relations as node()*, $relations-
         else ()
 };
 
+declare function syriaca:update-person-work-links ($master-uri as xs:string, $secondary-uri as xs:string, $persons as node()*, $works as node()*) {
+    let $match := concat('(^|\s)',$secondary-uri,'(\s|$)')
+    let $replacement := concat('$1',$master-uri,'$2')
+    for $link in ($works|$persons)//@*[name()=('ref','passive','active') and matches(.,$match)]
+        let $new-link := replace($link,$match,$replacement)
+    return (update replace $link with $new-link)
+};
+
 (: ------------------------------------------------------------------------ :)
 (: MERGE SCRIPT BODY :)
 let $persons := collection('/db/apps/srophe-data/data/persons/tei/')/TEI
+let $works := collection('/db/apps/srophe-data/data/works/tei/')/TEI
 
 (: VARIABLES TO EDIT FOR EACH RUN :)
 (: Record that will be kept :)
-let $master-uri := 'http://syriaca.org/person/530'
+let $master-uri := 'http://syriaca.org/person/1749'
 
 (: Record that will be deprecated :)
-let $secondary-uri := 'http://syriaca.org/person/530'
+let $secondary-uri := 'http://syriaca.org/person/1750'
 
 (: Your user id in http://syriaca.org/documentation/editors.xml :)
 let $user := 'ngibson'
 
 
 let $master-id := replace($master-uri,'http://syriaca.org/person/','')
-let $master-record := $persons[text/body/listPerson/person/idno=$master-uri]
+let $master-record := $persons[text/body/listPerson/person/idno[@type='URI']=$master-uri]
 
 let $secondary-id := replace($secondary-uri,'http://syriaca.org/person/','')
-(: ADAPTED for merging in overlapping saint records :)
-let $overlapping-saints := collection('/db/apps/srophe-data/data/overlapping-saints/')/TEI
-let $secondary-record := $overlapping-saints[text/body/listPerson/person/idno=$secondary-uri]
-(:original:)
-(:let $secondary-record := $persons[text/body/listPerson/person/idno=$secondary-uri]:)
+(: Use the following for merging records with different URIs :)
+let $secondary-record := $persons[text/body/listPerson/person/idno[@type='URI']=$secondary-uri]
+
+(: Use the following for merging in overlapping saint records that have same URI as master record :)
+(:let $overlapping-saints := collection('/db/apps/srophe-data/data/overlapping-saints/')/TEI:)
+(:let $secondary-record := $overlapping-saints[text/body/listPerson/person/idno[@type='URI']=$secondary-uri]:)
 
 let $titles-master := $master-record/teiHeader/fileDesc/titleStmt/title
 let $titles-secondary := $secondary-record/teiHeader/fileDesc/titleStmt/title
-let $titles := 
-    ($titles-master,
-    $titles-secondary[not(.=$titles-master/*) and @level=('m','s')])
+let $titles := $titles-master[@level='a']
 
 let $respStmts-master := $master-record/teiHeader/fileDesc/titleStmt/respStmt
 let $respStmts-secondary := $secondary-record/teiHeader/fileDesc/titleStmt/respStmt
@@ -348,17 +356,29 @@ let $bibl-matching-test := '.[ptr/@target]/ptr/@target=$node/ptr/@target or .[no
 let $bibls := 
     syriaca:merge-nodes($master-person/bibl,$secondary-person/bibl, $bibl-matching-test, ('citedRange','note'), (), $master-person/bibl)
 
-let $test-deep-equal := './idno=$node/idno'
+let $test-deep-equal := './idno[@type="URI"]=$node/idno[@type="URI"]'
 
 let $seriesStmts-master := $master-record/teiHeader/fileDesc/seriesStmt
 let $seriesStmts-secondary := $secondary-record/teiHeader/fileDesc/seriesStmt
 
-(: for merges other than saint-author merges :)
-(:let $seriesStmts := :)
-(:    syriaca:merge-nodes($seriesStmts-master, $seriesStmts-secondary, $test-deep-equal, 'biblScope', $secondary-person/bibl, :)
-(:            $bibls):)
-            
-(: for author-saint merges only :)
+let $includes-saint := matches($seriesStmts-master|$seriesStmts-secondary,'http://syriaca.org/q')
+let $includes-author := matches($seriesStmts-master|$seriesStmts-secondary,'http://syriaca.org/authors')
+
+let $biblScope-saint := 
+    if ($includes-saint) then 
+        <biblScope unit="vol" from="1" to="1">
+            <title level="m">Qadishe: A Guide to the Syriac Saints</title>
+            <idno type="URI">http://syriaca.org/q</idno>
+        </biblScope>
+    else ()
+let $biblScope-author := 
+    if ($includes-author) then
+        <biblScope unit="vol" from="2" to="2">
+            <title level="m">A Guide to Syriac Authors</title>
+            <idno type="URI">http://syriaca.org/authors</idno>
+        </biblScope>
+    else ()
+
 let $seriesStmts :=
     (<seriesStmt>
         <title level="s">The Syriac Biographical Dictionary</title>
@@ -383,15 +403,9 @@ let $seriesStmts :=
             <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</name>
         </respStmt>
         <idno type="URI">http://syriaca.org/persons</idno>
-        <biblScope unit="vol" from="1" to="1">
-            <title level="m">Qadishe: A Guide to the Syriac Saints</title>
-            <idno type="URI">http://syriaca.org/q</idno>
-        </biblScope>
-        <biblScope unit="vol" from="2" to="2">
-            <title level="m">A Guide to Syriac Authors</title>
-            <idno type="URI">http://syriaca.org/authors</idno>
-        </biblScope>
+        {$biblScope-saint, $biblScope-author}
     </seriesStmt>,
+    if ($includes-saint) then 
     <seriesStmt>
         <title level="s">Gateway to the Syriac Saints</title>
         <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
@@ -411,7 +425,8 @@ let $seriesStmts :=
             <title level="m">Qadishe: A Guide to the Syriac Saints</title>
             <idno type="URI">http://syriaca.org/q</idno>
         </biblScope>
-    </seriesStmt>)
+    </seriesStmt>
+    else ())
 
 let $persNames := 
     syriaca:merge-nodes($master-person/persName, 
@@ -435,96 +450,96 @@ let $editors :=
         $bibls)
         
 (: for merges other than saint-author merges :)
-(:let $titleStmt := :)
-(:    ($titles,:)
-(:    $master-record/teiHeader/fileDesc/titleStmt/(sponsor|funder|principal),:)
-(:    $editors,:)
-(:    $respStmts):)
+let $titleStmt := 
+    element titleStmt {$titles,
+    $master-record/teiHeader/fileDesc/titleStmt/(sponsor|funder|principal),
+    $editors,
+    $respStmts}
 
 (: adapted for saints-author merges only:)
-let $titleStmt :=
-    <titleStmt>
-        {$titles-master[@level='a']}
-        <sponsor>Syriaca.org: The Syriac Reference Portal</sponsor>
-        <funder>The Andrew W. Mellon Foundation</funder>
-        <funder>The National Endowment for the Humanities</funder>
-        <funder>The International Balzan Prize Foundation</funder>
-        <principal>David A. Michelson</principal>
-        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
-        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
-        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
-        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#tcarlson">Thomas A. Carlson</editor>
-        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
-        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
-        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
-        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jwalters">James E. Walters</editor>
-        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#tcarlson">Thomas A. Carlson</editor>
-        <respStmt>
-            <resp>Editing, proofreading, data entry and revision by</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</name>
-        </respStmt>
-        <respStmt>
-            <resp>Editing, document design, data architecture, encoding, proofreading, data entry by</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</name>
-        </respStmt>
-        <respStmt>
-            <resp>Proofreading of GEDSH abstracts, addition of confessions and alternate names from GEDSH, matching with viaf.org records, data entry, data transformation, data merging, conversion to XML by</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</name>
-        </respStmt>
-        <respStmt>
-            <resp>GEDSH and Barsoum English name entry, matching with viaf.org records by</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jwalters">James E. Walters</name>
-        </respStmt>
-        <respStmt>
-            <resp>Editing, Syriac name entry, disambiguation research, conversion to XML by</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#tcarlson">Thomas A. Carlson</name>
-        </respStmt>
-        <respStmt>
-            <resp>Editing, Syriac data conversion, data entry, and reconciling by</resp>
-            <name ref="http://syriaca.org/documentation/editors.xml#akane">Adam P. Kane</name>
-        </respStmt>
-        <respStmt>
-            <resp>Editing and Syriac data proofreading by</resp>
-            <name ref="http://syriaca.org/documentation/editors.xml#abarschabo">Aram Bar Schabo</name>
-        </respStmt>
-        <respStmt>
-            <resp>Syriac name entry by</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#raydin">Robert Aydin</name>
-        </respStmt>
-        {$master-record/teiHeader/fileDesc/titleStmt/respStmt[contains(.,'Arabic name entry')]}
-        <respStmt>
-            <resp>Normalization of GEDSH dates and entry matching with viaf.org records by</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#avawter">Alex Vawter</name>
-        </respStmt>
-        <respStmt>
-            <resp>Editorial oversight for GEDSH and Barsoum English text entry, and proofreading by</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#cjohnson">Christopher Johnson</name>
-        </respStmt>
-        <respStmt>
-            <resp>GEDSH and Barsoum English text entry and proofreading by</resp>
-            <name type="org" ref="http://syriaca.org/documentation/editors.xml#uasyriacresearchgroup">the Syriac Research Group, University of Alabama</name>
-        </respStmt>
-        <respStmt>
-            <resp>Entries adapted from the work of</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jmfiey">Jean Maurice Fiey</name>
-        </respStmt>
-        <respStmt>
-            <resp>Entries adapted from the work of</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#uzanetti">Ugo Zanetti</name>
-        </respStmt>
-        <respStmt>
-            <resp>Entries adapted from the work of</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#cdetienne">Claude Detienne</name>
-        </respStmt>
-    </titleStmt>
+(:let $titleStmt :=:)
+(:    <titleStmt>:)
+(:        {$titles-master[@level='a']}:)
+(:        <sponsor>Syriaca.org: The Syriac Reference Portal</sponsor>:)
+(:        <funder>The Andrew W. Mellon Foundation</funder>:)
+(:        <funder>The National Endowment for the Humanities</funder>:)
+(:        <funder>The International Balzan Prize Foundation</funder>:)
+(:        <principal>David A. Michelson</principal>:)
+(:        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>:)
+(:        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>:)
+(:        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>:)
+(:        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#tcarlson">Thomas A. Carlson</editor>:)
+(:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>:)
+(:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>:)
+(:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>:)
+(:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jwalters">James E. Walters</editor>:)
+(:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#tcarlson">Thomas A. Carlson</editor>:)
+(:        <respStmt>:)
+(:            <resp>Editing, proofreading, data entry and revision by</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>Editing, document design, data architecture, encoding, proofreading, data entry by</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>Proofreading of GEDSH abstracts, addition of confessions and alternate names from GEDSH, matching with viaf.org records, data entry, data transformation, data merging, conversion to XML by</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>GEDSH and Barsoum English name entry, matching with viaf.org records by</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jwalters">James E. Walters</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>Editing, Syriac name entry, disambiguation research, conversion to XML by</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#tcarlson">Thomas A. Carlson</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>Editing, Syriac data conversion, data entry, and reconciling by</resp>:)
+(:            <name ref="http://syriaca.org/documentation/editors.xml#akane">Adam P. Kane</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>Editing and Syriac data proofreading by</resp>:)
+(:            <name ref="http://syriaca.org/documentation/editors.xml#abarschabo">Aram Bar Schabo</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>Syriac name entry by</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#raydin">Robert Aydin</name>:)
+(:        </respStmt>:)
+(:        {$master-record/teiHeader/fileDesc/titleStmt/respStmt[contains(.,'Arabic name entry')]}:)
+(:        <respStmt>:)
+(:            <resp>Normalization of GEDSH dates and entry matching with viaf.org records by</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#avawter">Alex Vawter</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>Editorial oversight for GEDSH and Barsoum English text entry, and proofreading by</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#cjohnson">Christopher Johnson</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>GEDSH and Barsoum English text entry and proofreading by</resp>:)
+(:            <name type="org" ref="http://syriaca.org/documentation/editors.xml#uasyriacresearchgroup">the Syriac Research Group, University of Alabama</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>Entries adapted from the work of</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jmfiey">Jean Maurice Fiey</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>Entries adapted from the work of</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#uzanetti">Ugo Zanetti</name>:)
+(:        </respStmt>:)
+(:        <respStmt>:)
+(:            <resp>Entries adapted from the work of</resp>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#cdetienne">Claude Detienne</name>:)
+(:        </respStmt>:)
+(:    </titleStmt>:)
 
 let $idnos := 
     (if ($master-uri=$secondary-uri) then
-        $master-person/idno[matches(.,'http://syriaca.org')]
+        $master-person/idno[@type='URI' and matches(.,'http://syriaca.org')]
     else
-        (syriaca:update-attribute($master-person/idno[matches(.,'http://syriaca.org')],'change',concat('#',$change-new-id)),
+        (syriaca:update-attribute($master-person/idno[@type='URI' and matches(.,'http://syriaca.org')],'change',concat('#',$change-new-id)),
         syriaca:update-attribute(
-            syriaca:update-attribute($secondary-person/idno[matches(.,'http://syriaca.org')],'change',concat('#',$change-new-id)),
+            syriaca:update-attribute($secondary-person/idno[@type='URI' and matches(.,'http://syriaca.org')],'change',concat('#',$change-new-id)),
             'type',
             'deprecated'
     )),
@@ -535,8 +550,8 @@ let $idnos :=
         $secondary-person/bibl, 
         $bibls))
         
-let $publication-idnos-master := $master-record//publicationStmt/idno
-let $publication-idnos-secondary := $secondary-record//publicationStmt/idno
+let $publication-idnos-master := $master-record//publicationStmt/idno[@type='URI']
+let $publication-idnos-secondary := $secondary-record//publicationStmt/idno[@type='URI']
 
 let $publication-idnos := 
     if ($publication-idnos-master=$publication-idnos-secondary) then
@@ -672,4 +687,5 @@ return
     (syriaca:write-new-header($header, $header-master),
     syriaca:write-new-person($person, $master-person),
     syriaca:write-new-relations($relations, $relations-master, $master-person),
-    syriaca:deprecate-merge-redirect($secondary-record, $master-uri, $user))
+    syriaca:deprecate-merge-redirect($secondary-record, $master-uri, $user),
+    syriaca:update-person-work-links($master-uri, $secondary-uri, $persons, $works))
