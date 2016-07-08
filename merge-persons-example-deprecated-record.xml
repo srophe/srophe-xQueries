@@ -8,6 +8,7 @@ REMEMBER TO MOVE THE DEPRECATED RECORD TO THE srophe-app-data/data/deprecated FO
     <teiHeader>
         <fileDesc>
             <titleStmt>
+                <!-- Add " [deprecated]" to the title -->
                 <title level="a" xml:lang="en">Philoxenus of Mabbug —
                     <foreign xml:lang="syr">ܦܝܠܟܣܝܢܘܣ ܕܡܒܘܓ</foreign> [deprecated]
                 </title>
