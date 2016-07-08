@@ -302,10 +302,10 @@ let $works := collection('/db/apps/srophe-data/data/works/tei/')/TEI
 
 (: VARIABLES TO EDIT FOR EACH RUN :)
 (: Record that will be kept :)
-let $master-uri := 'http://syriaca.org/person/1749'
+let $master-uri := 'http://syriaca.org/person/1135'
 
 (: Record that will be deprecated :)
-let $secondary-uri := 'http://syriaca.org/person/1750'
+let $secondary-uri := 'http://syriaca.org/person/1558'
 
 (: Your user id in http://syriaca.org/documentation/editors.xml :)
 let $user := 'ngibson'
@@ -549,9 +549,12 @@ let $idnos :=
         (), 
         $secondary-person/bibl, 
         $bibls))
+
+let $publication-stmt-master := $master-record//publicationStmt
+let $publication-stmt-secondary := $secondary-record//publicationStmt
         
-let $publication-idnos-master := $master-record//publicationStmt/idno[@type='URI']
-let $publication-idnos-secondary := $secondary-record//publicationStmt/idno[@type='URI']
+let $publication-idnos-master := $publication-stmt-master/idno[@type='URI']
+let $publication-idnos-secondary := $publication-stmt-secondary/idno[@type='URI']
 
 let $publication-idnos := 
     if ($publication-idnos-master=$publication-idnos-secondary) then
@@ -563,6 +566,13 @@ let $publication-idnos :=
             'type',
             'deprecated'
         ))
+
+let $publication-stmt := 
+    <publicationStmt>
+        {$publication-stmt-master/authority,
+        $publication-idnos,
+        $publication-stmt-master/node()[name()!='authority' and name()!='idno']}
+    </publicationStmt>
         
 let $header-master := $master-record/teiHeader
         
@@ -570,7 +580,8 @@ let $header :=
     <teiHeader>
         <fileDesc>
             {$titleStmt}
-            {($master-record/teiHeader/fileDesc/(editionStmt|publicationStmt),
+            {($master-record/teiHeader/fileDesc/editionStmt,
+            $publication-stmt,
             $seriesStmts,
             $master-record/teiHeader/fileDesc/sourceDesc)}
         </fileDesc>
