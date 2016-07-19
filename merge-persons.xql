@@ -385,7 +385,7 @@ let $seriesStmts :=
         <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
         <editor role="associate" ref="http://syriaca.org/documentation/editors.xml#tcarlson">Thomas A. Carlson</editor>
         <editor role="associate" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
-        <editor role="associate" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
+        <editor role="associate" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
         <respStmt>
             <resp>Edited by</resp>
             <name type="person" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</name>
@@ -400,7 +400,7 @@ let $seriesStmts :=
         </respStmt>
         <respStmt>
             <resp>Edited by</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</name>
+            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</name>
         </respStmt>
         <idno type="URI">http://syriaca.org/persons</idno>
         {$biblScope-saint, $biblScope-author}
@@ -408,12 +408,12 @@ let $seriesStmts :=
     if ($includes-saint) then 
     <seriesStmt>
         <title level="s">Gateway to the Syriac Saints</title>
-        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
+        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
         <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A.
                 Michelson</editor>
         <respStmt>
             <resp>Edited by</resp>
-            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</name>
+            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</name>
         </respStmt>
         <respStmt>
             <resp>Edited by</resp>
@@ -465,18 +465,18 @@ let $titleStmt :=
 (:        <funder>The National Endowment for the Humanities</funder>:)
 (:        <funder>The International Balzan Prize Foundation</funder>:)
 (:        <principal>David A. Michelson</principal>:)
-(:        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>:)
+(:        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>:)
 (:        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>:)
 (:        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>:)
 (:        <editor role="general" ref="http://syriaca.org/documentation/editors.xml#tcarlson">Thomas A. Carlson</editor>:)
-(:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>:)
+(:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>:)
 (:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>:)
 (:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>:)
 (:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jwalters">James E. Walters</editor>:)
 (:        <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#tcarlson">Thomas A. Carlson</editor>:)
 (:        <respStmt>:)
 (:            <resp>Editing, proofreading, data entry and revision by</resp>:)
-(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</name>:)
+(:            <name type="person" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</name>:)
 (:        </respStmt>:)
 (:        <respStmt>:)
 (:            <resp>Editing, document design, data architecture, encoding, proofreading, data entry by</resp>:)

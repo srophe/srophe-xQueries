@@ -129,7 +129,7 @@ for $person at $i in $bhse-authors/(author|editor)[@xml:id]
                     ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P.
                         Gibson</editor>
             <editor role="associate"
-                    ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
+                    ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
             <editor role="creator"
                     ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
             <respStmt>                
@@ -167,7 +167,7 @@ for $person at $i in $bhse-authors/(author|editor)[@xml:id]
                     ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P.
                         Gibson</editor>
             <editor role="associate"
-                    ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
+                    ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
             <respStmt>
                <resp>Edited by</resp>
                <name type="person"
@@ -189,7 +189,7 @@ for $person at $i in $bhse-authors/(author|editor)[@xml:id]
             <respStmt>
                <resp>Edited by</resp>
                <name type="person"
-                     ref="http://syriaca.org/documentation/editors.xml#jnmsaintlaurent">Jeanne-Nicole Mellon Saint-Laurent</name>
+                     ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</name>
             </respStmt>
             <biblScope unit="vol">2</biblScope>
             <idno type="URI">http://syriaca.org/persons</idno>
