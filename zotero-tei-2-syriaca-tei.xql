@@ -1,6 +1,12 @@
 xquery version "3.0";
 
-(:Convert TEI exported from Zotero to Syriaca TEI bibl records:)
+(:Convert TEI exported from Zotero to Syriaca TEI bibl records. :)
+(: If there is a tag with "Subject: " (used to identify records to which this bibl should be added as a citation), :)
+(:then it is added as <note type="tag">Subject: ...</note>.:)
+(:If a bibl record with the same Zotero ID already exists, then the script adds the subject tag to the existing bibl record. :)
+(:Subject tags should be processed with an additional script after this to add them to the appropriate record. See add-citation-from-zotero-subject.xql :)
+(: KNOWN ISSUES:)
+(: May produce duplicate subject tags :)
 
 declare default element namespace "http://www.tei-c.org/ns/1.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
@@ -19,16 +25,17 @@ as node()*
 };
 
 let $bibls := collection("/db/apps/srophe-data/data/bibl/tei/")/TEI/text/body/biblStruct
-let $zotero-doc := doc("/db/apps/srophe-data/data/bibl/zanetti-bibls-zotero-export.xml")
+let $zotero-doc := doc("/db/apps/srophe-data/data/bibl/cbsc-bibls-q-bhse-C.xml")
 for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
     
-    let $bibl-id := (1724 + $i)
+    let $bibl-id := (2198 + $i)
     let $syriaca-uri := concat('http://syriaca.org/bibl/',$bibl-id)
     let $syriaca-idno := <idno type='URI'>{$syriaca-uri}</idno>
     (:tags:)
-    let $zotero-id := $zotero-bibl/note[@type='tags']/note[@type='tag']/text()
+    let $zotero-id := $zotero-bibl/note[@type='tags']/note[@type='tag' and matches(.,'^\d+$')]/text()
     let $zotero-idno := <idno type='zotero'>{$zotero-id}</idno>
     let $zotero-idno-uri := <idno type='URI'>{string($zotero-bibl/@corresp)}</idno>
+    let $subject-uri := $zotero-bibl/note[@type='tags']/note[@type='tag' and matches(.,'^\s*Subject:\s*')]
     let $callNumbers := $zotero-bibl/idno[@type='callNumber']
     let $callNumber-idnos := 
         for $num in $callNumbers
@@ -77,7 +84,7 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
             <analytic>
                 {$analytic/(author|editor),$translators-analytic}
                 {$analytic/title}
-                {$all-idnos}
+                {$all-idnos[.!='']}
                 {$refs}
             </analytic>
             else()
@@ -88,7 +95,7 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
             <monogr>
                 {$monogr/(author|editor),$translators-monogr}
                 {$monogr/title[not(@type='short')]}
-                {if ($tei-analytic) then () else ($all-idnos,$refs)}
+                {if ($tei-analytic) then () else ($all-idnos[.!=''],$refs)}
                 {element imprint {$monogr/imprint/*[not(name()='biblScope') and not(name()='note')]}}
                 {$biblScopes-monogr-new}
             </monogr>
@@ -118,23 +125,24 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
                     <funder>The National Endowment for the Humanities</funder>
                     <funder>The International Balzan Prize Foundation</funder>
                     <principal>David A. Michelson</principal>
-                    <editor role="general" ref="http://syriaca.org/editors.xml#dmichelson">David A. Michelson</editor>
-                    <editor role="creator" ref="http://syriaca.org/editors.xml#uzanetti">Ugo Zanetti</editor>
-                    <editor role="creator" ref="http://syriaca.org/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
-                    <editor role="creator" ref="http://syriaca.org/editors.xml#ngibson">Nathan P. Gibson</editor>
-                    <editor role="creator" ref="http://syriaca.org/editors.xml#dkiger">David Kiger</editor>
+                    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
+                    <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
+                    <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
                     <respStmt>
-                        <resp>Data entry by</resp>
-                        <name ref="http://syriaca.org/editors.xml#dkiger">David Kiger</name>
+                        <resp>Bibliography curated by</resp>
+                        <name ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</name>
                     </respStmt>
                     <respStmt>
                         <resp>XML coding and TEI record generation by</resp>
-                        <name ref="http://syriaca.org/editors.xml#ngibson">Nathan P. Gibson</name>
+                        <name ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</name>
                     </respStmt>
                     <respStmt>
                         <resp>Bibliography items adapted from the work of</resp>
-                        <name ref="http://syriaca.org/documentation/editors.xml#uzanetti">Ugo
-                        Zanetti</name>
+                        <name ref="http://syriaca.org/documentation/documentation/editors.xml#sminov">Sergey Minov</name>
+                    </respStmt>
+                    <respStmt>
+                        <resp>Data entry by</resp>
+                        <name ref="http://syriaca.org/documentation/editors.xml#dkiger">David Kiger</name>
                     </respStmt>
                 </titleStmt>
                 <publicationStmt>
@@ -152,7 +160,7 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
                 </sourceDesc>
             </fileDesc>
             <revisionDesc>
-                <change who="http://syriaca.org/editors.xml#ngibson" when="{current-date()}">CREATED: bibl</change>
+                <change who="http://syriaca.org/documentation/editors.xml#ngibson" when="{current-date()}">CREATED: bibl</change>
             </revisionDesc>
         </teiHeader>
         <text>
@@ -161,6 +169,7 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
                     {$tei-analytic}
                     {$tei-monogr}
                     {$tei-series}
+                    {$subject-uri[.!='']}
                 </biblStruct>
             </body>
         </text>
@@ -168,8 +177,10 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
     
     let $collection-uri := "/db/apps/srophe-data/data/bibl/tei/"
     let $resource-name := concat($bibl-id,'.xml')
+    let $matching-bibl := $bibls[*[1]/idno=$zotero-idno]
     return 
-        if ($bibls[*[1]/idno=$zotero-idno]) then
-            concat('The bibl with Zotero id ', $zotero-id,' was not created because one with the same ID already exists in the database.')
+        if ($matching-bibl) then
+            (concat('The bibl with Zotero id ', $zotero-id,' was not created because one with the same ID already exists in the database.'),
+            if ($subject-uri) then update insert $subject-uri into $matching-bibl else ())
         else 
             xmldb:store($collection-uri, $resource-name, $tei-record)
