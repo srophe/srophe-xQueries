@@ -1,0 +1,26 @@
+xquery version "3.0";
+
+(: NAMESPACES:)
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+declare namespace tei = "http://www.tei-c.org/ns/1.0";
+declare namespace syriaca = "http://syriaca.org";
+declare namespace functx = "http://www.functx.com";
+
+let $works := collection('/db/apps/srophe-data/data/works/tei')/TEI
+let $spreadsheet := doc('/db/apps/srophe-data/data/bibl/hagiography-editions-translations.xml')/root
+
+for $bibl in $works//bibl[not(ptr) and not(idno)]
+    let $id-syriaca-matching := $spreadsheet/row[Author=$bibl/(author|editor) and Title=$bibl/title]/Syriaca_ID[1]
+    let $id-zotero-matching := $spreadsheet/row[Author=$bibl/(author|editor) and Title=$bibl/title]/Zotero_ID[1]
+    let $idno := 
+        if ($id-syriaca-matching) then
+            let $URI := concat('http://syriaca.org/bibl',$id-syriaca-matching/text())
+            return element ptr {attribute target {$URI}}
+        else if ($id-zotero-matching) then
+            element idno {attribute type {'zotero'},$id-zotero-matching/text()}
+        else ()
+    let $new-bibl :=
+        element bibl {$bibl/@*, $bibl/node()[name()!='citedRange'], $idno, $bibl/citedRange}
+
+
+return if ($idno) then $new-bibl else ()
