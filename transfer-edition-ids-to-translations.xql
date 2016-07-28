@@ -45,7 +45,7 @@ for $work in $works
             ($matching-edition[1]/ptr, 
             $matching-edition[1]/idno, 
             if ($translation/citedRange[@unit='vol']) then () else $matching-edition[1]/citedRange[@unit='vol'],
-            if ($translation/citedRange[@unit!='vol']) then () else $matching-edition[1]/citedRange[@unit!='vol'])
+            if ($translation/citedRange[not(@unit='vol')]) then () else $matching-edition[1]/citedRange[not(@unit='vol')])
         let $translation-new := element bibl {
             $translation/@*, 
             $translation/node()[name()!='citedRange'],
