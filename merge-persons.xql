@@ -17,6 +17,8 @@ xquery version "3.0";
 (:  - No @syriaca-tags are preserved from the secondary record.:)
 (:  - Source attributes pointing to bibls that don't have a ptr/@target will not be merged correctly. :)
 (:    (The script uses the ptr/@target for matching with the correct source bibl.):)
+(:  - <editor> in titleStmt may sometimes be duplicated:)
+(:  - Updating links (syriaca:update-person-work-links) may only work for 1 record at a time:)
  
 
 (: NAMESPACES:)
@@ -127,11 +129,14 @@ as node()*
                 let $attribute-value := 
                     replace
                         (replace
-                            (replace($attribute,$master-id,$master-uri),
-                            $secondary-person-id,
-                            $master-uri),
-                        $secondary-uri,
-                        $master-uri)
+                            (replace
+                                (replace($attribute,$master-id,$master-uri),
+                                $secondary-person-id,
+                                $master-uri),
+                            $secondary-uri,
+                            $master-uri), 
+                            '#person\-',
+                            '')
                 return attribute {name($attribute)} {$attribute-value}
         return element {name($node)} {$node/@*[not(name()=('mutual','active','passive'))],$new-attributes,$node/node()}
 };
@@ -142,6 +147,21 @@ as node()*
     $arg2 as xs:anyAtomicType* )  as xs:anyAtomicType* {
 
   distinct-values(($arg1, $arg2))
+ } ;
+ 
+declare function syriaca:normalize-space
+  ( $nodes as node()* )  as node()* {
+
+for $node in $nodes
+    let $children-normalized :=
+        for $child in $node/node()
+        return if ($child/descendant::*) then 
+                syriaca:normalize-space($child)
+            else if ($child/text()) then
+                element {$child/name()} {$child/@*, $child/normalize-space()}
+            else $child
+    return element {$node/name()} {$node/@*, $children-normalized}
+
  } ;
 
 declare function syriaca:merge-master-nodes($master-nodes as node()*,$secondary-nodes as node()*,$matching-secondary-node-path as xs:string*,$elements-to-join as xs:string*) as node()*
@@ -261,12 +281,43 @@ declare function syriaca:deprecate-merge-redirect($tei-root as node(),$redirect-
         (element idno {$idno-old/@*,$change-attribute,$idno-old/node()},
         element idno {attribute type {'redirect'},$change-attribute,$redirect-uri})
     
-    return 
-        (update replace $title-old with $title,
-        update insert $publication-idno following $publication-idno-old, update delete $publication-idno-old,
-        update replace $revisionDesc-old with $revisionDesc,
-        update insert $idno following $idno-old, update delete $idno-old,
-        update replace $body-old with $body)
+    let $deprecated-record := 
+        <TEI xml:lang='en'>
+            <teiHeader>
+                <fileDesc>
+                    <titleStmt>
+                        {$title}
+                        {$tei-root/teiHeader/fileDesc/titleStmt/node()[not(name()='title' and @level='a')]}
+                    </titleStmt>
+                    {$tei-root/teiHeader/fileDesc/node()[name()!='titleStmt']}
+                </fileDesc>
+                {$tei-root/teiHeader/node()[not(name()=('fileDesc','revisionDesc'))]}
+                {$revisionDesc}
+            </teiHeader>
+            <text>
+                <body>
+                    {$body-text}
+                    <listPerson>
+                        <person>
+                            {$tei-root/text/body/listPerson/person/@*}
+                            {$tei-root/text/body/listPerson/person/(persName|note)}
+                            {$idno}
+                            {$tei-root/text/body/listPerson/person/idno[not(@type='URI' and text()=$secondary-uri)]}
+                            {$tei-root/text/body/listPerson/person/node()[not(name()=('persName','note','idno'))]}
+                        </person>
+                    </listPerson>
+                </body>
+            </text>
+        </TEI>
+    
+    return $deprecated-record
+        
+        
+(:        (update replace $title-old with $title,:)
+(:        update insert $publication-idno following $publication-idno-old, update delete $publication-idno-old,:)
+(:        update replace $revisionDesc-old with $revisionDesc,:)
+(:        update insert $idno following $idno-old, update delete $idno-old,:)
+(:        update replace $body-old with $body):)
 };
 
 declare function syriaca:write-new-header ($header as node()*, $header-master as node()*) {
@@ -295,32 +346,15 @@ declare function syriaca:update-person-work-links ($master-uri as xs:string, $se
     return (update replace $link with $new-link)
 };
 
-(: ------------------------------------------------------------------------ :)
-(: MERGE SCRIPT BODY :)
-let $persons := collection('/db/apps/srophe-data/data/persons/tei/')/TEI
-let $works := collection('/db/apps/srophe-data/data/works/tei/')/TEI
-
-(: VARIABLES TO EDIT FOR EACH RUN :)
-(: Record that will be kept :)
-let $master-uri := 'http://syriaca.org/person/1135'
-
-(: Record that will be deprecated :)
-let $secondary-uri := 'http://syriaca.org/person/1558'
-
-(: Your user id in http://syriaca.org/documentation/editors.xml :)
-let $user := 'ngibson'
-
-
+(: MAIN MERGE SCRIPT :)
+declare function syriaca:merge-records ($user as xs:string, $master-uri as xs:string, $secondary-uri as xs:string, $persons-master-collection as node()*, $persons-secondary-collection as node()*)
+{
+ 
 let $master-id := replace($master-uri,'http://syriaca.org/person/','')
-let $master-record := $persons[text/body/listPerson/person/idno[@type='URI']=$master-uri]
+let $master-record := $persons-master-collection[text/body/listPerson/person/idno[@type='URI']=$master-uri]
 
 let $secondary-id := replace($secondary-uri,'http://syriaca.org/person/','')
-(: Use the following for merging records with different URIs :)
-let $secondary-record := $persons[text/body/listPerson/person/idno[@type='URI']=$secondary-uri]
-
-(: Use the following for merging in overlapping saint records that have same URI as master record :)
-(:let $overlapping-saints := collection('/db/apps/srophe-data/data/overlapping-saints/')/TEI:)
-(:let $secondary-record := $overlapping-saints[text/body/listPerson/person/idno[@type='URI']=$secondary-uri]:)
+let $secondary-record := $persons-secondary-collection[text/body/listPerson/person/idno[@type='URI']=$secondary-uri] 
 
 let $titles-master := $master-record/teiHeader/fileDesc/titleStmt/title
 let $titles-secondary := $secondary-record/teiHeader/fileDesc/titleStmt/title
@@ -361,8 +395,8 @@ let $test-deep-equal := './idno[@type="URI"]=$node/idno[@type="URI"]'
 let $seriesStmts-master := $master-record/teiHeader/fileDesc/seriesStmt
 let $seriesStmts-secondary := $secondary-record/teiHeader/fileDesc/seriesStmt
 
-let $includes-saint := matches($seriesStmts-master|$seriesStmts-secondary,'http://syriaca.org/q')
-let $includes-author := matches($seriesStmts-master|$seriesStmts-secondary,'http://syriaca.org/authors')
+let $includes-saint := matches(($seriesStmts-master|$seriesStmts-secondary)/descendant-or-self::*,'http://syriaca.org/q')
+let $includes-author := matches(($seriesStmts-master|$seriesStmts-secondary)/descendant-or-self::*,'http://syriaca.org/authors')
 
 let $biblScope-saint := 
     if ($includes-saint) then 
@@ -438,8 +472,8 @@ let $persNames :=
         
 let $test-deep-equal-no-ids-or-sources := 'functx:is-node-in-sequence-deep-equal(syriaca:remove-extra-attributes(., ("xml:id","source")), syriaca:remove-extra-attributes($node, ("xml:id","source")))'
 
-let $editors-master := $master-record/teiHeader/fileDesc/titleStmt/editor
-let $editors-secondary := $secondary-record/teiHeader/fileDesc/titleStmt/editor
+let $editors-master := syriaca:normalize-space($master-record/teiHeader/fileDesc/titleStmt/editor)
+let $editors-secondary := syriaca:normalize-space($secondary-record/teiHeader/fileDesc/titleStmt/editor)
 
 let $editors := 
     syriaca:merge-nodes($editors-master, 
@@ -597,7 +631,7 @@ let $header :=
 (: adapted for authors-saints merge :)
 let $abstract := $master-person/note[@type='abstract']
 let $desc-hagio-secondary := $secondary-person/note[@type='abstract']
-let $desc-hagio-updated := element note {$desc-hagio-secondary/@*, 'In hagiography: ', $desc-hagio-secondary/node()}
+let $desc-hagio-updated := if ($desc-hagio-secondary) then element note {$desc-hagio-secondary/@*, 'In hagiography: ', $desc-hagio-secondary/node()} else ()
 let $desc-hagio := 
     syriaca:update-attribute(
         syriaca:update-sources(
@@ -691,12 +725,70 @@ let $person := <person>
     $links,
     $bibls)}
     </person>
-
+    
 (: Having trouble finding the right formula for matching events, etc. across records :)
 (: Also need to get headword selection working :)
 return 
-    (syriaca:write-new-header($header, $header-master),
-    syriaca:write-new-person($person, $master-person),
-    syriaca:write-new-relations($relations, $relations-master, $master-person),
-    syriaca:deprecate-merge-redirect($secondary-record, $master-uri, $user),
-    syriaca:update-person-work-links($master-uri, $secondary-uri, $persons, $works))
+    <TEI xml:lang='en'>
+        {$header}
+        <text>
+            <body>
+                <listPerson>
+                    {$person}
+                    {$relations}
+                </listPerson>
+            </body>
+        </text>
+    </TEI>
+(:    (syriaca:write-new-header($header, $header-master),:)
+(:    syriaca:write-new-person($person, $master-person),:)
+(:    syriaca:write-new-relations($relations, $relations-master, $master-person),:)
+(:    syriaca:deprecate-merge-redirect($secondary-record, $master-uri, $user),:)
+(:    syriaca:update-person-work-links($master-uri, $secondary-uri, $persons-master-collection, $works)):)
+};
+
+
+
+
+
+(: ------------------------------------------------------------------------ :)
+(: MERGE SCRIPT BODY :)
+(: VARIABLES TO EDIT FOR EACH RUN :)
+
+
+(: Your user id in http://syriaca.org/documentation/editors.xml :)
+let $user := 'ngibson'
+let $records-to-merge := collection('/db/apps/srophe-data/data/persons/baumstark/')/TEI
+
+    for $record-to-merge in $records-to-merge (:MERGE FOLDER:)
+        let $persons-master-collection := collection('/db/apps/srophe-data/data/persons/tei/')/TEI
+        let $persons-secondary-collection := collection('/db/apps/srophe-data/data/persons/baumstark/')/TEI
+        let $works := collection('/db/apps/srophe-data/data/works/tei/')/TEI
+        
+        (: Record that will be kept :)
+        let $master-uri := $record-to-merge/text/body/listPerson/person/idno[@type='URI' and matches(.,'http://syriaca\.org')]/text() (:MERGE FOLDER:)
+        (: Record that will be deprecated :)
+        let $secondary-uri := $master-uri (:MERGE FOLDER:)
+    
+    let $master-record := $persons-master-collection[text/body/listPerson/person[idno=$master-uri]]
+    let $master-collection := util:collection-name($master-record)
+    let $master-filename := util:document-name($master-record)
+    let $master-record-content := syriaca:merge-records($user, $master-uri, $secondary-uri, $persons-master-collection, $persons-secondary-collection)
+    
+    let $secondary-record := $persons-secondary-collection[text/body/listPerson/person[idno=$secondary-uri]]
+    let $secondary-collection := util:collection-name($secondary-record)
+    let $secondary-filename := util:document-name($secondary-record)
+    let $secondary-record-content := syriaca:deprecate-merge-redirect($secondary-record, $master-uri, $user)
+    
+    return 
+(:        if (count($secondary-record)>1) then:)
+(:            for $record in $secondary-record :)
+(:            return (util:collection-name($record), $secondary-uri):)
+(:        else ():)
+        (xmldb:store($master-collection,$master-filename,$master-record-content),
+        xmldb:store($secondary-collection,$secondary-filename,$secondary-record-content),
+        if ($master-uri!=$secondary-uri) then 
+            syriaca:update-person-work-links($master-uri, $secondary-uri, $persons-master-collection, $works)
+            else ()
+        )
+        

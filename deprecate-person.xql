@@ -113,10 +113,10 @@ let $persons := collection('/db/apps/srophe-data/data/persons/tei/')/TEI
 
 (: VARIABLES TO EDIT FOR EACH RUN :)
 (: Record that will be deprecated :)
-let $uri := 'http://syriaca.org/person/2091'
+let $uri := 'http://syriaca.org/person/3007'
 
 (: URI of record where visitors to the deprecated URI will be redirected :)
-let $uri-redirect := ''
+let $uri-redirect := 'http://syriaca.org/person/1428'
 
 (: Your user id in http://syriaca.org/documentation/editors.xml :)
 let $user := 'ngibson'

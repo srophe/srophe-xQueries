@@ -25,10 +25,10 @@ as node()*
 };
 
 let $bibls := collection("/db/apps/srophe-data/data/bibl/tei/")/TEI/text/body/biblStruct
-let $zotero-doc := doc("/db/apps/srophe-data/data/bibl/cbsc-bibls-q-bhse-C.xml")
+let $zotero-doc := doc("/db/apps/srophe-data/data/bibl/q-additional-bibls.xml")
 for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
     
-    let $bibl-id := (2198 + $i)
+    let $bibl-id := (2204 + $i)
     let $syriaca-uri := concat('http://syriaca.org/bibl/',$bibl-id)
     let $syriaca-idno := <idno type='URI'>{$syriaca-uri}</idno>
     (:tags:)
@@ -126,8 +126,9 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
                     <funder>The International Balzan Prize Foundation</funder>
                     <principal>David A. Michelson</principal>
                     <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
+                    <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jfiey">J. M. Fiey</editor>
                     <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
-                    <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
+                    <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
                     <respStmt>
                         <resp>Bibliography curated by</resp>
                         <name ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</name>
@@ -138,11 +139,7 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
                     </respStmt>
                     <respStmt>
                         <resp>Bibliography items adapted from the work of</resp>
-                        <name ref="http://syriaca.org/documentation/documentation/editors.xml#sminov">Sergey Minov</name>
-                    </respStmt>
-                    <respStmt>
-                        <resp>Data entry by</resp>
-                        <name ref="http://syriaca.org/documentation/editors.xml#dkiger">David Kiger</name>
+                        <name ref="http://syriaca.org/documentation/editors.xml#jfiey">J. M. Fiey</name>
                     </respStmt>
                 </titleStmt>
                 <publicationStmt>
