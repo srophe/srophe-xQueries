@@ -5,7 +5,7 @@ declare namespace tei="http://www.tei-c.org/ns/1.0";
  : Run one FLWOR at a time. Check data, run the next... 
 :)
 
-(: 
+(: 1.
 Remove from /TEI/teiHeader/fileDesc/titleStmt
 <title level="m">Bibliotheca Hagiographica Syriaca Electronica</title>
 <title level="s">Gateway to the Syriac Saints</title>
@@ -19,7 +19,7 @@ return
     update delete $r/descendant::tei:fileDesc/tei:titleStmt/tei:title[@level='s'][. = 'New Handbook of Syriac Literature']
     )
 
-(: 
+(: 2.
  : Replace /TEI/teiHeader/fileDesc/seriesStmt[title='Gateway to the Syriac Saints']/biblScope with
     <biblScope unit="vol" from="2" to="2">
         <title level="m">Bibliotheca Hagiographica Syriaca Electronica</title>
@@ -35,7 +35,7 @@ let $newbiblScope :=
     </biblScope>
 return update replace $biblScope with $newbiblScope
 
-(: 
+(: 3.
  : Replace /TEI/teiHeader/fileDesc/seriesStmt/idno[.='http://syriaca.org/q'] with
     <idno type="URI">http://syriaca.org/saints</idno>
  :)
@@ -43,7 +43,7 @@ for $r in collection('/db/apps/srophe-data/data/works/tei')//tei:TEI[descendant:
 let $idno := $r/descendant::tei:seriesStmt/tei:idno[. = 'http://syriaca.org/q']
 return update value $idno with 'http://syriaca.org/saints'
 
-(: 
+(: 4. 
  Replace /TEI/teiHeader/fileDesc/seriesStmt[title='New Handbook of Syriac Literature']/biblScope with
 <biblScope unit="vol" from="1" to="1">
     <title level="m">Bibliotheca Hagiographica Syriaca Electronica</title>
@@ -51,7 +51,7 @@ return update value $idno with 'http://syriaca.org/saints'
 </biblScope>
 :)
 for $r in collection('/db/apps/srophe-data/data/works/tei')//tei:TEI[descendant::tei:seriesStmt[tei:title = 'New Handbook of Syriac Literature']]
-let $biblScope := $r/descendant::tei:seriesStmt[tei:title = 'Gateway to the Syriac Saints']/tei:biblScope
+let $biblScope := $r/descendant::tei:seriesStmt[tei:title = 'New Handbook of Syriac Literature']/tei:biblScope
 let $newbiblScope := 
                 <biblScope unit="vol" from="1" to="1" xmlns="http://www.tei-c.org/ns/1.0">
                     <title level="m">Bibliotheca Hagiographica Syriaca Electronica</title>
@@ -59,7 +59,7 @@ let $newbiblScope :=
                 </biblScope>
 return update replace $biblScope with $newbiblScope
 
-(: 
+(: 5.
 Replace /TEI/teiHeader/fileDesc/seriesStmt/idno[.='http://syriaca.org/works'] with
 <idno type="URI">http://syriaca.org/nhsl</idno>
  :)
@@ -67,7 +67,7 @@ for $r in collection('/db/apps/srophe-data/data/works/tei')//tei:TEI[descendant:
 let $idno := $r/descendant::tei:seriesStmt/tei:idno[. = 'http://syriaca.org/works']
 return update value $idno with 'http://syriaca.org/nhsl'
 
-(: 
+(: 6.
     Move all idno elements immediately after editor|author|title 
     After these idnos insert 
     <textLang mainLang="syr"/>
@@ -98,7 +98,7 @@ return
      update insert $newIds/child::* following $last
     )
 
-(: 
+(: 7.
     For note[@type='editions'] ...
     Keep bibl inside note but remove note tag
     Add @type='lawd:Edition' to bibl
@@ -125,7 +125,7 @@ let $new-element :=
         
 return update replace $r with $new-element
 
-(: 
+(: 8.
 For note[@type='MSS'] ... 
 Move @xml:lang and @source to the bibl inside it.
 Keep bibl inside note but remove note tag
@@ -151,7 +151,7 @@ let $new-element :=
         
 return update replace $r with $new-element
 
-(: 
+(: 9.
 For note[@type='ancientVersion'] ... 
 Move @xml:lang and @source to the bibl inside it.
 Keep bibl inside note but remove note tag
@@ -179,7 +179,7 @@ let $new-element :=
         
 return update replace $r with $new-element (:($new-element,$bibl):)
 
-(: 
+(: 10.
 For note[@type='modernTranslation'] ... 
 Move @xml:lang and @source to the bibl inside it.
 Keep bibl inside note but remove note tag
@@ -207,25 +207,35 @@ let $new-element :=
         
 return update replace $r with $new-element (:($new-element,$bibl):)
 
-(: 
+(: 11.
+Main bibl[not(@type)] add @type="lawd:ConceptualWork"
+:)
+for $r in collection('/db/apps/srophe-data/data/works/tei')//tei:TEI/descendant::tei:text/tei:body/tei:bibl
+return 
+    update insert attribute type {'lawd:ConceptualWork'} into $r
+
+
+(: 12.
 For bibl[not(@type)] add @type="lawd:Citation"
 :)
 for $r in collection('/db/apps/srophe-data/data/works/tei')//tei:TEI/descendant::tei:bibl[not(@type)]
-let $work-uri := $r/parent::*[1]/tei:idno[@type='URI'][starts-with(., 'http://syriaca.org/')]/text()
-let $bibl := $r/tei:bibl
 return 
     update insert attribute type {'lawd:Citation'} into $r
 
 
-(: 
+(: 13.
  For listRelation/relation[@name='syriaca:commemorated'] …
  Remove @name
  Add @ref='syriaca:commemorated'
  :)
 for $r in collection('/db/apps/srophe-data/data/works/tei')//tei:TEI/descendant::tei:listRelation/tei:relation[@name='syriaca:commemorated']
-return update delete $r/@name
+return 
+    (
+    update insert attribute ref {'syriaca:commemorated'} into $r,
+    update delete $r/@name
+    )
 
-(: 
+(: 14.
  Add change element
  :)
 for $r in collection('/db/apps/srophe-data/data/works/tei')//tei:TEI
