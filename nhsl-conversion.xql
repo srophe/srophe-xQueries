@@ -117,7 +117,11 @@ let $new-element :=
             {$bibl/@*[not(name() ='corresp') and not(name() ='n')],
             $bibl/child::*,
             <listRelation>
-                <relation type="mssWitnesses" active="#{$bibl/@xml:id}" ref="dct:source" passive="{$bibl/@corresp}" source="{$bibl/@source}"/>
+                {
+                if($bibl[not(@corresp)]) then ()
+                else
+                    <relation type="mssWitnesses" active="#{$bibl/@xml:id}" ref="dct:source" passive="{$bibl/@corresp}" source="{$bibl/@source}"/>
+                }
                 <relation active="#{$bibl/@xml:id}" ref="lawd:embodies" passive="{$work-uri}"/>
             </listRelation>
             }
@@ -142,6 +146,9 @@ let $bibl := $r/tei:bibl
 let $new-element := 
         <bibl xmlns="http://www.tei-c.org/ns/1.0" type="syriaca:Manuscript">
             {$bibl/@*[not(name() ='corresp') and not(name() ='n')],
+            if($bibl/@source) then () 
+            else 
+                attribute source {$r/@source},   
             $bibl/node(),
             <listRelation>
                 <relation active="#{$bibl/@xml:id}" ref="lawd:embodies" passive="{$work-uri}"/>
@@ -169,6 +176,9 @@ let $bibl := $r/tei:bibl
 let $new-element := 
         <bibl xmlns="http://www.tei-c.org/ns/1.0" type="syriaca:AncientVersion">
             {$bibl/@*[not(name() ='corresp') and not(name() ='n')],
+            if($bibl/@source) then () 
+            else 
+                attribute source {$r/@source}, 
             <lang>{$bibl/tei:lang/text()}</lang>,
             $bibl/node()[not(name() = 'lang')],
             <listRelation>
@@ -197,6 +207,9 @@ let $bibl := $r/tei:bibl
 let $new-element := 
         <bibl xmlns="http://www.tei-c.org/ns/1.0" type="syriaca:ModernTranslation">
             {$bibl/@*[not(name() ='corresp') and not(name() ='n')],
+            if($bibl/@source) then () 
+            else 
+                attribute source {$r/@source}, 
             <lang>{$bibl/tei:lang/text()}</lang>,
             $bibl/node()[not(name() = 'lang')],
             <listRelation>
