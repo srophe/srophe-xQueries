@@ -25,10 +25,20 @@ as node()*
 };
 
 let $bibls := collection("/db/apps/srophe-data/data/bibl/tei/")/TEI/text/body/biblStruct
-let $zotero-doc := doc("/db/apps/srophe-data/data/bibl/q-additional-bibls.xml")
+let $zotero-doc := doc("/db/apps/srophe-data/data/bibl/sbd-2017-06-20.xml")
+(:    Set this to the number of the highest existing bibl record. If the eXist data is up-to-date and no bibl URIs have been reserved outside eXist, 
+ : this can be left blank and will be automatically determined. :)
+let $max-bibl-id := ''
+
+let $all-bibl-ids := 
+    for $uri in $bibls/descendant-or-self::idno[starts-with(.,'http://syriaca.org/bibl')]
+    return number(replace($uri,'http://syriaca.org/bibl/',''))
+let $max-bibl-id-auto := max($all-bibl-ids)
+
 for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
     
-    let $bibl-id := (2204 + $i)
+
+    let $bibl-id := ( if(string-length($max-bibl-id)) then $max-bibl-id else $max-bibl-id-auto + $i)
     let $syriaca-uri := concat('http://syriaca.org/bibl/',$bibl-id)
     let $syriaca-idno := <idno type='URI'>{$syriaca-uri}</idno>
     (:tags:)
@@ -53,19 +63,23 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
     
 (:    links to external resources:)
     let $refs := 
-        for $url in $zotero-bibl//note[@type='url']
-        return <ref target='{$url/text()}'/>
+        let $vol-regex := '^\s*[Vv][Oo][Ll]\.*\s*(\d+)\s*:\s*http.*'
+        let $url-regex := '^\s*[Uu][Rr][Ll]*\s*:\s*http.*'
+        for $url in $zotero-bibl//note[@type='url' or matches(.,$vol-regex) or matches(.,$url-regex)]
+            let $link-text := if (matches($url, $vol-regex)) then replace($url,$vol-regex,'Vol. $1') else ()
+            let $link := replace($url,'^[A-Za-z:\d\s\.]*(http.*).*?$','$1')
+        return element ref {attribute target {$link}, $link-text}
         
     (:biblScope & @unit:)
     let $biblScopes-monogr-old := $zotero-bibl/monogr/imprint/biblScope
-    let $biblScopes-monogr-new := (
-        syriaca:update-attribute($biblScopes-monogr-old[@unit='volume'], 'unit', 'vol'),
+    let $biblScopes-monogr-new := 
+        (syriaca:update-attribute($biblScopes-monogr-old[@unit='volume'], 'unit', 'vol'),
         $biblScopes-monogr-old[@unit!='volume' and @unit!='page'],
         syriaca:update-attribute($biblScopes-monogr-old[@unit='page'], 'unit', 'pp')
         )
     let $biblScopes-series-old := $zotero-bibl/series/biblScope
-    let $biblScopes-series-new := (
-        syriaca:update-attribute($biblScopes-series-old[@unit='volume'], 'unit', 'vol'),
+    let $biblScopes-series-new := 
+        (syriaca:update-attribute($biblScopes-series-old[@unit='volume'], 'unit', 'vol'),
         $biblScopes-series-old[@unit!='volume']
         )
     (: respStmt :)
@@ -126,20 +140,11 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
                     <funder>The International Balzan Prize Foundation</funder>
                     <principal>David A. Michelson</principal>
                     <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
-                    <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jfiey">J. M. Fiey</editor>
-                    <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
-                    <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
+                    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
+                    <editor role="creator" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
                     <respStmt>
-                        <resp>Bibliography curated by</resp>
-                        <name ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</name>
-                    </respStmt>
-                    <respStmt>
-                        <resp>XML coding and TEI record generation by</resp>
+                        <resp>Bibliography curation and TEI record generation by</resp>
                         <name ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</name>
-                    </respStmt>
-                    <respStmt>
-                        <resp>Bibliography items adapted from the work of</resp>
-                        <name ref="http://syriaca.org/documentation/editors.xml#jfiey">J. M. Fiey</name>
                     </respStmt>
                 </titleStmt>
                 <publicationStmt>
@@ -175,6 +180,7 @@ for $zotero-bibl at $i in $zotero-doc/listBibl/biblStruct
     let $collection-uri := "/db/apps/srophe-data/data/bibl/tei/"
     let $resource-name := concat($bibl-id,'.xml')
     let $matching-bibl := $bibls[*[1]/idno=$zotero-idno]
+    
     return 
         if ($matching-bibl) then
             (concat('The bibl with Zotero id ', $zotero-id,' was not created because one with the same ID already exists in the database.'),
