@@ -53,7 +53,7 @@ as xs:string*
     return 
         if (count($ids) > 0) then
             let $id-nums := 
-                for $id in $ids[matches(.,'\d$')]
+                for $id in $ids
                 return number(replace($id,$prefix,''))
             return concat($prefix,($i+max($id-nums)))
         else concat($prefix,$i)
@@ -68,26 +68,6 @@ as node()*
             element {xs:QName(name($node))} {
                 $node/@*[not(name()=$attributes-to-remove)], 
                 syriaca:remove-extra-attributes($node/node(), $attributes-to-remove)}
-        else $node
-};
-
-declare function syriaca:remove-attribute-values($input-node as node()*,$attributes as xs:string*,$attribute-values as xs:string*)
-as node()*
-{
-    for $node in $input-node
-    return
-        if ($node/descendant-or-self::*[@*/name()=$attributes]) then
-            let $updated-attributes := 
-                for $value in $node/@*[name()=$attributes]
-                    for $attribute at $i in $attributes
-                    return 
-                        if ($node/@*[name()=$attribute]) then 
-                            attribute {$attribute} {replace($value,concat('[\s]*',$attribute-values[$i],'[\s]*'),'')}
-                        else()
-            return element {xs:QName(name($node))} {
-                ($node/@*[not(name()=$attributes)], 
-                $updated-attributes[.!='']),
-                syriaca:remove-attribute-values($node/node(), $attributes, $attribute-values)}
         else $node
 };
 
@@ -185,22 +165,21 @@ for $node in $nodes
 
  } ;
 
-declare function syriaca:merge-master-nodes($master-nodes as node()*,$secondary-nodes as node()*,$matching-secondary-node-path as xs:string*,$elements-to-join as xs:string*) as node()*
+declare function syriaca:merge-master-nodes($master-nodes as node()*,$secondary-nodes as node()*,$matching-secondary-node-path as node()*,$elements-to-join as xs:string*) as node()*
 {
     for $node in $master-nodes
-        let $matching-secondary-nodes := util:eval($matching-secondary-node-path)
+        let $matching-secondary-nodes := $matching-secondary-node-path
         let $joined-elements :=
             for $element in $elements-to-join
-                return functx:distinct-deep(($node|$matching-secondary-nodes)/*[name()=$element])
-(:                Due to namespace issues, might have to prefix attribute on $matching-secondary-nodes :)
+            return functx:distinct-deep(($node|$matching-secondary-nodes)/*[name()=$element])
+    (:                Due to namespace issues, might have to prefix attribute on $matching-secondary-nodes :)
         let $sources := syriaca:merge-attribute-values(($node/@source,$matching-secondary-nodes/@source), 'source')
         let $syriaca-tags-secondary := 
             for $tag in $matching-secondary-nodes/@syriaca-tags
             return attribute syriaca-tags {replace($tag,'[\s]*#syriaca-headword[\s]*','')}
         let $syriaca-tags := syriaca:merge-attribute-values(($node/@syriaca-tags,$syriaca-tags-secondary), 'syriaca-tags')
-        
-        return 
-            element {$node/name()} {$node/@*[not(name()=('source','syriaca-tags'))],$syriaca-tags,$sources,$node/node()[not(name()=$elements-to-join)],$joined-elements}
+    return 
+    element {$node/name()} {$node/@*[not(name()=('source','syriaca-tags'))],$syriaca-tags,$sources,$node/node()[not(name()=$elements-to-join)],$joined-elements}
 };
 
 declare function syriaca:merge-attribute-values($attribute-values as node()*, $attribute-name as xs:string) as node()*
@@ -213,23 +192,22 @@ declare function syriaca:merge-attribute-values($attribute-values as node()*, $a
 declare function syriaca:merge-nodes($master-nodes as node()*,$secondary-nodes as node()*,$matching-test-for-secondary-nodes as xs:string*,$elements-to-join as xs:string*,$secondary-bibls as node()*,$new-bibls as node()*) as node()*
 {
     let $master-id := replace(replace($new-bibls[1]/@xml:id,'bib',''),'-[\d]+$','')
-    let $secondary-unique-nodes := util:eval(concat('$secondary-nodes[not(',replace($matching-test-for-secondary-nodes,'\$node','\$master-nodes'),')]'))
+    let $secondary-unique-nodes := $secondary-nodes[not(string-join(descendant-or-self::*)=tokenize(string-join($master-nodes,","),","))]
     let $secondary-unique := 
         let $secondary-unique-updated-ids := 
             for $node at $i in $secondary-unique-nodes
             return syriaca:update-secondary-xml-ids($node, $master-nodes, $master-id, $i - 1)
         return syriaca:update-sources($secondary-unique-updated-ids, $secondary-bibls, $new-bibls)
     let $secondary-unique-no-headwords := 
-        syriaca:remove-attribute-values($secondary-unique, 'syriaca-tags', '#syriaca-headword')
-        
+        syriaca:remove-extra-attributes($secondary-unique, 'syriaca-tags')
     let $master-merged := 
         syriaca:merge-master-nodes
-            ($master-nodes,
-            syriaca:update-sources($secondary-nodes, $secondary-bibls, $new-bibls), 
-            concat('$secondary-nodes[',$matching-test-for-secondary-nodes,']'), 
-            $elements-to-join)
+        ($master-nodes,
+        syriaca:update-sources($secondary-nodes, $secondary-bibls, $new-bibls), 
+        $secondary-nodes[string-join(descendant-or-self::*)=tokenize(string-join($master-nodes,","),",")], 
+        $elements-to-join)
     return 
-        ($master-merged,$secondary-unique-no-headwords)
+    ($master-merged,$secondary-unique-no-headwords)
 };
 
 declare function syriaca:preserve-master($master-node as node()?,$secondary-node as node()?,$secondary-bibls as node()*,$new-bibls as node()*) as node()?
@@ -341,15 +319,15 @@ declare function syriaca:deprecate-merge-redirect($tei-root as node(),$redirect-
 (:        update replace $body-old with $body):)
 };
 
-declare function syriaca:write-new-header ($header as node()*, $header-master as node()*) {
+(:declare function syriaca:write-new-header ($header as node()*, $header-master as node()*) {
  (update insert $header following $header-master, update delete $header-master)
-};
+};:)
 
-declare function syriaca:write-new-person ($person as node()*, $master-person as node()*) {
+(:declare function syriaca:write-new-person ($person as node()*, $master-person as node()*) {
  (update insert $person following $master-person[last()], update delete $master-person)
-};
+};:)
 
-declare function syriaca:write-new-relations ($relations as node()*, $relations-master as node()*, $master-person as node()*) {
+(:declare function syriaca:write-new-relations ($relations as node()*, $relations-master as node()*, $master-person as node()*) {
  
      if ($relations) then 
         (update insert $relations following $master-person,
@@ -357,15 +335,15 @@ declare function syriaca:write-new-relations ($relations as node()*, $relations-
             update delete $relations-master
             else ())
         else ()
-};
+};:)
 
-declare function syriaca:update-person-work-links ($master-uri as xs:string, $secondary-uri as xs:string, $persons as node()*, $works as node()*) {
+(:declare function syriaca:update-person-work-links ($master-uri as xs:string, $secondary-uri as xs:string, $persons as node()*, $works as node()*) {
     let $match := concat('(^|\s)',$secondary-uri,'(\s|$)')
     let $replacement := concat('$1',$master-uri,'$2')
     for $link in ($works|$persons)//@*[name()=('ref','passive','active') and matches(.,$match)]
         let $new-link := replace($link,$match,$replacement)
     return (update replace $link with $new-link)
-};
+};:)
 
 (: MAIN MERGE SCRIPT :)
 declare function syriaca:merge-records ($user as xs:string, $master-uri as xs:string, $secondary-uri as xs:string, $persons-master-collection as node()*, $persons-secondary-collection as node()*)
@@ -416,8 +394,8 @@ let $test-deep-equal := './idno[@type="URI"]=$node/idno[@type="URI"]'
 let $seriesStmts-master := $master-record/teiHeader/fileDesc/seriesStmt
 let $seriesStmts-secondary := $secondary-record/teiHeader/fileDesc/seriesStmt
 
-let $includes-saint := matches(($seriesStmts-master|$seriesStmts-secondary)/descendant-or-self::*,'http://syriaca.org/q')
-let $includes-author := matches(($seriesStmts-master|$seriesStmts-secondary)/descendant-or-self::*,'http://syriaca.org/authors')
+let $includes-saint := matches(concat($seriesStmts-master[1],$seriesStmts-secondary[1]),'http://syriaca.org/q')
+let $includes-author := matches(concat($seriesStmts-master[1],$seriesStmts-secondary[1]),'http://syriaca.org/authors')
 
 let $biblScope-saint := 
     if ($includes-saint) then 
@@ -476,7 +454,7 @@ let $seriesStmts :=
                     Michelson</name>
         </respStmt>
         <idno type="URI">http://syriaca.org/saints</idno>
-        <biblScope unit="vol" from="1" to="1">
+        <biblScope unit="vol" from="2" to="2">
             <title level="m">Qadishe: A Guide to the Syriac Saints</title>
             <idno type="URI">http://syriaca.org/q</idno>
         </biblScope>
@@ -499,7 +477,7 @@ let $editors-secondary := syriaca:normalize-space($secondary-record/teiHeader/fi
 let $editors := 
     syriaca:merge-nodes($editors-master, 
         $editors-secondary, 
-        'functx:is-node-in-sequence-deep-equal(.,$node)', 
+        $test-deep-equal-no-ids-or-sources, 
         (), 
         $secondary-person/bibl, 
         $bibls)
@@ -718,20 +696,15 @@ let $links := syriaca:merge-nodes($master-person/link,
     $secondary-person/bibl, 
     $bibls)
     
-let $relations-secondary := syriaca:update-relation-attributes($secondary-person/../listRelation/relation, $master-id, $secondary-id)
-let $relations-master := syriaca:update-relation-attributes($master-person/../listRelation/relation, $master-id, $secondary-id)
+let $relations-secondary := syriaca:update-relation-attributes($secondary-person/(relation|../relation), $master-id, $secondary-id)
+let $relations-master := syriaca:update-relation-attributes($master-person/(relation|../relation), $master-id, $secondary-id)
     
-let $relations := 
-    if ($relations-master or $relations-secondary) then
-        element listRelation {
-            syriaca:merge-nodes($relations-master, 
-                $relations-secondary, 
-                $test-deep-equal-no-ids-or-sources, 
-                (), 
-                $secondary-person/bibl, 
-                $bibls)
-        }
-    else ()
+let $relations := syriaca:merge-nodes($relations-master, 
+    $relations-secondary, 
+    $test-deep-equal-no-ids-or-sources, 
+    (), 
+    $secondary-person/bibl, 
+    $bibls)
     
 let $person := <person>
     {$master-person/@*}
@@ -794,7 +767,7 @@ let $secondary-uri-merge-folder := ''
     (: BEGIN MERGE FOLDER: If you want to merge an entire folder of records that have the URIs of existing records, 
  : set the $records-to-merge variable to the folder and uncomment the following lines.:)
 
-let $records-to-merge := collection('/db/apps/srophe-data/data/persons/ektobe-matched-2017-06-26/')/TEI
+let $records-to-merge := doc('../draft-data/data/persons/sample-files/13.xml')/TEI
     for $record-to-merge in $records-to-merge 
         let $master-uri-merge-folder := $record-to-merge/text/body/listPerson/person/idno[@type='URI' and matches(.,'http://syriaca\.org')]/text()
         let $secondary-uri-merge-folder := $master-uri-merge-folder
@@ -811,25 +784,25 @@ let $records-to-merge := collection('/db/apps/srophe-data/data/persons/ektobe-ma
     let $master-uri := if ($master-uri-merge-folder) then $master-uri-merge-folder else $master-uri-merge-manual
     let $secondary-uri := if ($secondary-uri-merge-folder) then $secondary-uri-merge-folder else $secondary-uri-merge-manual
     
-    let $persons-master-collection := collection('/db/apps/srophe-data/data/persons/tei/')/TEI
+    let $persons-master-collection := doc('../srophe-app-data/data/persons/tei/13.xml')/TEI
     let $persons-secondary-collection := if ($records-to-merge) then $records-to-merge else $persons-master-collection
     let $works := collection('/db/apps/srophe-data/data/works/tei/')/TEI
     
     let $master-record := $persons-master-collection[text/body/listPerson/person[idno=$master-uri]]
-    let $master-collection := util:collection-name($master-record)
-    let $master-filename := util:document-name($master-record)
+(:    let $master-collection := util:collection-name($master-record):)
+(:    let $master-filename := util:document-name($master-record):)
     let $master-record-content := syriaca:merge-records($user, $master-uri, $secondary-uri, $persons-master-collection, $persons-secondary-collection)
     
     let $secondary-record := $persons-secondary-collection[text/body/listPerson/person[idno=$secondary-uri]]
-    let $secondary-collection := util:collection-name($secondary-record)
-    let $secondary-filename := util:document-name($secondary-record)
+(:    let $secondary-collection := util:collection-name($secondary-record):)
+(:    let $secondary-filename := util:document-name($secondary-record):)
     let $secondary-record-content := syriaca:deprecate-merge-redirect($secondary-record, $master-uri, $user)
     
-    return 
-        (xmldb:store($master-collection,$master-filename,$master-record-content),
+    return $master-record-content
+        (:(xmldb:store($master-collection,$master-filename,$master-record-content),
         xmldb:store($secondary-collection,$secondary-filename,$secondary-record-content),
         if ($master-uri!=$secondary-uri) then 
             syriaca:update-person-work-links($master-uri, $secondary-uri, $persons-master-collection, $works)
             else ()
-        )
+        ):)
         
