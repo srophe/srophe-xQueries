@@ -1,0 +1,283 @@
+<?xml-model type="application/xml" href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="en" level="a">Theodoret, Bishop of Cyrrhus , <title level="m">Ecclesiastical History </title> 5.8</title>
+        <title level="m" xml:lang="en">Textual Evidence for Caesarea-Maritima</title>
+        <sponsor>Vanderbilt University</sponsor>
+        <principal>Joseph L. Rife</principal>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</editor>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#plieberman">Phillip I. Lieberman</editor>
+        <editor role="technical" ref="https://caesarea-maritima.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
+        <editor role="technical" ref="https://caesarea-maritima.org/documentation/editors.xml#wpotter">William L. Potter</editor>
+        <editor role="creator" ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</editor>
+        <editor role="creator" ref="https://caesarea-maritima.org/documentation/editors.xml#jwoods">Joshua Woods</editor>
+        <editor role="creator" ref="https://caesarea-maritima.org/documentation/editors.xml#eyonan">Eliana Yonan</editor>
+        <respStmt>
+        <resp>TEI encoding by</resp>
+        <name ref="https://caesarea-maritima.org/documentation/editors.xml#wpotter">William L. Potter</name>
+      </respStmt>
+        <respStmt>
+        <resp>Electronic text added by</resp>
+        <name ref="https://caesarea-maritima.org/documentation/editors.xml#jwoods">Joshua Woods</name>
+      </respStmt>
+        <respStmt>
+        <resp>Electronic text added by</resp>
+        <name ref="https://caesarea-maritima.org/documentation/editors.xml#eyonan">Eliana Yonan</name>
+      </respStmt>
+        <respStmt>
+        <resp>Testimonia identified by</resp>
+        <name ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</name>
+      </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition n="1.0"/>
+      </editionStmt>
+      <publicationStmt>
+        <authority>Ceasarea City and Port Exploration Project</authority>
+        <idno type="URI">https://caesarea-maritima.org/testimonia/154/tei</idno>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by/4.0/">
+            <p>Distributed under a Creative Commons Attribution 4.0 Unported License.</p>
+          </licence>
+        </availability>
+        <date>2020-06-10-05:00</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title level="s" xml:lang="en">Caesarea-Maritima: A Digital Archive</title>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</editor>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#plieberman">Phillip I. Lieberman</editor>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Born digital.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+        <editorialDecl>
+          <p>Authors of testimonia are identified with URIs from The Virtual International Authority File, see <ref target="http://viaf.org/">http://viaf.org/</ref>. When multiple VIAF URIs exist, preference has been given to VIAF record linked to the Library of Congress authority file.</p>
+          <p>Geographic locations are identified with URIs from Pleiades: A Gazetteer of Past Places, see <ref target="https://pleiades.stoa.org/docs">https://pleiades.stoa.org/docs</ref>.</p>
+          <p>When possible., textual works have been cited using URNs according to the Distributed Text Services (DTS) system, see <ref target="https://distributed-text-services.github.io/specifications/">https://distributed-text-services.github.io/specifications/</ref>). Additional identifiers have been adopted from the systems used by the Perseus Digital Library (<ref target="http://www.perseus.tufts.edu/hopper/">http://www.perseus.tufts.edu/</ref>), Syriaca.org (<ref target="http://syriaca.org">http://syriaca.org</ref>), and other relevant authority systems such as WorldCat Identities or OCLC numbers (<ref target="https://www.worldcat.org/">https://www.worldcat.org/</ref>).</p>
+          <p>Bibliographic items are identified by a caesarea-maritima.org URI, which is linked, when possible to OCLC numbers and other identifiers.</p>
+          <p>Dates have been encoded following the ISO 8601 standard, <ref target="https://www.iso.org/iso-8601-date-and-time-format.html">https://www.iso.org/iso-8601-date-and-time-format.html</ref>, and the best practices established by for the Srophé App, see <ref target="http://srophe.app">http://srophe.app</ref>.</p>
+          <p>Languages have been encoded using ISO 639-1, 639-2, and 639-3 codes, following best practices of the TEI guidelines.</p>
+        </editorialDecl>
+        <classDecl>
+          <taxonomy xml:id="CM-NEAEH">
+            <desc>
+              <title>Caesarea-Maritima.org Chronology</title>: This chronology is adapted from the chronology used in <bibl>
+              <title>The New Encyclopedia of Archaeological Excavations in the Holy Land</title>
+              <ptr target="https://caesarea-maritima.org/bibl/HG492LV3"/>
+            </bibl>.  This taxonomy is used in the <gi>catRef</gi> encoding to classify the testimonia according to the time period(s) of the events described, rather than the date of composition of the testimonium. For example, Josephus may describe events occuring well before the period of his writing.
+            </desc>
+            <category xml:id="lowerPaleolithic">
+              <catDesc>Lower Paleolithic, 999999-119999 BCE</catDesc>
+            </category>
+            <category xml:id="upperAcheulean">
+              <catDesc>Upper Acheulean, 498050-148050 BP</catDesc>
+            </category>
+            <category xml:id="acheulean">
+              <catDesc>Acheulean, 298050-148050 BP</catDesc>
+            </category>
+            <category xml:id="mousterian">
+              <catDesc>Mousterian, 138050-38050 BP</catDesc>
+            </category>
+            <category xml:id="middlePaleolithic">
+              <catDesc>Middle Paleolithic, 119999-44999 BCE</catDesc>
+            </category>
+            <category xml:id="upperPaleolithic">
+              <catDesc>Upper Paleolithic, 44999-17999 BCE</catDesc>
+            </category>
+            <category xml:id="kebaran">
+              <catDesc>Kebaran , 18050-13050 BP</catDesc>
+            </category>
+            <category xml:id="epipaleolithic">
+              <catDesc>Epipaleolithic, 17999-8299 BCE</catDesc>
+            </category>
+            <category xml:id="geometricKebaran">
+              <catDesc>Geometric Kebaran, 12499-10899 BCE</catDesc>
+            </category>
+            <category xml:id="natufianCulture">
+              <catDesc>Natufian Culture, 10799-8499 BCE</catDesc>
+            </category>
+            <category xml:id="pre-potteryNeolithic">
+              <catDesc>Pre-Pottery Neolithic, 8299-5499 BCE</catDesc>
+            </category>
+            <category xml:id="potteryNeolithic">
+              <catDesc>Pottery Neolithic, 5499-4499 BCE</catDesc>
+            </category>
+            <category xml:id="chalcolithic">
+              <catDesc>Chalcolithic, 4499-3299 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAge">
+              <catDesc>Early Bronze Age, 3299-2199 BCE</catDesc>
+            </category>
+            <category xml:id="bronzeAge">
+              <catDesc>Bronze Age, 3299-1199 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAgeIa-b">
+              <catDesc>Early Bronze Age IA-B, 3299-2999 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAgeIi">
+              <catDesc>Early Bronze Age II, 2999-2699 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAgeIii">
+              <catDesc>Early Bronze Age III, 2699-2199 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAge">
+              <catDesc>Middle Bronze Age, 2199-1549 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAgeI">
+              <catDesc>Middle Bronze Age I, 2199-1999 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAgeIia">
+              <catDesc>Middle Bronze Age IIA, 1999-1749 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAgeIib">
+              <catDesc>Middle Bronze Age IIB, 1749-1549 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAge">
+              <catDesc>Late Bronze Age, 1599-1200 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAgeI">
+              <catDesc>Late Bronze Age I, 1549-1399 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAgeIia">
+              <catDesc>Late Bronze Age IIA, 1399-1299 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAgeIib">
+              <catDesc>Late Bronze Age IIB, 1299-1199 BCE</catDesc>
+            </category>
+            <category xml:id="ironAge">
+              <catDesc>Iron Age, 1199-585 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIa">
+              <catDesc>Iron Age IA, 1199-1149 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIb">
+              <catDesc>Iron Age IB, 1149-999 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIia">
+              <catDesc>Iron Age IIA, 999-899 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIib">
+              <catDesc>Iron Age IIB, 899-699 BCE</catDesc>
+            </category>
+            <category xml:id="ironIic">
+              <catDesc>Iron IIC, 799-731 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIic">
+              <catDesc>Iron Age IIC, 699-585 BCE</catDesc>
+            </category>
+            <category xml:id="babylonianAndPersian">
+              <catDesc>Babylonian and Persian Periods, 585-331 BCE</catDesc>
+            </category>
+            <category xml:id="earlyHellenistic">
+              <catDesc>Early Hellenistic Period, 331-166 BCE</catDesc>
+            </category>
+            <category xml:id="hellenistic">
+              <catDesc>Hellenistic Period, 331-36 BCE</catDesc>
+            </category>
+            <category xml:id="earlyNabatean">
+              <catDesc>Early Nabatean Period, 331-36 BCE</catDesc>
+            </category>
+            <category xml:id="nabateanKingdom">
+              <catDesc>Nabatean Kingdom, 167 BCE-106 CE</catDesc>
+            </category>
+            <category xml:id="lateHellenistic">
+              <catDesc>Late Hellenistic Period, 166-36 BCE</catDesc>
+            </category>
+            <category xml:id="earlyRoman">
+              <catDesc>Early Roman Period, 36 BCE-132 CE</catDesc>
+            </category>
+            <category xml:id="herodian">
+              <catDesc>Herodian Period, 36 BCE-70 CE</catDesc>
+            </category>
+            <category xml:id="middleNabatean">
+              <catDesc>Middle Nabatean Period, 24 BCE-50 CE</catDesc>
+            </category>
+            <category xml:id="lateRoman">
+              <catDesc>Late Roman Period, 132-324 CE</catDesc>
+            </category>
+            <category xml:id="byzantine">
+              <catDesc>Byzantine Period, 324-638 CE</catDesc>
+            </category>
+            <category xml:id="earlyIslamic">
+              <catDesc>Early Islamic Period, 638-1099 CE</catDesc>
+            </category>
+            <category xml:id="crusader">
+              <catDesc>Crusader Period, 1099-1291 CE</catDesc>
+            </category>
+            <category xml:id="lateIslamic">
+              <catDesc>Late Islamic Period, 1291-1516 CE</catDesc>
+            </category>
+            <category xml:id="ottoman">
+              <catDesc>Ottoman Period, 1516-1917 CE</catDesc>
+            </category>
+            <category xml:id="britishTerritorialAdministration">
+              <catDesc>British Territorial Administration Period, 1970-1920 CE</catDesc>
+            </category>
+            <category xml:id="britishMandate">
+              <catDesc>British Mandate Period, 1920-1948 CE</catDesc>
+            </category>
+            <category xml:id="modernState">
+              <catDesc>Modern State, 1948- CE</catDesc>
+            </category>
+          </taxonomy>
+        </classDecl>
+      </encodingDesc>
+    <profileDesc>
+      <abstract>
+        <p/>
+      </abstract>
+      <creation>This entry is taken from <title ref="urn:cts:greekLit:tlg4089.tlg003" type="uniform" level="m">Ecclesiastical History </title>
+        <ref target="#bib154-1">5.8</ref> written by <persName ref="http://viaf.org/viaf/77111352 " role="author">Theodoret, Bishop of Cyrrhus </persName> in <origDate period="#byzantine" notBefore="0449" notAfter="0450">
+          <date>449 – 450 CE</date>
+        </origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/658446">Cyrrus</origPlace>.</creation>
+      <langUsage>
+        <language ident="grc">Ancient Greek</language>
+      </langUsage>
+      <textClass>
+        <classCode scheme="https://distributed-text-services.github.io/specifications/">
+          <idno xml:base="https://scaife-cts.perseus.org/api/cts?request=GetPassage&amp;urn=" type="URN">urn:cts:greekLit:tlg4089.tlg003:5.8</idno>
+        </classCode>
+      </textClass>
+    </profileDesc>
+    <revisionDesc status="draft">
+      <change who="https://caesarea-maritima.org/documentation/editors.xml#wpotter" when="2020-06-10-05:00">CREATED: testimonium</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <ab type="identifier">
+        <idno type="URI">https://caesarea-maritima.org/testimonia/154</idno>
+      </ab>
+      <desc type="abstract" xml:id="abstract154-1">
+        <quote><placeName xml:lang="grc">Καισαρείας τῆς Παλαιστίνης,</placeName></quote>,  and <quote><placeName xml:lang="en">Cæsarea in Palestine,</placeName></quote> are place names attested in <persName ref="http://viaf.org/viaf/77111352 " role="author">Theodoret, Bishop of Cyrrhus </persName>'s <title ref="urn:cts:greekLit:tlg4089.tlg003" type="uniform" level="m">Ecclesiastical History </title> 5.8. This testimonium was written circa <origDate period="#byzantine" notBefore="0449" notAfter="0450">
+          <date>449 – 450 CE</date>
+        </origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/658446">Cyrrus</origPlace>.</desc>
+      <ab type="edition" xml:lang="grc" xml:id="quote154-1" source="#bib154-1">Κατ’ ἐκεῖνον δὲ τὸν χρόνον ὁ τὴν Ναζιανζὸν τὰ τελευταῖα ποιμάνας ἐν κωνσταντινουπόλει διέτριβε, ταῖς ’Αρειανικαῖς ἀντιταττόμενος βλασφημίαις· καὶ τόν τε θεῖον λαὸν ταῖς εύαγγελικαῖς ἄρδων διδασκαλίαις τούς τε τῆς ποίμνης ἔξω πλανωμένους ἀγρεύων καὶ τῆς ὀλεθρίου πόας ἐλευθερῶν οὕτω τὴν ποίμνην ἐκείνην ἐξ ὀλίγης μεγάλην ἀπέφηνε. τοῦτον ἰδὼν ὁ θεῖος Μελέτιος καὶ τῶν τὸν κανόνα γεγραφότων τὸν σκοπὸν ἐπιστάμενος τὰς γὰρ τῆς φιλαρχίας ἀφορμὰς περικόπτοντες ἐκώλυσαν τὴν μετάθεσιν), ἐβεβαίωσε τῷ θειοτάτῳ Γρηγορίῳ τὴν τῆς Κωνσταντινουπόλεως προεδρίαν. ὀλίγου δὲ διελθόντος χρόνου, ὁ μὲν θεῖος Μελέτιος εἰς τὴν ἄλυπον μετέστη ζωήν, ὑπὸ πάντων τῶν λόγου μετειληχότων ταῖς ἐπιταφίοις ταινιωθεὶς εὐφημίαις. Τιμόθεος δὲ ὁ τῆς Ἀλεξανδρέων ἐπίσκοπος, ὃς Πέτρον διεδέξατο τὸν τῆς ’Αθανασίου προεδρίας κληρονόμον γενόμενον, ἀντὶ τοῦ θαυμασίου Γρηγορίου Μάξιμόν τινα κεχειροτόνηκε κυνικόν, εὐθὺς αὐτοῦ τὰς κυνικὰς ἀποκείρας τρίχας· καὶ τῆς ’Απολιναρίου δὲ τερθρείας ἀνάπλεως οὗτος ἦν. Ἀλλ’ οὐκ ἤνεγκαν τοῦ γεγενημένου τὴν ἀτοπίαν οἱ τηνικαῦτα συνειλεγμένοι. ἦσαν δὲ ἄνδρες ἀξιάγαστοι καὶ ζήλου θείου καὶ ἀνάπλεοι· Ἑλλάδιος μὲν ὁ τῆς τοῦ μεγάλου Βασιλείου προεδρίας διάδοχος, Γρηγόριος δὲ καὶ Πέτρος οἱ τοὺς αὐτοὺς Βασιλείῳ πατέρας αὐχήσαντες· Ἀμφιλόχιος δὲ Λυκαόνων ἡγεῖτο καὶ Πισιδῶν Ὄπτιμος καὶ Κιλίκων Διόδωρος. παρὴν δὲ καὶ Πελάγιος ὁ Λαοδικείας καὶ [*] [*] [*] [*] Εὐλόγιος ὁ Ἐδέσσης καὶ Ἀκάκιος καὶ Ἰσίδωρος ὁ ἡμέτερος καὶ Κύριλλος ὁ τῶν Ἰεροσολύμων, καὶ Γελάσιος ὁ <placeName xml:lang="grc">Καισαρείας τῆς Παλαιστίνης,</placeName> λόγῳ καὶ βίῳ κοσμούμενος, καὶ ἕτεροι πλεῖστοι τῆς ἀρετῆς ἀθληταί. τότε δὴ οὖν οὗτοι πάντες τῶν Αἰγυπτίων σφὰς αὐτοὺς ἀποκρίναντες, οὑν τῷ μεγάλω, Γρηγορίῳ τὰς πανηγύρεις ἐπετέλουν τὰς θείας. Ο δὲ θεῖος παρεκάλει Γρηγόριος συμφωνίας πέρι συνηθροισμένους τὴν πρὸς ἀλλήλοις ὁμόνοιαν προτιμῆσαι τῆς ἑνὸς ἀνδρός ἀδικίας, »ἐγώ τε γάρ«, ἔφη,»τῶν πλειόνων φροντίδων ἀπαλλαγεὶς τὴν ἐμοὶ φίλην ἀπολήψομαι ἡσυχίαν, καὶ ὑμεῖς τὴν τριπόθητον εἰρήνην μετὰ τὸν μακρὸν ἐκεῖνον καὶ χαλεπὸν ἀπολήψεσθε πόλεμον. τῶν γὰρ λίαν ἀτοπωτάτων ἄρτι τῶν πολεμικῶν ἀπαλλαγέντας βελῶν ἀλλήλους βάλλειν καὶ τὴν οἰκείαν ἀναλίσκειν ἰσχύν· ἐπίχαρτοι γὰρ οὕτω τοῖς δυσμενέσιν ἐσόμεθα. ἄνδρα δὴ οὖν ἐπιζητήσαντες ἀξιέπαινον καὶ νοῦν ἔχοντα τῶν φροντίδων τὸ πλῆθος καὶ δέξασθαι καὶ εὑ διαθεῖναι δυνάμενον ἀρχιερέα προβάλλεσθε.«ταύταις οἱ ἄριστοι ποιμένες ταῖς ὑποθήκαις πεισθέντες, Νεκτάριον, εὐπατρίδην ἄνδρα καὶ περιφανείᾳ γένους κοσμούμενον καὶ τοῖς τῆς ἀρετῆς εἴδεσι λαμπρυνόμενον, ἐπίσκοπον τῆς μεγίστης ἐκείνης ἐχειροτόνησαν πόλεως· τὸν δὲ Μάξιμον, ὡς τῆς ’Απολιναρίου φρενοβλαβείας μετειληχότα, τῆς ἀρχιερατικῆς ἀξίας γυμνώσαντες ἀπεκήρυξαν. καὶ κανόνας δὲ περὶ τῆς ἐκκλησιαστικῆς γράψαντες εὐκοσμίας καὶ τὴν ἐκτεθεῖσαν ἐν Νικαίᾳ πίστιν βεβαίαν μένειν διαγορεύσαντες, εἰς τὰς οἰκείας ἐπανῆλθον πατρίδας. Τοῦ δὲ ἐπιγενομένου θέρους εἰς ἐκείνην αὖθις τὴν πόλιν οἱ τούτων τούτων παραγενόμενοι ἐκκλησιαστικαὶ γὰρ αὐτοὺς πάλιν συνεκάλεσαν χρεῖαι) συνοδικὴν ἐπιστολὴν τῶν τῆς Ἐσπέρας ἐπισκότων ἐδέξαντο εἰς τὴν Ῥώμην αὐτοὺς αὐτοὺς προτρέπουσαν, ὡς συνόδου μεγίστης αὐτόθι συγκροτουμένης. ἀλλὰ τὴν μὲν ἀποδημίαν παρῃτήσαντο, ὡς οὐδὲν ἔχουσαν κέρδος· ἐπέστειλαν δὲ τόν τε κλύ’ [*] [*] [*] δωνα τὸν κατὰ τῶν ἐκκλησιῶν ἐπαναστάντα σημαίνοντες καὶ τὴν γεγενημένην αὐτῶν ἀμέλειαν αἰνιττόμενοι, ἐν κεφαλαίῳ δὲ καὶ τὸ γεγενημένην τοῖς γράμμασιν ἐνέθηκαν φρόνημα. σαφέστερον δὲ τὴν τῶν γεγραφότων ἀνδρείαν τε καὶ σοφίαν αὐτὰ δηλώσει τὰ γράμματα.</ab>
+      <ab type="translation" xml:lang="en" xml:id="quote154-2" source="#bib154-2">At this time the recent feeder of the flock at Nazianzus was living at Constantinople, continually withstanding the blasphemies of the Arians, watering the holy people with the teaching of the Gospel, catching wanderers outside the flock and removing them from poisonous pasture. So that flock once small he made a great one. When the divine Meletius saw him, knowing as he did full well the object which the makers of the canon had before them when, with the view of preventing the possibility of ambitious efforts, they forbade the translation of bishops, he confirmed Gregory in the episcopate of Constantinople. Shortly afterwards the divine Meletius passed away to the life that knows no pain, crowned by the praises of the funeral eloquence of all the great orators. Timotheus, bishop of Alexandria, who had followed Peter, the successor of Athanasius in the patriarchate, ordained in place of the admirable Gregorius, Maximus—a cynic who had but recently suffered his cynic’s hair to be shorn, and had been carried away by the flimsy rhetoric of Apollinarius. But this absurdity was beyond the endurance of the assembled bishops—admirable men, and full of divine zeal and wisdom, such as Helladius, successor of the great Basil, Gregorius and Peter, brothers of Basil, and Amphilochius from Lycaonia, Optimus from Pisidia, Diodorus from Cilicia. The council was also attended by Pelagius of Laodicæa, Eulogius of Edessa, Acacius, our own Isidorus, Cyril of Jerusalem, Gelasius of <placeName xml:lang="en">Cæsarea in Palestine,</placeName> who was renowned alike for lore and life and many other athletes of virtue. All these then whom I have named separated themselves from the Egyptians and celebrated divine service with the great Gregory. But he himself implored them, assembled as they were to promote harmony, to subordinate all question of wrong to an individual to the promotion of agreement with one another. “For,” said he, “I shall be released from many cares and once more lead the quiet life I hold so dear; while you, after your long and painful warfare, will obtain the longed for peace. What can be more absurd than for men who have just escaped the weapons of their enemies to waste their own strength in wounding one another; by so doing we shall be a laughing stock to our opponents. Find then some worthy man of sense, able to sustain heavy responsibilities and discharge them well, and make him bishop.” The excellent pastors moved by these counsels appointed as bishop of that mighty city a man of noble birth and distinguished for every kind of virtue as well as for the splendour of his ancestry, by name Nectarius. Maximus, as having participated in the insanity of Apollinarius, they stripped of his episcopal rank and rejected. They next enacted canons concerning the good government of the church, and published a confirmation of the faith set forth at Nicæa. Then they returned each to his own country. Next summer the greater number of them assembled again in the same city, summoned once more by the needs of the church, and received a synodical letter from the bishops of the west inviting them to come to Rome, where a great synod was being assembled. They begged however to be excused from travelling thus far abroad; their doing so, they said, would be useless. They wrote however both to point out the storm which had risen against the churches, and to hint at the carelessness with which the western bishops had treated it. They also included in their letter a summary of the apostolic doctrine, but the boldness and wisdom of their expressions will be more clearly shown by the letter itself. </ab>
+      <listBibl>
+        <bibl xml:id="bib154-1">
+          <ptr target="https://caesarea-maritima.org/bibl/ZEME9T44"/>
+          <citedRange>5.8</citedRange>
+        </bibl>
+        <bibl xml:id="bib154-2">
+          <ptr target="https://caesarea-maritima.org/bibl/68KPMACB"/>
+          <citedRange>5.8</citedRange>
+        </bibl>
+      </listBibl>
+      <listBibl>
+        <bibl>
+          <ptr target="https://caesarea-maritima.org/bibl/Z8DHDYQU"/>
+          <citedRange>5.8</citedRange>
+        </bibl>
+        <bibl>
+          <ptr target="https://caesarea-maritima.org/bibl/P9X8IHTU"/>
+          <citedRange>5.8</citedRange>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,277 @@
+<?xml-model type="application/xml" href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="en" level="a">Eusebius of Caesarea, <title level="m">Martyrs of Palestine</title> 6.3</title>
+        <title level="m" xml:lang="en">Textual Evidence for Caesarea-Maritima</title>
+        <sponsor>Vanderbilt University</sponsor>
+        <principal>Joseph L. Rife</principal>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</editor>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#plieberman">Phillip I. Lieberman</editor>
+        <editor role="technical" ref="https://caesarea-maritima.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
+        <editor role="technical" ref="https://caesarea-maritima.org/documentation/editors.xml#wpotter">William L. Potter</editor>
+        <editor role="creator" ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</editor>
+        <editor role="creator" ref="https://caesarea-maritima.org/documentation/editors.xml#eyonan">Eliana Yonan</editor>
+        <respStmt>
+        <resp>TEI encoding by</resp>
+        <name ref="https://caesarea-maritima.org/documentation/editors.xml#wpotter">William L. Potter</name>
+      </respStmt>
+        <respStmt>
+        <resp>Electronic text added by</resp>
+        <name ref="https://caesarea-maritima.org/documentation/editors.xml#eyonan">Eliana Yonan</name>
+      </respStmt>
+        <respStmt>
+        <resp>Testimonia identified by</resp>
+        <name ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</name>
+      </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition n="1.0"/>
+      </editionStmt>
+      <publicationStmt>
+        <authority>Ceasarea City and Port Exploration Project</authority>
+        <idno type="URI">https://caesarea-maritima.org/testimonia/126/tei</idno>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by/4.0/">
+            <p>Distributed under a Creative Commons Attribution 4.0 Unported License.</p>
+          </licence>
+        </availability>
+        <date>2020-06-10-05:00</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title level="s" xml:lang="en">Caesarea-Maritima: A Digital Archive</title>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</editor>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#plieberman">Phillip I. Lieberman</editor>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Born digital.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+        <editorialDecl>
+          <p>Authors of testimonia are identified with URIs from The Virtual International Authority File, see <ref target="http://viaf.org/">http://viaf.org/</ref>. When multiple VIAF URIs exist, preference has been given to VIAF record linked to the Library of Congress authority file.</p>
+          <p>Geographic locations are identified with URIs from Pleiades: A Gazetteer of Past Places, see <ref target="https://pleiades.stoa.org/docs">https://pleiades.stoa.org/docs</ref>.</p>
+          <p>When possible., textual works have been cited using URNs according to the Distributed Text Services (DTS) system, see <ref target="https://distributed-text-services.github.io/specifications/">https://distributed-text-services.github.io/specifications/</ref>). Additional identifiers have been adopted from the systems used by the Perseus Digital Library (<ref target="http://www.perseus.tufts.edu/hopper/">http://www.perseus.tufts.edu/</ref>), Syriaca.org (<ref target="http://syriaca.org">http://syriaca.org</ref>), and other relevant authority systems such as WorldCat Identities or OCLC numbers (<ref target="https://www.worldcat.org/">https://www.worldcat.org/</ref>).</p>
+          <p>Bibliographic items are identified by a caesarea-maritima.org URI, which is linked, when possible to OCLC numbers and other identifiers.</p>
+          <p>Dates have been encoded following the ISO 8601 standard, <ref target="https://www.iso.org/iso-8601-date-and-time-format.html">https://www.iso.org/iso-8601-date-and-time-format.html</ref>, and the best practices established by for the Srophé App, see <ref target="http://srophe.app">http://srophe.app</ref>.</p>
+          <p>Languages have been encoded using ISO 639-1, 639-2, and 639-3 codes, following best practices of the TEI guidelines.</p>
+        </editorialDecl>
+        <classDecl>
+          <taxonomy xml:id="CM-NEAEH">
+            <desc>
+              <title>Caesarea-Maritima.org Chronology</title>: This chronology is adapted from the chronology used in <bibl>
+              <title>The New Encyclopedia of Archaeological Excavations in the Holy Land</title>
+              <ptr target="https://caesarea-maritima.org/bibl/HG492LV3"/>
+            </bibl>.  This taxonomy is used in the <gi>catRef</gi> encoding to classify the testimonia according to the time period(s) of the events described, rather than the date of composition of the testimonium. For example, Josephus may describe events occuring well before the period of his writing.
+            </desc>
+            <category xml:id="lowerPaleolithic">
+              <catDesc>Lower Paleolithic, 999999-119999 BCE</catDesc>
+            </category>
+            <category xml:id="upperAcheulean">
+              <catDesc>Upper Acheulean, 498050-148050 BP</catDesc>
+            </category>
+            <category xml:id="acheulean">
+              <catDesc>Acheulean, 298050-148050 BP</catDesc>
+            </category>
+            <category xml:id="mousterian">
+              <catDesc>Mousterian, 138050-38050 BP</catDesc>
+            </category>
+            <category xml:id="middlePaleolithic">
+              <catDesc>Middle Paleolithic, 119999-44999 BCE</catDesc>
+            </category>
+            <category xml:id="upperPaleolithic">
+              <catDesc>Upper Paleolithic, 44999-17999 BCE</catDesc>
+            </category>
+            <category xml:id="kebaran">
+              <catDesc>Kebaran , 18050-13050 BP</catDesc>
+            </category>
+            <category xml:id="epipaleolithic">
+              <catDesc>Epipaleolithic, 17999-8299 BCE</catDesc>
+            </category>
+            <category xml:id="geometricKebaran">
+              <catDesc>Geometric Kebaran, 12499-10899 BCE</catDesc>
+            </category>
+            <category xml:id="natufianCulture">
+              <catDesc>Natufian Culture, 10799-8499 BCE</catDesc>
+            </category>
+            <category xml:id="pre-potteryNeolithic">
+              <catDesc>Pre-Pottery Neolithic, 8299-5499 BCE</catDesc>
+            </category>
+            <category xml:id="potteryNeolithic">
+              <catDesc>Pottery Neolithic, 5499-4499 BCE</catDesc>
+            </category>
+            <category xml:id="chalcolithic">
+              <catDesc>Chalcolithic, 4499-3299 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAge">
+              <catDesc>Early Bronze Age, 3299-2199 BCE</catDesc>
+            </category>
+            <category xml:id="bronzeAge">
+              <catDesc>Bronze Age, 3299-1199 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAgeIa-b">
+              <catDesc>Early Bronze Age IA-B, 3299-2999 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAgeIi">
+              <catDesc>Early Bronze Age II, 2999-2699 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAgeIii">
+              <catDesc>Early Bronze Age III, 2699-2199 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAge">
+              <catDesc>Middle Bronze Age, 2199-1549 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAgeI">
+              <catDesc>Middle Bronze Age I, 2199-1999 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAgeIia">
+              <catDesc>Middle Bronze Age IIA, 1999-1749 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAgeIib">
+              <catDesc>Middle Bronze Age IIB, 1749-1549 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAge">
+              <catDesc>Late Bronze Age, 1599-1200 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAgeI">
+              <catDesc>Late Bronze Age I, 1549-1399 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAgeIia">
+              <catDesc>Late Bronze Age IIA, 1399-1299 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAgeIib">
+              <catDesc>Late Bronze Age IIB, 1299-1199 BCE</catDesc>
+            </category>
+            <category xml:id="ironAge">
+              <catDesc>Iron Age, 1199-585 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIa">
+              <catDesc>Iron Age IA, 1199-1149 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIb">
+              <catDesc>Iron Age IB, 1149-999 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIia">
+              <catDesc>Iron Age IIA, 999-899 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIib">
+              <catDesc>Iron Age IIB, 899-699 BCE</catDesc>
+            </category>
+            <category xml:id="ironIic">
+              <catDesc>Iron IIC, 799-731 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIic">
+              <catDesc>Iron Age IIC, 699-585 BCE</catDesc>
+            </category>
+            <category xml:id="babylonianAndPersian">
+              <catDesc>Babylonian and Persian Periods, 585-331 BCE</catDesc>
+            </category>
+            <category xml:id="earlyHellenistic">
+              <catDesc>Early Hellenistic Period, 331-166 BCE</catDesc>
+            </category>
+            <category xml:id="hellenistic">
+              <catDesc>Hellenistic Period, 331-36 BCE</catDesc>
+            </category>
+            <category xml:id="earlyNabatean">
+              <catDesc>Early Nabatean Period, 331-36 BCE</catDesc>
+            </category>
+            <category xml:id="nabateanKingdom">
+              <catDesc>Nabatean Kingdom, 167 BCE-106 CE</catDesc>
+            </category>
+            <category xml:id="lateHellenistic">
+              <catDesc>Late Hellenistic Period, 166-36 BCE</catDesc>
+            </category>
+            <category xml:id="earlyRoman">
+              <catDesc>Early Roman Period, 36 BCE-132 CE</catDesc>
+            </category>
+            <category xml:id="herodian">
+              <catDesc>Herodian Period, 36 BCE-70 CE</catDesc>
+            </category>
+            <category xml:id="middleNabatean">
+              <catDesc>Middle Nabatean Period, 24 BCE-50 CE</catDesc>
+            </category>
+            <category xml:id="lateRoman">
+              <catDesc>Late Roman Period, 132-324 CE</catDesc>
+            </category>
+            <category xml:id="byzantine">
+              <catDesc>Byzantine Period, 324-638 CE</catDesc>
+            </category>
+            <category xml:id="earlyIslamic">
+              <catDesc>Early Islamic Period, 638-1099 CE</catDesc>
+            </category>
+            <category xml:id="crusader">
+              <catDesc>Crusader Period, 1099-1291 CE</catDesc>
+            </category>
+            <category xml:id="lateIslamic">
+              <catDesc>Late Islamic Period, 1291-1516 CE</catDesc>
+            </category>
+            <category xml:id="ottoman">
+              <catDesc>Ottoman Period, 1516-1917 CE</catDesc>
+            </category>
+            <category xml:id="britishTerritorialAdministration">
+              <catDesc>British Territorial Administration Period, 1970-1920 CE</catDesc>
+            </category>
+            <category xml:id="britishMandate">
+              <catDesc>British Mandate Period, 1920-1948 CE</catDesc>
+            </category>
+            <category xml:id="modernState">
+              <catDesc>Modern State, 1948- CE</catDesc>
+            </category>
+          </taxonomy>
+        </classDecl>
+      </encodingDesc>
+    <profileDesc>
+      <abstract>
+        <p/>
+      </abstract>
+      <creation>This entry is taken from <title ref="urn:cts:greekLit:tlg2018.tlg003" type="uniform" level="m">Martyrs of Palestine</title>
+        <ref target="#bib126-1">6.3</ref> written by <persName ref="http://viaf.org/viaf/4929593" role="author">Eusebius of Caesarea</persName> in <origDate period="#lateRoman" notBefore="0315" notAfter="0316">
+          <date>315 – 316 CE</date>
+        </origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/678401">Caesarea</origPlace>.</creation>
+      <langUsage>
+        <language ident="grc">Ancient Greek</language>
+      </langUsage>
+      <textClass>
+        <classCode scheme="https://distributed-text-services.github.io/specifications/">
+          <idno xml:base="https://scaife-cts.perseus.org/api/cts?request=GetPassage&amp;urn=" type="URN">urn:cts:greekLit:tlg2018.tlg003:6.3</idno>
+        </classCode>
+      </textClass>
+    </profileDesc>
+    <revisionDesc status="draft">
+      <change who="https://caesarea-maritima.org/documentation/editors.xml#wpotter" when="2020-06-10-05:00">CREATED: testimonium</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <ab type="identifier">
+        <idno type="URI">https://caesarea-maritima.org/testimonia/126</idno>
+      </ab>
+      <desc type="abstract" xml:id="abstract126-1">Caesarea Maritima is indirectly attested in <persName ref="http://viaf.org/viaf/4929593" role="author">Eusebius of Caesarea</persName>'s <title ref="urn:cts:greekLit:tlg2018.tlg003" type="uniform" level="m">Martyrs of Palestine</title> 6.3. This testimonium was written circa <origDate period="#lateRoman" notBefore="0315" notAfter="0316">
+          <date>315 – 316 CE</date>
+        </origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/678401">Caesarea</origPlace>.</desc>
+      <ab type="edition" xml:lang="grc" xml:id="quote126-1" source="#bib126-1">τί τοίνυν τοῦτο ἦν; μάρτυς τοῦ καθ’ ἡμᾶς δόγματος παρήγετο εἰς μέσον, τῆς μόνης καὶ ἀληθοῦς εὐσεβείας ὑπεραγωνιζόμενος. Ἀγάπιος οὗτος ἦν, ὁ δεύτερος ἅμα τῇ Θέκλᾳ θηρσὶν ἐπὶ βορᾷ δεδόσθαι μικρῷ πρότερον δεδηλωμένος, ὃς δὴ καὶ ἄλλοτε δεσμωτηρίου τρίτον καὶ πολλάκις ἅμα κακούργοις ἐμπομπεύσας τῷ σταδίῳ, ἀεί γε μὴν κατὰ χρόνους τοῦ δικαστοῦ μετὰ τὰς ἀπειλὰς, ἤτοι κατ’ οἶκτον ἢ κατ’ ἐλπίδα τοῦ μεταθήσεσθαι τῆς προθέσεως, εἰς ἑτέρους αὐτὸν ἀγῶνας ὑπερτιθεμένου, τότε δὴ βασιλέως ἐπιπαρόντος ἤγετο, ὥσπερ ἐπίτηδες εἰς ἐκεῖνο τοῦ καιροῦ πεφυλαγμένος, ὥστ’ ἂν κἀκεῖνο τὸ σωτήριον ῥῆμα, ὃ τοῖς μαθηταῖς θείᾳ γνώσει προηγόρευεν, ὡς ἄρα καὶ ἐπὶ βασιλέων ἀχθήσονται ἕνεκεν τῆς εἰς αὐτὸν μαρτυρίας, καὶ ἐπ’ αὐτοῦ πληρωθείη. </ab>
+      <ab type="translation" xml:lang="en" xml:id="quote126-2" source="#bib126-2">A witness of our doctrine was brought into the midst and endured the contest for the true and only religion. This was Agapius, who, as we have stated a little above, was, with Thecla, the second to be thrown to the wild beasts for food. He had also, three times and more, marched with malefactors from the prison to the arena; and every time, after threats from the judge, whether in compassion or in hope that he might change his mind, had been reserved for other conflicts. But the emperor being present, he was brought out at this time, as if he had been appropriately reserved for this occasion, until the very word of the Saviour should be fulfilled in him, which through divine knowledge he declared to his disciples, that they should be brought before kings on account of their testimony unto him. </ab>
+      <listBibl>
+        <bibl xml:id="bib126-1">
+          <ptr target="https://caesarea-maritima.org/bibl/HHVGPUU8"/>
+          <citedRange>6.3</citedRange>
+        </bibl>
+        <bibl xml:id="bib126-2">
+          <ptr target="https://caesarea-maritima.org/bibl/NANLZS57"/>
+          <citedRange>6.3</citedRange>
+        </bibl>
+      </listBibl>
+      <listBibl>
+        <bibl>
+          <ptr target="https://caesarea-maritima.org/bibl/G35HFK6A"/>
+          <citedRange>6.3</citedRange>
+        </bibl>
+        <bibl>
+          <ptr target="https://caesarea-maritima.org/bibl/BTVVYMAC"/>
+          <citedRange>6.3</citedRange>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,278 @@
+<?xml-model type="application/xml" href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="en" level="a">Eusebius of Caesarea, <title level="m">Martyrs of Palestine</title> 11</title>
+        <title level="m" xml:lang="en">Textual Evidence for Caesarea-Maritima</title>
+        <sponsor>Vanderbilt University</sponsor>
+        <principal>Joseph L. Rife</principal>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</editor>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#plieberman">Phillip I. Lieberman</editor>
+        <editor role="technical" ref="https://caesarea-maritima.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
+        <editor role="technical" ref="https://caesarea-maritima.org/documentation/editors.xml#wpotter">William L. Potter</editor>
+        <editor role="creator" ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</editor>
+        <editor role="creator" ref="https://caesarea-maritima.org/documentation/editors.xml#eyonan">Eliana Yonan</editor>
+        <respStmt>
+        <resp>TEI encoding by</resp>
+        <name ref="https://caesarea-maritima.org/documentation/editors.xml#wpotter">William L. Potter</name>
+      </respStmt>
+        <respStmt>
+        <resp>Electronic text added by</resp>
+        <name ref="https://caesarea-maritima.org/documentation/editors.xml#eyonan">Eliana Yonan</name>
+      </respStmt>
+        <respStmt>
+        <resp>Testimonia identified by</resp>
+        <name ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</name>
+      </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition n="1.0"/>
+      </editionStmt>
+      <publicationStmt>
+        <authority>Ceasarea City and Port Exploration Project</authority>
+        <idno type="URI">https://caesarea-maritima.org/testimonia/128/tei</idno>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by/4.0/">
+            <p>Distributed under a Creative Commons Attribution 4.0 Unported License.</p>
+          </licence>
+        </availability>
+        <date>2020-06-10-05:00</date>
+      </publicationStmt>
+      <seriesStmt>
+        <title level="s" xml:lang="en">Caesarea-Maritima: A Digital Archive</title>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L. Rife</editor>
+        <editor role="general" ref="https://caesarea-maritima.org/documentation/editors.xml#plieberman">Phillip I. Lieberman</editor>
+      </seriesStmt>
+      <sourceDesc>
+        <p>Born digital.</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+        <editorialDecl>
+          <p>Authors of testimonia are identified with URIs from The Virtual International Authority File, see <ref target="http://viaf.org/">http://viaf.org/</ref>. When multiple VIAF URIs exist, preference has been given to VIAF record linked to the Library of Congress authority file.</p>
+          <p>Geographic locations are identified with URIs from Pleiades: A Gazetteer of Past Places, see <ref target="https://pleiades.stoa.org/docs">https://pleiades.stoa.org/docs</ref>.</p>
+          <p>When possible., textual works have been cited using URNs according to the Distributed Text Services (DTS) system, see <ref target="https://distributed-text-services.github.io/specifications/">https://distributed-text-services.github.io/specifications/</ref>). Additional identifiers have been adopted from the systems used by the Perseus Digital Library (<ref target="http://www.perseus.tufts.edu/hopper/">http://www.perseus.tufts.edu/</ref>), Syriaca.org (<ref target="http://syriaca.org">http://syriaca.org</ref>), and other relevant authority systems such as WorldCat Identities or OCLC numbers (<ref target="https://www.worldcat.org/">https://www.worldcat.org/</ref>).</p>
+          <p>Bibliographic items are identified by a caesarea-maritima.org URI, which is linked, when possible to OCLC numbers and other identifiers.</p>
+          <p>Dates have been encoded following the ISO 8601 standard, <ref target="https://www.iso.org/iso-8601-date-and-time-format.html">https://www.iso.org/iso-8601-date-and-time-format.html</ref>, and the best practices established by for the Srophé App, see <ref target="http://srophe.app">http://srophe.app</ref>.</p>
+          <p>Languages have been encoded using ISO 639-1, 639-2, and 639-3 codes, following best practices of the TEI guidelines.</p>
+        </editorialDecl>
+        <classDecl>
+          <taxonomy xml:id="CM-NEAEH">
+            <desc>
+              <title>Caesarea-Maritima.org Chronology</title>: This chronology is adapted from the chronology used in <bibl>
+              <title>The New Encyclopedia of Archaeological Excavations in the Holy Land</title>
+              <ptr target="https://caesarea-maritima.org/bibl/HG492LV3"/>
+            </bibl>.  This taxonomy is used in the <gi>catRef</gi> encoding to classify the testimonia according to the time period(s) of the events described, rather than the date of composition of the testimonium. For example, Josephus may describe events occuring well before the period of his writing.
+            </desc>
+            <category xml:id="lowerPaleolithic">
+              <catDesc>Lower Paleolithic, 999999-119999 BCE</catDesc>
+            </category>
+            <category xml:id="upperAcheulean">
+              <catDesc>Upper Acheulean, 498050-148050 BP</catDesc>
+            </category>
+            <category xml:id="acheulean">
+              <catDesc>Acheulean, 298050-148050 BP</catDesc>
+            </category>
+            <category xml:id="mousterian">
+              <catDesc>Mousterian, 138050-38050 BP</catDesc>
+            </category>
+            <category xml:id="middlePaleolithic">
+              <catDesc>Middle Paleolithic, 119999-44999 BCE</catDesc>
+            </category>
+            <category xml:id="upperPaleolithic">
+              <catDesc>Upper Paleolithic, 44999-17999 BCE</catDesc>
+            </category>
+            <category xml:id="kebaran">
+              <catDesc>Kebaran , 18050-13050 BP</catDesc>
+            </category>
+            <category xml:id="epipaleolithic">
+              <catDesc>Epipaleolithic, 17999-8299 BCE</catDesc>
+            </category>
+            <category xml:id="geometricKebaran">
+              <catDesc>Geometric Kebaran, 12499-10899 BCE</catDesc>
+            </category>
+            <category xml:id="natufianCulture">
+              <catDesc>Natufian Culture, 10799-8499 BCE</catDesc>
+            </category>
+            <category xml:id="pre-potteryNeolithic">
+              <catDesc>Pre-Pottery Neolithic, 8299-5499 BCE</catDesc>
+            </category>
+            <category xml:id="potteryNeolithic">
+              <catDesc>Pottery Neolithic, 5499-4499 BCE</catDesc>
+            </category>
+            <category xml:id="chalcolithic">
+              <catDesc>Chalcolithic, 4499-3299 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAge">
+              <catDesc>Early Bronze Age, 3299-2199 BCE</catDesc>
+            </category>
+            <category xml:id="bronzeAge">
+              <catDesc>Bronze Age, 3299-1199 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAgeIa-b">
+              <catDesc>Early Bronze Age IA-B, 3299-2999 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAgeIi">
+              <catDesc>Early Bronze Age II, 2999-2699 BCE</catDesc>
+            </category>
+            <category xml:id="earlyBronzeAgeIii">
+              <catDesc>Early Bronze Age III, 2699-2199 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAge">
+              <catDesc>Middle Bronze Age, 2199-1549 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAgeI">
+              <catDesc>Middle Bronze Age I, 2199-1999 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAgeIia">
+              <catDesc>Middle Bronze Age IIA, 1999-1749 BCE</catDesc>
+            </category>
+            <category xml:id="middleBronzeAgeIib">
+              <catDesc>Middle Bronze Age IIB, 1749-1549 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAge">
+              <catDesc>Late Bronze Age, 1599-1200 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAgeI">
+              <catDesc>Late Bronze Age I, 1549-1399 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAgeIia">
+              <catDesc>Late Bronze Age IIA, 1399-1299 BCE</catDesc>
+            </category>
+            <category xml:id="lateBronzeAgeIib">
+              <catDesc>Late Bronze Age IIB, 1299-1199 BCE</catDesc>
+            </category>
+            <category xml:id="ironAge">
+              <catDesc>Iron Age, 1199-585 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIa">
+              <catDesc>Iron Age IA, 1199-1149 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIb">
+              <catDesc>Iron Age IB, 1149-999 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIia">
+              <catDesc>Iron Age IIA, 999-899 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIib">
+              <catDesc>Iron Age IIB, 899-699 BCE</catDesc>
+            </category>
+            <category xml:id="ironIic">
+              <catDesc>Iron IIC, 799-731 BCE</catDesc>
+            </category>
+            <category xml:id="ironAgeIic">
+              <catDesc>Iron Age IIC, 699-585 BCE</catDesc>
+            </category>
+            <category xml:id="babylonianAndPersian">
+              <catDesc>Babylonian and Persian Periods, 585-331 BCE</catDesc>
+            </category>
+            <category xml:id="earlyHellenistic">
+              <catDesc>Early Hellenistic Period, 331-166 BCE</catDesc>
+            </category>
+            <category xml:id="hellenistic">
+              <catDesc>Hellenistic Period, 331-36 BCE</catDesc>
+            </category>
+            <category xml:id="earlyNabatean">
+              <catDesc>Early Nabatean Period, 331-36 BCE</catDesc>
+            </category>
+            <category xml:id="nabateanKingdom">
+              <catDesc>Nabatean Kingdom, 167 BCE-106 CE</catDesc>
+            </category>
+            <category xml:id="lateHellenistic">
+              <catDesc>Late Hellenistic Period, 166-36 BCE</catDesc>
+            </category>
+            <category xml:id="earlyRoman">
+              <catDesc>Early Roman Period, 36 BCE-132 CE</catDesc>
+            </category>
+            <category xml:id="herodian">
+              <catDesc>Herodian Period, 36 BCE-70 CE</catDesc>
+            </category>
+            <category xml:id="middleNabatean">
+              <catDesc>Middle Nabatean Period, 24 BCE-50 CE</catDesc>
+            </category>
+            <category xml:id="lateRoman">
+              <catDesc>Late Roman Period, 132-324 CE</catDesc>
+            </category>
+            <category xml:id="byzantine">
+              <catDesc>Byzantine Period, 324-638 CE</catDesc>
+            </category>
+            <category xml:id="earlyIslamic">
+              <catDesc>Early Islamic Period, 638-1099 CE</catDesc>
+            </category>
+            <category xml:id="crusader">
+              <catDesc>Crusader Period, 1099-1291 CE</catDesc>
+            </category>
+            <category xml:id="lateIslamic">
+              <catDesc>Late Islamic Period, 1291-1516 CE</catDesc>
+            </category>
+            <category xml:id="ottoman">
+              <catDesc>Ottoman Period, 1516-1917 CE</catDesc>
+            </category>
+            <category xml:id="britishTerritorialAdministration">
+              <catDesc>British Territorial Administration Period, 1970-1920 CE</catDesc>
+            </category>
+            <category xml:id="britishMandate">
+              <catDesc>British Mandate Period, 1920-1948 CE</catDesc>
+            </category>
+            <category xml:id="modernState">
+              <catDesc>Modern State, 1948- CE</catDesc>
+            </category>
+          </taxonomy>
+        </classDecl>
+      </encodingDesc>
+    <profileDesc>
+      <abstract>
+        <p/>
+      </abstract>
+      <creation>This entry is taken from <title ref="urn:cts:greekLit:tlg2018.tlg003" type="uniform" level="m">Martyrs of Palestine</title>
+        <ref target="#bib128-1">11</ref> written by <persName ref="http://viaf.org/viaf/4929593" role="author">Eusebius of Caesarea</persName> in <origDate period="#lateRoman" notBefore="0315" notAfter="0316">
+          <date>315 – 316 CE</date>
+        </origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/678401">Caesarea</origPlace>.</creation>
+      <langUsage>
+        <language ident="grc">Ancient Greek</language>
+      </langUsage>
+      <textClass>
+        <classCode scheme="https://distributed-text-services.github.io/specifications/">
+          <idno xml:base="https://scaife-cts.perseus.org/api/cts?request=GetPassage&amp;urn=" type="URN">urn:cts:greekLit:tlg2018.tlg003:11</idno>
+        </classCode>
+      </textClass>
+    </profileDesc>
+    <revisionDesc status="draft">
+      <change who="https://caesarea-maritima.org/documentation/editors.xml#wpotter" when="2020-06-10-05:00">CREATED: testimonium</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <ab type="identifier">
+        <idno type="URI">https://caesarea-maritima.org/testimonia/128</idno>
+      </ab>
+      <desc type="abstract" xml:id="abstract128-1">
+        <quote><placeName xml:lang="grc">Καισάρειαν</placeName></quote>, <quote><placeName xml:lang="grc">Καισαρέων</placeName></quote>,  and <quote><placeName xml:lang="en">Cæsarea</placeName></quote> are place names attested in <persName ref="http://viaf.org/viaf/4929593" role="author">Eusebius of Caesarea</persName>'s <title ref="urn:cts:greekLit:tlg2018.tlg003" type="uniform" level="m">Martyrs of Palestine</title> 11. This testimonium was written circa <origDate period="#lateRoman" notBefore="0315" notAfter="0316">
+          <date>315 – 316 CE</date>
+        </origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/678401">Caesarea</origPlace>.</desc>
+      <ab type="edition" xml:lang="grc" xml:id="quote128-1" source="#bib128-1">Καιρὸς δῆτα καλεῖ τὸ μέγα καὶ περιβόητον ἀνιστορῆσαι θέατρον τῶν ἀμφὶ τὸ τριπόθητον ἔμοιγε ὄνομα Παμφίλου τελειωθέντων· δώδεκα δ ἦσαν οἱ πάντες, προφητικοῦ τινος ἢ καὶ ἀποστολικοῦ χαρίσματος καὶ ἀριθμοῦ κατηξιωμένοι. ὧν ὁ κορυφαῖος καὶ τῇ τοῦ κατὰ <placeName xml:lang="grc">Καισάρειαν</placeName> πρεσβείου τιμῇ κεκοσμημένος μόνος ἐτύγχανεν ὁ Πάμφιλος, ἀνὴρ καὶ παρ ὅλον αὐτοῦ τὸν βίον πάσῃ διαπρέψας ἀρετῇ, ἀποτάξει καὶ καταφρονήσει βίου, τῇ τῆς οὐσίας εἰς ἐνδεεῖς κοινωνίᾳ, κοσμικῶν ἐλπίδων ὀλιγωρίᾳ, φιλοσόφῳ πολιτείᾳ καὶ ἀσκήσει· μάλιστα δὲ παρὰ τοὺς καθ ἡμᾶς πάντας διέπρεπε τῇ περὶ τὰ θεῖα λόγια γνησιωτάτῃ σπουδῇ, ἀτρύτῳ τε περὶ ἃ προύθετο φιλοπονίᾳ , καὶ τῇ περὶ τοὺς προσήκοντας καὶ πάντας τοὺς αὐτῷ πλησιάζοντας ὠφελείᾳ· οὗ τὰ λοιπὰ τῆς ἀρετῆς κατορθώματα, μακροτέρας ὄντα διηγήσεως, ἐπ ἰδίας τῆς τοῦ κατ αὐτὸν ὑποθέσεως βίου γραφῆς ἐν τρισὶν ἤδη πρότερον ὑπομνήμασι παραδεδώκαμεν. ἀλλὰ γὰρ ἐπ ἐκεῖνα τοὺς φιλοτίμως καὶ ταῦτα εἰδέναι ἔχοντας ἀναπέμψαντες τὰ νῦν ἐχώμεθα τῆς κατὰ τοὺς μάρτυρας ἀκολουθίας. δεύτερος μετὰ Πάμφιλον ἐπὶ τὸν ἀγῶνα παρῄει ἱεροπρεπεῖ πολιᾷ τετιμημένος Οὐάλης, τῶν ἀπὸ Αἰλίας διάκονος, αὐτῇ προσόψει σεμνότατος πρεσβύτης, τῶν θείων γραφῶν εἰ καί τις ἄλλος ἐπιστήμων· τοσαύτας γέ τοι μνήμας αὐτῶν ἐνεστέρνιστο ὡς μὴ ἐνδεῖν τῆς ἀπὸ γραμμάτων ἐντεύξεως, τῆς εἴ ποτε λάβοι γραφῆς οἵασδ οὖν ἀπομνημονεῦσαι διεξόδους. τρίτος ὁ θερμουργότατος καὶ τῷ πνεύματι ζέων ἀπὸ τῆς Ἰαμνιτῶν πόλεως ἐν αὐτοῖς ἐγνωv ρίζετο Παῦλος, πρὸ τοῦ μαρτυρίου διὰ καυτήρων ὑπομονῆς τὸν τῆς ὁμολογίας διαθλήσας ἀγῶνα. τούτοις ἐπὶ τῆς εἱρκτῆς ἐτῶν δυεῖν ὅλων χρόνον κατατρίψασιν ὑπόθεσις τοῦ μαρτυρίου γίνεται Αἰγυπτίων γυπτίων αὖθις ἀδελφῶν ἔφοδος, τῶν καὶ σὺν αὐτοῖς τελειωθέντων. τοὺς κατὰ Κιλικίαν οὗτοι μέχρι τῶν αὐτόθι μετάλλων ὁμολογητὰς προπέμψαντες ἐπαλινόστουν ἐπὶ τὰ οἰκεῖα· ὁμοίως δῆτα καὶ αὐτοὶ πρὸς αὐταῖς εἰσόδοις τῶν κατὰ <placeName xml:lang="grc">Καισάρειαν</placeName> πυλῶν, τίνες τε εἶεν καὶ ὁπόθεν ἀφικνούμενοι πρὸς τῶν φυλάκων βάρβαροι δέ τινες ὑπῆρχον οὗτοι τὸν τρόπον) ἀνερωτηθέντες, καὶ μηδὲν τῆς ἀληθείας ἀποκρυψάμενοι, οἷα κακοῦργοι ἐπ’ αὐτοφώρῳ λη φθέντες συνείχοντο· πέντε δ’ ἦσαν οὗτοι τὸν. οἱ καὶ προσαχθέντες τῷ τυράννῳ, κἀπὶ τούτου παρρησιασάμενοι, αὐτίκα μὲν καθείργνυνται δεσμωτηρίῳ· τῇ δ’ ἐξῆς Περιτίου μηνὸς ἡμέρᾳ ἑκκαιδεκάτῃ Μαρτίου κατὰ Ῥωμαίους ἡ πρὸ δεκατεσσάρων Καλανδῶν) ἐκ προστάγματος τούτους δὴ αὐτοὺς ἅμα τοῖς ἀμφὶ τὸν Πάμφιλον δεδηλωμένοις τῷ δικαστῇ προσάγουσιν. ὃς καὶ πρῶτον τῆς τῶν Αἰγυπτίων ἀκαταμαχήτου ἐνστάσεως παντοίοις βασάνων εἴδεσι, μηχανῶν τε ξένων καὶ ποικίλων ἐπινοίαις πεῖραν λαμβάνει. τὸν μὲν προήγορον ἁπάντων τούτοις ἐγγυμνάσας τοῖς ἄθλοις τίς εἴη πρῶτον ἠρώτα, εἶτ’ ἀντὶ τοῦ κυρίου ὀνόματος προφητικόν τι ἐπακούσας — τοῦτο δὲ πρὸς αὐτῶν ἐγίνετο, ἀντὶ τῶν πατρόθεν αὐτοῖς ἐπιπεφημισμένων εἰδῶ λικῶν ὄντων, εἰ τύχοι, μετατεθεικότων ἑαυτοῖς τὰς προσηγορίας· Ἠλίαν γοῦν καὶ Ἱερεμίαν καὶ Ἠσαίαν τε καὶ Σαμουὴλ καὶ Δανιὴλ ἤκουες ἂν αὐτῶν ἐπιγραφομένων, καὶ τὸν ἐν κρυπτῷ Ἰουδαῖον γνήσιόν τε καὶ εἰλικρινῶς Ἰσραὴλ τοῦ θεοῦ οὐ μόνον ἔργοις, ἀλλὰ φωναῖς κυρίως ἐκφερομέναις ἐπιδεικνυμένων — τοιοῦτόν τι οὑν πρὸς τοῦ μάρτυρος ὄνομα ἐπακούσας ὁ Φιρμιλλιανὸς, οὐ μὴν ἐπιστήσας τῇ τοῦ ῥήματος δυνάμει, δεύτερον ἥτις αὐτοῦ πατρὶς γένοιτο ἠρώτα. ὁ δὲ συνῳδὸν τῇ προτέρᾳ δευτέραν ἀφίησι φωνὴν, Ἱερουσαλὴμ εἶναι λέγων τὴν ἑαυτοῦ πατρίδα, ἐκείνην δῆτα νοῶν περὶ ἧς εἴρηται τῷ Παύλῳ ‟ἡ δὲ ἄνω Ἱερουσαλὴμ ἐλευθέρα ἐστὶν, ἥτις ἐστὶν μήτηρ ἡμῶν.” καὶ “προσεληλύθατε Σιῶν ὄρει, καὶ πόλει θεοῦ ζῶντος, Ἱερουσαλὴμ ἐπουρανίῳ.” καὶ ὁ μὲν ταύτην ἐνόει, ὁ δ’ ἐπὶ χθόνα καὶ χαμαὶ ῥίψας τὴν διάνοιαν, ἥτις εἴη αὕτη καὶ ποῖ γῆς κειμένη, ἀκριβῶς ἐπολυπραγμόνει, εἶτα βασάνους ἐπῆγεν, ὡς ἂν τἀληθὲς ὁμολογοίη· ὁ δὲ στρεβλούμενος κατόπιν τὼ χεῖρε, καὶ τοῖν ποδοῖν μαγγάνοις τισὶ ξένοις διακλώμενος, τἀληθὲς εἰπεῖν ἀπισχυρίζετο. εἶτα πάλιν πολλάκις ἐρομένου τίς εἴη καὶ ποῖ κειμένη ἣν δὴ φράζει πόλιν, μόνων εἶναι τῶν θεοσεβῶν ταύτην ἔλεγε πατρίδα· μὴ γὰρ ἑτέροις ἢ τούτοις μόνοις αὐτῆς μετεῖναι, κεῖσθαι δὲ πρὸς αὐταῖς ἀνατολαῖς καὶ πρὸς ἀνίσχοντι ἡλίῳ. ὁ μὲν πάλιν διὰ τούτων κατὰ τὸν ἴδιον νοῦν ἐφιλοσόφει, μηδαμῶς τῶν ἐν κύκλῳ βασάνοις αὐτὸν αἰκιζομένων ἐπιστροφὴν ποιούμενος, ἄσαρκος δ’ ὥσπερ καὶ ἀσώματος οὐδ’ ἐπαίειν δοκῶν τῶν ἀλγηδόνων· ὁ δ’ ἀπορούμενος ἐσφάδαζεν, ἐχθρὰν καὶ Ῥωμαίοις πολεμίαν πάντως που συστήσεσθαι πόλιν Χριστιανοὺς οἰόμενος, πολύς τε ἦν ταύτην ἀνερευνῶν, καὶ τὴν δηλωθεῖσαν χώραν κατ’ ἀνατολὰς [*] ἐξετάζων. ὡς δ’ ἐπὶ πλέον μάστιξι τὸν νεανίαν καταξήνας παντοίαις τε τιμωρησάμενος βασάνοις ἀπαράλλακτον τὴν ἔνστασιν τῶν πρότερον αὐτῷ ῥηθέντων ἐγίνωσκε, τὴν ἐπὶ θανάτω κατ’ αὐτοῦ κεφαλικὴν ἐκφέρει ψῆφον. τοσαύτην μὲν οὖν τὰ κατὰ τοῦτον δραματουργίαν εἰλήχει. καὶ τοὺς λοιποὺς δὲ τοῖς παραπλησίοις ἄθλοις ἐγγυμνάσας τὸν ὅμοιον ἀπαλλάττει τρόπον. εἶτ’ ἀποκαμὼν, διαγνούς τε εἰς μάτην τιμωρεῖσθαι τοὺς ἄνδρας, ἐπιθυμίας κόρον λαβὼν ἐπὶ τοὺς ἀμφὶ τὸν Πάμφιλον μέτεισιν, ἀναδιδαχθείς τε ὡς ἤδη καὶ πρότερον διὰ βασάνων ἀμετάθετον ἐνεδείξαντο τὴν ὑπὲρ τῆς πίστεως προθυμίαν, ἀνερωτήσας εἰ ἄρα εἰσέτι κἂν νῦν πειθαρχοῖεν, δεξάμενός τε αὐτὸ μόνον παρ’ ἑνὸς ἑκάστου τὴν τελευταίαν αὐτῶν τῆς κατὰ τὸ μαρτύριον ὁμολογίας φωνὴν, τὴν αὐτὴν τοῖς προτέροις ἐπάγει τιμωρίαν. τούτων ἐπὶ πέρας ἀχθέντων μειράκιον τῆς οἰκετικῆς ὑπάρχον τοῦ Παμφίλου θεραπείας, οἶα γνησίᾳ ἀνατροφῇ καὶ παιδείᾳ τοῦ τηλικούτου συνησκημένον ἀνδρὸς, ὡς ἔγνω τὴν κατὰ τοῦ δεσπότου ψῆφον, ἀπὸ μέσης τῆς πληθύος ἀναβοᾷ, γῇ τὰ σώματα παραδοθῆναι ἀξιῶν. ὁ δ’ οὐκ ἄνθρωπος, ἀλλὰ θὴρ καὶ εἴ τι θηρὸς ἀγριώτερον, δ μήτε τῷ τῆς ἡλικίας ἀπονείμας νέῳ συγγνώμην, αὐτὸ μόνον ὡς ἐρωτήσας ὁμολογοῦντα Χριστιανὸν ἔμαθεν, ὥσπερ ὑπό τινος τρωθεὶς βέλους, οἰδήσας τὸν θυμὸν, ὅλῃ δυνάμει τοῖς βασανισταῖς χρῆσθαι κατ’ αὐτοῦ προστάττει. ὡς δ’ ἐπικελευομένου θύειν ἀνανεύοντα ἐώρα, οὐκέθ’ ὡς σάρκας ἀνθρώπου, ἀλλ’ ἤ λίθους ἢ ξύλα ἥ τι τῶν ἄλλων ἀψύχων, ἄχρις αὐτῶν ὀστέων καὶ τῶν ἐν βάθει καὶ ἐν μυχοῖς σπλάγχνων παραμόνως καταξαίνεσθαι κελεύει.εἰς μακρὸν δὲ τούτου γινομένου μάτην ἐγχειρεῖν διέγνω, ἀφώνου καὶ ἀνεπαισθήτου, μικροῦ δὲ δεῖν καὶ πάντη ἀψύχου τοῦ σώματος αὐτῷ ταῖς βασάνοις κατατριβομένου. παράμονον δὲ τὸ ἀνηλεὲς καὶ ἀπάνθρωπον κεκτημένος, εὐθὺς ὡς εἶχε μακρῷ πυρὶ παραδοθῆναι αὐτὸν ἀποφαίνεται. καὶ οὗτος μὲν, πρὸ τῆς τοῦ κατὰ σάρκα δεσπότου τελειώσεως, ὕστατος ἐπὶ τὸν ἀγῶνα παρελθὼν, τὴν ἀπὸ τοῦ σώματος ἀπαλλαγὴν προύλαβεν, ἔτι διαμελλόντων τῶν περὶ τοὺς προτέρους ἐσπουδακότων. ἦν δὲ ἄρα τὸν Πορφύριον ἰδεῖν, ἱερονίκου διαθέσει πάμ μαχον νενικηκοτος, κεκονισμένον μὲν τὸ σῶμα, φαιδρὸν δὲ τὸ πρόσωπον, θαρσαλέῳ φρονήματι καὶ γαύρῳ μετὰ τοσαῦτα τὴν ἐπὶ θανάτῳ βαδίζοντα, καὶ θείου πνεύματος ὡς ἀληθῶς ἔμπλεων, αὐτοῦ τε φιλοσόφῳ σχήματι μόνῳ τῷ περὶ αὐτὸν ἀναβολαίῳ ἐξωμίδος τρόπον ἠμφιεσμένον, νηφαλέῳ τε λογισμῷ περὶ ὧν ἐβούλετο τοῖς γνωρίμοις ἐντελλόμενον καὶ διανεύοντα, ἐπ’ αὐτῷ τε ἰκρίῳ τὸ πρόσωπον ἔτι φαιδρὸν διατηροῦντα, ἀλλὰ καὶ ἁφθείσης ἔξω ἀπὸ μακροῦ ἀποστήματος κύκλῳ περὶ αὐτὸν τῆς πυρᾶς, ἐνθένδε κἀκεῖθεν ἀφαρπάζοντα τῷ στόματι τὴν φλόγα, γενναιότατά τε εἰς ἐσχάτην ἀναπνοὴν ἐγκαρτεροῦντα τῇ σιωπῇ, μετὰ μίαν τε, ἣν ἅμα καθαψαμένης αὐτοῦ τῆς φλογὸς ἀπέρρηξε, φωνὴν, τὸν υἱὸν τοῦ θεοῦ Ἰησοῦν βοηθὸν ἐπιβοώμενος. τοιοῦτος καὶ ὁ Πορφυρίου ἆθλος. τῆς δὲ κατ’ αὐτὸν τελειώσεως ἄγγελος τῷ Παμφίλῳ γενόμενος Σέλευκος, τῶν ἀπὸ στρατείας τις ὁμολογητὴς, οἶα τηλικαύτης ἀγγελίας διάκονος, τοῦ σὺν αὐτοῖς παραχρῆμα κλήρου καταξιοῦται. αὐτίκα γάρ τοι αὐτὸν διαγγείλαντα τὸ τοῦ Πορφυρίου τέλος, τῶν τε μαρτύρων ἕνα δή τινα φιλήματι προσειπόντα, ἐπιλαβόμενοι στρατιῶταί τινες ἄγουσιν ἐπὶ τὸν ἡγεμόνα. ὁ δὲ ὥσπερ ἐπισπέρχων αὐτὸν τῷ προτέρῳ συναπόδημον τῆς εἰς οὐρανοὺς γενέσθαι πορείας, αὐτίκα κεφαλικῇ τιμωρίᾳ κολασθῆναι προστάττει. οὗτος ἦν μὲν ἀπὸ τῆς Καππαδοκῶν γῆς, τῆς δ’ ἐν στρατείαις ἐπιλέκτου νεολαίας, καὶ τῶν ἐν Ῥωμαϊκοῖς ἀξιώμασιν οὐ μικρᾶς τιμῆς ἐπειλημμένος· ἡλικίᾳ τε γὰρ καὶ ῥώμῃ σώματος, μεγέθει τε καὶ ἰσχύι· παρὰ πλεῖστον ὅσον τοὺς συστρατιώτας ἐπλεονέκτει, ὡς καὶ τὴν πρόσοψιν αὐτῷ περιβόητον τοῖς πᾶσιν εἶναι, καὶ τὸ πᾶν εἶδος ἀξιάγαστον, μεγέθους ἕνεκα καὶ εὐμορφίας. κατ’ ἀρχὰς μὲν οὖν τοῦ διωγμοῦ διὰ μαστίγων ὑπομονῆς τοῖς κατὰ τὴν ὁμολογίαν διαπρέψας ἀγῶσι, μετὰ δὲ τὴν τῆς στρατείας ἀπαλλαγὴν ζηλωτὴν ἑαυτὸν καταστήσας τῶν τῆς θεοσεβείας ἀσκητῶν, ὀρφανῶν ἐρήμων καὶ χηρῶν ἀπεριστάτων, τῶν τε ἐν πενίαις καὶ ἀσθενείαις ἀπερριμμένων ἐπίσκοπος ὥσπερ καὶ ἐπίκουρος, πατρὸς καὶ κηδεμόνος δίκην, ἀναπέφανται, ὅθεν δὴ εἰκότ’ ὡς πρὸς τοῦ τοῖς τοιοῖσδε μᾶλλον τῶν διὰ καπνοῦ καὶ αἵματος θυσιῶν χαίροντος θεοῦ τῆς κατὰ τὸ μαρτύριον παραδόξου κλήσεως ἠξιώθη. δέκατος οὗτος ἀθλητὴς ἐπὶ τοῖς δεδηλωμένοις ἐν μιᾷ καὶ τῇ αὐτῇ τετελείωτο ἡμέρᾳ, καθ’ ἣν, ὡς ἔοικε, μεγίστης τῷ Παμφίλου μαρτυρίῳ ἐπαξίως τοῦ ἀνδρὸς διανοιχθείσης πύλης εὐμαρὴς ἅμ’ αὐτῷ καὶ ἑτέροις ἡ πάροδος τῆς εἰς τὴν βασιλείαν τῶν οὐρανῶν εἰσόδου γεγένηται. κατ’ ἴχνη δῆτα τῷ Σελεύκῳ Θεόδουλος, σεμνός τις καὶ θεοσεβὴς πρεσβύτης, τῆς ἡγεμονικῆς τυγχάνων οἰκετίας, τετιμημένος τε παρὰ τῷ Φιρμιλλιιανῶ πλέον τῶν κατὰ τὸν οἶκον ἁπάντων, τοῦτο μὲν τῆς ἡλικίας ἕνεκεν, καὶ τῷ τριγενείας πατέρα καθεστάναι, τοῦτο δὲ δι’ ἣν ἔσωζε περὶ αὐτοὺς εὔνοιαν καὶ πιστοτάτην συνείδησιν, τὸ παραπλήσιον τῷ Σελεύκῳ διαπραξάμενος, προσαχθεὶς τῷ δεσπότῃ καὶ μᾶλλον αὐτὸν τῶν πρότερον ὀξύνας, ταὐτὸ τοῦ σωτηρίου μαρτύριον πάθους σταυρῷ παραδοθεὶς κατεδέξατο. ἐπὶ τούτοις ἑνὸς ἔτι λείποντος, ὃ τὸν δωδέκατον ἀποπλήσοι τοῖς δηλουμένοις μάρτυσι ἀριθμὸν, Ἰουλιανὸς παρῆν τοῦτον ἀποπληρώσων ἐξ ἀποδημίας γέ τοι ἀφικόμενος αὐτίκα, καὶ μηδ’ εἰσβαλών πω τῇ πόλει, εὐθὺς ὡς εἶχεν ἀπὸ τῆς ὁδοῦ μαθὼν καὶ ὁρμήσας ἐπὶ τὴν μαρτύρων θέαν, ὡς ἐπὶ γῆς χαμαὶ τὰ τῶν ἁγίων εἶδε σκηνώματα, χαρᾶς ἔμπλεως γεγονὼς, ἑκάστῳ περιπλακεὶς, τοὺς πάντας ἠσπάζετο. τοῦτο ποιοῦντα συλλαβόντες αὖθις οἶ τῶν φόνων διάκονοι προσάγουσι τῷ Φιρμιλλιαῷ. ἀκόλουθα δ’ αὑτῷ ἐπιτελῶν μακρῷ καὶ τοῦτον πυρὶ παραδίδωσιν. οὕτω δῆτα καὶ Ἰουλιανὸς σκιρτῶν καὶ ὑπεραλλόμενος, μεγάλῃ τε φωνῇ τῷ τηλικούτων αὐτὸν ἀξιώσαντι κυρίῳ ὑπερευχαριστῶν, τοῦ τῶν μαρτύρων κατηξιώθη στεφάνου. ἦν δὲ οὗτος τὸ μὲν κατὰ σάρκα γένος Καππαδοκῶν, τὸν δὲ τρόπον εὐλαβέστατος καὶ πιστότατος καὶ γνησιώτατος, σπουδαῖός τε τὰ ἄλλα πάντα, καὶ πνέων αὐτοῦ ἁγίου πνεύματος. τοιοῦτο τῆς συνοδίας τὸ στῖφος τῶν ἅμα Παμφίλῳ συνεισελθεῖν ἐπὶ τὸ μαρτύριον ἀξιωθέντων. τούτων ἐπὶ τέσσαρας ἡμέρας τοσαύτας τε νύκτας ἐκ προστάξεως τοῦ δυσσεβοῦς ἡγουμένου τὰ ἱερὰ καὶ ὄντως ἅγια σώματα εἰς βορὰν τοῖς σαρκοβόροις ἐτηρεῖτο. ὡς δ’ οὐδὲν αὐτοῖς παραδόξως, οὐ θηρίον, οὐ πτηνὸν, οὐ κύων προσεπέλαζεν, αὖθις ἐξ οἰκονομίας τῆς τοῦ θεοῦ προνοίας ἀβλαβῆ ληφθέντα, τῆς τε προσηκούσης κηδείας λαχόντα, τῇ συνήθει παρεδόθη ταφῇ. ἔτι δὲ τῆς κατὰ τούτους κινήσεως ἀνὰ στόμα τοῖς πᾶσι λαλουμένης Ἀδριανὸς καὶ Εὔβουλος, ἀπὸ Μαγγαναίας οὕτω καλουμένης χώρας ὡς τοὺς λοιποὺς ὸμολογητὰς εἰς τὴν <placeName xml:lang="grc">Καισάρειαν</placeName> ἀφικόμενοι, πρὸς τῇ πύλῃ καὶ αὐτοὶ δι’ ἣν ἐληλύθασιν ἀνεκρίνοντο αἰτίαν· εἶτα ὁμολογήσαντες τἀληθὲς τῷ Φιρμιλλιανῷ προσάγονται. ὁ δ’ ὡς εἶχε, πάλιν μηδὲν ὑπερθέμενος, μετὰ πλείστας βασάνους ἅς κατὰ τῶν πλευρῶν αὐτοῖς ἐπιτέθεικε, θηρίων αὐτοὺς βορᾷ κατακρίνει. δυεῖν δὴ οὖν μεταξὺ διελθουσῶν ἡμερῶν ὁ μὲν Ἀδριανὸς Δύστρου πέμπτῃ μηνὸς, πρὸ τριῶν Νώνων Μαρτίων, γενεθλίων τῆς κατὰ <placeName xml:lang="grc">Καισαρέων</placeName> νομιζομένης Τύχης ἡμέρᾳ, λέοντι παραβληθεὶς καὶ μετὰ τοῦτον ξίφει κατασφαγεὶς ἐτελειώθη, ὁ δὲ Εὔβουλος μεθ’ ἑτέραν μέσην, Νώναις αὐταῖς Μαρτίαις, ἣ γένοιτ’ ἂν ἑβδόμη Δύστρου, πολλὰ λιπαρήσαντος αὐτὸν τοῦ δικαστοῦ, ὡς ἂν θύσας τῆς νομιζομένης παρ’ αὐτῶν ἐλευθερίας τύχοι, τῆς προσκαίρου ζωῆς τὸν ὑπὲρ εὐσεβείας εὐκλεῆ προτιμήσας θάνατον, μετὰ τοὺς θῆρας ὁμοίως τῷ προτέρῳ θῦμα γενόμενος, ὕστατος τῶν ἐπὶ τῆς Καισαρείας μαρτύρων τοὺς ἄθλους ἐπεσφραγίσατο. μνημονεῦσαι δ’ ἔτι ἄξιον ἐνταῦθα τοῦ λόγου ὡς ἄρα οὐκ εἰς μακρὸν τῆς οὐρανίου προνοίας τοὺς δυσσεβεῖς ἄρχοντας αὐτοῖς τυράννοις μετελθούσης. ὁ γὰρ τὰ τοσαῦτα κατὰ τῶν τοῦ Χριστοῦ μαρτύρων παροινήσας, αὐτὸς δὴ ὁ Φιρμιλλιανὸς, μετὰ τῶν ἄλλων ἐσχάτην ὑπομείνας τιμωρίαν ξίφει τὴν ζωὴν καταστρέφει. καὶ τὰ μὲν κατὰ <placeName xml:lang="grc">Καισάρειαν</placeName> ἐφ’ ὅλοις τοῖς τοῦ διωγμοῦ χρόνοις ἐπιτελεσθέντα μαρτύρια τοιαῦτα</ab>
+      <ab type="translation" xml:lang="en" xml:id="quote128-2" source="#bib128-2">It is time to describe the great and celebrated spectacle of Pamphilus, a man thrice dear to me, and of those who finished their course with him. They were twelve in all; being counted worthy of apostolic grace and number. Of these the leader and the only one honored with the position of presbyter at <placeName xml:lang="en">Cæsarea</placeName>, was Pamphilus; a man who through his entire life was celebrated for every virtue, for renouncing and despising the world, for sharing his possessions with the needy, for contempt of earthly hopes, and for philosophic deportment and exercise. He especially excelled all in our time in most sincere devotion to the Divine Scriptures and indefatigable industry in whatever he undertook, and in his helpfulness to his relatives and associates. In a separate treatise on his life, consisting of three books, we have already described the excellence of his virtue. Referring to this work those who delight in such things and desire to know them, let us now consider the martyrs in order. Second after Pamphilus, Vales, who was honored for his venerable gray hair, entered the contest. He was a deacon from Ælia, an old man of gravest appearance, and versed in the Divine Scriptures, if any one ever was. He had so laid up the memory of them in his heart that he did not need to look at the books if he undertook to repeat any passage of Scripture. The third was Paul from the city of Jamna, who was known among them as most zealous and fervent in spirit. Previous to his martyrdom, he had endured the conflict of confession by cauterization. After these persons had continued in prison for two entire years, the occasion of their martyrdom was a second arrival of Egyptian brethren who suffered with them. They had accompanied the confessors in Cilicia to the mines there and were returning to their homes. At the entrance of the gates of <placeName xml:lang="en">Cæsarea</placeName>, the guards, who were men of barbarous character, questioned them as to who they were and whence they came. They kept back nothing of the truth, and were seized as malefactors taken in the very act. They were five in number. When brought before the tyrant, being very bold in his presence, they were immediately thrown into prison. On the next day, which was the nineteenth of the month Peritius, according to the Roman reckoning the fourteenth before the Kalends of March, they were brought, according to command, before the judge, with Pamphilus and his associates whom we have mentioned. First, by all kinds of torture, through the invention of strange and various machines, he tested the invincible constancy of the Egyptians. Having practised these cruelties upon the leader of all, he asked him first who he was. He heard in reply the name of some prophet instead of his proper name. For it was their custom, in place of the names of idols given them by their fathers, if they had such, to take other names; so that you would hear them calling themselves Elijah or Jeremiah or Isaiah or Samuel or Daniel, thus showing themselves inwardly true Jews, and the genuine Israel of God, not only in deeds, but in the names which they bore. When Firmilianus had heard some such name from the martyr, and did not understand the force of the word, he asked next the name of his country. But he gave a second answer similar to the former, saying that Jerusalem was his country, meaning that of which Paul says, “Jerusalem which is above is free, which is our mother,” and, “Ye are come unto Mount Sion, and unto the city of the living God, the heavenly Jerusalem.” This was what he meant; but the judge thinking only of the earth, sought diligently to discover what that city was, and in what part of the world it was situated. And therefore he applied tortures that the truth might be acknowledged. But the man, with his hands twisted behind his back, and his feet crushed by strange machines, asserted firmly that he had spoken the truth. And being questioned again repeatedly what and where the city was of which he spoke, he said that it was the country of the pious alone, for no others should have a place in it, and that it lay toward the far East and the rising sun. He philosophized about these things according to his own understanding, and was in nowise turned from them by the tortures with which he was afflicted on every side. And as if he were without flesh or body he seemed insensible of his sufferings. But the judge being perplexed, was impatient, thinking that the Christians were about to establish a city somewhere, inimical and hostile to the Romans. And he inquired much about this, and investigated where that country toward the East was located. But when he had for a long time lacerated the young man with scourgings, and punished him with all sorts of torments, he perceived that his persistence in what he had said could not be changed, and passed against him sentence of death. Such a scene was exhibited by what was done to this man. And having inflicted similar tortures on the others, he sent them away in the same manner. Then being wearied and perceiving that he punished the men in vain, having satiated his desire, he proceeded against Pamphilus and his companions. And having learned that already under former tortures they had manifested an unchangeable zeal for the faith, he asked them if they would now obey. And receiving from every one of them only this one answer, as their last word of confession in martyrdom, he inflicted on them punishment similar to the others. When this had been done, a young man, one of the household servants of Pamphilus, who had been educated in the noble life and instruction of such a man, learning the sentence passed upon his master, cried out from the midst of the crowd asking that their bodies might be buried. Thereupon the judge, not a man, but a wild beast, or if anything more savage than a wild beast, giving no consideration to the young man’s age, asked him only the same question. When he learned that he confessed himself a Christian, as if he had been wounded by a dart, swelling with rage, he ordered the tormentors to use their utmost power against him. And when he saw that he refused to sacrifice as commanded, he ordered them to scrape him continually to his very bones and to the inmost recesses of his bowels, not as if he were human flesh but as if he were stones or wood or any lifeless thing. But after long persistence he saw that this was in vain, as the man was speechless and insensible and almost lifeless, his body being worn out by the tortures. But being inflexibly merciless and inhuman, he ordered him to be committed straightway, as he was, to a slow fire. And before the death of his earthly master, though he had entered later on the conflict, he received release from the body, while those who had been zealous about the others were yet delaying. One could then see Porphyry,like one who had come off victorious in every conflict, his body covered with dust, but his countenance cheerful, after such sufferings, with courageous and exulting mind, advancing to death. And as if truly filled with the Divine Spirit, covered only with his philosophic robe thrown about him as a cloak, soberly and intelligently he directed his friends as to what he wished, and beckoned to them, preserving still a cheerful countenance even at the stake. But when the fire was kindled at some distance around him in a circle, having inhaled the flame into his mouth, he continued most nobly in silence from that time till his death, after the single word which he uttered when the flame first touched him, and he cried out for the help of Jesus the Son of God. Such was the contest of Porphyry. His death was reported to Pamphilus by a messenger, Seleucus. He was one of the confessors from the army. As the bearer of such a message, he was forthwith deemed worthy of a similar lot. For as soon as he related the death of Porphyry, and had saluted one of the martyrs with a kiss, some of the soldiers seized him and led him to the governor. And he, as if he would hasten him on to be a companion of the former on the way to heaven, commanded that he be put to death immediately. This man was from Cappadocia, and belonged to the select band of soldiers, and had obtained no small honor in those things which are esteemed among the Romans. For in stature and bodily strength, and size and vigor, he far excelled his fellow-soldiers, so that his appearance was matter of common talk, and his whole form was admired on account of its size and symmetrical proportions. At the beginning of the persecution he was prominent in the conflicts of confession, through his patience under scourging. After he left the army he set himself to imitate zealously the religious ascetics, and as if he were their father and guardian he showed himself a bishop and patron of destitute orphans and defenceless widows and of those who were distressed with penury or sickness. It is likely that on this account he was deemed worthy of an extraordinary call to martyrdom by God, who rejoices in such things more than in the smoke and blood of sacrifices. He was the tenth athlete among those whom we have mentioned as meeting their end on one and the same day. On this day, as was fitting, the chief gate was opened, and a ready way of entrance into the kingdom of heaven was given to the martyr Pamphilus and to the others with him. In the footsteps of Seleucus came Theodulus, a grave and pious old man, who belonged to the governor’s household, and had been honored by Firmilianus himself more than all the others in his house on account of his age, and because he was a father of the third generation, and also on account of the kindness and most faithful conscientiousness which he had manifested toward him. As he pursued the course of Seleucus when brought before his master, the latter was more angry at him than at those who had preceded him, and condemned him to endure the martyrdom of the Saviour on the cross. As there lacked yet one to fill up the number of the twelve martyrs of whom we have spoken, Julian came to complete it. He had just arrived from abroad, and had not yet entered the gate of the city, when having learned about the martyrs while still on the way, he rushed at once, just as he was, to see them. When he beheld the tabernacles of the saints prone on the ground, being filled with joy, he embraced and kissed them all. The ministers of slaughter straightway seized him as he was doing this and led him to Firmilianus. Acting as was his custom, he condemned him to a slow fire. Thereupon Julian, leaping and exulting, in a loud voice gave thanks to the Lord who had judged him worthy of such things, and was honored with the crown of martyrdom. He was a Cappadocian by birth, and in his manner of life he was most circumspect, faithful and sincere, zealous in all other respects, and animated by the Holy Spirit himself. Such was the company which was thought worthy to enter into martyrdom with Pamphilus. By the command of the impious governor their sacred and truly holy bodies were kept as food for the wild beasts for four days and as many nights. But since, strange to say, through the providential care of God, nothing approached them,—neither beast of prey, nor bird, nor dog,—they were taken up uninjured, and after suitable preparation were buried in the customary manner. When the report of what had been done to these men was spread in all directions, Adrianus and Eubulus, having come from the so-called country of Manganaea to <placeName xml:lang="en">Cæsarea</placeName>, to see the remaining confessors, were also asked at the gate the reason for their coming; and having acknowledged the truth, were brought to Firmilianus. But he, as was his custom, without delay inflicted many tortures in their sides, and condemned them to be devoured by wild beasts. After two days, on the fifth of the month Dystrus, the third before the Nones of March, which was regarded as the birthday of the tutelary divinity of <placeName xml:lang="en">Cæsarea</placeName>, Adrianus was thrown to a lion, and afterwards slain with the sword. But Eubulus, two days later, on the Nones of March, that is, on the seventh of the month Dystrus, when the judge had earnestly entreated him to enjoy by sacrificing that which was considered freedom among them, preferring a glorious death for religion to transitory life, was made like the other an offering to wild beasts, and as the last of the martyrs in <placeName xml:lang="en">Cæsarea</placeName>, sealed the list of athletes. It is proper also to relate here, how in a short time the heavenly Providence came upon the impious rulers, together with the tyrants themselves. For that very Firmilianus, who had thus abused the martyrs of Christ, after suffering with the others the severest punishment, was put to death by the sword. Such were the martyrdoms which took place at <placeName xml:lang="en">Cæsarea</placeName> during the entire period of the persecution.</ab>
+      <listBibl>
+        <bibl xml:id="bib128-1">
+          <ptr target="https://caesarea-maritima.org/bibl/HHVGPUU8"/>
+          <citedRange>11</citedRange>
+        </bibl>
+        <bibl xml:id="bib128-2">
+          <ptr target="https://caesarea-maritima.org/bibl/NANLZS57"/>
+          <citedRange>11</citedRange>
+        </bibl>
+      </listBibl>
+      <listBibl>
+        <bibl>
+          <ptr target="https://caesarea-maritima.org/bibl/G35HFK6A"/>
+          <citedRange>11</citedRange>
+        </bibl>
+        <bibl>
+          <ptr target="https://caesarea-maritima.org/bibl/BTVVYMAC"/>
+          <citedRange>11</citedRange>
+        </bibl>
+      </listBibl>
+    </body>
+  </text>
+</TEI>

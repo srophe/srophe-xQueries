@@ -1,0 +1,52 @@
+catId,catDesc,notBefore,notAfter,calendar,dateRangeLabel
+lowerPaleolithic,Lower Paleolithic,-999999,-119999,Gregorian,999999-119999 BCE
+upperAcheulean,Upper Acheulean,-498050,-148050,BP,498050-148050 BP
+acheulean,Acheulean  ,-298050,-148050,BP,298050-148050 BP
+middlePaleolithic,Middle Paleolithic,-119999,-44999,BP,119999-44999 BCE
+mousterian,Mousterian,-118050,-38050,Gregorian,118050-38050 BCE
+upperPaleolithic,Upper Paleolithic,-44999,-17999,Gregorian,44999-17999 BCE
+kebaran,Kebaran ,-18050,-13050,BP,18050-13050 BP
+epipaleolithic,Epipaleolithic,-17999,-8299,Gregorian,17999-8299 BCE
+geometricKebaran,Geometric Kebaran,-12499,-10899,Gregorian,12499-10899 BCE
+natufianCulture,Natufian culture,-10799,-8499,Gregorian,10799-8499 BCE
+pre-potteryNeolithic,Pre-Pottery Neolithic,-8299,-5499,Gregorian,8299-5499 BCE
+potteryNeolithic,Pottery Neolithic,-5499,-4499,Gregorian,5499-4499 BCE
+chalcolithic,Chalcolithic,-4499,-3299,Gregorian,4499-3299 BCE
+earlyBronzeAge,Early Bronze Age ,-3299,-2199,Gregorian,3299-2199 BCE
+bronzeAge,Bronze Age,-3299,-1199,Gregorian,3299-1199 BCE
+earlyBronzeAgeIa-b,Early Bronze Age IA-B,-3299,-2999,Gregorian,3299-2999 BCE
+earlyBronzeAgeIi,Early Bronze Age II,-2999,-2699,Gregorian,2999-2699 BCE
+earlyBronzeAgeIii,Early Bronze Age III,-2699,-2199,Gregorian,2699-2199 BCE
+middleBronzeAge,Middle Bronze Age,-2199,-1549,Gregorian,2199-1549 BCE
+middleBronzeAgeI,Middle Bronze Age I,-2199,-1999,Gregorian,2199-1999 BCE
+middleBronzeAgeIia,Middle Bronze Age IIA,-1999,-1749,Gregorian,1999-1749 BCE
+middleBronzeAgeIib,Middle Bronze Age IIB,-1749,-1549,Gregorian,1749-1549 BCE
+lateBronzeAge,Late Bronze Age,-1599,-1200,Gregorian,1599-1200 BCE
+lateBronzeAgeI,Late Bronze Age I,-1549,-1399,Gregorian,1549-1399 BCE
+lateBronzeAgeIia,Late Bronze Age IIA,-1399,-1299,Gregorian,1399-1299 BCE
+lateBronzeAgeIib,Late Bronze Age IIB,-1299,-1199,Gregorian,1299-1199 BCE
+ironAge,Iron Age,-1199,-0585,Gregorian,1199-585 BCE
+ironAgeIa,Iron Age IA,-1199,-1149,Gregorian,1199-1149 BCE
+ironAgeIb,Iron Age IB,-1149,-0999,Gregorian,1149-999 BCE
+ironAgeIia,Iron Age IIA,-0999,-0899,Gregorian,999-899 BCE
+ironAgeIib,Iron Age IIB,-0899,-0699,Gregorian,899-699 BCE
+ironIic,Iron IIC,-0799,-0731,Gregorian,799-731 BCE
+ironAgeIic,Iron Age IIC,-0699,-0585,Gregorian,699-585 BCE
+babylonianAndPersian,Babylonian and Persian Periods,-0585,-0331,Gregorian,585-331 BCE
+earlyHellenistic,Early Hellenistic period,-0331,-0166,Gregorian,331-166 BCE
+hellenistic,Hellenistic Period,-0331,-0036,Gregorian,331-36 BCE
+earlyNabatean,Early Nabatean Period,-0331,-0036,Gregorian,331-36 BCE
+nabateanKingdom,Nabatean kingdom,-0167,0106,Gregorian,167 BCE-106 CE
+lateHellenistic,Late Hellenistic period,-0166,-0036,Gregorian,166-36 BCE
+earlyRoman,Early Roman period,-0036,0132,Gregorian,36 BCE-132 CE
+herodian,Herodian period,-0036,0070,Gregorian,36 BCE-70 CE
+middleNabatean,Middle Nabatean Period,-0024,0050,Gregorian,24 BCE-50 CE
+lateRoman,Late Roman period,0132,0324,Gregorian,132-324 CE
+byzantine,Byzantine period,0324,0638,Gregorian,324-638 CE
+earlyIslamic,Early Islamic Period,0638,1099,Gregorian,638-1099 CE
+crusader,Crusader period,1099,1291,Gregorian,1099-1291 CE
+lateIslamic,Late Islamic period,1291,1516,Gregorian,1291-1516 CE
+ottoman,Ottoman period,1516,1917,Gregorian,1516-1917 CE
+britishTerritorialAdministration,British Territorial Administration Period,1917,1920,Gregorian,1970-1920 CE
+britishMandate,British Mandate Period,1920,1948,Gregorian,1920-1948 CE
+modernState,Modern State,1948,,Gregorian,1948- CE

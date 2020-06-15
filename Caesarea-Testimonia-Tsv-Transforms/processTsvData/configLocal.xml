@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <inputFileUri>C:/Users/anoni/Documents/GitHub/miscellaneous-util-scripts/Caesarea-Testimonia-Tsv-Transforms/processTsvData/tsvInput-2020-06-10.csv</inputFileUri>
+  <delimiter xml:space="preserve">&#9;</delimiter>
+  <outputPath>C:/Users/anoni/Documents/GitHub/miscellaneous-util-scripts/Caesarea-Testimonia-Tsv-Transforms/processTsvOutput/2020-06-10/</outputPath>
+  <outputTo>file</outputTo>
+</configuration>
