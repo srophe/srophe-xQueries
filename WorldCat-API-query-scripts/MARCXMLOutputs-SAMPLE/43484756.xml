@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oclcterms="http://purl.org/oclc/terms/">
+    <leader>00000cam a2200000 a 4500</leader>
+    <controlfield tag="001">43484756</controlfield>
+    <controlfield tag="008">000216s1999    riuabe   b    000 0 eng c</controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">  2003270467</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1887829350</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781887829359</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Caesarea papers 2 :</subfield>
+      <subfield code="b">Herod's temple, the provincial governor's Praetorium and granaries, the later harbor, a gold coin hoard, and other studies /</subfield>
+      <subfield code="c">edited by K.G. Holum, A. Raban, and J. Patrich.</subfield>
+    </datafield>
+    <datafield ind1="3" ind2=" " tag="246">
+      <subfield code="a">Caesarea papers two</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Portsmouth, R.I. :</subfield>
+      <subfield code="b">Journal of Roman Archaeology,</subfield>
+      <subfield code="c">1999.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">440 pages :</subfield>
+      <subfield code="b">illustrations (some color), maps, plans ;</subfield>
+      <subfield code="c">29 cm.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="490">
+      <subfield code="a">Journal of Roman archaeology. Supplementary series,</subfield>
+      <subfield code="x">1063-4304 ;</subfield>
+      <subfield code="v">no. 35</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">"Part 1 ... contains field reports of the Combined Caesarea Expeditions (CCE) from 1993 to 1995"--Page 9.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Frontispiece, Introduction and Acknowledgements / K. G. Holium, A. Raban, I. Patrich -- Part 1: FIELD REPORTS -- 1.1 The Temple Platform and environs -- 1.11 The Temple Platform: progress report on the excavations / K. G. Holum -- 1.12 The south flank of the Temple Platform (area Z2, 1993-95 excavations) / F. H. Stanley, Jr. -- 1.13 A corpus of Islamic ceramics (area Z, 1987 season) / M. Niamir -- 1.2 The Praetorium and Warehouse Complex -- 1.21 The warehouse complex and governor's palace (areas KK, CC, NN, May 1993-December 1995) / J. Patrich, D. Reshef, D. Ben Yosef, S. Rotgaizer, S. Pinkas, Z. Bar-Or, H. Van-Dam, A. Moscu -- 1.22 Early Byzantine wall-paintings from Caesarea / T. Avner -- 1.23 Byzantine lead seals from the vicinity of the governor's palace and warehouses (areas CC and KK) / J. W. Nesbitt -- 1.24 The governor's palace and warehouse complex, west flank (areas KK7-9, CV, 1993-95 excavations) / C. M. Lehmann -- 1.3 Underwater excavations in the Outer Harbour -- 1.31 The underwater excavations, 1993-94 / A. Raban. E. G. Reinhardt, M. McGrath, N. Hodge -- 1.32 Pozzolana, lime, and single-mission barges (area K) / C. Brandon with S. Kemp and M. Grove -- 1.33 The lead ingots from the wreck site (area K8) / A. Raban -- 1.34 Stratigraphic excavation of Outer Harbour deposits: preliminary report (1994) / E. G. Reinhardt -- 1.4 Excavations in the Inner Harbour -- 1.41 Land excavations in the Inner Harbour (1993-94) / A. Raban, R. Toueg, S. Yankelevitz, Y. Arnon -- 1.42 Islamic and Crusader pottery (area I, 1993-94) / Y. D. Arnon -- 1.43 Foraminiferal analysis of three stratigraphic sections from the Inner Harbour / E. G. Reinhardt, R. T. Patterson -- 1.5 Evaluation of the Inner Harbour -- 1.51 Caesarea's Inner Harbour: the potential of the harbour sediments / B. Yule, A. J. Barham -- 1.52 The Arab and Crusader sequence (area 114) / P. Rowsome, B. Yule -- 1.53 Pottery from the sediments of the Inner Harbour (area 114) / R. Tomber -- 1.54 Glass from the sediments of the Inner Harbour (area 114) / R. Pollak -- Sedimentological report on samples from the Inner Harbour (area 114) / V. D. Williamson -- 1.55 Diatoms from the sediments of the Inner Harbour (area 114) / N. Cameron -- 1.56 Foraminifera from the sediments of the Inner Harbour (area 114) / E. G. Reinhardt -- 1.57 Macro-invertebrates from the sediments of the Inner Harbour (area 114) / A. Pipe -- 1.58 Plant remains from the sediments of the Inner Harbour (area 114) / J. Giorgi -- Part 2: SPECIALIST STUDIES -- 2.1 A further note on the coins of "Demetrias which is on the sea" / P. Lampinen -- 2.2 Straton's Tower and Demetrias again: one town or two? / R. R. Stieglitz -- Colliviaria at Caesarea / Y. Peleg -- 2.3 The gold hoard of 4th-c. solidi found in 1993 / P. Lampinen -- 2.4 Roman statuary used in Byzantine Caesarea / R. Gersht -- 2.5 Countermarked Byzantines folles and the identification of a new imperial family member / P. Lampinen -- 2.5 Faunal remains and butchery practices from Byzantine and Islamic contexts (1993-94 seasons) / C.R. Cope -- 2.6 The petrography of hydraulic and other building materials in Caesarea / A. Tsatskin -- 2.7 Radiocarbon dates from samples taken in the harbors / D. Segal, I. Carmi -- 2.8 Morbidity and mortality of post-Byzantine populations from Caesarea / P. Smith, T. Zegerson</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="4" tag="600">
+      <subfield code="a">Herod</subfield>
+      <subfield code="b">I,</subfield>
+      <subfield code="c">King of Judea,</subfield>
+      <subfield code="d">73-4 B.C.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Caesarea (Israel)</subfield>
+      <subfield code="x">Antiquities.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="z">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Antiquities.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00810745</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00917564</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01212441</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Holum, Kenneth G.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Raban, Avner.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Patrich, J.</subfield>
+      <subfield code="q">(Joseph)</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="711">
+      <subfield code="a">Combined Caesarea Expeditions.</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="1" tag="856">
+      <subfield code="3">Table of contents</subfield>
+      <subfield code="u">http://catdir.loc.gov/catdir/toc/fy043/2003270467.html</subfield>
+    </datafield>
+  </record>
+</collection>

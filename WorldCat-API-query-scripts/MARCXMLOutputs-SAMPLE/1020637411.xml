@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oclcterms="http://purl.org/oclc/terms/">
+    <leader>00000cam a2200000Mi 4500</leader>
+    <controlfield tag="001">1020637411</controlfield>
+    <controlfield tag="008">160629s2016    enkab    b    000 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781138980808</subfield>
+      <subfield code="q">(paperback)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1138980803</subfield>
+      <subfield code="q">(paperback)</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Mediterranean cities :</subfield>
+      <subfield code="b">historical perspectives /</subfield>
+      <subfield code="c">edited by Irad Malkin and Robert L. Hohlfelder.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">London ;</subfield>
+      <subfield code="a">New York :</subfield>
+      <subfield code="b">Routledge,</subfield>
+      <subfield code="c">2016.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">200 pages :</subfield>
+      <subfield code="b">illustrations, maps ;</subfield>
+      <subfield code="c">22 cm</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">First published 1988; first issued in paperback 2016.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Introduction -- Bollards and men / David J. Blackman -- The 'city of the blind' and the founding of Byzantium / lrad Malkin and Nino Shmueli -- Akko-Ptolemais : a maritime metropolis in Hellenistic and early Roman times, 332 BCE-70 CE, as seen through the literary sources / Nadav Kashtan -- Procopius, De Aedificiis, 1.11.18-20 : Caesarea Maritima and the building of harbours in late antiquity / Robert L. Hohlfelder -- Literary sources and numismatic evidence of maritime activity in Caesarea during the Roman period / Joseph Ringel -- The strategic and commercial importance of Jaffa, 66-69 CE / George T. Radan -- Archaeology and history at Tel Michal / Ze'ev Herzog -- The ecology of maritime success : the puzzling case of Amalfi / Barbara M. Kreutz -- Labour in thirteenth-century Genoa / Steven A. Epstein -- The Venetian port of Candia, Crete (1299-1363) : construction and maintenance / Ruthi Gertwagen -- Humanism on the sea / Ennio Concina -- A modem perspective : the recent development of port cities in southern Europe / Armando Montanari -- Testimonium Cicero, The Republic, 2.5-9 : 'on the disadvantages of a maritime city' / Rachel Vishnia.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Harbors</subfield>
+      <subfield code="z">Mediterranean Region</subfield>
+      <subfield code="x">History.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">TRANSPORTATION / Ships &amp; Shipbuilding / Pictorial.</subfield>
+      <subfield code="2">bisacsh</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Harbors.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00951219</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Mediterranean Region.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01239752</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="655">
+      <subfield code="a">Electronic books.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">History.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01411628</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="655">
+      <subfield code="a">Electronic books.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Malkin, Irad,</subfield>
+      <subfield code="e">editor.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Hohlfelder, Robert L.,</subfield>
+      <subfield code="e">editor.</subfield>
+    </datafield>
+  </record>
+</collection>

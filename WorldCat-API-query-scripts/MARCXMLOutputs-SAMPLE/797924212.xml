@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oclcterms="http://purl.org/oclc/terms/">
+    <leader>00000cam a2200000Mi 4500</leader>
+    <controlfield tag="001">797924212</controlfield>
+    <controlfield tag="008">970514s1996    ne a   e      000 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9004103783</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9789004103788</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Caesarea Maritima :</subfield>
+      <subfield code="b">a retrospective after two millennia /</subfield>
+      <subfield code="c">edited by Avner Raban and Kenneth G. Holum.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Leiden :</subfield>
+      <subfield code="b">Brill,</subfield>
+      <subfield code="c">1996.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">XLIV, 694 p., [3] c. geogr. ripieg. :</subfield>
+      <subfield code="b">illustrations ;</subfield>
+      <subfield code="c">30 cm</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="490">
+      <subfield code="a">Documenta et monumenta orientis antiqui ;</subfield>
+      <subfield code="v">21</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="650">
+      <subfield code="a">Scavi archeologici</subfield>
+      <subfield code="x">Cesarea (Israele)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="651">
+      <subfield code="a">Cesarea (Israele)</subfield>
+      <subfield code="x">Antichità</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Raban, Avner.</subfield>
+      <subfield code="4">edt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Holum, Kenneth G.</subfield>
+      <subfield code="4">edt</subfield>
+    </datafield>
+  </record>
+</collection>
