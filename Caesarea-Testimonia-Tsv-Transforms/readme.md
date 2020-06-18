@@ -7,7 +7,7 @@ Author: William L. Potter
 
 This directory houses XQuery scripts and their associated data files for creating Caesarea-Maritima.org testimonia TEI XML records from TSV data. The conversion from TSV to XML takes place in three stages. This document describes how to use the files in this directory to accomplish that conversion. Descriptions are given for each step and function. _The essential information is contained in the **Global Options** and **Process** sections of each script._
 
-## General Requirements and Depencies
+## General Requirements and Dependencies
 
 - The XQuery scripts depend upon several BaseX modules, such as [file](https://docs.basex.org/wiki/File_Module) and [csv](https://docs.basex.org/wiki/CSV_Module). As such, it is highly recommended that these scripts be executed using BaseX. BaseX may be downloaded [here](http://basex.org/download/).
   - Note that certain update functions require setting global options. Instructions for setting these options assume the use of BaseX
