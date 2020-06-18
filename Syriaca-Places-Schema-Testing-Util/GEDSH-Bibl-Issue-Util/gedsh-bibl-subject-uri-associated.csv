@@ -1,0 +1,623 @@
+gedsh-entry-number,gedsh-entry-headword,gedsh-uri,syriaca-bibl-uri,associated-syriaca-entity-uri,entity-type
+1,Aba I,https://gedsh.bethmardutho.org/Aba-I,http://syriaca.org/bibl/10,http://syriaca.org/person/306,person
+2,Aba II of Kashkar,https://gedsh.bethmardutho.org/Aba-II-of-Kashkar,http://syriaca.org/bibl/11,http://syriaca.org/person/307,person
+3,Aba,https://gedsh.bethmardutho.org/Aba,http://syriaca.org/bibl/12,http://syriaca.org/person/308,person
+4,ʿAbdishoʿ bar Bahrīz,https://gedsh.bethmardutho.org/Abdisho-bar-Bahriz,http://syriaca.org/bibl/13,http://syriaca.org/person/309,person
+5,ʿAbdishoʿ bar Brikha,https://gedsh.bethmardutho.org/Abdisho-bar-Brikha,http://syriaca.org/bibl/14,http://syriaca.org/person/310,person
+6,ʿAbdishoʿ of Gazarta,https://gedsh.bethmardutho.org/Abdisho-of-Gazarta,http://syriaca.org/bibl/15,http://syriaca.org/person/311,person
+7,ʿAbdullāh I bar Sṭephanos,https://gedsh.bethmardutho.org/Abdullah-I-bar-Stephanos,http://syriaca.org/bibl/16,http://syriaca.org/person/312,person
+8,ʿAbdullāh II Saṭṭūf,https://gedsh.bethmardutho.org/Abdullah-II-Sattuf,http://syriaca.org/bibl/17,http://syriaca.org/person/313,person
+9,ʿAbdulmasīḥ II,https://gedsh.bethmardutho.org/Abdulmasih-II,http://syriaca.org/bibl/18,http://syriaca.org/person/314,person
+10,Abgar the Hagiographer,https://gedsh.bethmardutho.org/Abgar-the-Hagiographer,http://syriaca.org/bibl/19,http://syriaca.org/person/315,person
+11,Abgarids of Edessa,https://gedsh.bethmardutho.org/Abgarids-of-Edessa,http://syriaca.org/bibl/20,,org
+12,Abraham bar Dashandad,https://gedsh.bethmardutho.org/Abraham-bar-Dashandad,http://syriaca.org/bibl/21,http://syriaca.org/person/317,person
+13,Abraham bar Lipeh,https://gedsh.bethmardutho.org/Abraham-bar-Lipeh,http://syriaca.org/bibl/22,http://syriaca.org/person/318,person
+14,Abraham of Beth Rabban,https://gedsh.bethmardutho.org/Abraham-of-Beth-Rabban,http://syriaca.org/bibl/23,http://syriaca.org/person/319,person
+15,Abraham of Kashkar,https://gedsh.bethmardutho.org/Abraham-of-Kashkar,http://syriaca.org/bibl/24,http://syriaca.org/person/320,person
+16,Abraham of Nathpar,https://gedsh.bethmardutho.org/Abraham-of-Nathpar,http://syriaca.org/bibl/25,http://syriaca.org/person/321,person
+17,Abrohom II Gharīb,https://gedsh.bethmardutho.org/Abrohom-II-Gharib,http://syriaca.org/bibl/26,http://syriaca.org/person/257,person
+18,Abrohom Naḥshirtono,https://gedsh.bethmardutho.org/Abrohom-Nahshirtono,http://syriaca.org/bibl/27,http://syriaca.org/person/110,person
+19,"Addai, Teaching of",https://gedsh.bethmardutho.org/Addai-Teaching-of,http://syriaca.org/bibl/28,,work
+20,Adiabene,https://gedsh.bethmardutho.org/Adiabene,http://syriaca.org/bibl/29,http://syriaca.org/place/993,place
+21,Aesop,https://gedsh.bethmardutho.org/Aesop,http://syriaca.org/bibl/30,http://syriaca.org/person/322,person
+22,Aḥiqar,https://gedsh.bethmardutho.org/Ahiqar,http://syriaca.org/bibl/31,http://syriaca.org/person/323,person
+23,Aḥob Qaṭraya,https://gedsh.bethmardutho.org/Ahob-Qatraya,http://syriaca.org/bibl/32,http://syriaca.org/person/324,person
+24,Aḥudemmeh,https://gedsh.bethmardutho.org/Ahudemmeh,http://syriaca.org/bibl/33,http://syriaca.org/person/325,person
+25,Aḥudemmeh of Balad,https://gedsh.bethmardutho.org/Ahudemmeh-of-Balad,http://syriaca.org/bibl/34,http://syriaca.org/person/67,person
+26,Aitalaha,https://gedsh.bethmardutho.org/Aitalaha,http://syriaca.org/bibl/35,http://syriaca.org/person/326,person
+27,"Albonesi, Teseo Ambrogio degli",https://gedsh.bethmardutho.org/Albonesi-Teseo-Ambrogio-degli,http://syriaca.org/bibl/36,http://syriaca.org/person/327,person
+28,Aleppo,https://gedsh.bethmardutho.org/Aleppo,http://syriaca.org/bibl/37,http://syriaca.org/place/18,place
+29,Alexander Cycle,https://gedsh.bethmardutho.org/Alexander-Cycle,http://syriaca.org/bibl/38,,work
+30,Alqosh,https://gedsh.bethmardutho.org/Alqosh,http://syriaca.org/bibl/39,http://syriaca.org/place/19,place
+31,"Alqosh, School of",https://gedsh.bethmardutho.org/Alqosh-School-of,http://syriaca.org/bibl/40,,org
+32,Amid,https://gedsh.bethmardutho.org/Amid,http://syriaca.org/bibl/41,http://syriaca.org/place/8,place
+33,"ʿAmīra, Jirjis",https://gedsh.bethmardutho.org/Amira-Jirjis,http://syriaca.org/bibl/42,http://syriaca.org/person/332,person
+34,Amyūn,https://gedsh.bethmardutho.org/Amyun,http://syriaca.org/bibl/43,http://syriaca.org/place/269,place
+35,al-Anbār,https://gedsh.bethmardutho.org/al-Anbar,http://syriaca.org/bibl/44,http://syriaca.org/place/211,place
+36,Antioch,https://gedsh.bethmardutho.org/Antioch,http://syriaca.org/bibl/45,http://syriaca.org/place/10,place
+37,Anṭun of Tagrit,https://gedsh.bethmardutho.org/Antun-of-Tagrit,http://syriaca.org/bibl/46,http://syriaca.org/person/154,person
+38,Apamea,https://gedsh.bethmardutho.org/Apamea,http://syriaca.org/bibl/47,http://syriaca.org/place/11,place
+39,Aphrahaṭ,https://gedsh.bethmardutho.org/Aphrahat,http://syriaca.org/bibl/48,http://syriaca.org/person/10,person
+40,Apocalypses,https://gedsh.bethmardutho.org/Apocalypses,http://syriaca.org/bibl/49,,subject
+41,Aqaq,https://gedsh.bethmardutho.org/Aqaq,http://syriaca.org/bibl/50,http://syriaca.org/person/338,person
+42,"Arabic, Syriac translations from",https://gedsh.bethmardutho.org/Arabic-Syriac-translations-from,http://syriaca.org/bibl/51,,subject
+43,Aramaic,https://gedsh.bethmardutho.org/Aramaic,http://syriaca.org/bibl/52,,subject
+44,Arameans,https://gedsh.bethmardutho.org/Arameans,http://syriaca.org/bibl/53,,org
+45,Arbela,https://gedsh.bethmardutho.org/Arbela,http://syriaca.org/bibl/54,http://syriaca.org/place/13,place
+46,Aristides of Athens,https://gedsh.bethmardutho.org/Aristides-of-Athens,http://syriaca.org/bibl/55,http://syriaca.org/person/341,person
+47,Aristotle,https://gedsh.bethmardutho.org/Aristotle,http://syriaca.org/bibl/56,http://syriaca.org/person/342,person
+48,"Armalah, Isḥāq",https://gedsh.bethmardutho.org/Armalah-Ishaq,http://syriaca.org/bibl/57,http://syriaca.org/person/343,person
+49,"Armenian Christianity, Syriac contacts with",https://gedsh.bethmardutho.org/Armenian-Christianity-Syriac-contacts-with,http://syriaca.org/bibl/58,,subject
+50,Art and architecture,https://gedsh.bethmardutho.org/Art-and-architecture,http://syriaca.org/bibl/59,,subject
+51,"Asʿad, Gabriel",https://gedsh.bethmardutho.org/Asad-Gabriel,http://syriaca.org/bibl/60,http://syriaca.org/person/346,person
+52,"Assemani, Elia",https://gedsh.bethmardutho.org/Assemani-Elia,http://syriaca.org/bibl/61,http://syriaca.org/person/347,person
+53,"Assemani, Joseph Aloysius",https://gedsh.bethmardutho.org/Assemani-Joseph-Aloysius,http://syriaca.org/bibl/62,http://syriaca.org/person/348,person
+54,"Assemani, Josephus Simonius",https://gedsh.bethmardutho.org/Assemani-Josephus-Simonius,http://syriaca.org/bibl/63,http://syriaca.org/person/349,person
+55,"Assemani, Stephanus Evodius",https://gedsh.bethmardutho.org/Assemani-Stephanus-Evodius,http://syriaca.org/bibl/64,http://syriaca.org/person/350,person
+56,"Assfalg, Julius",https://gedsh.bethmardutho.org/Assfalg-Julius,http://syriaca.org/bibl/65,http://syriaca.org/person/351,person
+57,Assyrians,https://gedsh.bethmardutho.org/Assyrians,http://syriaca.org/bibl/66,,subject
+58,Athanasios I Gamolo,https://gedsh.bethmardutho.org/Athanasios-I-Gamolo,http://syriaca.org/bibl/67,http://syriaca.org/person/88,person
+59,Athanasios II of Balad,https://gedsh.bethmardutho.org/Athanasios-II-of-Balad,http://syriaca.org/bibl/68,http://syriaca.org/person/109,person
+60,Athanasios Aṣlan,https://gedsh.bethmardutho.org/Athanasios-Aslan,http://syriaca.org/bibl/69,http://syriaca.org/person/353,person
+61,Athanasius of Alexandria,https://gedsh.bethmardutho.org/Athanasius-of-Alexandria,http://syriaca.org/bibl/70,http://syriaca.org/person/354,person
+62,"Audo, Toma",https://gedsh.bethmardutho.org/Audo-Toma,http://syriaca.org/bibl/71,http://syriaca.org/person/355,person
+63,"Awgen, Mar",https://gedsh.bethmardutho.org/Awgen-Mar,http://syriaca.org/bibl/72,http://syriaca.org/person/356,person
+64,"Aydin, Nuʿmān",https://gedsh.bethmardutho.org/Aydin-Numan,http://syriaca.org/bibl/73,http://syriaca.org/person/357,person
+65,"Ayyub, Barsoum",https://gedsh.bethmardutho.org/Ayyub-Barsoum,http://syriaca.org/bibl/74,http://syriaca.org/person/358,person
+66,Babai the Great,https://gedsh.bethmardutho.org/Babai-the-Great,http://syriaca.org/bibl/75,http://syriaca.org/person/359,person
+67,Babai of Nisibis,https://gedsh.bethmardutho.org/Babai-of-Nisibis,http://syriaca.org/bibl/76,http://syriaca.org/person/360,person
+68,Baghdad,https://gedsh.bethmardutho.org/Baghdad,http://syriaca.org/bibl/77,http://syriaca.org/place/41,place
+69,Bahdeidat,https://gedsh.bethmardutho.org/Bahdeidat,http://syriaca.org/bibl/78,http://syriaca.org/place/263,place
+70,Balad,https://gedsh.bethmardutho.org/Balad,http://syriaca.org/bibl/79,http://syriaca.org/place/42,place
+71,Balai,https://gedsh.bethmardutho.org/Balai,http://syriaca.org/bibl/80,http://syriaca.org/person/27,person
+72,"Bar ʿAli, Ishoʿ",https://gedsh.bethmardutho.org/Bar-Ali-Isho,http://syriaca.org/bibl/81,http://syriaca.org/person/364,person
+73,"Bar Bahlul, Ḥasan",https://gedsh.bethmardutho.org/Bar-Bahlul-Hasan,http://syriaca.org/bibl/82,http://syriaca.org/person/365,person
+74,"Bar ʿEbroyo, Grigorios",https://gedsh.bethmardutho.org/Bar-Ebroyo-Grigorios,http://syriaca.org/bibl/83,http://syriaca.org/person/239,person
+75,"Bar ʿEdta, Rabban",https://gedsh.bethmardutho.org/Bar-Edta-Rabban,http://syriaca.org/bibl/84,http://syriaca.org/person/366,person
+76,Bardaiṣan,https://gedsh.bethmardutho.org/Bardaisan,http://syriaca.org/bibl/85,http://syriaca.org/person/3,person
+77,Barḥadbshabba ʿArbaya,https://gedsh.bethmardutho.org/Barhadbshabba-Arbaya,http://syriaca.org/bibl/86,http://syriaca.org/person/367,person
+78,Barlaam and Josaphat,https://gedsh.bethmardutho.org/Barlaam-and-Josaphat,http://syriaca.org/bibl/87,,work
+79,Barṣawma of Nisibis,https://gedsh.bethmardutho.org/Barsawma-of-Nisibis,http://syriaca.org/bibl/88,http://syriaca.org/person/369,person
+80,Barṣawmo,https://gedsh.bethmardutho.org/Barsawmo,http://syriaca.org/bibl/89,http://syriaca.org/person/370,person
+81,"Barṣawmo, Dayro d-Mor",https://gedsh.bethmardutho.org/Barsawmo-Dayro-d-Mor,http://syriaca.org/bibl/90,http://syriaca.org/place/224,place
+82,"Barṣawmo Ṣafī, Grigorios",https://gedsh.bethmardutho.org/Barsawmo-Safi-Grigorios,http://syriaca.org/bibl/91,http://syriaca.org/person/245,person
+83,"Barsoum, Ignatius Afram",https://gedsh.bethmardutho.org/Barsoum-Ignatius-Afram,http://syriaca.org/bibl/92,http://syriaca.org/person/372,person
+84,"Barsoum, Murad Ṣaliba",https://gedsh.bethmardutho.org/Barsoum-Murad-Saliba,http://syriaca.org/bibl/93,http://syriaca.org/person/373,person
+85,Barṭelle,https://gedsh.bethmardutho.org/Bartelle,http://syriaca.org/bibl/94,http://syriaca.org/place/260,place
+86,Baselios Gewargis,https://gedsh.bethmardutho.org/Baselios-Gewargis,http://syriaca.org/bibl/95,http://syriaca.org/person/375,person
+87,Basil of Caesarea,https://gedsh.bethmardutho.org/Basil-of-Caesarea,http://syriaca.org/bibl/96,http://syriaca.org/person/376,person
+88,"Baumstark, Anton",https://gedsh.bethmardutho.org/Baumstark-Anton,http://syriaca.org/bibl/97,http://syriaca.org/person/377,person
+89,"Beck, Edmund",https://gedsh.bethmardutho.org/Beck-Edmund,http://syriaca.org/bibl/98,http://syriaca.org/person/378,person
+90,"Bedjan, Paul",https://gedsh.bethmardutho.org/Bedjan-Paul,http://syriaca.org/bibl/99,http://syriaca.org/person/379,person
+91,"Behnam, Dayro d-Mor",https://gedsh.bethmardutho.org/Behnam-Dayro-d-Mor,http://syriaca.org/bibl/100,http://syriaca.org/place/225,place
+92,Behnam Ḥadloyo,https://gedsh.bethmardutho.org/Behnam-Hadloyo,http://syriaca.org/bibl/101,http://syriaca.org/person/263,person
+93,Beirut,https://gedsh.bethmardutho.org/Beirut,http://syriaca.org/bibl/102,http://syriaca.org/place/46,place
+94,"Bello, Estipān",https://gedsh.bethmardutho.org/Bello-Estipan,http://syriaca.org/bibl/103,http://syriaca.org/person/382,person
+95,Benjamin of Edessa,https://gedsh.bethmardutho.org/Benjamin-of-Edessa,http://syriaca.org/bibl/104,http://syriaca.org/person/152,person
+96,"Beth ʿAbe, Monastery of",https://gedsh.bethmardutho.org/Beth-Abe-Monastery-of,http://syriaca.org/bibl/105,http://syriaca.org/place/223,place
+97,Beth Aramaye,https://gedsh.bethmardutho.org/Beth-Aramaye,http://syriaca.org/bibl/106,http://syriaca.org/place/32,place
+98,Beth ʿArbaye,https://gedsh.bethmardutho.org/Beth-Arbaye,http://syriaca.org/bibl/107,http://syriaca.org/place/31,place
+99,Beth Garmai,https://gedsh.bethmardutho.org/Beth-Garmai,http://syriaca.org/bibl/108,http://syriaca.org/place/33,place
+100,Beth Lapaṭ,https://gedsh.bethmardutho.org/Beth-Lapat,http://syriaca.org/bibl/109,http://syriaca.org/place/35,place
+101,Beth Nuhadra,https://gedsh.bethmardutho.org/Beth-Nuhadra,http://syriaca.org/bibl/110,http://syriaca.org/place/36,place
+102,Beth Qaṭraye,https://gedsh.bethmardutho.org/Beth-Qatraye,http://syriaca.org/bibl/111,http://syriaca.org/place/37,place
+103,"Beulay, Robert",https://gedsh.bethmardutho.org/Beulay-Robert,http://syriaca.org/bibl/112,http://syriaca.org/person/390,person
+104,Bible (General),https://gedsh.bethmardutho.org/Bible-General,http://syriaca.org/bibl/113,,subject
+105,"Bible, Old Testament manuscripts",https://gedsh.bethmardutho.org/Bible-Old-Testament-manuscripts,http://syriaca.org/bibl/114,,subject
+106,"Bible, New Testament manuscripts",https://gedsh.bethmardutho.org/Bible-New-Testament-manuscripts,http://syriaca.org/bibl/115,,subject
+107,Bibliography,https://gedsh.bethmardutho.org/Bibliography,http://syriaca.org/bibl/116,,subject
+108,"Bidāry, Pawlos",https://gedsh.bethmardutho.org/Bidary-Pawlos,http://syriaca.org/bibl/117,http://syriaca.org/person/395,person
+109,"Bidawid, Raphael I",https://gedsh.bethmardutho.org/Bidawid-Raphael-I,http://syriaca.org/bibl/118,http://syriaca.org/person/396,person
+110,"Bnay Qyāmā, Bnāt Qyāmā",https://gedsh.bethmardutho.org/Bnay-Qyama-Bnat-Qyama,http://syriaca.org/bibl/119,,org
+111,Book of Steps,https://gedsh.bethmardutho.org/Book-of-Steps,http://syriaca.org/bibl/120,,work
+112,Bostra,https://gedsh.bethmardutho.org/Bostra,http://syriaca.org/bibl/121,http://syriaca.org/place/40,place
+113,"Braun, Oskar",https://gedsh.bethmardutho.org/Braun-Oskar,http://syriaca.org/bibl/122,http://syriaca.org/person/400,person
+114,British Orthodox Church,https://gedsh.bethmardutho.org/British-Orthodox-Church,http://syriaca.org/bibl/123,,org
+115,"Brockelmann, Carl",https://gedsh.bethmardutho.org/Brockelmann-Carl,http://syriaca.org/bibl/124,http://syriaca.org/person/402,person
+116,"Brooks, Ernest Walter",https://gedsh.bethmardutho.org/Brooks-Ernest-Walter,http://syriaca.org/bibl/125,http://syriaca.org/person/403,person
+117,"Budge, Sir Ernest Alfred Wallis",https://gedsh.bethmardutho.org/Budge-Sir-Ernest-Alfred-Wallis,http://syriaca.org/bibl/126,http://syriaca.org/person/404,person
+118,"Burkitt, Francis Crawford",https://gedsh.bethmardutho.org/Burkitt-Francis-Crawford,http://syriaca.org/bibl/127,http://syriaca.org/person/405,person
+119,"Cardahi, Gabriel",https://gedsh.bethmardutho.org/Cardahi-Gabriel,http://syriaca.org/bibl/128,http://syriaca.org/person/406,person
+120,"Catherine, Monastery of St.",https://gedsh.bethmardutho.org/Catherine-Monastery-of-St,http://syriaca.org/bibl/129,http://syriaca.org/place/368,place
+121,Cause of Causes,https://gedsh.bethmardutho.org/Cause-of-Causes,http://syriaca.org/bibl/130,,work
+122,Cave of Treasures,https://gedsh.bethmardutho.org/Cave-of-Treasures,http://syriaca.org/bibl/131,,work
+123,"Ceriani, Antonio Maria",https://gedsh.bethmardutho.org/Ceriani-Antonio-Maria,http://syriaca.org/bibl/132,http://syriaca.org/person/410,person
+124,"Chabot, Jean-Baptiste",https://gedsh.bethmardutho.org/Chabot-Jean-Baptiste,http://syriaca.org/bibl/133,http://syriaca.org/person/411,person
+125,Chaldean Catholic Church,https://gedsh.bethmardutho.org/Chaldean-Catholic-Church,http://syriaca.org/bibl/134,,org
+126,Chaldean Syrian Church,https://gedsh.bethmardutho.org/Chaldean-Syrian-Church,http://syriaca.org/bibl/135,,org
+127,Chaldeans,https://gedsh.bethmardutho.org/Chaldeans,http://syriaca.org/bibl/136,,org
+128,Chicago,https://gedsh.bethmardutho.org/Chicago,http://syriaca.org/bibl/137,http://syriaca.org/place/471,place
+129,"China, Syriac Christianity in",https://gedsh.bethmardutho.org/China-Syriac-Christianity-in,http://syriaca.org/bibl/138,,subject
+130,Christian Palestinian Aramaic,https://gedsh.bethmardutho.org/Christian-Palestinian-Aramaic,http://syriaca.org/bibl/139,,subject
+131,Chronicle of 1234,https://gedsh.bethmardutho.org/Chronicle-of-1234,http://syriaca.org/bibl/140,,work
+132,Chronicle of Edessa,https://gedsh.bethmardutho.org/Chronicle-of-Edessa,http://syriaca.org/bibl/141,,work
+133,"Chronicles, Syriac",https://gedsh.bethmardutho.org/Chronicles-Syriac,http://syriaca.org/bibl/142,,work
+134,Church of the East,https://gedsh.bethmardutho.org/Church-of-the-East,http://syriaca.org/bibl/143,,org
+135,"Çiçek, Julius Yeshu",https://gedsh.bethmardutho.org/Cicek-Julius-Yeshu,http://syriaca.org/bibl/144,http://syriaca.org/person/422,person
+136,Clement of Rome and Pseudo-Clementine literature,https://gedsh.bethmardutho.org/Clement-of-Rome-and-Pseudo-Clementine-literature,http://syriaca.org/bibl/145,,
+137,Colophons,https://gedsh.bethmardutho.org/Colophons,http://syriaca.org/bibl/146,,subject
+138,"Computing, Syriac",https://gedsh.bethmardutho.org/Computing-Syriac,http://syriaca.org/bibl/147,,subject
+139,"Coptic Christianity, Syriac contacts with",https://gedsh.bethmardutho.org/Coptic-Christianity-Syriac-contacts-with,http://syriaca.org/bibl/148,,subject
+140,"Costaz, Louis",https://gedsh.bethmardutho.org/Costaz-Louis,http://syriaca.org/bibl/149,http://syriaca.org/person/427,person
+141,Crusades,https://gedsh.bethmardutho.org/Crusades,http://syriaca.org/bibl/150,,subject
+142,"Cureton, William",https://gedsh.bethmardutho.org/Cureton-William,http://syriaca.org/bibl/151,http://syriaca.org/person/429,person
+143,Cyril of Alexandria,https://gedsh.bethmardutho.org/Cyril-of-Alexandria,http://syriaca.org/bibl/152,http://syriaca.org/person/430,person
+144,Cyril of Jerusalem,https://gedsh.bethmardutho.org/Cyril-of-Jerusalem,http://syriaca.org/bibl/153,http://syriaca.org/person/431,person
+145,"Dabbūs, Antoine",https://gedsh.bethmardutho.org/Dabbus-Antoine,http://syriaca.org/bibl/154,http://syriaca.org/person/432,person
+146,Dadishoʿ I,https://gedsh.bethmardutho.org/Dadisho-I,http://syriaca.org/bibl/155,http://syriaca.org/person/433,person
+147,Dadishoʿ Qaṭraya,https://gedsh.bethmardutho.org/Dadisho-Qatraya,http://syriaca.org/bibl/156,http://syriaca.org/person/434,person
+148,Damascus,https://gedsh.bethmardutho.org/Damascus,http://syriaca.org/bibl/157,http://syriaca.org/place/66,place
+149,Damyanos of Alqosh,https://gedsh.bethmardutho.org/Damyanos-of-Alqosh,http://syriaca.org/bibl/158,http://syriaca.org/person/436,person
+150,"Danhash, George",https://gedsh.bethmardutho.org/Danhash-George,http://syriaca.org/bibl/159,http://syriaca.org/person/437,person
+151,Daniel bar Maryam,https://gedsh.bethmardutho.org/Daniel-bar-Maryam,http://syriaca.org/bibl/160,http://syriaca.org/person/438,person
+152,Daniel bar Ṭubanitha,https://gedsh.bethmardutho.org/Daniel-bar-Tubanitha,http://syriaca.org/bibl/161,http://syriaca.org/person/439,person
+153,Daniel of Mardin,https://gedsh.bethmardutho.org/Daniel-of-Mardin,http://syriaca.org/bibl/162,http://syriaca.org/person/256,person
+154,Daniel of Ṣalaḥ,https://gedsh.bethmardutho.org/Daniel-of-Salah,http://syriaca.org/bibl/163,http://syriaca.org/person/59,person
+155,"Daoud, Francis",https://gedsh.bethmardutho.org/Daoud-Francis,http://syriaca.org/bibl/164,http://syriaca.org/person/440,person
+156,"Darmo, Toma",https://gedsh.bethmardutho.org/Darmo-Toma,http://syriaca.org/bibl/165,http://syriaca.org/person/441,person
+157,"David, Clemens Joseph",https://gedsh.bethmardutho.org/David-Clemens-Joseph,http://syriaca.org/bibl/166,http://syriaca.org/person/442,person
+158,Dawid bar Pawlos,https://gedsh.bethmardutho.org/Dawid-bar-Pawlos,http://syriaca.org/bibl/167,http://syriaca.org/person/144,person
+159,Dawid Puniqoyo,https://gedsh.bethmardutho.org/Dawid-Puniqoyo,http://syriaca.org/bibl/168,http://syriaca.org/person/273,person
+160,"De’ Rossi, Azariah (Buonaiuto)",https://gedsh.bethmardutho.org/De-Rossi-Azariah-Buonaiuto,http://syriaca.org/bibl/169,http://syriaca.org/person/443,person
+161,Denḥa,https://gedsh.bethmardutho.org/Denha,http://syriaca.org/bibl/170,http://syriaca.org/person/97,person
+162,"Diamper, Synod of",https://gedsh.bethmardutho.org/Diamper-Synod-of,http://syriaca.org/bibl/171,,org
+163,Diaspora,https://gedsh.bethmardutho.org/Diaspora,http://syriaca.org/bibl/172,,subject
+164,Diatessaron,https://gedsh.bethmardutho.org/Diatessaron,http://syriaca.org/bibl/173,,work
+165,"al-Dibs, Yūsuf",https://gedsh.bethmardutho.org/al-Dibs-Yusuf,http://syriaca.org/bibl/174,http://syriaca.org/person/448,person
+166,Didascalia Apostolorum,https://gedsh.bethmardutho.org/Didascalia-Apostolorum,http://syriaca.org/bibl/175,,work
+167,"Dinno, Niʿmatullāh",https://gedsh.bethmardutho.org/Dinno-Nimatullah,http://syriaca.org/bibl/176,http://syriaca.org/person/450,person
+168,Diodore of Tarsus,https://gedsh.bethmardutho.org/Diodore-of-Tarsus,http://syriaca.org/bibl/177,http://syriaca.org/person/451,person
+169,Dionysios bar Ṣalibi,https://gedsh.bethmardutho.org/Dionysios-bar-Salibi,http://syriaca.org/bibl/178,http://syriaca.org/person/212,person
+170,Dionysios of Tel Maḥre,https://gedsh.bethmardutho.org/Dionysios-of-Tel-Mahre,http://syriaca.org/bibl/179,http://syriaca.org/person/155,person
+171,"Dionysius the Areopagite, Pseudo-",https://gedsh.bethmardutho.org/Dionysius-the-Areopagite-Pseudo-,http://syriaca.org/bibl/180,http://syriaca.org/person/452,pseudonym
+172,Dionysius Thrax,https://gedsh.bethmardutho.org/Dionysius-Thrax,http://syriaca.org/bibl/181,http://syriaca.org/person/453,person
+173,Diosqoros of Gozarto,https://gedsh.bethmardutho.org/Diosqoros-of-Gozarto,http://syriaca.org/bibl/182,http://syriaca.org/person/243,person
+174,"Dolabani, Philoxenos Yuḥanon",https://gedsh.bethmardutho.org/Dolabani-Philoxenos-Yuhanon,http://syriaca.org/bibl/183,http://syriaca.org/person/454,person
+175,Dorekthā,https://gedsh.bethmardutho.org/Dorektha,http://syriaca.org/bibl/184,,subject
+176,"Draguet, René",https://gedsh.bethmardutho.org/Draguet-Rene,http://syriaca.org/bibl/185,http://syriaca.org/person/456,person
+177,"Drijvers, Hendrik (Han) Jan Willem",https://gedsh.bethmardutho.org/Drijvers-Hendrik-Han-Jan-Willem,http://syriaca.org/bibl/186,http://syriaca.org/person/457,person
+178,Dura-Europos,https://gedsh.bethmardutho.org/Dura-Europos,http://syriaca.org/bibl/187,http://syriaca.org/place/77,place
+179,"Duval, Paul-Rubens",https://gedsh.bethmardutho.org/Duval-Paul-Rubens,http://syriaca.org/bibl/188,http://syriaca.org/person/459,person
+180,"al-Duwayhī, Isṭifān",https://gedsh.bethmardutho.org/al-Duwayhi-Istifan,http://syriaca.org/bibl/189,http://syriaca.org/person/460,person
+181,Ecumenical dialogue,https://gedsh.bethmardutho.org/Ecumenical-dialogue,http://syriaca.org/bibl/190,,subject
+182,Eddé,https://gedsh.bethmardutho.org/Edde,http://syriaca.org/bibl/191,http://syriaca.org/place/265,place
+183,Edessa,https://gedsh.bethmardutho.org/Edessa,http://syriaca.org/bibl/192,http://syriaca.org/place/78,place
+184,"Edessa, School of",https://gedsh.bethmardutho.org/Edessa-School-of,http://syriaca.org/bibl/193,,org
+185,Eli of Qarṭmin,https://gedsh.bethmardutho.org/Eli-of-Qartmin,http://syriaca.org/bibl/194,http://syriaca.org/person/465,person
+186,"Elias, Ghaṭṭās (Danḥo) Maqdisī",https://gedsh.bethmardutho.org/Elias-Ghattas-Danho-Maqdisi,http://syriaca.org/bibl/195,http://syriaca.org/person/466,person
+187,Elishaʿ bar Quzbaye,https://gedsh.bethmardutho.org/Elisha-bar-Quzbaye,http://syriaca.org/bibl/196,http://syriaca.org/person/467,person
+188,Eliya I of Ṭirhan,https://gedsh.bethmardutho.org/Eliya-I-of-Tirhan,http://syriaca.org/bibl/197,http://syriaca.org/person/468,person
+189,Eliya III Shakir,https://gedsh.bethmardutho.org/Eliya-III-Shakir,http://syriaca.org/bibl/198,http://syriaca.org/person/469,person
+190,Eliya (mid-6th cent.),https://gedsh.bethmardutho.org/Eliya-mid-6th-cent,http://syriaca.org/bibl/199,http://syriaca.org/person/63,person
+191,Eliya (late 8th/early 9th cent.),https://gedsh.bethmardutho.org/Eliya-late-8th-early-9th-cent,http://syriaca.org/bibl/200,http://syriaca.org/person/945,person
+192,Eliya of al-Anbār,https://gedsh.bethmardutho.org/Eliya-of-al-Anbar,http://syriaca.org/bibl/201,http://syriaca.org/person/471,person
+193,Eliya of Nisibis,https://gedsh.bethmardutho.org/Eliya-of-Nisibis,http://syriaca.org/bibl/202,http://syriaca.org/person/472,person
+194,Emmanuel bar Shahhare,https://gedsh.bethmardutho.org/Emmanuel-bar-Shahhare,http://syriaca.org/bibl/203,http://syriaca.org/person/473,person
+195,ʿEnanishoʿ,https://gedsh.bethmardutho.org/Enanisho,http://syriaca.org/bibl/204,http://syriaca.org/person/474,person
+196,The Enaton,https://gedsh.bethmardutho.org/The-Enaton,http://syriaca.org/bibl/205,http://syriaca.org/place/473,place
+197,Ephrem,https://gedsh.bethmardutho.org/Ephrem,http://syriaca.org/bibl/206,http://syriaca.org/person/13,person
+198,"Ephrem, Life of",https://gedsh.bethmardutho.org/Ephrem-Life-of,http://syriaca.org/bibl/207,,subject
+199,Epiphanius of Salamis,https://gedsh.bethmardutho.org/Epiphanius-of-Salamis,http://syriaca.org/bibl/208,http://syriaca.org/person/477,person
+200,"Ethiopic Christianity, Syriac contacts with",https://gedsh.bethmardutho.org/Ethiopic-Christianity-Syriac-contacts-with,http://syriaca.org/bibl/209,,subject
+201,Euphemia and the Goth,https://gedsh.bethmardutho.org/Euphemia-and-the-Goth,http://syriaca.org/bibl/210,,work
+202,Eusebius of Caesarea,https://gedsh.bethmardutho.org/Eusebius-of-Caesarea,http://syriaca.org/bibl/211,http://syriaca.org/person/480,person
+203,Eusebius of Emesa,https://gedsh.bethmardutho.org/Eusebius-of-Emesa,http://syriaca.org/bibl/212,http://syriaca.org/person/481,person
+204,Eutyches,https://gedsh.bethmardutho.org/Eutyches,http://syriaca.org/bibl/213,http://syriaca.org/person/482,person
+205,Evagrius,https://gedsh.bethmardutho.org/Evagrius-of-Pontus,http://syriaca.org/bibl/214,http://syriaca.org/person/483,person
+206,"Exegesis, Old Testament",https://gedsh.bethmardutho.org/Exegesis-Old-Testament,http://syriaca.org/bibl/215,,subject
+207,"Exegesis, New Testament",https://gedsh.bethmardutho.org/Exegesis-New-Testament,http://syriaca.org/bibl/216,,subject
+208,"Fāʾiq, Naʿʿūm",https://gedsh.bethmardutho.org/Faiq-Naum,http://syriaca.org/bibl/217,http://syriaca.org/person/304,person
+209,Fars,https://gedsh.bethmardutho.org/Fars,http://syriaca.org/bibl/218,http://syriaca.org/place/84,place
+210,"Fatḥallāh, Elias",https://gedsh.bethmardutho.org/Fathallah-Elias,http://syriaca.org/bibl/219,http://syriaca.org/person/487,person
+211,"Fiey, Jean-Maurice",https://gedsh.bethmardutho.org/Fiey-Jean-Maurice,http://syriaca.org/bibl/220,http://syriaca.org/person/488,person
+212,"Furlani, Giuseppe",https://gedsh.bethmardutho.org/Furlani-Giuseppe,http://syriaca.org/bibl/221,http://syriaca.org/person/489,person
+213,"Gabriel, Fawlos",https://gedsh.bethmardutho.org/Gabriel-Fawlos,http://syriaca.org/bibl/222,http://syriaca.org/person/490,person
+214,"Gabriel, Monastery of Mor",https://gedsh.bethmardutho.org/Gabriel-Monastery-of-Mor,http://syriaca.org/bibl/223,http://syriaca.org/place/226,place
+215,Gabriel bar Bokhtishoʿ,https://gedsh.bethmardutho.org/Gabriel-bar-Bokhtisho,http://syriaca.org/bibl/224,http://syriaca.org/person/492,person
+216,Gabriel of Baṣra,https://gedsh.bethmardutho.org/Gabriel-of-Basra,http://syriaca.org/bibl/225,http://syriaca.org/person/493,person
+217,Gabriel Qamṣa,https://gedsh.bethmardutho.org/Gabriel-Qamsa,http://syriaca.org/bibl/226,http://syriaca.org/person/494,person
+218,Gabriel Qaṭraya,https://gedsh.bethmardutho.org/Gabriel-Qatraya,http://syriaca.org/bibl/227,http://syriaca.org/person/495,person
+219,Galen,https://gedsh.bethmardutho.org/Galen,http://syriaca.org/bibl/228,http://syriaca.org/person/496,person
+220,Gannat Bussāme,https://gedsh.bethmardutho.org/Gannat-Bussame,http://syriaca.org/bibl/229,,work
+221,Garshuni,https://gedsh.bethmardutho.org/Garshuni,http://syriaca.org/bibl/230,,subject
+222,Geoponika,https://gedsh.bethmardutho.org/Geoponika,http://syriaca.org/bibl/231,,work
+223,"Georgian Christianity, Syriac contacts with",https://gedsh.bethmardutho.org/Georgian-Christianity-Syriac-contacts-with,http://syriaca.org/bibl/232,,subject
+224,Gewargis I,https://gedsh.bethmardutho.org/Gewargis-I,http://syriaca.org/bibl/233,http://syriaca.org/person/501,person
+225,Gewargis of Arbela,https://gedsh.bethmardutho.org/Gewargis-of-Arbela,http://syriaca.org/bibl/234,http://syriaca.org/person/502,person
+226,"Gewargis of Arbela, Pseudo-",https://gedsh.bethmardutho.org/Gewargis-of-Arbela-Pseudo-,http://syriaca.org/bibl/235,,pseudonym
+227,Gewargis Warda,https://gedsh.bethmardutho.org/Gewargis-Warda,http://syriaca.org/bibl/236,http://syriaca.org/person/504,person
+228,"Giwargi, bp. of the Arab tribes",https://gedsh.bethmardutho.org/Giwargi-bp-of-the-Arab-tribes,http://syriaca.org/bibl/237,http://syriaca.org/person/122,person
+229,"Giwargis II, Ignatius",https://gedsh.bethmardutho.org/Giwargis-II-Ignatius,http://syriaca.org/bibl/238,http://syriaca.org/person/505,person
+230,Giwargis of Bʿeltan,https://gedsh.bethmardutho.org/Giwargis-of-Beltan,http://syriaca.org/bibl/239,http://syriaca.org/person/139,person
+231,Gospel of the Twelve Apostles,https://gedsh.bethmardutho.org/Gospel-of-the-Twelve-Apostles,http://syriaca.org/bibl/240,,work
+232,"Graffin, François",https://gedsh.bethmardutho.org/Graffin-Francois,http://syriaca.org/bibl/241,http://syriaca.org/person/508,person
+233,"Graffin, René",https://gedsh.bethmardutho.org/Graffin-Rene,http://syriaca.org/bibl/242,http://syriaca.org/person/509,person
+234,"Greek, Syriac translations from",https://gedsh.bethmardutho.org/Greek-Syriac-translations-from,http://syriaca.org/bibl/243,,subject
+235,Gregory of Nazianzus,https://gedsh.bethmardutho.org/Gregory-of-Nazianzus,http://syriaca.org/bibl/244,http://syriaca.org/person/511,person
+236,Gregory of Nyssa,https://gedsh.bethmardutho.org/Gregory-of-Nyssa,http://syriaca.org/bibl/245,http://syriaca.org/person/512,person
+237,Gregory Thaumaturgus,https://gedsh.bethmardutho.org/Gregory-Thaumaturgus,http://syriaca.org/bibl/246,http://syriaca.org/person/513,person
+238,Grigor I,https://gedsh.bethmardutho.org/Grigor-I,http://syriaca.org/bibl/247,http://syriaca.org/person/514,person
+239,Grigorios of Cyprus,https://gedsh.bethmardutho.org/Grigorios-of-Cyprus,http://syriaca.org/bibl/248,http://syriaca.org/person/21,person
+240,Grigorios Yawseph,https://gedsh.bethmardutho.org/Grigorios-Yawseph,http://syriaca.org/bibl/249,http://syriaca.org/person/281,person
+241,"Guidi, Ignazio",https://gedsh.bethmardutho.org/Guidi-Ignazio,http://syriaca.org/bibl/250,http://syriaca.org/person/517,person
+242,"Guillaumont, Antoine",https://gedsh.bethmardutho.org/Guillaumont-Antoine,http://syriaca.org/bibl/251,http://syriaca.org/person/518,person
+243,"Habbi, Yusuf",https://gedsh.bethmardutho.org/Habbi-Yusuf,http://syriaca.org/bibl/252,http://syriaca.org/person/519,person
+244,Hagiography,https://gedsh.bethmardutho.org/Hagiography,http://syriaca.org/bibl/253,,subject
+245,Hakkari,https://gedsh.bethmardutho.org/Hakkari,http://syriaca.org/bibl/254,http://syriaca.org/place/90,place
+246,"de Halleux, André",https://gedsh.bethmardutho.org/de-Halleux-Andre,http://syriaca.org/bibl/255,http://syriaca.org/person/522,person
+247,"Ḥanno, Sulayman",https://gedsh.bethmardutho.org/Hanno-Sulayman,http://syriaca.org/bibl/256,http://syriaca.org/person/523,person
+248,"al-Ḥāqilānī, Ibrāhīm",https://gedsh.bethmardutho.org/al-Haqilani-Ibrahim,http://syriaca.org/bibl/257,http://syriaca.org/person/524,person
+249,Ḥarqlean Version,https://gedsh.bethmardutho.org/Harqlean-Version,http://syriaca.org/bibl/258,,work
+250,Ḥarran,https://gedsh.bethmardutho.org/Harran,http://syriaca.org/bibl/259,http://syriaca.org/place/216,place
+251,"Harris, James Rendel",https://gedsh.bethmardutho.org/Harris-James-Rendel,http://syriaca.org/bibl/260,http://syriaca.org/person/527,person
+252,"Hatch, William Henry Paine",https://gedsh.bethmardutho.org/Hatch-William-Henry-Paine,http://syriaca.org/bibl/261,http://syriaca.org/person/528,person
+253,Ḥazqiel I,https://gedsh.bethmardutho.org/Hazqiel-I,http://syriaca.org/bibl/262,http://syriaca.org/person/529,person
+254,Ḥenana,https://gedsh.bethmardutho.org/Henana,http://syriaca.org/bibl/263,http://syriaca.org/person/530,person
+255,Ḥenanishoʿ I,https://gedsh.bethmardutho.org/Henanisho-I,http://syriaca.org/bibl/264,http://syriaca.org/person/531,person
+256,Ḥenanishoʿ II,https://gedsh.bethmardutho.org/Henanisho-II,http://syriaca.org/bibl/265,http://syriaca.org/person/532,person
+257,Ḥenanishoʿ bar Seroshway,https://gedsh.bethmardutho.org/Henanisho-bar-Seroshway,http://syriaca.org/bibl/266,http://syriaca.org/person/533,person
+258,Hiba,https://gedsh.bethmardutho.org/Hiba,http://syriaca.org/bibl/267,http://syriaca.org/person/534,person
+259,Ḥimṣ,https://gedsh.bethmardutho.org/Hims,http://syriaca.org/bibl/268,http://syriaca.org/place/215,place
+260,Ḥimyar,https://gedsh.bethmardutho.org/Himyar,http://syriaca.org/bibl/269,http://syriaca.org/place/474,placeorg
+261,Hippolytus of Rome,https://gedsh.bethmardutho.org/Hippolytus-of-Rome,http://syriaca.org/bibl/270,http://syriaca.org/person/537,person
+262,Ḥirta,https://gedsh.bethmardutho.org/Hirta,http://syriaca.org/bibl/271,http://syriaca.org/place/219,place
+263,"Historiography, Syriac",https://gedsh.bethmardutho.org/Historiography-Syriac,http://syriaca.org/bibl/272,,subject
+264,"Hormizd, Monastery of Rabban",https://gedsh.bethmardutho.org/Hormizd-Monastery-of-Rabban,http://syriaca.org/bibl/273,http://syriaca.org/place/168,place
+265,"Ḥubeika, Joseph",https://gedsh.bethmardutho.org/Hubeika-Joseph,http://syriaca.org/bibl/274,http://syriaca.org/person/541,person
+266,Ḥunayn b. Isḥāq,https://gedsh.bethmardutho.org/Hunayn-b-Ishaq,http://syriaca.org/bibl/275,http://syriaca.org/person/542,person
+267,Ibn al-Ṭayyib,https://gedsh.bethmardutho.org/Ibn-al-Tayyib,http://syriaca.org/bibl/276,http://syriaca.org/person/543,person
+268,Ignatius of Antioch,https://gedsh.bethmardutho.org/Ignatius-of-Antioch,http://syriaca.org/bibl/277,http://syriaca.org/person/544,person
+269,Ignatius Yaʿqub III,https://gedsh.bethmardutho.org/Ignatius-Yaqub-III,http://syriaca.org/bibl/278,http://syriaca.org/person/545,person
+270,Iḥidāyā,https://gedsh.bethmardutho.org/Ihidaya,http://syriaca.org/bibl/279,,subject
+271,Inscriptions,https://gedsh.bethmardutho.org/Inscriptions,http://syriaca.org/bibl/280,,subject
+272,Isaiah of Scetis,https://gedsh.bethmardutho.org/Isaiah-of-Scetis,http://syriaca.org/bibl/281,http://syriaca.org/person/548,person
+273,Isḥaq,https://gedsh.bethmardutho.org/Ishaq,http://syriaca.org/bibl/282,http://syriaca.org/person/549,person
+274,Isḥaq of Amid,https://gedsh.bethmardutho.org/Ishaq-of-Amid,http://syriaca.org/bibl/283,http://syriaca.org/person/17,person
+275,Isḥaq of Antioch,https://gedsh.bethmardutho.org/Ishaq-of-Antioch,http://syriaca.org/bibl/284,http://syriaca.org/person/33,person
+276,Isḥaq of Edessa,https://gedsh.bethmardutho.org/Ishaq-of-Edessa,http://syriaca.org/bibl/285,http://syriaca.org/person/34,person
+277,Isḥaq of Nineveh,https://gedsh.bethmardutho.org/Ishaq-of-Nineveh,http://syriaca.org/bibl/286,http://syriaca.org/person/550,person
+278,Isḥaq Shbadnaya,https://gedsh.bethmardutho.org/Ishaq-Shbadnaya,http://syriaca.org/bibl/287,http://syriaca.org/person/551,person
+279,Ishaʿya of Beth Sbirina,https://gedsh.bethmardutho.org/Ishaya-of-Beth-Sbirina,http://syriaca.org/bibl/288,http://syriaca.org/person/259,person
+280,Ishoʿ bar Nun,https://gedsh.bethmardutho.org/Isho-bar-Nun,http://syriaca.org/bibl/289,http://syriaca.org/person/552,person
+281,Ishoʿ of Merv,https://gedsh.bethmardutho.org/Isho-of-Merv,http://syriaca.org/bibl/290,http://syriaca.org/person/553,person
+282,Ishoʿbokht of Rev Ardashir,https://gedsh.bethmardutho.org/Ishobokht-of-Rev-Ardashir,http://syriaca.org/bibl/291,http://syriaca.org/person/554,person
+283,Ishoʿdad of Merv,https://gedsh.bethmardutho.org/Ishodad-of-Merv,http://syriaca.org/bibl/292,http://syriaca.org/person/555,person
+284,Ishoʿdnaḥ,https://gedsh.bethmardutho.org/Ishodnah,http://syriaca.org/bibl/293,http://syriaca.org/person/556,person
+285,Isḥoq ʿAzar,https://gedsh.bethmardutho.org/Ishoq-Azar,http://syriaca.org/bibl/294,http://syriaca.org/person/289,person
+286,Isḥoq Ṣaliba,https://gedsh.bethmardutho.org/Ishoq-Saliba,http://syriaca.org/bibl/295,http://syriaca.org/person/558,person
+287,Ishoʿyahb I,https://gedsh.bethmardutho.org/Ishoyahb-I,http://syriaca.org/bibl/296,http://syriaca.org/person/559,person
+288,Ishoʿyahb II of Gdala,https://gedsh.bethmardutho.org/Ishoyahb-II-of-Gdala,http://syriaca.org/bibl/297,http://syriaca.org/person/560,person
+289,Ishoʿyahb III of Adiabene,https://gedsh.bethmardutho.org/Ishoyahb-III-of-Adiabene,http://syriaca.org/bibl/298,http://syriaca.org/person/561,person
+290,Ishoʿyahb IV,https://gedsh.bethmardutho.org/Ishoyahb-IV,http://syriaca.org/bibl/299,http://syriaca.org/person/562,person
+291,Ishoʿyahb bar Malkon,https://gedsh.bethmardutho.org/Ishoyahb-bar-Malkon,http://syriaca.org/bibl/300,http://syriaca.org/person/563,person
+292,Isidore of Pelusium,https://gedsh.bethmardutho.org/Isidore-of-Pelusium,http://syriaca.org/bibl/301,http://syriaca.org/person/564,person
+293,"Islam, Syriac interactions with",https://gedsh.bethmardutho.org/Islam-Syriac-contacts-with,http://syriaca.org/bibl/302,,subject
+294,Israel of Alqosh,https://gedsh.bethmardutho.org/Israel-of-Alqosh,http://syriaca.org/bibl/303,http://syriaca.org/person/566,person
+295,Iwannis of Dara,https://gedsh.bethmardutho.org/Iwannis-of-Dara,http://syriaca.org/bibl/304,http://syriaca.org/person/161,person
+296,Iwannis Yuḥanon,https://gedsh.bethmardutho.org/Iwannis-Yuhanon,http://syriaca.org/bibl/305,http://syriaca.org/person/567,person
+297,Iyob of Edessa,https://gedsh.bethmardutho.org/Iyob-of-Edessa,http://syriaca.org/bibl/306,http://syriaca.org/person/568,person
+298,"Jacob, Cyril",https://gedsh.bethmardutho.org/Jacob-Cyril,http://syriaca.org/bibl/307,http://syriaca.org/person/569,person
+299,"Jamīl, Shmuʾel",https://gedsh.bethmardutho.org/Jamil-Shmuel,http://syriaca.org/bibl/308,http://syriaca.org/person/570,person
+300,"Jansma, Taeke",https://gedsh.bethmardutho.org/Jansma-Taeke,http://syriaca.org/bibl/309,http://syriaca.org/person/571,person
+301,Jerusalem,https://gedsh.bethmardutho.org/Jerusalem,http://syriaca.org/bibl/310,http://syriaca.org/place/104,place
+302,John bar Aphtonia,https://gedsh.bethmardutho.org/John-bar-Aphtonia,http://syriaca.org/bibl/311,http://syriaca.org/person/52,person
+303,John Chrysostom,https://gedsh.bethmardutho.org/John-Chrysostom,http://syriaca.org/bibl/312,http://syriaca.org/person/573,person
+304,John Climacus,https://gedsh.bethmardutho.org/John-Climacus,http://syriaca.org/bibl/313,http://syriaca.org/person/574,person
+305,John of Damascus,https://gedsh.bethmardutho.org/John-of-Damascus,http://syriaca.org/bibl/314,http://syriaca.org/person/575,person
+306,John Philoponos,https://gedsh.bethmardutho.org/John-Philoponos,http://syriaca.org/bibl/315,http://syriaca.org/person/576,person
+307,John Rufus,https://gedsh.bethmardutho.org/John-Rufus,http://syriaca.org/bibl/316,http://syriaca.org/person/39,person
+308,Josephus,https://gedsh.bethmardutho.org/Josephus,http://syriaca.org/bibl/317,http://syriaca.org/person/577,person
+309,"Judaism, Syriac contacts with",https://gedsh.bethmardutho.org/Judaism-Syriac-contacts-with,http://syriaca.org/bibl/318,,subject
+310,Julian of Halicarnassus,https://gedsh.bethmardutho.org/Julian-of-Halicarnassus,http://syriaca.org/bibl/319,http://syriaca.org/person/579,person
+311,Julian Romance,https://gedsh.bethmardutho.org/Julian-Romance,http://syriaca.org/bibl/320,,work
+312,Juridical literature,https://gedsh.bethmardutho.org/Juridical-literature,http://syriaca.org/bibl/321,,subject
+313,"Kaftun, Dayr",https://gedsh.bethmardutho.org/Kaftun-Dayr,http://syriaca.org/bibl/322,http://syriaca.org/place/268,place
+314,Kalila and Dimna,https://gedsh.bethmardutho.org/Kalila-and-Dimna,http://syriaca.org/bibl/323,,work
+315,Karamlish,https://gedsh.bethmardutho.org/Karamlish,http://syriaca.org/bibl/324,http://syriaca.org/place/110,place
+316,Karka d-Beth Slokh,https://gedsh.bethmardutho.org/Karka-d-Beth-Slokh,http://syriaca.org/bibl/325,http://syriaca.org/place/108,place
+317,Kfar Helda,https://gedsh.bethmardutho.org/Kfar-Helda,http://syriaca.org/bibl/326,http://syriaca.org/place/267,place
+318,Khamis bar Qardaḥe,https://gedsh.bethmardutho.org/Khamis-bar-Qardahe,http://syriaca.org/bibl/327,http://syriaca.org/person/587,person
+319,"Khouri-Sarkis, Gabriel",https://gedsh.bethmardutho.org/Khouri-Sarkis-Gabriel,http://syriaca.org/bibl/328,http://syriaca.org/person/588,person
+320,"Khoury, Asmar",https://gedsh.bethmardutho.org/Khoury-Asmar,http://syriaca.org/bibl/329,http://syriaca.org/person/589,person
+321,Kokhe,https://gedsh.bethmardutho.org/Kokhe,http://syriaca.org/bibl/330,http://syriaca.org/place/475,place
+322,"Konat, Matta",https://gedsh.bethmardutho.org/Konat-Matta,http://syriaca.org/bibl/331,http://syriaca.org/person/303,person
+323,Kthobonoyo Syriac,https://gedsh.bethmardutho.org/Kthobonoyo-Syriac,http://syriaca.org/bibl/332,,subject
+324,"de Lagarde, Paul Anton",https://gedsh.bethmardutho.org/de-Lagarde-Paul-Anton,http://syriaca.org/bibl/333,http://syriaca.org/person/592,person
+325,"Lamsa, George",https://gedsh.bethmardutho.org/Lamsa-George,http://syriaca.org/bibl/334,http://syriaca.org/person/593,person
+326,"Land, Jan Pieter Nicolaas",https://gedsh.bethmardutho.org/Land-Jan-Pieter-Nicolaas,http://syriaca.org/bibl/335,http://syriaca.org/person/594,person
+327,"Leloir, Louis",https://gedsh.bethmardutho.org/Leloir-Louis,http://syriaca.org/bibl/336,http://syriaca.org/person/595,person
+328,Leon of Ḥarran,https://gedsh.bethmardutho.org/Leon-of-Harran,http://syriaca.org/bibl/337,http://syriaca.org/person/596,person
+329,"Leroy, Jules",https://gedsh.bethmardutho.org/Leroy-Jules,http://syriaca.org/bibl/338,http://syriaca.org/person/597,person
+330,"Levi Della Vida, Giorgio",https://gedsh.bethmardutho.org/Levi-Della-Vida-Giorgio,http://syriaca.org/bibl/339,http://syriaca.org/person/598,person
+331,Liturgy,https://gedsh.bethmardutho.org/Liturgy,http://syriaca.org/bibl/340,,subject
+332,Loʿozar bar Sobtho,https://gedsh.bethmardutho.org/Loozar-bar-Sobtho,http://syriaca.org/bibl/341,http://syriaca.org/person/149,person
+333,Loʿozar of Beth Qandasa,https://gedsh.bethmardutho.org/Loozar-of-Beth-Qandasa,http://syriaca.org/bibl/342,http://syriaca.org/person/136,person
+334,Maʿad,https://gedsh.bethmardutho.org/Maad,http://syriaca.org/bibl/343,http://syriaca.org/place/264,place
+335,Macarian Homilies,https://gedsh.bethmardutho.org/Macarian-Homilies,http://syriaca.org/bibl/344,,subject
+336,Malabar Catholic Church,https://gedsh.bethmardutho.org/Malabar-Catholic-Church,http://syriaca.org/bibl/345,,org
+337,Malabar Independent Syrian Church,https://gedsh.bethmardutho.org/Malabar-Independent-Syrian-Church,http://syriaca.org/bibl/346,,org
+338,Malankara Catholic Church,https://gedsh.bethmardutho.org/Malankara-Catholic-Church,http://syriaca.org/bibl/347,,org
+339,Malankara Orthodox Syrian Church,https://gedsh.bethmardutho.org/Malankara-Orthodox-Syrian-Church,http://syriaca.org/bibl/348,,org
+340,Malankara Syriac Orthodox Church,https://gedsh.bethmardutho.org/Malankara-Syriac-Orthodox-Church,http://syriaca.org/bibl/349,,org
+341,Man of God of Edessa,https://gedsh.bethmardutho.org/Man-of-God-of-Edessa,http://syriaca.org/bibl/350,http://syriaca.org/person/607,person
+342,Mani,https://gedsh.bethmardutho.org/Mani,http://syriaca.org/bibl/351,http://syriaca.org/person/608,person
+343,"Manna, Yaʿqob Awgen",https://gedsh.bethmardutho.org/Manna-Yaqob-Awgen,http://syriaca.org/bibl/352,http://syriaca.org/person/609,person
+344,Manuscripts,https://gedsh.bethmardutho.org/Manuscripts,http://syriaca.org/bibl/353,,subject
+345,Maphrian,https://gedsh.bethmardutho.org/Maphrian,http://syriaca.org/bibl/354,,subject
+346,"Maqdisī, Jeremiah",https://gedsh.bethmardutho.org/Maqdisi-Jeremiah,http://syriaca.org/bibl/355,http://syriaca.org/person/612,person
+347,Mar Thoma Syrian Church (Malankara),https://gedsh.bethmardutho.org/Mar-Thoma-Syrian-Church-Malankara,http://syriaca.org/bibl/356,,org
+348,"Mara bar Serapion, Letter of",https://gedsh.bethmardutho.org/Mara-bar-Serapion-Letter-of,http://syriaca.org/bibl/357,,work
+349,Marcian,https://gedsh.bethmardutho.org/Marcian-the-Monk,http://syriaca.org/bibl/358,http://syriaca.org/person/615,person
+350,Marcion,https://gedsh.bethmardutho.org/Marcion,http://syriaca.org/bibl/359,http://syriaca.org/person/616,person
+351,Mardin,https://gedsh.bethmardutho.org/Mardin,http://syriaca.org/bibl/360,http://syriaca.org/place/130,place
+352,"Mari, Acts of",https://gedsh.bethmardutho.org/Mari-Acts-of,http://syriaca.org/bibl/361,,work
+353,Mark the Monk,https://gedsh.bethmardutho.org/Mark-the-Monk,http://syriaca.org/bibl/362,http://syriaca.org/person/619,person
+354,"Mark, Monastery of St.",https://gedsh.bethmardutho.org/Mark-Monastery-of-St,http://syriaca.org/bibl/363,http://syriaca.org/place/388,place
+355,Maron,https://gedsh.bethmardutho.org/Maron,http://syriaca.org/bibl/364,http://syriaca.org/person/621,person
+356,Maronite Church,https://gedsh.bethmardutho.org/Maronite-Church,http://syriaca.org/bibl/365,,org
+357,Martyrs and persecutions,https://gedsh.bethmardutho.org/Martyrs-and-persecutions,http://syriaca.org/bibl/366,,subject
+358,Marutha of Maypherqaṭ,https://gedsh.bethmardutho.org/Marutha-of-Maypherqat,http://syriaca.org/bibl/367,http://syriaca.org/person/25,person
+359,Marutha of Tagrit,https://gedsh.bethmardutho.org/Marutha-of-Tagrit,http://syriaca.org/bibl/368,http://syriaca.org/person/93,person
+360,Mary,https://gedsh.bethmardutho.org/Mary,http://syriaca.org/bibl/369,http://syriaca.org/person/624,person
+361,"Masius, Andreas",https://gedsh.bethmardutho.org/Masius-Andreas,http://syriaca.org/bibl/370,http://syriaca.org/person/625,person
+362,Masora,https://gedsh.bethmardutho.org/Masora,http://syriaca.org/bibl/371,,subject
+363,Masʿūd of Ṭur ʿAbdin,https://gedsh.bethmardutho.org/Masud-of-Tur-Abdin,http://syriaca.org/bibl/372,http://syriaca.org/person/279,person
+364,"Matay, Dayro d-Mor",https://gedsh.bethmardutho.org/Matay-Dayro-d-Mor,http://syriaca.org/bibl/373,http://syriaca.org/person/227,person
+365,Maximus,https://gedsh.bethmardutho.org/Maximus,http://syriaca.org/bibl/374,http://syriaca.org/person/628,person
+366,Medicine,https://gedsh.bethmardutho.org/Medicine,http://syriaca.org/bibl/375,,subject
+367,Melitene,https://gedsh.bethmardutho.org/Melitene,http://syriaca.org/bibl/376,http://syriaca.org/place/136,place
+368,Meliton the Philosopher,https://gedsh.bethmardutho.org/Meliton-the-Philosopher,http://syriaca.org/bibl/377,http://syriaca.org/person/631,person
+369,Melkite,https://gedsh.bethmardutho.org/Melkite,http://syriaca.org/bibl/378,,subject
+370,Melkite literature in Syriac,https://gedsh.bethmardutho.org/Melkite-literature-in-Syriac,http://syriaca.org/bibl/379,,subject
+371,"Menander, Syriac sentences of",https://gedsh.bethmardutho.org/Menander-Syriac-sentences-of,http://syriaca.org/bibl/380,,work
+372,"Methodius, Apocalypse of Pseudo-",https://gedsh.bethmardutho.org/Methodius-Apocalypse-of-Pseudo-,http://syriaca.org/bibl/381,,work
+373,Michael I Rabo,https://gedsh.bethmardutho.org/Michael-I-Rabo,http://syriaca.org/bibl/382,http://syriaca.org/person/217,person
+374,Michael II the Younger,https://gedsh.bethmardutho.org/Michael-II-the-Younger,http://syriaca.org/bibl/383,http://syriaca.org/person/223,person
+375,Michael Badoqa,https://gedsh.bethmardutho.org/Michael-Badoqa,http://syriaca.org/bibl/384,http://syriaca.org/person/637,person
+376,Midyat,https://gedsh.bethmardutho.org/Midyat,http://syriaca.org/bibl/385,http://syriaca.org/place/137,place
+377,"Mingana, Alphonse",https://gedsh.bethmardutho.org/Mingana-Alphonse,http://syriaca.org/bibl/386,http://syriaca.org/person/639,person
+378,"Moberg, Axel",https://gedsh.bethmardutho.org/Moberg-Axel,http://syriaca.org/bibl/387,http://syriaca.org/person/640,person
+379,Monasticism,https://gedsh.bethmardutho.org/Monasticism,http://syriaca.org/bibl/388,,subject
+380,Mosul,https://gedsh.bethmardutho.org/Mosul,http://syriaca.org/bibl/389,http://syriaca.org/place/139,place
+381,"Mubārak, Buṭros",https://gedsh.bethmardutho.org/Mubarak-Butros,http://syriaca.org/bibl/390,http://syriaca.org/person/643,person
+382,"Murad, Michael",https://gedsh.bethmardutho.org/Murad-Michael,http://syriaca.org/bibl/391,http://syriaca.org/person/644,person
+383,"Mūsā al-Ḥabashī, Dayr Mār",https://gedsh.bethmardutho.org/Musa-al-Habashi-Dayr-Mar,http://syriaca.org/bibl/392,http://syriaca.org/place/228,place
+384,Mushe of Aggel,https://gedsh.bethmardutho.org/Mushe-of-Aggel,http://syriaca.org/bibl/393,http://syriaca.org/person/64,person
+385,Mushe bar Kipho,https://gedsh.bethmardutho.org/Mushe-bar-Kipho,http://syriaca.org/bibl/394,http://syriaca.org/person/173,person
+386,Mushe of Mardin,https://gedsh.bethmardutho.org/Mushe-of-Mardin,http://syriaca.org/bibl/395,http://syriaca.org/person/646,person
+387,Mushe of Nisibis,https://gedsh.bethmardutho.org/Mushe-of-Nisibis,http://syriaca.org/bibl/396,http://syriaca.org/person/647,person
+388,Nagran,https://gedsh.bethmardutho.org/Nagran,http://syriaca.org/bibl/397,http://syriaca.org/place/464,place
+389,"Naqqāsheh, Afram",https://gedsh.bethmardutho.org/Naqqasheh-Afram,http://syriaca.org/bibl/398,http://syriaca.org/person/649,person
+390,Narsai,https://gedsh.bethmardutho.org/Narsai,http://syriaca.org/bibl/399,http://syriaca.org/person/650,person
+391,Nathniel of Sirzor,https://gedsh.bethmardutho.org/Nathniel-of-Sirzor,http://syriaca.org/bibl/400,http://syriaca.org/person/651,person
+392,"Nau, François",https://gedsh.bethmardutho.org/Nau-Francois,http://syriaca.org/bibl/401,http://syriaca.org/person/652,person
+393,Nestorianism,https://gedsh.bethmardutho.org/Nestorianism,http://syriaca.org/bibl/402,,subject
+394,Nestorios of Beth Nuhadra,https://gedsh.bethmardutho.org/Nestorios-of-Beth-Nuhadra,http://syriaca.org/bibl/403,http://syriaca.org/person/654,person
+395,Nestorius,https://gedsh.bethmardutho.org/Nestorius,http://syriaca.org/bibl/404,http://syriaca.org/person/655,person
+396,Nicolaus of Damascus,https://gedsh.bethmardutho.org/Nicolaus-of-Damascus,http://syriaca.org/bibl/405,http://syriaca.org/person/656,person
+397,Nilus the Solitary,https://gedsh.bethmardutho.org/Nilus-the-Solitary,http://syriaca.org/bibl/406,http://syriaca.org/person/657,person
+398,"Niʿmatullāh, Ignatius",https://gedsh.bethmardutho.org/Nimatullah-Ignatius,http://syriaca.org/bibl/407,http://syriaca.org/person/285,person
+399,Nineveh,https://gedsh.bethmardutho.org/Nineveh,http://syriaca.org/bibl/408,http://syriaca.org/place/144,place
+400,Nisibis,https://gedsh.bethmardutho.org/Nisibis,http://syriaca.org/bibl/409,http://syriaca.org/place/142,place
+401,"Nisibis, School of",https://gedsh.bethmardutho.org/Nisibis-School-of,http://syriaca.org/bibl/410,,org
+402,"Nöldeke, Theodor",https://gedsh.bethmardutho.org/Noldeke-Theodor,http://syriaca.org/bibl/411,http://syriaca.org/person/661,person
+403,Nonos of Nisibis,https://gedsh.bethmardutho.org/Nonos-of-Nisibis,http://syriaca.org/bibl/412,http://syriaca.org/person/156,person
+404,Nuḥ the Lebanese,https://gedsh.bethmardutho.org/Nuh-the-Lebanese,http://syriaca.org/bibl/413,http://syriaca.org/person/277,person
+405,"Nūrī, Athanasios Ignatios",https://gedsh.bethmardutho.org/Nuri-Athanasios-Ignatios,http://syriaca.org/bibl/414,http://syriaca.org/person/662,person
+406,"Nuro, Abrohom",https://gedsh.bethmardutho.org/Nuro-Abrohom,http://syriaca.org/bibl/415,http://syriaca.org/person/663,person
+407,Old Syriac documents,https://gedsh.bethmardutho.org/Old-Syriac-documents,http://syriaca.org/bibl/416,,subject
+408,Old Syriac Version,https://gedsh.bethmardutho.org/Old-Syriac-Version,http://syriaca.org/bibl/417,,work
+409,ʿOnithā,https://gedsh.bethmardutho.org/Onitha,http://syriaca.org/bibl/418,,subject
+410,Palimpsests,https://gedsh.bethmardutho.org/Palimpsests,http://syriaca.org/bibl/419,,subject
+411,Palladius,https://gedsh.bethmardutho.org/Palladius,http://syriaca.org/bibl/420,http://syriaca.org/person/668,person
+412,Papa bar ʿAggai,https://gedsh.bethmardutho.org/Papa-bar-Aggai,http://syriaca.org/bibl/421,http://syriaca.org/person/669,person
+413,"Papyri, Syriac",https://gedsh.bethmardutho.org/Papyri-Syriac,http://syriaca.org/bibl/422,,subject
+414,"Paradise of the Fathers, Book of",https://gedsh.bethmardutho.org/Paradise-of-the-Fathers-Book-of,http://syriaca.org/bibl/423,,work
+415,Pawla of Edessa,https://gedsh.bethmardutho.org/Pawla-of-Edessa,http://syriaca.org/bibl/424,http://syriaca.org/person/84,person
+416,Pawlos of Beth Ukome,https://gedsh.bethmardutho.org/Pawlos-of-Beth-Ukome,http://syriaca.org/bibl/425,http://syriaca.org/person/72,person
+417,Pawlos of Kallinikos,https://gedsh.bethmardutho.org/Pawlos-of-Kallinikos,http://syriaca.org/bibl/426,http://syriaca.org/person/47,person
+418,Pawlos of Nisibis,https://gedsh.bethmardutho.org/Pawlos-of-Nisibis,http://syriaca.org/bibl/427,http://syriaca.org/person/673,person
+419,Pawlos the Persian,https://gedsh.bethmardutho.org/Pawlos-the-Persian,http://syriaca.org/bibl/428,http://syriaca.org/person/674,person
+420,Pawlos the Philosopher,https://gedsh.bethmardutho.org/Pawlos-the-Philosopher,http://syriaca.org/bibl/429,http://syriaca.org/person/675,person
+421,Pawlos of Tella,https://gedsh.bethmardutho.org/Pawlos-of-Tella,http://syriaca.org/bibl/430,http://syriaca.org/person/82,person
+422,"Payne Smith (Mrs. Margoliouth), Jessie",https://gedsh.bethmardutho.org/Payne-Smith-Mrs-Margoliouth-Jessie,http://syriaca.org/bibl/431,http://syriaca.org/person/676,person
+423,"Payne Smith, Robert",https://gedsh.bethmardutho.org/Payne-Smith-Robert,http://syriaca.org/bibl/432,http://syriaca.org/person/677,person
+424,"Perley, David Barsum",https://gedsh.bethmardutho.org/Perley-David-Barsum,http://syriaca.org/bibl/433,http://syriaca.org/person/678,person
+425,Peshitta,https://gedsh.bethmardutho.org/Peshitta,http://syriaca.org/bibl/434,,work
+426,Peter the Iberian,https://gedsh.bethmardutho.org/Peter-the-Iberian,http://syriaca.org/bibl/435,http://syriaca.org/person/680,person
+427,Peter of Kallinikos,https://gedsh.bethmardutho.org/Peter-of-Kallinikos,http://syriaca.org/bibl/436,http://syriaca.org/person/75,person
+428,Philoxenos of Mabbug,https://gedsh.bethmardutho.org/Philoxenos-of-Mabbug,http://syriaca.org/bibl/437,http://syriaca.org/person/44,person
+429,Physiologus,https://gedsh.bethmardutho.org/Physiologus,http://syriaca.org/bibl/438,,work
+430,"van der Ploeg, Johannes P. M.",https://gedsh.bethmardutho.org/van-der-Ploeg-Johannes-P-M,http://syriaca.org/bibl/439,http://syriaca.org/person/682,person
+431,Poetry,https://gedsh.bethmardutho.org/Poetry,http://syriaca.org/bibl/440,,subject
+432,Polykarpos,https://gedsh.bethmardutho.org/Polykarpos,http://syriaca.org/bibl/441,http://syriaca.org/person/35,person
+433,Porphyry,https://gedsh.bethmardutho.org/Porphyry,http://syriaca.org/bibl/442,http://syriaca.org/person/684,person
+434,Printing,https://gedsh.bethmardutho.org/Printing,http://syriaca.org/bibl/443,,subject
+435,Proba,https://gedsh.bethmardutho.org/Proba,http://syriaca.org/bibl/444,http://syriaca.org/person/686,person
+436,Proba,https://gedsh.bethmardutho.org/Proba-metr-of-Chalcedon,http://syriaca.org/bibl/445,http://syriaca.org/person/687,person
+437,Proclus of Constantinople,https://gedsh.bethmardutho.org/Proclus-of-Constantinople,http://syriaca.org/bibl/446,http://syriaca.org/person/688,person
+438,"Psalms, Syriac Apocryphal",https://gedsh.bethmardutho.org/Psalms-Syriac-Apocryphal,http://syriaca.org/bibl/447,,work
+439,Qara,https://gedsh.bethmardutho.org/Qara,http://syriaca.org/bibl/448,http://syriaca.org/place/161,place
+440,"Qarabashī, ʿAbd al-Masīḥ Nuʿmān",https://gedsh.bethmardutho.org/Qarabashi-Abd-al-Masih-Numan,http://syriaca.org/bibl/449,http://syriaca.org/person/691,person
+441,Qaraqosh,https://gedsh.bethmardutho.org/Qaraqosh,http://syriaca.org/bibl/450,http://syriaca.org/place/262,place
+442,"Qarqaphto, Monastery of",https://gedsh.bethmardutho.org/Qarqaphto-Monastery-of,http://syriaca.org/bibl/451,http://syriaca.org/place/229,place
+443,Qdām w-Bāthar,https://gedsh.bethmardutho.org/Qdam-w-Bathar,http://syriaca.org/bibl/452,,work
+444,"Qenneshre, Monastery of",https://gedsh.bethmardutho.org/Qenneshre-Monastery-of,http://syriaca.org/bibl/453,http://syriaca.org/place/230,place
+445,"Qiryo, Yuḥanna",https://gedsh.bethmardutho.org/Qiryo-Yuhanna,http://syriaca.org/bibl/454,http://syriaca.org/person/696,person
+446,Qiyore of Edessa,https://gedsh.bethmardutho.org/Qiyore-of-Edessa,http://syriaca.org/bibl/455,http://syriaca.org/person/697,person
+447,"Qoro, Elias Malke",https://gedsh.bethmardutho.org/Qoro-Elias-Malke,http://syriaca.org/bibl/456,http://syriaca.org/person/698,person
+448,Qurillona,https://gedsh.bethmardutho.org/Qurillona,http://syriaca.org/bibl/457,http://syriaca.org/person/20,person
+449,Quryaqos,https://gedsh.bethmardutho.org/Quryaqos,http://syriaca.org/bibl/458,http://syriaca.org/person/145,person
+450,Rabbula of Edessa,https://gedsh.bethmardutho.org/Rabbula-of-Edessa,http://syriaca.org/bibl/459,http://syriaca.org/person/26,person
+451,Rabbula Gospels,https://gedsh.bethmardutho.org/Rabbula-Gospels,http://syriaca.org/bibl/460,,work
+452,"al-Rāhib, Elias",https://gedsh.bethmardutho.org/al-Rahib-Elias,http://syriaca.org/bibl/461,http://syriaca.org/person/700,person
+453,"Raḥmani, Ignatius Ephrem II",https://gedsh.bethmardutho.org/Rahmani-Ignatius-Ephrem-II,http://syriaca.org/bibl/462,http://syriaca.org/person/701,person
+454,"Renaissance, Syriac",https://gedsh.bethmardutho.org/Renaissance-Syriac,http://syriaca.org/bibl/463,,subject
+455,Reshʿayna,https://gedsh.bethmardutho.org/Reshayna,http://syriaca.org/bibl/464,http://syriaca.org/place/172,place
+456,"Rhétoré, Jacques",https://gedsh.bethmardutho.org/Rhetore-Jacques,http://syriaca.org/bibl/465,http://syriaca.org/person/704,person
+457,Rhetoric,https://gedsh.bethmardutho.org/Rhetoric,http://syriaca.org/bibl/466,,subject
+458,Romanos the Melodist,https://gedsh.bethmardutho.org/Romanos-the-Melodist,http://syriaca.org/bibl/467,http://syriaca.org/person/706,person
+459,"Saba, Boutros",https://gedsh.bethmardutho.org/Saba-Boutros,http://syriaca.org/bibl/468,http://syriaca.org/person/707,person
+460,Sabrishoʿ I,https://gedsh.bethmardutho.org/Sabrisho-I,http://syriaca.org/bibl/469,http://syriaca.org/person/708,person
+461,Sabrishoʿ bar Pawlos,https://gedsh.bethmardutho.org/Sabrisho-bar-Pawlos,http://syriaca.org/bibl/470,http://syriaca.org/person/709,person
+462,"Sachau, Eduard",https://gedsh.bethmardutho.org/Sachau-Eduard,http://syriaca.org/bibl/471,http://syriaca.org/person/710,person
+463,Sahdona (Martyrius),https://gedsh.bethmardutho.org/Sahdona-Martyrius,http://syriaca.org/bibl/472,http://syriaca.org/person/711,person
+464,"al-Ṣahyūnī, Jibrāʾīl",https://gedsh.bethmardutho.org/al-Sahyuni-Jibrail,http://syriaca.org/bibl/473,http://syriaca.org/person/712,person
+465,"Saka, Yaʿqub",https://gedsh.bethmardutho.org/Saka-Yaqub,http://syriaca.org/bibl/474,http://syriaca.org/person/305,person
+466,"al-Ṣalīb, Dayr",https://gedsh.bethmardutho.org/al-Salib-Dayr,http://syriaca.org/bibl/475,http://syriaca.org/place/68,place
+467,"Salmān, Ḥanna",https://gedsh.bethmardutho.org/Salman-Hanna,http://syriaca.org/bibl/476,http://syriaca.org/person/714,person
+468,"Salomon, Désiré",https://gedsh.bethmardutho.org/Salomon-Desire,http://syriaca.org/bibl/477,http://syriaca.org/person/715,person
+469,"Samuel, Athanasios Yeshuʿ",https://gedsh.bethmardutho.org/Samuel-Athanasios-Yeshu,http://syriaca.org/bibl/478,http://syriaca.org/person/716,person
+470,Sargis bar Waḥle,https://gedsh.bethmardutho.org/Sargis-bar-Wahle,http://syriaca.org/bibl/479,http://syriaca.org/person/717,person
+471,Sargis Bḥira,https://gedsh.bethmardutho.org/Sargis-Bhira,http://syriaca.org/bibl/480,http://syriaca.org/person/718,person
+472,Sargis the Stylite,https://gedsh.bethmardutho.org/Sargis-the-Stylite,http://syriaca.org/bibl/481,http://syriaca.org/person/81,person
+473,"Sauget, Joseph-Marie",https://gedsh.bethmardutho.org/Sauget-Joseph-Marie,http://syriaca.org/bibl/482,http://syriaca.org/person/719,person
+474,"Sawma, Abrohom",https://gedsh.bethmardutho.org/Sawma-Abrohom,http://syriaca.org/bibl/483,http://syriaca.org/person/720,person
+475,"Ṣawma, Rabban",https://gedsh.bethmardutho.org/Sawma-Rabban,http://syriaca.org/bibl/484,http://syriaca.org/person/721,person
+476,Sayfo,https://gedsh.bethmardutho.org/Sayfo,http://syriaca.org/bibl/485,,subject
+477,"Scher, Addai",https://gedsh.bethmardutho.org/Scher-Addai,http://syriaca.org/bibl/486,http://syriaca.org/person/723,person
+478,"Schulthess, Friedrich",https://gedsh.bethmardutho.org/Schulthess-Friedrich,http://syriaca.org/bibl/487,http://syriaca.org/person/724,person
+479,Scribes,https://gedsh.bethmardutho.org/Scribes,http://syriaca.org/bibl/488,,subject
+480,"Script, Syriac",https://gedsh.bethmardutho.org/Script-Syriac,http://syriaca.org/bibl/489,,subject
+481,Secundus,https://gedsh.bethmardutho.org/Secundus,http://syriaca.org/bibl/490,http://syriaca.org/person/727,person
+482,"Selb, Walter",https://gedsh.bethmardutho.org/Selb-Walter,http://syriaca.org/bibl/491,http://syriaca.org/person/728,person
+483,Seleucia-Ctesiphon,https://gedsh.bethmardutho.org/Seleucia-Ctesiphon,http://syriaca.org/bibl/492,http://syriaca.org/place/182,place
+484,Seminary of St. John,https://gedsh.bethmardutho.org/Seminary-of-St-John,http://syriaca.org/bibl/493,http://syriaca.org/place/477,place
+485,Sergios of Reshʿayna,https://gedsh.bethmardutho.org/Sergios-of-Reshayna,http://syriaca.org/bibl/494,http://syriaca.org/person/49,person
+486,"Severos, Commentary of the monk",https://gedsh.bethmardutho.org/Severos-Commentary-of-the-monk,http://syriaca.org/bibl/495,,work
+487,Severos bar Mashqo,https://gedsh.bethmardutho.org/Severos-bar-Mashqo,http://syriaca.org/bibl/496,http://syriaca.org/person/106,person
+488,Severos Sebokht,https://gedsh.bethmardutho.org/Severos-Sebokht,http://syriaca.org/bibl/497,http://syriaca.org/person/99,person
+489,Severus of Antioch,https://gedsh.bethmardutho.org/Severus-of-Antioch,http://syriaca.org/bibl/498,http://syriaca.org/person/51,person
+490,"Sextus, Sentences of",https://gedsh.bethmardutho.org/Sextus-Sentences-of,http://syriaca.org/bibl/499,,work
+491,Shahdost,https://gedsh.bethmardutho.org/Shahdost,http://syriaca.org/bibl/500,http://syriaca.org/person/732,person
+492,"Shaliṭa, Mar",https://gedsh.bethmardutho.org/Shalita-Mar,http://syriaca.org/bibl/501,http://syriaca.org/person/733,person
+493,Shalliṭa of Reshʿayna,https://gedsh.bethmardutho.org/Shallita-of-Reshayna,http://syriaca.org/bibl/502,http://syriaca.org/person/734,person
+494,Shamsi Clan,https://gedsh.bethmardutho.org/Shamsi-Clan,http://syriaca.org/bibl/503,,org
+495,Ṣharbokht bar Msargis,https://gedsh.bethmardutho.org/Sharbokht-bar-Msargis,http://syriaca.org/bibl/504,http://syriaca.org/person/736,person
+496,Sharfeh,https://gedsh.bethmardutho.org/Sharfeh,http://syriaca.org/bibl/505,http://syriaca.org/place/232,place
+497,"Shaʿya, Elias",https://gedsh.bethmardutho.org/Shaya-Elias,http://syriaca.org/bibl/506,http://syriaca.org/person/738,person
+498,"Shemʿon, Eshai",https://gedsh.bethmardutho.org/Shemon-Eshai,http://syriaca.org/bibl/507,http://syriaca.org/person/739,person
+499,Shemʿon bar Ṣabbaʿe,https://gedsh.bethmardutho.org/Shemon-bar-Sabbae,http://syriaca.org/bibl/508,http://syriaca.org/person/9,person
+500,Shemʿon of Rev Ardashir,https://gedsh.bethmardutho.org/Shemon-of-Rev-Ardashir,http://syriaca.org/bibl/509,http://syriaca.org/person/740,person
+501,Shemʿon Shanqlawi,https://gedsh.bethmardutho.org/Shemon-Shanqlawi,http://syriaca.org/bibl/510,http://syriaca.org/person/741,person
+502,Shemʿon d-Ṭaybutheh,https://gedsh.bethmardutho.org/Shemon-d-Taybutheh,http://syriaca.org/bibl/511,http://syriaca.org/person/742,person
+503,"Shemʿun II, Basileios",https://gedsh.bethmardutho.org/Shemun-II-Basileios,http://syriaca.org/bibl/512,http://syriaca.org/person/291,person
+504,Shemʿun of Beth Arsham,https://gedsh.bethmardutho.org/Shemun-of-Beth-Arsham,http://syriaca.org/bibl/513,http://syriaca.org/person/53,person
+505,Shemʿun of Edessa,https://gedsh.bethmardutho.org/Shemun-of-Edessa,http://syriaca.org/bibl/514,http://syriaca.org/person/80,person
+506,Shemʿun Quqoyo,https://gedsh.bethmardutho.org/Shemun-Quqoyo,http://syriaca.org/bibl/515,http://syriaca.org/person/37,person
+507,Shemʿun the Stylite,https://gedsh.bethmardutho.org/Shemun-the-Stylite,http://syriaca.org/bibl/516,http://syriaca.org/person/744,person
+508,Shlemon of Baṣra,https://gedsh.bethmardutho.org/Shlemon-of-Basra,http://syriaca.org/bibl/517,http://syriaca.org/person/745,person
+509,Shubḥalmaran,https://gedsh.bethmardutho.org/Shubhalmaran,http://syriaca.org/bibl/518,http://syriaca.org/person/746,person
+510,Siirt,https://gedsh.bethmardutho.org/Siirt,http://syriaca.org/bibl/519,http://syriaca.org/place/188,place
+511,Silwanos of Qardu,https://gedsh.bethmardutho.org/Silwanos-of-Qardu,http://syriaca.org/bibl/520,http://syriaca.org/person/748,person
+512,Sindbad,https://gedsh.bethmardutho.org/Sindbad,http://syriaca.org/bibl/521,http://syriaca.org/person/749,person
+513,"Sleepers of Ephesus, Legend of the",https://gedsh.bethmardutho.org/Sleepers-of-Ephesus-Legend-of-the,http://syriaca.org/bibl/522,,work
+514,"Smith, Agnes and Margaret",https://gedsh.bethmardutho.org/Smith-Agnes-and-Margaret,http://syriaca.org/bibl/523,http://syriaca.org/person/751|http://syriaca.org/person/752,person
+515,"Sobo, Ignatius",https://gedsh.bethmardutho.org/Sobo-Ignatius,http://syriaca.org/bibl/524,http://syriaca.org/person/753,person
+516,"Sobo, Malki al-Qas Afram",https://gedsh.bethmardutho.org/Sobo-Malki-al-Qas-Afram,http://syriaca.org/bibl/525,http://syriaca.org/person/754,person
+517,Sogdian,https://gedsh.bethmardutho.org/Sogdian,http://syriaca.org/bibl/526,,subject
+518,"Solomon, Odes of",https://gedsh.bethmardutho.org/Solomon-Odes-of,http://syriaca.org/bibl/527,,work
+519,Sophronius,https://gedsh.bethmardutho.org/Sophronius,http://syriaca.org/bibl/528,http://syriaca.org/person/757,person
+520,Sṭephanos bar Ṣudayli,https://gedsh.bethmardutho.org/Stephanos-bar-Sudayli,http://syriaca.org/bibl/529,http://syriaca.org/person/36,person
+521,"Strothmann, Werner",https://gedsh.bethmardutho.org/Strothmann-Werner,http://syriaca.org/bibl/530,http://syriaca.org/person/758,person
+522,Sureth,https://gedsh.bethmardutho.org/Sureth,http://syriaca.org/bibl/531,,subject
+523,"al-Suryān, Dayr",https://gedsh.bethmardutho.org/al-Suryan-Dayr,http://syriaca.org/bibl/532,http://syriaca.org/place/360,place
+524,Symmachus,https://gedsh.bethmardutho.org/Symmachus,http://syriaca.org/bibl/533,http://syriaca.org/person/761,person
+525,Synodicon Orientale,https://gedsh.bethmardutho.org/Synodicon-Orientale,http://syriaca.org/bibl/534,,work
+526,Syriac Catholic Church,https://gedsh.bethmardutho.org/Syriac-Catholic-Church,http://syriaca.org/bibl/535,,org
+527,Syriac Conferences,https://gedsh.bethmardutho.org/Syriac-Conferences,http://syriaca.org/bibl/536,,subject
+528,Syriac Language,https://gedsh.bethmardutho.org/Syriac-Language,http://syriaca.org/bibl/537,,subject
+529,Syriac Lexicography,https://gedsh.bethmardutho.org/Syriac-Lexicography,http://syriaca.org/bibl/538,,subject
+530,Syriac Orthodox Church,https://gedsh.bethmardutho.org/Syriac-Orthodox-Church,http://syriaca.org/bibl/539,,org
+531,Syro-Hexapla,https://gedsh.bethmardutho.org/Syro-Hexapla,http://syriaca.org/bibl/540,,work
+532,Tagrit,https://gedsh.bethmardutho.org/Tagrit,http://syriaca.org/bibl/541,http://syriaca.org/place/193,place
+533,"Tappuni, Gabriel",https://gedsh.bethmardutho.org/Tappuni-Gabriel,http://syriaca.org/bibl/542,http://syriaca.org/person/770,person
+534,Tatian,https://gedsh.bethmardutho.org/Tatian,http://syriaca.org/bibl/543,http://syriaca.org/person/771,person
+535,Taw Mim Simkath,https://gedsh.bethmardutho.org/Taw-Mim-Simkath,http://syriaca.org/bibl/544,,org
+536,Telkepe,https://gedsh.bethmardutho.org/Telkepe,http://syriaca.org/bibl/545,http://syriaca.org/place/197,place
+537,"Tell ʿAda, Monastery of",https://gedsh.bethmardutho.org/Tell-Ada-Monastery-of,http://syriaca.org/bibl/546,http://syriaca.org/place/233,place
+538,Testament of Adam,https://gedsh.bethmardutho.org/Testament-of-Adam,http://syriaca.org/bibl/547,,work
+539,Testament of our Lord Jesus Christ,https://gedsh.bethmardutho.org/Testament-of-our-Lord-Jesus-Christ,http://syriaca.org/bibl/548,,work
+540,Thābit b. Qurra,https://gedsh.bethmardutho.org/Thabit-b-Qurra,http://syriaca.org/bibl/549,http://syriaca.org/person/777,person
+541,Theano,https://gedsh.bethmardutho.org/Theano,http://syriaca.org/bibl/550,http://syriaca.org/person/778,person
+542,Theodora (Empress),https://gedsh.bethmardutho.org/Theodora-Empress,http://syriaca.org/bibl/551,http://syriaca.org/person/779,person
+543,Theodore of Mopsuestia,https://gedsh.bethmardutho.org/Theodore-of-Mopsuestia,http://syriaca.org/bibl/552,http://syriaca.org/person/780,person
+544,Theodoret of Cyrrhus,https://gedsh.bethmardutho.org/Theodoret-of-Cyrrhus,http://syriaca.org/bibl/553,http://syriaca.org/person/781,person
+545,Theodoros Abū Qurra,https://gedsh.bethmardutho.org/Theodoros-Abu-Qurra,http://syriaca.org/bibl/554,http://syriaca.org/person/782,person
+546,Theodoros bar Koni,https://gedsh.bethmardutho.org/Theodoros-bar-Koni,http://syriaca.org/bibl/555,http://syriaca.org/person/783,person
+547,Theodoros bar Wahbun,https://gedsh.bethmardutho.org/Theodoros-bar-Wahbun,http://syriaca.org/bibl/556,http://syriaca.org/person/216,person
+548,Theodosios,https://gedsh.bethmardutho.org/Theodosios-patr,http://syriaca.org/bibl/557,http://syriaca.org/person/169,person
+549,Theodosios of Edessa,https://gedsh.bethmardutho.org/Theodosios-of-Edessa,http://syriaca.org/bibl/558,http://syriaca.org/person/150,person
+550,Theodosius of Alexandria,https://gedsh.bethmardutho.org/Theodosius-of-Alexandria,http://syriaca.org/bibl/559,http://syriaca.org/person/784,person
+551,Theodotos of Amid,https://gedsh.bethmardutho.org/Theodotos-of-Amid,http://syriaca.org/bibl/560,http://syriaca.org/person/785,person
+552,Theodotus of Ancyra,https://gedsh.bethmardutho.org/Theodotus-of-Ancyra,http://syriaca.org/bibl/561,http://syriaca.org/person/786,person
+553,Theophilos of Edessa,https://gedsh.bethmardutho.org/Theophilos-of-Edessa,http://syriaca.org/bibl/562,http://syriaca.org/person/787,person
+554,"Thomas, Acts of",https://gedsh.bethmardutho.org/Thomas-Acts-of,http://syriaca.org/bibl/563,,work
+555,Thomas Christians,https://gedsh.bethmardutho.org/Thomas-Christians,http://syriaca.org/bibl/564,,org
+556,Timotheos I,https://gedsh.bethmardutho.org/Timotheos-I,http://syriaca.org/bibl/565,http://syriaca.org/person/790,person
+557,Timotheos II,https://gedsh.bethmardutho.org/Timotheos-II,http://syriaca.org/bibl/566,http://syriaca.org/person/791,person
+558,Timotheos II of Alexandria,https://gedsh.bethmardutho.org/Timotheos-II-of-Alexandria,http://syriaca.org/bibl/567,http://syriaca.org/person/792,person
+559,"Timotheus, Abimalek",https://gedsh.bethmardutho.org/Timotheus-Abimalek,http://syriaca.org/bibl/568,http://syriaca.org/person/793,person
+560,Titus of Bostra,https://gedsh.bethmardutho.org/Titus-of-Bostra,http://syriaca.org/bibl/569,http://syriaca.org/person/794,person
+561,Toma of Edessa,https://gedsh.bethmardutho.org/Toma-of-Edessa,http://syriaca.org/bibl/570,http://syriaca.org/person/795,person
+562,Toma of Marga,https://gedsh.bethmardutho.org/Toma-of-Marga,http://syriaca.org/bibl/571,http://syriaca.org/person/796,person
+563,"Tsereteli, Konstantin",https://gedsh.bethmardutho.org/Tsereteli-Konstantin,http://syriaca.org/bibl/572,http://syriaca.org/person/797,person
+564,Tumo of Ḥarqel,https://gedsh.bethmardutho.org/Tumo-of-Harqel,http://syriaca.org/bibl/573,http://syriaca.org/person/87,person
+565,Ṭur ʿAbdin,https://gedsh.bethmardutho.org/Tur-Abdin,http://syriaca.org/bibl/574,http://syriaca.org/place/221,place
+566,"Turfan, Syriac texts from",https://gedsh.bethmardutho.org/Turfan-Syriac-texts-from,http://syriaca.org/bibl/575,,subject
+567,Ṭuroyo,https://gedsh.bethmardutho.org/Turoyo,http://syriaca.org/bibl/576,,subject
+568,Urmia,https://gedsh.bethmardutho.org/Urmia,http://syriaca.org/bibl/577,http://syriaca.org/place/206,place
+569,"Van den Eynde, Ceslas Florent",https://gedsh.bethmardutho.org/Van-den-Eynde-Ceslas-Florent,http://syriaca.org/bibl/578,http://syriaca.org/person/801,person
+570,"Van Roey, Albert",https://gedsh.bethmardutho.org/Van-Roey-Albert,http://syriaca.org/bibl/579,http://syriaca.org/person/802,person
+571,"Vaschalde, Arthur Adolphe, C.S.B.",https://gedsh.bethmardutho.org/Vaschalde-Arthur-Adolphe-CSB,http://syriaca.org/bibl/580,http://syriaca.org/person/803,person
+572,"Vööbus, Arthur",https://gedsh.bethmardutho.org/Voobus-Arthur,http://syriaca.org/bibl/581,http://syriaca.org/person/804,person
+573,Wall paintings in Syria and Lebanon,https://gedsh.bethmardutho.org/Wall-paintings-in-Syria-and-Lebanon,http://syriaca.org/bibl/582,,subject
+574,Women in the Syriac Tradition,https://gedsh.bethmardutho.org/Women-in-the-Syriac-Tradition,http://syriaca.org/bibl/583,,subject
+575,"Wright, William",https://gedsh.bethmardutho.org/Wright-William,http://syriaca.org/bibl/584,http://syriaca.org/person/807,person
+576,Xi’an,https://gedsh.bethmardutho.org/Xian,http://syriaca.org/bibl/585,http://syriaca.org/place/479,place
+577,Yahbalaha I,https://gedsh.bethmardutho.org/Yahbalaha-I,http://syriaca.org/bibl/586,http://syriaca.org/person/809,person
+578,Yahbalaha III,https://gedsh.bethmardutho.org/Yahbalaha-III,http://syriaca.org/bibl/587,http://syriaca.org/person/810,person
+579,Yaḥyā b. ʿAdī,https://gedsh.bethmardutho.org/Yahya-b-Adi,http://syriaca.org/bibl/588,http://syriaca.org/person/180,person
+580,Yaʿqub bar Shakko,https://gedsh.bethmardutho.org/Yaqub-bar-Shakko,http://syriaca.org/bibl/589,http://syriaca.org/person/231,person
+581,Yaʿqub Burdʿoyo,https://gedsh.bethmardutho.org/Yaqub-Burdoyo,http://syriaca.org/bibl/590,http://syriaca.org/person/69,person
+582,Yaʿqub of Edessa,https://gedsh.bethmardutho.org/Yaqub-of-Edessa,http://syriaca.org/bibl/591,http://syriaca.org/person/113,person
+583,Yaʿqub of Nisibis,https://gedsh.bethmardutho.org/Yaqub-of-Nisibis,http://syriaca.org/bibl/592,http://syriaca.org/person/811,person
+584,Yaʿqub of Serugh,https://gedsh.bethmardutho.org/Yaqub-of-Serugh,http://syriaca.org/bibl/593,http://syriaca.org/person/42,person
+585,Yawsep I of Seleucia-Ctesiphon,https://gedsh.bethmardutho.org/Yawsep-I-of-Seleucia-Ctesiphon,http://syriaca.org/bibl/594,http://syriaca.org/person/812,person
+586,Yawsep II,https://gedsh.bethmardutho.org/Yawsep-II,http://syriaca.org/bibl/595,http://syriaca.org/person/813,person
+587,Yawsep d-Beth Qelayta,https://gedsh.bethmardutho.org/Yawsep-d-Beth-Qelayta,http://syriaca.org/bibl/596,http://syriaca.org/person/814,person
+588,Yawsep Busnaya,https://gedsh.bethmardutho.org/Yawsep-Busnaya,http://syriaca.org/bibl/597,http://syriaca.org/person/815,person
+589,Yawsep Ḥazzaya,https://gedsh.bethmardutho.org/Yawsep-Hazzaya,http://syriaca.org/bibl/598,http://syriaca.org/person/816,person
+590,Yawsep Huzaya,https://gedsh.bethmardutho.org/Yawsep-Huzaya,http://syriaca.org/bibl/599,http://syriaca.org/person/817,person
+591,Yawsep of Telkepe,https://gedsh.bethmardutho.org/Yawsep-of-Telkepe,http://syriaca.org/bibl/600,http://syriaca.org/person/818,person
+592,Yeshuʿ bar Khayrun,https://gedsh.bethmardutho.org/Yeshu-bar-Khayrun,http://syriaca.org/bibl/601,http://syriaca.org/person/250,person
+593,Yeshuʿ the Stylite,https://gedsh.bethmardutho.org/Yeshu-the-Stylite,http://syriaca.org/bibl/602,http://syriaca.org/person/40,person
+594,Yoḥannan Azraq,https://gedsh.bethmardutho.org/Yohannan-Azraq,http://syriaca.org/bibl/603,http://syriaca.org/person/819,person
+595,Yoḥannan bar Abgare,https://gedsh.bethmardutho.org/Yohannan-bar-Abgare,http://syriaca.org/bibl/604,http://syriaca.org/person/820,person
+596,Yoḥannan bar Penkaye,https://gedsh.bethmardutho.org/Yohannan-bar-Penkaye,http://syriaca.org/bibl/605,http://syriaca.org/person/821,person
+597,Yoḥannan bar Sarapion,https://gedsh.bethmardutho.org/Yohannan-bar-Sarapion,http://syriaca.org/bibl/606,http://syriaca.org/person/822,person
+598,Yoḥannan bar Zoʿbi,https://gedsh.bethmardutho.org/Yohannan-bar-Zobi,http://syriaca.org/bibl/607,http://syriaca.org/person/823,person
+599,Yoḥannan of Beth Rabban,https://gedsh.bethmardutho.org/Yohannan-of-Beth-Rabban,http://syriaca.org/bibl/608,http://syriaca.org/person/824,person
+600,Yoḥannan of Dailam,https://gedsh.bethmardutho.org/Yohannan-of-Dailam,http://syriaca.org/bibl/609,http://syriaca.org/person/825,person
+601,Yoḥannan of Dalyatha,https://gedsh.bethmardutho.org/Yohannan-of-Dalyatha,http://syriaca.org/bibl/610,http://syriaca.org/person/826,person
+602,Yoḥannan Iḥidaya,https://gedsh.bethmardutho.org/Yohannan-Ihidaya,http://syriaca.org/bibl/611,http://syriaca.org/person/827,person
+603,Yoḥannan of Mosul,https://gedsh.bethmardutho.org/Yohannan-of-Mosul,http://syriaca.org/bibl/612,http://syriaca.org/person/828,person
+604,Yoḥannan Sullaqa,https://gedsh.bethmardutho.org/Yohannan-Sullaqa,http://syriaca.org/bibl/613,http://syriaca.org/person/829,person
+605,"Yuḥanon X, Ishoʿ bar Shushan",https://gedsh.bethmardutho.org/Yuhanon-X-Isho-bar-Shushan,http://syriaca.org/bibl/614,http://syriaca.org/person/193,person
+606,Yuḥanon XIV bar Shayullāh,https://gedsh.bethmardutho.org/Yuhanon-XIV-bar-Shayullah,http://syriaca.org/bibl/615,http://syriaca.org/person/830,person
+607,Yuḥanon bar Maʿdani,https://gedsh.bethmardutho.org/Yuhanon-bar-Madani,http://syriaca.org/bibl/616,http://syriaca.org/person/236,person
+608,Yuḥanon Barbur,https://gedsh.bethmardutho.org/Yuhanon-Barbur,http://syriaca.org/bibl/617,http://syriaca.org/person/831,person
+609,Yuḥanon of Ephesus,https://gedsh.bethmardutho.org/Yuhanon-of-Ephesus,http://syriaca.org/bibl/618,http://syriaca.org/person/74,person
+610,Yuḥanon of Litarba,https://gedsh.bethmardutho.org/Yuhanon-of-Litarba,http://syriaca.org/bibl/619,http://syriaca.org/person/127,person
+611,Yuḥanon of Mardin,https://gedsh.bethmardutho.org/Yuhanon-of-Mardin,http://syriaca.org/bibl/620,http://syriaca.org/person/209,person
+612,Yuḥanon Maron,https://gedsh.bethmardutho.org/Yuhanon-Maron,http://syriaca.org/bibl/621,http://syriaca.org/person/832,person
+613,Yuḥanon Naqar,https://gedsh.bethmardutho.org/Yuhanon-Naqar,http://syriaca.org/bibl/622,http://syriaca.org/person/96,person
+614,Yuḥanon Qashisho,https://gedsh.bethmardutho.org/Yuhanon-Qashisho,http://syriaca.org/bibl/623,http://syriaca.org/person/833,person
+615,Yuḥanon of the Sedre,https://gedsh.bethmardutho.org/Yuhanon-of-the-Sedre,http://syriaca.org/bibl/624,http://syriaca.org/person/92,person
+616,Yuḥanon of Tella,https://gedsh.bethmardutho.org/Yuhanon-of-Tella,http://syriaca.org/bibl/625,http://syriaca.org/person/50,person
+617,Yulyana Saba,https://gedsh.bethmardutho.org/Yulyana-Saba,http://syriaca.org/bibl/626,http://syriaca.org/person/834,person
+618,"Zacharias, Pseudo-",https://gedsh.bethmardutho.org/Zacharias-Pseudo-,http://syriaca.org/bibl/627,,pseudonym
+619,Zacharias Rhetor,https://gedsh.bethmardutho.org/Zacharias-Rhetor,http://syriaca.org/bibl/628,http://syriaca.org/person/58,person
+620,"al-Zaʿfarān, Dayr",https://gedsh.bethmardutho.org/al-Zafaran-Dayr,http://syriaca.org/bibl/629,http://syriaca.org/place/69,place
+621,"Zingerle, Pius (Jacob)",https://gedsh.bethmardutho.org/Zingerle-Pius-Jacob,http://syriaca.org/bibl/630,http://syriaca.org/person/837,person
+622,"Zuqnin, Chronicle of",https://gedsh.bethmardutho.org/Zuqnin-Chronicle-of,http://syriaca.org/bibl/631,,work
