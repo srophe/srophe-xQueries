@@ -7,6 +7,10 @@ Author: William L. Potter
 
 This directory houses XQuery scripts and their associated data files for converting the skeleton XML encoding of manuscripts in Wright's ... into fully formed Syriaca manuscript records. This document describes how to use the files in this directory to accomplish that conversion. Descriptions are given for each step and function. _The essential information is contained in the **Global Options** and **Process** sections of each script._
 
+## General Notes
+
+Once data has been finalized in Wright Catalogue Repository it is moved to the Dev branch of Srophe-App-Data.
+
 ## General Requirements and Dependencies
 
 - The XQuery scripts depend upon several BaseX modules, such as [file](https://docs.basex.org/wiki/File_Module) and [csv](https://docs.basex.org/wiki/CSV_Module). As such, it is highly recommended that these scripts be executed using BaseX. BaseX may be downloaded [here](http://basex.org/download/).
