@@ -20,7 +20,7 @@ Once data has been finalized in Wright Catalogue Repository it is moved to the D
 
 Although these scripts may be housed in a separate repository, they are intended to act upon data in the [Srophe Wright Catalogue Data Repository](https://github.com/srophe/wright-catalogue/tree/master/data). An overview of that repository follows.
 
-The logic of the [Srophe Wright Catalogue Data Repository](https://github.com/srophe/wright-catalogue/tree/master/data) roughly follows the editorial process. Currently, only [3_drafts](https://github.com/srophe/wright-catalogue/tree/master/data/3_drafts), [4_to_be_checked](https://github.com/srophe/wright-catalogue/tree/master/data/4_to_be_checked), and [5_finalized](https://github.com/srophe/wright-catalogue/tree/master/data/5_finalized) are in use.
+The logic of the [Srophe Wright Catalogue Data Repository](https://github.com/srophe/wright-catalogue/tree/master/data) roughly follows the editorial process. Currently, only [3_drafts](https://github.com/srophe/wright-catalogue/tree/master/data/3_drafts), [4_to_be_checked](https://github.com/srophe/wright-catalogue/tree/master/data/4_to_be_checked), and [5_finalized](https://github.com/srophe/wright-catalogue/tree/master/data/5_finalized) are in use. (Directories 1_raw_ocr and 2_preprocessing)
 
 Encoders store their encoded drafts in "3_drafts" as skeleton XML records using the CSS form for oXygen Author mode.
 
