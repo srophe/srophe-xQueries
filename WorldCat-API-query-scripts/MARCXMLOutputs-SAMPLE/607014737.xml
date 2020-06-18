@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oclcterms="http://purl.org/oclc/terms/">
+    <leader>00000cam a2200000Ka 4500</leader>
+    <controlfield tag="001">607014737</controlfield>
+    <controlfield tag="008">100414s2003    enkab   ob    100 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">  2004381916</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781785704628</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1785704621</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781785704642</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1785704648</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">1842170937</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">9781842170939</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">9781785704611</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">1785704613</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">Boats, ships and shipyards :</subfield>
+      <subfield code="b">proceedings of the Ninth International Symposium on Boat and Ship Archaeology, Venice 2000 /</subfield>
+      <subfield code="c">edited by Carlo Beltrame.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Oxford :</subfield>
+      <subfield code="b">Oxbow ;</subfield>
+      <subfield code="a">Oakville, CT :</subfield>
+      <subfield code="b">David Brown Co.,</subfield>
+      <subfield code="c">©2003.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">1 online resource (xiv, 362 pages) :</subfield>
+      <subfield code="b">illustrations, maps</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="538">
+      <subfield code="a">Master and use copy. Digital master created according to Benchmark for Faithful Digital Reproductions of Monographs and Serials, Version 1. Digital Library Federation, December 2002.</subfield>
+      <subfield code="u">http://purl.oclc.org/DLF/benchrepro0212</subfield>
+      <subfield code="5">MiAaHDL</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="505">
+      <subfield code="t">Introduction /</subfield>
+      <subfield code="r">Carlo Beltrame --</subfield>
+      <subfield code="g">1.</subfield>
+      <subfield code="t">Maritime Archaeology and the ISBSA -- Where to in the 21st Century? /</subfield>
+      <subfield code="r">Frederick M. Hocker --</subfield>
+      <subfield code="g">2.</subfield>
+      <subfield code="t">Nautical Archaeology in Italy: Past, Present and Future /</subfield>
+      <subfield code="r">Carlo Beltrame --</subfield>
+      <subfield code="g">3.</subfield>
+      <subfield code="t">The Arsenal of Venice and the Art of Building Ships /</subfield>
+      <subfield code="r">Mauro Bondioli --</subfield>
+      <subfield code="g">4.</subfield>
+      <subfield code="t">Neolithic Watercraft in Greece: Circumstantial Evidence and Serious Guesses /</subfield>
+      <subfield code="r">Christina Marangou --</subfield>
+      <subfield code="g">5.</subfield>
+      <subfield code="t">Sewn Planked Boats from Early Dynastic Abydos, Egypt /</subfield>
+      <subfield code="r">Cheryl A. Ward --</subfield>
+      <subfield code="g">6.</subfield>
+      <subfield code="t">Towards the Determination of Mycenaean Shipbuilding Techniques, Tools and Materials /</subfield>
+      <subfield code="r">Dimitra Kamarinou --</subfield>
+      <subfield code="g">7.</subfield>
+      <subfield code="t">Mortise-and-Tenon Joints of Bronze Age Seagoing Ships /</subfield>
+      <subfield code="r">Cemal Pulak --</subfield>
+      <subfield code="g">8.</subfield>
+      <subfield code="t">Timber Supply and Ancient Naval Architecture /</subfield>
+      <subfield code="r">Frederic Guibal and Patrice Pomey --</subfield>
+      <subfield code="g">9.</subfield>
+      <subfield code="t">The Late-Roman "Parco di Teodorico" Wreck, Ravenna, Italy: Preliminary Remarks on the Hull and the Shipbuilding /</subfield>
+      <subfield code="r">Stefano Medas --</subfield>
+      <subfield code="g">10.</subfield>
+      <subfield code="t">Dor D Wreck, Tantura Lagoon, Israel /</subfield>
+      <subfield code="r">Yaacov Kahanov --</subfield>
+      <subfield code="g">11.</subfield>
+      <subfield code="t">Reconstruction of Marseilles 6th century B.C. Greek ships /</subfield>
+      <subfield code="r">Patrice Pomey --</subfield>
+      <subfield code="g">12.</subfield>
+      <subfield code="t">The Late-Roman Fiumicino 1 Wreck: Reconstructing the Hull /</subfield>
+      <subfield code="r">Giulia Boetto --</subfield>
+      <subfield code="g">13.</subfield>
+      <subfield code="t">The Reconstruction of the Ladby Ship -- Using a Working Spline Model and Computer /</subfield>
+      <subfield code="r">Vibeke Bischoff --</subfield>
+      <subfield code="g">14.</subfield>
+      <subfield code="t">Progress in the Study of Ancient Shipsheds: a Review /</subfield>
+      <subfield code="r">David Blackman --</subfield>
+      <subfield code="g">15.</subfield>
+      <subfield code="t">Ancient Slipways and Shipsheds on the Israeli Coast of the Mediterranean /</subfield>
+      <subfield code="r">Avner Raban --</subfield>
+      <subfield code="g">16.</subfield>
+      <subfield code="t">Operating on Shipsheds and Slipways: Evidence of Underwater Configuration of Slipways from the Neosoikos of 'Trypiti' /</subfield>
+      <subfield code="r">Kalliopi Baika</subfield>
+    </datafield>
+    <datafield ind1="8" ind2="0" tag="505">
+      <subfield code="g">17.</subfield>
+      <subfield code="t">An Early Roman Boatyard at Mainz, Germany /</subfield>
+      <subfield code="r">Olaf Hockmann --</subfield>
+      <subfield code="g">18.</subfield>
+      <subfield code="t">Essay to Restore the Operating Process of a Shipyard in the Early Medieval Period: the Example of the Port Berteau II Wreck, Charente-Maritime, France /</subfield>
+      <subfield code="r">Eric Rieth --</subfield>
+      <subfield code="g">19.</subfield>
+      <subfield code="t">Nails for Shipbuilding (13th-20th centuries) /</subfield>
+      <subfield code="r">Furio Ciciliot --</subfield>
+      <subfield code="g">20.</subfield>
+      <subfield code="t">How Were Vessels Designed before the Late-Medieval Period? /</subfield>
+      <subfield code="r">Sean McGrail --</subfield>
+      <subfield code="g">21.</subfield>
+      <subfield code="t">The Hogendijk Shipyard in Zaandam and the VOC Shipyard Oostenburg-in Amsterdam, Examples of Recent Archaeological Slipway Research in the Netherlands /</subfield>
+      <subfield code="r">Jerzy Gawronski --</subfield>
+      <subfield code="g">22.</subfield>
+      <subfield code="t">Moulds, Rising Boards and Bevel Boards, The Wooden Memory of the Shipyard of Le Locum, Lake Geneva /</subfield>
+      <subfield code="r">Paul Bloesch --</subfield>
+      <subfield code="g">23.</subfield>
+      <subfield code="t">The Tyrrell's Boatyard of Arklow, County Wicklow, Ireland /</subfield>
+      <subfield code="r">Darina Tully --</subfield>
+      <subfield code="g">24.</subfield>
+      <subfield code="t">Tracing Ship Traffic without Ships -- Alternative Methods of Finding Evidence for Pre- and Early Historical Inland Water Transport /</subfield>
+      <subfield code="r">Ulrike Teigelake --</subfield>
+      <subfield code="g">25.</subfield>
+      <subfield code="t">Thoughts on the Typology of Stone Age Boat Petroglyphs from the White Sea and Lake Onega, Russia /</subfield>
+      <subfield code="r">Maik-Jens Springmann --</subfield>
+      <subfield code="g">26.</subfield>
+      <subfield code="t">A Roman River Barge (?) Found in the Danube near Prahovo, Serbia /</subfield>
+      <subfield code="r">Ronald Bockius --</subfield>
+      <subfield code="g">27.</subfield>
+      <subfield code="t">Expanded Logboats between the Baltic and the Black Sea /</subfield>
+      <subfield code="r">Waldemar Ossowski --</subfield>
+      <subfield code="g">28.</subfield>
+      <subfield code="t">A New Look at the Utrecht Ship /</subfield>
+      <subfield code="r">Aleydis Van de Moortel --</subfield>
+      <subfield code="g">29.</subfield>
+      <subfield code="t">Investigation of Traditional Boatbuilding for the Reconstruction of Medieval Russian Boats /</subfield>
+      <subfield code="r">Petr Sorokin --</subfield>
+      <subfield code="g">30.</subfield>
+      <subfield code="t">Wooden Shipbuilding on Lake Constance before 1900 /</subfield>
+      <subfield code="r">Dietrich Hakelberg</subfield>
+    </datafield>
+    <datafield ind1="8" ind2="0" tag="505">
+      <subfield code="g">31.</subfield>
+      <subfield code="t">The Sailing Qualities of Venetian Great Galleys in the 15th Century. Evidence of their Influence on the Development of Sailing Ships in the Atlantic Area during the Following Century /</subfield>
+      <subfield code="r">Sergio Bellabarba --</subfield>
+      <subfield code="g">32.</subfield>
+      <subfield code="t">The Venetian Merchant Galley and the System of Partisoni -- Initial Steps towards Modern Ship Design /</subfield>
+      <subfield code="r">Ulrich Alertz --</subfield>
+      <subfield code="g">33.</subfield>
+      <subfield code="t">The Art of Designing and Building Venetian Galleys from the 15th to the 16th century /</subfield>
+      <subfield code="r">Mauro Bondioli --</subfield>
+      <subfield code="g">34.</subfield>
+      <subfield code="t">Reportage, Representation and Reality. The Extent to which Chronicle Accounts and Contemporary Illustrations can be relied upon when discussing the Tactics used in Medieval Galley Warfare /</subfield>
+      <subfield code="r">Susan Rose --</subfield>
+      <subfield code="g">35.</subfield>
+      <subfield code="t">Les Galeres de la Vue de Venise de Jacopo de Barberi (1500) /</subfield>
+      <subfield code="r">Lucien Basch --</subfield>
+      <subfield code="g">36.</subfield>
+      <subfield code="t">Kadirga, A Technical Analysis of the Sultan's Galley /</subfield>
+      <subfield code="r">Erkut Arcak --</subfield>
+      <subfield code="g">37.</subfield>
+      <subfield code="t">Drachio in Context /</subfield>
+      <subfield code="r">Louis Th. Lehmann --</subfield>
+      <subfield code="g">38.</subfield>
+      <subfield code="t">Variations on a Theme. 11th-century Ship Types of the North /</subfield>
+      <subfield code="r">Ole Crumlin-Pedersen --</subfield>
+      <subfield code="g">39.</subfield>
+      <subfield code="t">The Boat Puck -- 3 in the Light of Investigation of Other Slavic Boats from 9-14th Century /</subfield>
+      <subfield code="r">Jerzy Litwin --</subfield>
+      <subfield code="g">40.</subfield>
+      <subfield code="t">The Szezecin Vessel -- a 'Crossroad' of Shipbuilding Traditions or a Representative Artifact of Early Medieval Boatbuilding by Western Slavs? /</subfield>
+      <subfield code="r">George Indruszewski --</subfield>
+      <subfield code="g">41.</subfield>
+      <subfield code="t">Large Cargo Vessels in Danish Waters 1000-1250. Archaeological Evidence for Professional Merchant Seafaring before the Hanseatic Period /</subfield>
+      <subfield code="r">Anton Englert --</subfield>
+      <subfield code="g">42.</subfield>
+      <subfield code="t">Remarks on he Identification of Medieval Ship Types in Northern Europe /</subfield>
+      <subfield code="r">Timm Weski</subfield>
+    </datafield>
+    <datafield ind1="8" ind2="0" tag="505">
+      <subfield code="g">43.</subfield>
+      <subfield code="t">Rare Fragments of a 13th Century Clinker Galley found in London and Use of the Irish Wildwoods for Shipbuilding /</subfield>
+      <subfield code="r">Damian Goodburn --</subfield>
+      <subfield code="g">44.</subfield>
+      <subfield code="t">Clenched Lap-Strake Boat Finds from the Netherlands, between 1200 and 1600 /</subfield>
+      <subfield code="r">Andre F. L. van Holk --</subfield>
+      <subfield code="g">45.</subfield>
+      <subfield code="t">Illuminating Ships: Integrating the Evidence from Images and Materials in Medieval Europe /</subfield>
+      <subfield code="r">Joe Flatman --</subfield>
+      <subfield code="g">46.</subfield>
+      <subfield code="t">Squares and Stripes: Remarks about Textiles Archaeology and Sails /</subfield>
+      <subfield code="r">Susan Moller-Wiering --</subfield>
+      <subfield code="g">47.</subfield>
+      <subfield code="t">Ships and Private Shipyards through the Archaeological Evidence of the Wreck off La Natiere (Saint-Malo, Brittany, France) /</subfield>
+      <subfield code="r">Michel L'Hour and Elisabeth Veyrat --</subfield>
+      <subfield code="g">48.</subfield>
+      <subfield code="t">The Mysteries of a Baltic Trader /</subfield>
+      <subfield code="r">Martijn R. Manders --</subfield>
+      <subfield code="g">49.</subfield>
+      <subfield code="t">Whipstaff and Helmsman. An Account of the Steering-gear of the Vasa /</subfield>
+      <subfield code="r">Olof Pipping --</subfield>
+      <subfield code="g">50.</subfield>
+      <subfield code="t">Maritime Ethnography: The Reality of Analogy /</subfield>
+      <subfield code="r">Lucy Blue --</subfield>
+      <subfield code="g">51.</subfield>
+      <subfield code="t">A Comparison between the Earliest Testimonies of Venetian Construction Techniques and those of the Present Day /</subfield>
+      <subfield code="r">Gilberto Penzo --</subfield>
+      <subfield code="g">52.</subfield>
+      <subfield code="t">Reconstruction of the Hjortspring Boat Sailing Tests /</subfield>
+      <subfield code="r">Knud Vagn Valbjorn, Niels Peter Fenger and Max Vinner --</subfield>
+      <subfield code="g">53.</subfield>
+      <subfield code="t">Two Slavonic Boat Reconstructions in the Open Air Museum Gross Raden /</subfield>
+      <subfield code="r">Trixi Gulland.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Boats and boating</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Ships</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Shipbuilding</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Bateaux</subfield>
+      <subfield code="x">Histoire</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Navires</subfield>
+      <subfield code="x">Histoire</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Construction navale</subfield>
+      <subfield code="x">Histoire</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Navires anciens</subfield>
+      <subfield code="x">Conception et construction</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Archéologie sous-marine</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Navires médiévaux</subfield>
+      <subfield code="x">Conception et construction</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Boats and boating.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00835176</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Shipbuilding.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01116224</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Ships.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01116439</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Onderwaterarcheologie.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Schepen.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Scheepsbouw.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Oudheid.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Middeleeuwen.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Conference papers and proceedings.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01423772</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">History.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01411628</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="655">
+      <subfield code="a">Electronic books.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Beltrame, Carlo.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="710">
+      <subfield code="a">Università degli studi di Venezia.</subfield>
+      <subfield code="b">Dipartimento di scienze dell'antichità e del Vicino Oriente.</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">Google</subfield>
+      <subfield code="u">http://books.google.com/books?id=owhUAAAAMAAJ</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">HathiTrust Digital Library, Limited view (search only)</subfield>
+      <subfield code="u">http://catalog.hathitrust.org/api/volumes/oclc/51781386.html</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">EBSCOhost</subfield>
+      <subfield code="u">http://gateway.library.qut.edu.au/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=1510156</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">JSTOR</subfield>
+      <subfield code="u">http://www.jstor.org/stable/10.2307/j.ctvh1dsn7</subfield>
+    </datafield>
+  </record>
+</collection>

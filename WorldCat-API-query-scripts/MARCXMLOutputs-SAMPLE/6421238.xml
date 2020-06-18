@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oclcterms="http://purl.org/oclc/terms/">
+    <leader>00000cam a2200000 i 4500</leader>
+    <controlfield tag="001">6421238</controlfield>
+    <controlfield tag="008">800516s1980    nyua     b    101 0 eng  </controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">   80016940 </subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">0387904972</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9780387904979</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">3540904972</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9783540904977</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">Oceanography, the past /</subfield>
+      <subfield code="c">edited by M. Sears and D. Merriman.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">New York :</subfield>
+      <subfield code="b">Springer-Verlag,</subfield>
+      <subfield code="c">©1980.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">xx, 812 pages :</subfield>
+      <subfield code="b">illustrations ;</subfield>
+      <subfield code="c">25 cm</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">"Proceedings of the third International Congress on the History of Oceanography held September 22-26, 1980, at the Woods Hole Oceanographic Institution, Woods Hole, Massachusetts, USA."</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">The Woods Hole Oceanographic Institution : a commentary / Paul M. Fye -- The Oceanographic and how it grew / Roger Revelle -- The Woods Hole Oceanographic Institution : an expanding influence / George E.R. Deacon -- Changing concepts of the sea, 1550-1950 : an urban perspective / Josef W. Konvitz -- The 1959 Oceanographic Congress : an informal history / Dael Wolfle -- The R/V Atlantis and her first Oceanographic Institution / Susan Schlee -- Reviving American oceanography : Frank Lillie, Wickliffe Rose and the founding of the Woods Hole Oceanographic Institution / Harold L. Burstyn -- Growth of an oceanographic institution / Richard L. Haedrich and Kenneth O. Emery -- Alexander Agassiz (1835-1910) and the financial support of oceanography in the United States / Donald J. Zinn -- The Annisquam Sea-side Laboratory of Alpheus Hyatt, predecessor of the Marine Biological Laboratory at Woods Hole, 1880-1886 / Ralph W. Dexter -- Some aspects of Anglo-American co-operation in marine science, 1660-1914 / Margaret Deacon -- Edward H. Smith and the 1928 Marion Expedition revisited : a compilation / V. Wendel Driggers -- The role of T. Wayland Vaughan in American oceanography / Elizabeth N. Shor -- A brief history of the Tortugas Marine Laboratory and the Department of Marine Biology, Carnegie Institution of Washington / Patrick L. Colin -- Some aspects of the history of oceanography as seen through the publications of the International Hydrographic Bureau 1919-1939 / G.S. Ritchie -- The plan for an international oceanographic congress proposed by H.S.H. the Prince Albert 1st of Monaco / Jacqueline Carpine-Lancre -- Oceanographic prescience : the deliberations of the first U.S. Interagency Conference on Oceanography, July 1, 1924 / Stewart B. Nelson -- Some historical backgrounds for the establishment of the Stazione zoologica at Naples / Jane M. Oppenheimer -- A review of Wüst's classification of the major deep-sea expeditions 1873-1960 and its extension to recent oceanographic research programs / Matthias Tomczak Jr. -- The role of instruments in the development of physical oceanography / Myrl C. Hendershott -- Meso-scale spatial distribution of plankton : co-evolution of concepts and instrumentation / Alex Herman and Trevor Platt -- Some origins and perspectives in deep-ocean instrumentation development / Fred Noel Spiess -- The historical development of tidal science, and the Liverpool Tidal Institute / D.E. Cartwright -- Six's thermometer : a century of use in oceanography / Anita McConnell -- North Pacific sea surface temperature observations : a history / Kern E. Kenyon -- Some aspects of the historical development on the studies of the Kuroshio and the Oyashio / Kiyomitsu Kitano -- Seasonal changes in the Suez Canal following its opening in 1869; newly discovered hydrographic records of 1870-1872 / Selim A. Morcos -- The first geological-oceanological studies of the Black Sea (N.F. Andrusov, D. Arkhangel'sky, N.M. Strakhov) / V.V. Tikhomirov -- The first deep ocean drilling / Willard Bascom -- Geological and oceanographical studies in the Caspian Sea and the problems of oil and gas deposits / Sh. F. Mekhtiyev and Z.A. Buniat-Zade -- The development of marine chemistry until 1900 / William J. Wallace -- Physical oceanography of the Chilean Sea : an historical study / Guillermo Barros G. -- From the physiology of marine organisms to oceanographic physiology or physiological oceanography / Maurice Fontaine -- Alexander Agassiz, Carl Chun and the problem of the intermediate fauna / Eric L. Mills -- The British Association Dredging Committee : a brief history / A.L. Rice and J.B. Wilson -- Development of knowledge of the correlation between land and sea in historical times / I.A. Fedoseyev -- A commemoration on the 50th anniversary of the William Beebe-Otis Barton Bathysphere dives / Kenneth Gold and Jacqueline C. Warsaw -- Marine industrial pollution / Bostwick H. Ketchum -- The history of chlorinated hydrocarbon pollution in the marine environment / Arne Jernelöv -- Artificial radionuclides in the oceans / William L. Templeton -- The Royal Society and the study of coral reefs / C. Maurice Yonge -- Early 19th century oceanography around Terra Australis / Ian S.F. Jones and J.E. Jones -- The Plankton-Expedition and the copepod studies of Fredrich and Maria Dahl / David M. Damkaer and Tenge Mrozek-Dahl -- Studies on estuarine-marine dependency / Gordon Gunter -- History of Polish biological oceanographic research / Kazimierz Wincenty Siudzinski -- On the environment and unity in marine research / C.E. Lucas -- Phytoplankton ecology before 1900 : supplementary notes to the "Depths of the ocean" / F.J.R. Taylor -- The Victorian aquarium in ecological and social perspective / Philip F. Rehbock -- The development of biological studies in the ocean environment / T.R. Parsons -- Physical oceanography in India : an historical sketch / Sucharit Markanday and P.S. Srivastava -- Switzerland's contributions to the aquatic sciences over the centuries / Hermann Heberlein -- Traditional Chinese ichthyology and its encounter with Jesuit science : an historical survey / Elleanor H. Crown -- On the history of Arab navigation / A.A. Aleem -- Vila do Infante (Prince-Town), the first school of oceanography in the modem era : an essay / James H. Guill -- King Carlos of Portugal, a pioneer in European oceanography / Luiz Saldanha -- Studies of the acceptance of plate tectonics / J.L. Lemke, M.H. Nitecki and H. Pullman -- How secure is plate tectonics? / A. Hallam -- Early observations and investigations of El Niño : the event of 1925 / Warren S. Wooster -- Oceanography development in Peru / S. Zuta and L.A. Flores -- Oceanography and geophysical theory in the first half of the twentieth century : the Dutch school / Rachel Laudan -- Belgium and the early development of modern oceanography, including a note on A.F. Renard / Guy T. Houvenaghel -- The Forsters' offenses against convention during and after Capt. Cook's second voyage around the world and the governmental reprisals / Walter Lenz -- The Meteor Expedition, an ocean survey / William J. Emery -- The Benjamin Franklin and Timothy Folger charts of the Gulf Stream / Philip L. Richardson -- William De Brahm's "Continuation of the Atlantic pilot," an empirically supported eighteenth-century model of North Atlantic surface circulation / Louis De Vorsey Jr. -- Considerations on the medical use of marine invertebrates / Jean Théodoridès -- The siting and development of Mediterranean harbors in antiquity / Avner Raban -- Sebastos, the harbor complex of Caesarea Maritima, Israel : the preliminary report of the 1978 underwater explorations / Robert L. Hohlfelder and John P. Oleson -- Gondwanaland in ancient Indian literature / K. Krishnamurthy.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Oceanography</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="2" tag="650">
+      <subfield code="a">Oceanography</subfield>
+      <subfield code="x">history.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Océanographie</subfield>
+      <subfield code="x">Histoire</subfield>
+      <subfield code="x">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Oceanography.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01043671</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Oceanografie.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="2" tag="655">
+      <subfield code="a">Congress.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Conference papers and proceedings.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01423772</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">History.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01411628</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Conference papers and proceedings.</subfield>
+      <subfield code="2">lcgft</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Sears, Mary.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Merriman, Daniel.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="710">
+      <subfield code="a">Woods Hole Oceanographic Institution.</subfield>
+    </datafield>
+  </record>
+</collection>

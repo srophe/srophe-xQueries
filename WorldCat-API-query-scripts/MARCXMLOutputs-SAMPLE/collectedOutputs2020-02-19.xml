@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <leader>00000cam a2200000 a 4500</leader>
+    <controlfield tag="001">43484756</controlfield>
+    <controlfield tag="008">000216s1999    riuabe   b    000 0 eng c</controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">2003270467</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1887829350</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781887829359</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Caesarea papers 2 :</subfield>
+      <subfield code="b">Herod's temple, the provincial governor's Praetorium and granaries, the later harbor, a gold coin hoard, and other studies /</subfield>
+      <subfield code="c">edited by K.G. Holum, A. Raban, and J. Patrich.</subfield>
+    </datafield>
+    <datafield ind1="3" ind2=" " tag="246">
+      <subfield code="a">Caesarea papers two</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Portsmouth, R.I. :</subfield>
+      <subfield code="b">Journal of Roman Archaeology,</subfield>
+      <subfield code="c">1999.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">440 pages :</subfield>
+      <subfield code="b">illustrations (some color), maps, plans ;</subfield>
+      <subfield code="c">29 cm.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="490">
+      <subfield code="a">Journal of Roman archaeology. Supplementary series,</subfield>
+      <subfield code="x">1063-4304 ;</subfield>
+      <subfield code="v">no. 35</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">"Part 1 ... contains field reports of the Combined Caesarea Expeditions (CCE) from 1993 to 1995"--Page 9.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Frontispiece, Introduction and Acknowledgements / K. G. Holium, A. Raban, I. Patrich -- Part 1: FIELD REPORTS -- 1.1 The Temple Platform and environs -- 1.11 The Temple Platform: progress report on the excavations / K. G. Holum -- 1.12 The south flank of the Temple Platform (area Z2, 1993-95 excavations) / F. H. Stanley, Jr. -- 1.13 A corpus of Islamic ceramics (area Z, 1987 season) / M. Niamir -- 1.2 The Praetorium and Warehouse Complex -- 1.21 The warehouse complex and governor's palace (areas KK, CC, NN, May 1993-December 1995) / J. Patrich, D. Reshef, D. Ben Yosef, S. Rotgaizer, S. Pinkas, Z. Bar-Or, H. Van-Dam, A. Moscu -- 1.22 Early Byzantine wall-paintings from Caesarea / T. Avner -- 1.23 Byzantine lead seals from the vicinity of the governor's palace and warehouses (areas CC and KK) / J. W. Nesbitt -- 1.24 The governor's palace and warehouse complex, west flank (areas KK7-9, CV, 1993-95 excavations) / C. M. Lehmann -- 1.3 Underwater excavations in the Outer Harbour -- 1.31 The underwater excavations, 1993-94 / A. Raban. E. G. Reinhardt, M. McGrath, N. Hodge -- 1.32 Pozzolana, lime, and single-mission barges (area K) / C. Brandon with S. Kemp and M. Grove -- 1.33 The lead ingots from the wreck site (area K8) / A. Raban -- 1.34 Stratigraphic excavation of Outer Harbour deposits: preliminary report (1994) / E. G. Reinhardt -- 1.4 Excavations in the Inner Harbour -- 1.41 Land excavations in the Inner Harbour (1993-94) / A. Raban, R. Toueg, S. Yankelevitz, Y. Arnon -- 1.42 Islamic and Crusader pottery (area I, 1993-94) / Y. D. Arnon -- 1.43 Foraminiferal analysis of three stratigraphic sections from the Inner Harbour / E. G. Reinhardt, R. T. Patterson -- 1.5 Evaluation of the Inner Harbour -- 1.51 Caesarea's Inner Harbour: the potential of the harbour sediments / B. Yule, A. J. Barham -- 1.52 The Arab and Crusader sequence (area 114) / P. Rowsome, B. Yule -- 1.53 Pottery from the sediments of the Inner Harbour (area 114) / R. Tomber -- 1.54 Glass from the sediments of the Inner Harbour (area 114) / R. Pollak -- Sedimentological report on samples from the Inner Harbour (area 114) / V. D. Williamson -- 1.55 Diatoms from the sediments of the Inner Harbour (area 114) / N. Cameron -- 1.56 Foraminifera from the sediments of the Inner Harbour (area 114) / E. G. Reinhardt -- 1.57 Macro-invertebrates from the sediments of the Inner Harbour (area 114) / A. Pipe -- 1.58 Plant remains from the sediments of the Inner Harbour (area 114) / J. Giorgi -- Part 2: SPECIALIST STUDIES -- 2.1 A further note on the coins of "Demetrias which is on the sea" / P. Lampinen -- 2.2 Straton's Tower and Demetrias again: one town or two? / R. R. Stieglitz -- Colliviaria at Caesarea / Y. Peleg -- 2.3 The gold hoard of 4th-c. solidi found in 1993 / P. Lampinen -- 2.4 Roman statuary used in Byzantine Caesarea / R. Gersht -- 2.5 Countermarked Byzantines folles and the identification of a new imperial family member / P. Lampinen -- 2.5 Faunal remains and butchery practices from Byzantine and Islamic contexts (1993-94 seasons) / C.R. Cope -- 2.6 The petrography of hydraulic and other building materials in Caesarea / A. Tsatskin -- 2.7 Radiocarbon dates from samples taken in the harbors / D. Segal, I. Carmi -- 2.8 Morbidity and mortality of post-Byzantine populations from Caesarea / P. Smith, T. Zegerson</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="4" tag="600">
+      <subfield code="a">Herod</subfield>
+      <subfield code="b">I,</subfield>
+      <subfield code="c">King of Judea,</subfield>
+      <subfield code="d">73-4 B.C.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Caesarea (Israel)</subfield>
+      <subfield code="x">Antiquities.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="z">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Antiquities.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00810745</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00917564</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01212441</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Holum, Kenneth G.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Raban, Avner.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Patrich, J.</subfield>
+      <subfield code="q">(Joseph)</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="711">
+      <subfield code="a">Combined Caesarea Expeditions.</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="1" tag="856">
+      <subfield code="3">Table of contents</subfield>
+      <subfield code="u">http://catdir.loc.gov/catdir/toc/fy043/2003270467.html</subfield>
+    </datafield>
+  </record>
+  <record xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <leader>00000cam a2200000 i 4500</leader>
+    <controlfield tag="001">6421238</controlfield>
+    <controlfield tag="008">800516s1980    nyua     b    101 0 eng</controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">80016940</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">0387904972</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9780387904979</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">3540904972</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9783540904977</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">Oceanography, the past /</subfield>
+      <subfield code="c">edited by M. Sears and D. Merriman.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">New York :</subfield>
+      <subfield code="b">Springer-Verlag,</subfield>
+      <subfield code="c">©1980.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">xx, 812 pages :</subfield>
+      <subfield code="b">illustrations ;</subfield>
+      <subfield code="c">25 cm</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">"Proceedings of the third International Congress on the History of Oceanography held September 22-26, 1980, at the Woods Hole Oceanographic Institution, Woods Hole, Massachusetts, USA."</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">The Woods Hole Oceanographic Institution : a commentary / Paul M. Fye -- The Oceanographic and how it grew / Roger Revelle -- The Woods Hole Oceanographic Institution : an expanding influence / George E.R. Deacon -- Changing concepts of the sea, 1550-1950 : an urban perspective / Josef W. Konvitz -- The 1959 Oceanographic Congress : an informal history / Dael Wolfle -- The R/V Atlantis and her first Oceanographic Institution / Susan Schlee -- Reviving American oceanography : Frank Lillie, Wickliffe Rose and the founding of the Woods Hole Oceanographic Institution / Harold L. Burstyn -- Growth of an oceanographic institution / Richard L. Haedrich and Kenneth O. Emery -- Alexander Agassiz (1835-1910) and the financial support of oceanography in the United States / Donald J. Zinn -- The Annisquam Sea-side Laboratory of Alpheus Hyatt, predecessor of the Marine Biological Laboratory at Woods Hole, 1880-1886 / Ralph W. Dexter -- Some aspects of Anglo-American co-operation in marine science, 1660-1914 / Margaret Deacon -- Edward H. Smith and the 1928 Marion Expedition revisited : a compilation / V. Wendel Driggers -- The role of T. Wayland Vaughan in American oceanography / Elizabeth N. Shor -- A brief history of the Tortugas Marine Laboratory and the Department of Marine Biology, Carnegie Institution of Washington / Patrick L. Colin -- Some aspects of the history of oceanography as seen through the publications of the International Hydrographic Bureau 1919-1939 / G.S. Ritchie -- The plan for an international oceanographic congress proposed by H.S.H. the Prince Albert 1st of Monaco / Jacqueline Carpine-Lancre -- Oceanographic prescience : the deliberations of the first U.S. Interagency Conference on Oceanography, July 1, 1924 / Stewart B. Nelson -- Some historical backgrounds for the establishment of the Stazione zoologica at Naples / Jane M. Oppenheimer -- A review of Wüst's classification of the major deep-sea expeditions 1873-1960 and its extension to recent oceanographic research programs / Matthias Tomczak Jr. -- The role of instruments in the development of physical oceanography / Myrl C. Hendershott -- Meso-scale spatial distribution of plankton : co-evolution of concepts and instrumentation / Alex Herman and Trevor Platt -- Some origins and perspectives in deep-ocean instrumentation development / Fred Noel Spiess -- The historical development of tidal science, and the Liverpool Tidal Institute / D.E. Cartwright -- Six's thermometer : a century of use in oceanography / Anita McConnell -- North Pacific sea surface temperature observations : a history / Kern E. Kenyon -- Some aspects of the historical development on the studies of the Kuroshio and the Oyashio / Kiyomitsu Kitano -- Seasonal changes in the Suez Canal following its opening in 1869; newly discovered hydrographic records of 1870-1872 / Selim A. Morcos -- The first geological-oceanological studies of the Black Sea (N.F. Andrusov, D. Arkhangel'sky, N.M. Strakhov) / V.V. Tikhomirov -- The first deep ocean drilling / Willard Bascom -- Geological and oceanographical studies in the Caspian Sea and the problems of oil and gas deposits / Sh. F. Mekhtiyev and Z.A. Buniat-Zade -- The development of marine chemistry until 1900 / William J. Wallace -- Physical oceanography of the Chilean Sea : an historical study / Guillermo Barros G. -- From the physiology of marine organisms to oceanographic physiology or physiological oceanography / Maurice Fontaine -- Alexander Agassiz, Carl Chun and the problem of the intermediate fauna / Eric L. Mills -- The British Association Dredging Committee : a brief history / A.L. Rice and J.B. Wilson -- Development of knowledge of the correlation between land and sea in historical times / I.A. Fedoseyev -- A commemoration on the 50th anniversary of the William Beebe-Otis Barton Bathysphere dives / Kenneth Gold and Jacqueline C. Warsaw -- Marine industrial pollution / Bostwick H. Ketchum -- The history of chlorinated hydrocarbon pollution in the marine environment / Arne Jernelöv -- Artificial radionuclides in the oceans / William L. Templeton -- The Royal Society and the study of coral reefs / C. Maurice Yonge -- Early 19th century oceanography around Terra Australis / Ian S.F. Jones and J.E. Jones -- The Plankton-Expedition and the copepod studies of Fredrich and Maria Dahl / David M. Damkaer and Tenge Mrozek-Dahl -- Studies on estuarine-marine dependency / Gordon Gunter -- History of Polish biological oceanographic research / Kazimierz Wincenty Siudzinski -- On the environment and unity in marine research / C.E. Lucas -- Phytoplankton ecology before 1900 : supplementary notes to the "Depths of the ocean" / F.J.R. Taylor -- The Victorian aquarium in ecological and social perspective / Philip F. Rehbock -- The development of biological studies in the ocean environment / T.R. Parsons -- Physical oceanography in India : an historical sketch / Sucharit Markanday and P.S. Srivastava -- Switzerland's contributions to the aquatic sciences over the centuries / Hermann Heberlein -- Traditional Chinese ichthyology and its encounter with Jesuit science : an historical survey / Elleanor H. Crown -- On the history of Arab navigation / A.A. Aleem -- Vila do Infante (Prince-Town), the first school of oceanography in the modem era : an essay / James H. Guill -- King Carlos of Portugal, a pioneer in European oceanography / Luiz Saldanha -- Studies of the acceptance of plate tectonics / J.L. Lemke, M.H. Nitecki and H. Pullman -- How secure is plate tectonics? / A. Hallam -- Early observations and investigations of El Niño : the event of 1925 / Warren S. Wooster -- Oceanography development in Peru / S. Zuta and L.A. Flores -- Oceanography and geophysical theory in the first half of the twentieth century : the Dutch school / Rachel Laudan -- Belgium and the early development of modern oceanography, including a note on A.F. Renard / Guy T. Houvenaghel -- The Forsters' offenses against convention during and after Capt. Cook's second voyage around the world and the governmental reprisals / Walter Lenz -- The Meteor Expedition, an ocean survey / William J. Emery -- The Benjamin Franklin and Timothy Folger charts of the Gulf Stream / Philip L. Richardson -- William De Brahm's "Continuation of the Atlantic pilot," an empirically supported eighteenth-century model of North Atlantic surface circulation / Louis De Vorsey Jr. -- Considerations on the medical use of marine invertebrates / Jean Théodoridès -- The siting and development of Mediterranean harbors in antiquity / Avner Raban -- Sebastos, the harbor complex of Caesarea Maritima, Israel : the preliminary report of the 1978 underwater explorations / Robert L. Hohlfelder and John P. Oleson -- Gondwanaland in ancient Indian literature / K. Krishnamurthy.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Oceanography</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="2" tag="650">
+      <subfield code="a">Oceanography</subfield>
+      <subfield code="x">history.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Océanographie</subfield>
+      <subfield code="x">Histoire</subfield>
+      <subfield code="x">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Oceanography.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01043671</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Oceanografie.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="2" tag="655">
+      <subfield code="a">Congress.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Conference papers and proceedings.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01423772</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">History.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01411628</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Conference papers and proceedings.</subfield>
+      <subfield code="2">lcgft</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Sears, Mary.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Merriman, Daniel.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="710">
+      <subfield code="a">Woods Hole Oceanographic Institution.</subfield>
+    </datafield>
+  </record>
+  <record xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <leader>00000cam a2200000Mi 4500</leader>
+    <controlfield tag="001">1020637411</controlfield>
+    <controlfield tag="008">160629s2016    enkab    b    000 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781138980808</subfield>
+      <subfield code="q">(paperback)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1138980803</subfield>
+      <subfield code="q">(paperback)</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Mediterranean cities :</subfield>
+      <subfield code="b">historical perspectives /</subfield>
+      <subfield code="c">edited by Irad Malkin and Robert L. Hohlfelder.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">London ;</subfield>
+      <subfield code="a">New York :</subfield>
+      <subfield code="b">Routledge,</subfield>
+      <subfield code="c">2016.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">200 pages :</subfield>
+      <subfield code="b">illustrations, maps ;</subfield>
+      <subfield code="c">22 cm</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">First published 1988; first issued in paperback 2016.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Introduction -- Bollards and men / David J. Blackman -- The 'city of the blind' and the founding of Byzantium / lrad Malkin and Nino Shmueli -- Akko-Ptolemais : a maritime metropolis in Hellenistic and early Roman times, 332 BCE-70 CE, as seen through the literary sources / Nadav Kashtan -- Procopius, De Aedificiis, 1.11.18-20 : Caesarea Maritima and the building of harbours in late antiquity / Robert L. Hohlfelder -- Literary sources and numismatic evidence of maritime activity in Caesarea during the Roman period / Joseph Ringel -- The strategic and commercial importance of Jaffa, 66-69 CE / George T. Radan -- Archaeology and history at Tel Michal / Ze'ev Herzog -- The ecology of maritime success : the puzzling case of Amalfi / Barbara M. Kreutz -- Labour in thirteenth-century Genoa / Steven A. Epstein -- The Venetian port of Candia, Crete (1299-1363) : construction and maintenance / Ruthi Gertwagen -- Humanism on the sea / Ennio Concina -- A modem perspective : the recent development of port cities in southern Europe / Armando Montanari -- Testimonium Cicero, The Republic, 2.5-9 : 'on the disadvantages of a maritime city' / Rachel Vishnia.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Harbors</subfield>
+      <subfield code="z">Mediterranean Region</subfield>
+      <subfield code="x">History.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">TRANSPORTATION / Ships &amp; Shipbuilding / Pictorial.</subfield>
+      <subfield code="2">bisacsh</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Harbors.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00951219</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Mediterranean Region.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01239752</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="655">
+      <subfield code="a">Electronic books.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">History.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01411628</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="655">
+      <subfield code="a">Electronic books.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Malkin, Irad,</subfield>
+      <subfield code="e">editor.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Hohlfelder, Robert L.,</subfield>
+      <subfield code="e">editor.</subfield>
+    </datafield>
+  </record>
+  <record xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <leader>00000cam a2200000Mi 4500</leader>
+    <controlfield tag="001">754582324</controlfield>
+    <controlfield tag="008">110926s2011    ne      o     000 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9789047428565</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9047428560</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1283280949</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781283280945</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Patrich, J.</subfield>
+      <subfield code="q">(Joseph)</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">Studies in the archaeology and history of Caesarea Maritima :</subfield>
+      <subfield code="b">Caput Judaeae, Metropolis Palaestinae.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Leiden :</subfield>
+      <subfield code="b">BRILL,</subfield>
+      <subfield code="c">2011.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">1 online resource (512 pages)</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Abbreviations; Introduction; Chapter One Herodian Caesarea: The Urban Space; Chapter Two The Wall Street, the Eastern Stoa, the Location of the Tetrapylon, and the Halakhic Status of Caesarea Maritima (Interpreting Tosefta, Ahilot, 18:13); Chapter Three On the Proclamation of Caesarea as a Roman Colony; Chapter Four Urban Space in Caesarea Maritima in the Late Antiquity; Chapter Five Several Aspects of Commerce and Economy in Late Antique Caesarea; Chapter Six Caesarea in Transition: The Archaeological Evidence from the Southwest Zone (Areas CC, KK, NN).</subfield>
+    </datafield>
+    <datafield ind1="8" ind2=" " tag="505">
+      <subfield code="a">Chapter Seven Herod's Hippodrome/Stadium at Caesarea and the Games Conducted ThereinChapter Eight The Praetoria at Caesarea Maritima; Chapter Nine Warehouses and Granaries in Caesarea Maritima; Chapter Ten A Chapel of St. Paul at Caesarea Maritima?; Chapter Eleven Four Christian Objects from Caesarea Maritima; Chapter Twelve The Martyrs of Caesarea: The Urban Context; Bibliography; Index of Ancient Authors and Literary Sources; Index of Personal Names; Index of Places and People; General Index; Illustrations.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="520">
+      <subfield code="a">The book, well illustrated, presents in a wider historical-cultural context the results of the archaeological explorations (1990's to early 2000's) at Caesarea Maritima, the provincial capital of Roman Judaea/Palaestina, where Jews, Pagans, Christians and Samaritans lived side by side.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Caesarea (Israel)</subfield>
+      <subfield code="x">Antiquities.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="z">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Archaeology and history</subfield>
+      <subfield code="z">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">HISTORY</subfield>
+      <subfield code="x">Ancient</subfield>
+      <subfield code="x">General.</subfield>
+      <subfield code="2">bisacsh</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Antiquities.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00810745</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Archaeology and history.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00813004</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00917564</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01212441</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="655">
+      <subfield code="a">Electronic books.</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">Brill</subfield>
+      <subfield code="u">https://doi.org/10.1163/ej.9789004175112.i-500</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">ebrary</subfield>
+      <subfield code="u">http://site.ebrary.com/id/10498912</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">EBSCOhost</subfield>
+      <subfield code="u">https://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=390480</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">MyiLibrary</subfield>
+      <subfield code="u">http://www.myilibrary.com?id=328094</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">ProQuest Ebook Central</subfield>
+      <subfield code="u">https://public.ebookcentral.proquest.com/choice/publicfullrecord.aspx?p=773401</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="1" tag="856">
+      <subfield code="3">MyiLibrary, Table of contents</subfield>
+      <subfield code="u">http://www.myilibrary.com?id=328094&amp;ref=toc</subfield>
+    </datafield>
+  </record>
+  <record xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <leader>00000cam a2200000 a 4500</leader>
+    <controlfield tag="001">34557572</controlfield>
+    <controlfield tag="008">960404s1996    ne ab    b    001 0 eng</controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">96017561</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9004103783</subfield>
+      <subfield code="q">(cloth)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9789004103788</subfield>
+      <subfield code="q">(cloth)</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Caesarea Maritima :</subfield>
+      <subfield code="b">a retrospective after two millenia /</subfield>
+      <subfield code="c">edited by Avner Raban and Kenneth G. Holum.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Leiden ;</subfield>
+      <subfield code="a">New York :</subfield>
+      <subfield code="b">E.J. Brill,</subfield>
+      <subfield code="c">1996.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">xliv, 694 pages :</subfield>
+      <subfield code="b">illustrations (some color), maps ;</subfield>
+      <subfield code="c">30 cm.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="490">
+      <subfield code="a">Documenta et monumenta Orientis antiqui ;</subfield>
+      <subfield code="v">v. 21</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Includes three folded plates.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">pt. 1. Ancient harbors: geomorphological challenge and technological response. Caesarea: unique evidence for faulting patterns and sea level fluctuations in the late Holocene / Yossi Mart and Ilana Perecman. -- Cements, concrete, and settling barges at Sebastos: comparisons with other Roman harbor examples and the descriptions of Vitruvius / Christopher Brandon. -- Further evidence for the use of concrete in ancient harbor construction / David J. Blackman. -- pt. 2. Caesarea and comparative harbor studies. The Hellenistic harbor of Phalasarna in western Crete: a comparison with the Hellenistic inner harbor of Straton's tower / Elpida Hadjidaki. -- Harbor structures of the Augustan age in Italy / Piero A. Gianfrotta. -- Caesarea's master harbor builders: lessons learned, lessons applied? / Robert L. Hohlfelder. pt. 3. Caesarea's city plan and urban architecture. The evolution of the urban plan of Caesarea's southwest zone: new evidence from the current excavations / Yosef Porath. -- "Amphitheatrical" Hippo-Stadia / John H. Humphrey. -- King Herod's Temple of Roma and Augustus at Caesarea Maritima / Lisa C. Kahn.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Warehouses and granaries in Caesarea maritima / Joseph Patrich. -- A sixth-century bath in Caesarea's suburbs and the transformation of bathing culture in late antiquity / Fred L. Horton, Jr. -- pt. 4. The promontory Palace: architecture and power. The promontory palace / Ehud Netzer. -- Ruler and spectacle: the promontory palace / Kathryn Louise Gleason. -- Palace to praetorium: the romanization of Caesarea / Barbara Burrell. -- pt. 5. Sculpture from Caesarea, public and private. Marble, urbanism, and ideology in Roman Palestine: the Caesarea example / Mosche Fischer. -- Miscellaneous ornamented architectural elements in Roman Caesarea / Yehudit Turnheim and Asher Ovadiah. -- Representations of deities and the cults of Caesarea / Rivka Gersht. -- pt. 6. Caesarea's economy and society: the evidence of objects. Toward the study of economics at Caesarea Maritima / Jeffrey A. Blakely. -- Caesarea illuminated by its lamps / Varda Sussman. -- Articactual evidence for the history of the harbors of Caesarea / John Peter Oleson, with contributions by Robert L. Hohlfelder, Andrew N. Sherwood, and Steven E. Sidebotham.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">pt. 7. Caesarea and its people in the light of inscriptions. The city and the text / Clayton M. Lehmann. -- Synagogue officials: the evidence from Caesarea and its implications for Palestine and the Diaspora / Lee I. Levine. -- Arabic inscriptions from Caesarea maritima: a publication of the Corpus Inscriptionum Arabicarum Palaestinae / Moshe Sharon. -- pt. 8. The Jewish and Christian communities: society and thought. The Jews and the games in Roman Caesarea / Ze'ev Weiss. -- The Halachic status of Caesarea as reflected in the Talmudic literature / Ephrat Habas. -- Reflections on the Aggada of Caesarea / Marc Hirshman. -- Caesarea maritima and the survival of Hellenistic-Jewish literature / David T. Runia. -- Jewish and Christian academics in Roman Palestine: some preliminary observations / Hayim Lapin. -- pt. 9. Origen, Eusebius, and their influence. Eusebius of Caesarea as a Christian writer / Lorenzo Perrone. -- The idea of the city in early Christian thought: Caesarean perspectives / David Satran. -- Eusebius of Caesarea and the imperial Christian idea / Héléne Ahrweiler.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">pt. 10. Caesarea and Palaestina. Roman roads to Caesarea maritima / Israel Roll. -- The See of Caesarea in conflict with Jerusalem from Nicaea (325) to Chalcedon (451) / Ze'ev Rubin. -- Metropolis and Provincia in Byzantine Palestine / Leah Di Segni. -- pt. 11. Issues in the archaeology and history of Caesarea. Stratonos Pyrgos -- Migdal Śar -- Sebastos: history and archaeology / Robert R. Stieglitz. -- The legal and administrative status of the Port of Sebastos during the early Roman period / Dan Barag. -- The survival of the Bouleutic Class at Caesarea in late antiquity / Kenneth G. Holum. -- The inner harbor basin of Caesarea: archaeological evidence for its gradual demise / Avner Raban. -- pt. 12. Archaeological research and public response. The roles of the amateur and the professional in maritime archaeological research / Alexander Flinder. -- The Genesis of scientific underwater exploration in Israel centered at Caesarea, under the patronage of Baron Edmond de Rothschild / Elisha Linder.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Caesarea (Israel)</subfield>
+      <subfield code="x">Antiquities.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="z">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">15.75 history of Asia.</subfield>
+      <subfield code="0">(NL-LeOCL)077599616</subfield>
+      <subfield code="2">bcl</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">15.39 archaeology: other.</subfield>
+      <subfield code="0">(NL-LeOCL)077609514</subfield>
+      <subfield code="2">bcl</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Antiquities.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00810745</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00917564</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01212441</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Ausgrabung.</subfield>
+      <subfield code="0">(DE-588)4129464-6</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Geschichte.</subfield>
+      <subfield code="0">(DE-588)4020517-4</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Caesarea Maritima.</subfield>
+      <subfield code="0">(DE-588)4088936-1</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Caesarea (Palaestine)</subfield>
+      <subfield code="2">gtt</subfield>
+      <subfield code="0">(NL-LeOCL)108159728</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Fouilles archéologiques</subfield>
+      <subfield code="z">Israël</subfield>
+      <subfield code="z">Césarée maritime (ville ancienne)</subfield>
+      <subfield code="x">Congrès.</subfield>
+      <subfield code="2">ram</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Israël</subfield>
+      <subfield code="x">Antiquités</subfield>
+      <subfield code="x">Congrès.</subfield>
+      <subfield code="2">ram</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Césarée maritime (ville ancienne)</subfield>
+      <subfield code="x">Congrès.</subfield>
+      <subfield code="2">ram</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Ausgrabung.</subfield>
+      <subfield code="2">swd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Caesarea &lt;Palästina, 1995&gt;</subfield>
+      <subfield code="2">swd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Caesarea &lt;Palästina&gt;</subfield>
+      <subfield code="2">swd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="655">
+      <subfield code="a">Kongress</subfield>
+      <subfield code="z">Caesarea (Palästina)</subfield>
+      <subfield code="y">1995.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Congresses (form)</subfield>
+      <subfield code="0">(NL-LeOCL)088142469</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Raban, Avner.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Holum, Kenneth G.</subfield>
+    </datafield>
+  </record>
+  <record xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <leader>00000cam a2200000Ka 4500</leader>
+    <controlfield tag="001">607014737</controlfield>
+    <controlfield tag="008">100414s2003    enkab   ob    100 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">2004381916</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781785704628</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1785704621</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781785704642</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1785704648</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">1842170937</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">9781842170939</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">9781785704611</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">1785704613</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">Boats, ships and shipyards :</subfield>
+      <subfield code="b">proceedings of the Ninth International Symposium on Boat and Ship Archaeology, Venice 2000 /</subfield>
+      <subfield code="c">edited by Carlo Beltrame.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Oxford :</subfield>
+      <subfield code="b">Oxbow ;</subfield>
+      <subfield code="a">Oakville, CT :</subfield>
+      <subfield code="b">David Brown Co.,</subfield>
+      <subfield code="c">©2003.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">1 online resource (xiv, 362 pages) :</subfield>
+      <subfield code="b">illustrations, maps</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="538">
+      <subfield code="a">Master and use copy. Digital master created according to Benchmark for Faithful Digital Reproductions of Monographs and Serials, Version 1. Digital Library Federation, December 2002.</subfield>
+      <subfield code="u">http://purl.oclc.org/DLF/benchrepro0212</subfield>
+      <subfield code="5">MiAaHDL</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="505">
+      <subfield code="t">Introduction /</subfield>
+      <subfield code="r">Carlo Beltrame --</subfield>
+      <subfield code="g">1.</subfield>
+      <subfield code="t">Maritime Archaeology and the ISBSA -- Where to in the 21st Century? /</subfield>
+      <subfield code="r">Frederick M. Hocker --</subfield>
+      <subfield code="g">2.</subfield>
+      <subfield code="t">Nautical Archaeology in Italy: Past, Present and Future /</subfield>
+      <subfield code="r">Carlo Beltrame --</subfield>
+      <subfield code="g">3.</subfield>
+      <subfield code="t">The Arsenal of Venice and the Art of Building Ships /</subfield>
+      <subfield code="r">Mauro Bondioli --</subfield>
+      <subfield code="g">4.</subfield>
+      <subfield code="t">Neolithic Watercraft in Greece: Circumstantial Evidence and Serious Guesses /</subfield>
+      <subfield code="r">Christina Marangou --</subfield>
+      <subfield code="g">5.</subfield>
+      <subfield code="t">Sewn Planked Boats from Early Dynastic Abydos, Egypt /</subfield>
+      <subfield code="r">Cheryl A. Ward --</subfield>
+      <subfield code="g">6.</subfield>
+      <subfield code="t">Towards the Determination of Mycenaean Shipbuilding Techniques, Tools and Materials /</subfield>
+      <subfield code="r">Dimitra Kamarinou --</subfield>
+      <subfield code="g">7.</subfield>
+      <subfield code="t">Mortise-and-Tenon Joints of Bronze Age Seagoing Ships /</subfield>
+      <subfield code="r">Cemal Pulak --</subfield>
+      <subfield code="g">8.</subfield>
+      <subfield code="t">Timber Supply and Ancient Naval Architecture /</subfield>
+      <subfield code="r">Frederic Guibal and Patrice Pomey --</subfield>
+      <subfield code="g">9.</subfield>
+      <subfield code="t">The Late-Roman "Parco di Teodorico" Wreck, Ravenna, Italy: Preliminary Remarks on the Hull and the Shipbuilding /</subfield>
+      <subfield code="r">Stefano Medas --</subfield>
+      <subfield code="g">10.</subfield>
+      <subfield code="t">Dor D Wreck, Tantura Lagoon, Israel /</subfield>
+      <subfield code="r">Yaacov Kahanov --</subfield>
+      <subfield code="g">11.</subfield>
+      <subfield code="t">Reconstruction of Marseilles 6th century B.C. Greek ships /</subfield>
+      <subfield code="r">Patrice Pomey --</subfield>
+      <subfield code="g">12.</subfield>
+      <subfield code="t">The Late-Roman Fiumicino 1 Wreck: Reconstructing the Hull /</subfield>
+      <subfield code="r">Giulia Boetto --</subfield>
+      <subfield code="g">13.</subfield>
+      <subfield code="t">The Reconstruction of the Ladby Ship -- Using a Working Spline Model and Computer /</subfield>
+      <subfield code="r">Vibeke Bischoff --</subfield>
+      <subfield code="g">14.</subfield>
+      <subfield code="t">Progress in the Study of Ancient Shipsheds: a Review /</subfield>
+      <subfield code="r">David Blackman --</subfield>
+      <subfield code="g">15.</subfield>
+      <subfield code="t">Ancient Slipways and Shipsheds on the Israeli Coast of the Mediterranean /</subfield>
+      <subfield code="r">Avner Raban --</subfield>
+      <subfield code="g">16.</subfield>
+      <subfield code="t">Operating on Shipsheds and Slipways: Evidence of Underwater Configuration of Slipways from the Neosoikos of 'Trypiti' /</subfield>
+      <subfield code="r">Kalliopi Baika</subfield>
+    </datafield>
+    <datafield ind1="8" ind2="0" tag="505">
+      <subfield code="g">17.</subfield>
+      <subfield code="t">An Early Roman Boatyard at Mainz, Germany /</subfield>
+      <subfield code="r">Olaf Hockmann --</subfield>
+      <subfield code="g">18.</subfield>
+      <subfield code="t">Essay to Restore the Operating Process of a Shipyard in the Early Medieval Period: the Example of the Port Berteau II Wreck, Charente-Maritime, France /</subfield>
+      <subfield code="r">Eric Rieth --</subfield>
+      <subfield code="g">19.</subfield>
+      <subfield code="t">Nails for Shipbuilding (13th-20th centuries) /</subfield>
+      <subfield code="r">Furio Ciciliot --</subfield>
+      <subfield code="g">20.</subfield>
+      <subfield code="t">How Were Vessels Designed before the Late-Medieval Period? /</subfield>
+      <subfield code="r">Sean McGrail --</subfield>
+      <subfield code="g">21.</subfield>
+      <subfield code="t">The Hogendijk Shipyard in Zaandam and the VOC Shipyard Oostenburg-in Amsterdam, Examples of Recent Archaeological Slipway Research in the Netherlands /</subfield>
+      <subfield code="r">Jerzy Gawronski --</subfield>
+      <subfield code="g">22.</subfield>
+      <subfield code="t">Moulds, Rising Boards and Bevel Boards, The Wooden Memory of the Shipyard of Le Locum, Lake Geneva /</subfield>
+      <subfield code="r">Paul Bloesch --</subfield>
+      <subfield code="g">23.</subfield>
+      <subfield code="t">The Tyrrell's Boatyard of Arklow, County Wicklow, Ireland /</subfield>
+      <subfield code="r">Darina Tully --</subfield>
+      <subfield code="g">24.</subfield>
+      <subfield code="t">Tracing Ship Traffic without Ships -- Alternative Methods of Finding Evidence for Pre- and Early Historical Inland Water Transport /</subfield>
+      <subfield code="r">Ulrike Teigelake --</subfield>
+      <subfield code="g">25.</subfield>
+      <subfield code="t">Thoughts on the Typology of Stone Age Boat Petroglyphs from the White Sea and Lake Onega, Russia /</subfield>
+      <subfield code="r">Maik-Jens Springmann --</subfield>
+      <subfield code="g">26.</subfield>
+      <subfield code="t">A Roman River Barge (?) Found in the Danube near Prahovo, Serbia /</subfield>
+      <subfield code="r">Ronald Bockius --</subfield>
+      <subfield code="g">27.</subfield>
+      <subfield code="t">Expanded Logboats between the Baltic and the Black Sea /</subfield>
+      <subfield code="r">Waldemar Ossowski --</subfield>
+      <subfield code="g">28.</subfield>
+      <subfield code="t">A New Look at the Utrecht Ship /</subfield>
+      <subfield code="r">Aleydis Van de Moortel --</subfield>
+      <subfield code="g">29.</subfield>
+      <subfield code="t">Investigation of Traditional Boatbuilding for the Reconstruction of Medieval Russian Boats /</subfield>
+      <subfield code="r">Petr Sorokin --</subfield>
+      <subfield code="g">30.</subfield>
+      <subfield code="t">Wooden Shipbuilding on Lake Constance before 1900 /</subfield>
+      <subfield code="r">Dietrich Hakelberg</subfield>
+    </datafield>
+    <datafield ind1="8" ind2="0" tag="505">
+      <subfield code="g">31.</subfield>
+      <subfield code="t">The Sailing Qualities of Venetian Great Galleys in the 15th Century. Evidence of their Influence on the Development of Sailing Ships in the Atlantic Area during the Following Century /</subfield>
+      <subfield code="r">Sergio Bellabarba --</subfield>
+      <subfield code="g">32.</subfield>
+      <subfield code="t">The Venetian Merchant Galley and the System of Partisoni -- Initial Steps towards Modern Ship Design /</subfield>
+      <subfield code="r">Ulrich Alertz --</subfield>
+      <subfield code="g">33.</subfield>
+      <subfield code="t">The Art of Designing and Building Venetian Galleys from the 15th to the 16th century /</subfield>
+      <subfield code="r">Mauro Bondioli --</subfield>
+      <subfield code="g">34.</subfield>
+      <subfield code="t">Reportage, Representation and Reality. The Extent to which Chronicle Accounts and Contemporary Illustrations can be relied upon when discussing the Tactics used in Medieval Galley Warfare /</subfield>
+      <subfield code="r">Susan Rose --</subfield>
+      <subfield code="g">35.</subfield>
+      <subfield code="t">Les Galeres de la Vue de Venise de Jacopo de Barberi (1500) /</subfield>
+      <subfield code="r">Lucien Basch --</subfield>
+      <subfield code="g">36.</subfield>
+      <subfield code="t">Kadirga, A Technical Analysis of the Sultan's Galley /</subfield>
+      <subfield code="r">Erkut Arcak --</subfield>
+      <subfield code="g">37.</subfield>
+      <subfield code="t">Drachio in Context /</subfield>
+      <subfield code="r">Louis Th. Lehmann --</subfield>
+      <subfield code="g">38.</subfield>
+      <subfield code="t">Variations on a Theme. 11th-century Ship Types of the North /</subfield>
+      <subfield code="r">Ole Crumlin-Pedersen --</subfield>
+      <subfield code="g">39.</subfield>
+      <subfield code="t">The Boat Puck -- 3 in the Light of Investigation of Other Slavic Boats from 9-14th Century /</subfield>
+      <subfield code="r">Jerzy Litwin --</subfield>
+      <subfield code="g">40.</subfield>
+      <subfield code="t">The Szezecin Vessel -- a 'Crossroad' of Shipbuilding Traditions or a Representative Artifact of Early Medieval Boatbuilding by Western Slavs? /</subfield>
+      <subfield code="r">George Indruszewski --</subfield>
+      <subfield code="g">41.</subfield>
+      <subfield code="t">Large Cargo Vessels in Danish Waters 1000-1250. Archaeological Evidence for Professional Merchant Seafaring before the Hanseatic Period /</subfield>
+      <subfield code="r">Anton Englert --</subfield>
+      <subfield code="g">42.</subfield>
+      <subfield code="t">Remarks on he Identification of Medieval Ship Types in Northern Europe /</subfield>
+      <subfield code="r">Timm Weski</subfield>
+    </datafield>
+    <datafield ind1="8" ind2="0" tag="505">
+      <subfield code="g">43.</subfield>
+      <subfield code="t">Rare Fragments of a 13th Century Clinker Galley found in London and Use of the Irish Wildwoods for Shipbuilding /</subfield>
+      <subfield code="r">Damian Goodburn --</subfield>
+      <subfield code="g">44.</subfield>
+      <subfield code="t">Clenched Lap-Strake Boat Finds from the Netherlands, between 1200 and 1600 /</subfield>
+      <subfield code="r">Andre F. L. van Holk --</subfield>
+      <subfield code="g">45.</subfield>
+      <subfield code="t">Illuminating Ships: Integrating the Evidence from Images and Materials in Medieval Europe /</subfield>
+      <subfield code="r">Joe Flatman --</subfield>
+      <subfield code="g">46.</subfield>
+      <subfield code="t">Squares and Stripes: Remarks about Textiles Archaeology and Sails /</subfield>
+      <subfield code="r">Susan Moller-Wiering --</subfield>
+      <subfield code="g">47.</subfield>
+      <subfield code="t">Ships and Private Shipyards through the Archaeological Evidence of the Wreck off La Natiere (Saint-Malo, Brittany, France) /</subfield>
+      <subfield code="r">Michel L'Hour and Elisabeth Veyrat --</subfield>
+      <subfield code="g">48.</subfield>
+      <subfield code="t">The Mysteries of a Baltic Trader /</subfield>
+      <subfield code="r">Martijn R. Manders --</subfield>
+      <subfield code="g">49.</subfield>
+      <subfield code="t">Whipstaff and Helmsman. An Account of the Steering-gear of the Vasa /</subfield>
+      <subfield code="r">Olof Pipping --</subfield>
+      <subfield code="g">50.</subfield>
+      <subfield code="t">Maritime Ethnography: The Reality of Analogy /</subfield>
+      <subfield code="r">Lucy Blue --</subfield>
+      <subfield code="g">51.</subfield>
+      <subfield code="t">A Comparison between the Earliest Testimonies of Venetian Construction Techniques and those of the Present Day /</subfield>
+      <subfield code="r">Gilberto Penzo --</subfield>
+      <subfield code="g">52.</subfield>
+      <subfield code="t">Reconstruction of the Hjortspring Boat Sailing Tests /</subfield>
+      <subfield code="r">Knud Vagn Valbjorn, Niels Peter Fenger and Max Vinner --</subfield>
+      <subfield code="g">53.</subfield>
+      <subfield code="t">Two Slavonic Boat Reconstructions in the Open Air Museum Gross Raden /</subfield>
+      <subfield code="r">Trixi Gulland.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Boats and boating</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Ships</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Shipbuilding</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="v">Congresses.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Bateaux</subfield>
+      <subfield code="x">Histoire</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Navires</subfield>
+      <subfield code="x">Histoire</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Construction navale</subfield>
+      <subfield code="x">Histoire</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Navires anciens</subfield>
+      <subfield code="x">Conception et construction</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Archéologie sous-marine</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="6" tag="650">
+      <subfield code="a">Navires médiévaux</subfield>
+      <subfield code="x">Conception et construction</subfield>
+      <subfield code="v">Congrès.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Boats and boating.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00835176</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Shipbuilding.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01116224</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Ships.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01116439</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Onderwaterarcheologie.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Schepen.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Scheepsbouw.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Oudheid.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="7" tag="650">
+      <subfield code="a">Middeleeuwen.</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Conference papers and proceedings.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01423772</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">History.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01411628</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="655">
+      <subfield code="a">Electronic books.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Beltrame, Carlo.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="710">
+      <subfield code="a">Università degli studi di Venezia.</subfield>
+      <subfield code="b">Dipartimento di scienze dell'antichità e del Vicino Oriente.</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">Google</subfield>
+      <subfield code="u">http://books.google.com/books?id=owhUAAAAMAAJ</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">HathiTrust Digital Library, Limited view (search only)</subfield>
+      <subfield code="u">http://catalog.hathitrust.org/api/volumes/oclc/51781386.html</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">EBSCOhost</subfield>
+      <subfield code="u">http://gateway.library.qut.edu.au/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=1510156</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">JSTOR</subfield>
+      <subfield code="u">http://www.jstor.org/stable/10.2307/j.ctvh1dsn7</subfield>
+    </datafield>
+  </record>
+  <record xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <leader>00000cam a2200000Ma 4500</leader>
+    <controlfield tag="001">954230536</controlfield>
+    <controlfield tag="008">900215s1989    enka     b    000 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">89168299</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">0860546284</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9780860546283</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="4" tag="245">
+      <subfield code="a">The Harbours of Caesarea Maritima :</subfield>
+      <subfield code="b">results of the Caesarea Ancient Harbour Excavation Project, 1980-1985 /</subfield>
+      <subfield code="c">general editor, John Peter Oleson.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Oxford, England :</subfield>
+      <subfield code="b">B.A.R,</subfield>
+      <subfield code="c">1989.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">2 volumes (xxxii, 517 pages) :</subfield>
+      <subfield code="b">illustrations ;</subfield>
+      <subfield code="c">30 cm.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="490">
+      <subfield code="a">BAR international series ;</subfield>
+      <subfield code="v">491, pt. i-ii</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="490">
+      <subfield code="a">Publication / Center for Maritime Studies, University of Haifa ;</subfield>
+      <subfield code="v">no. 3</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Contents: Vol. 1. The site and the excavations / by Avner Raban with contributions by R.L. Hohlfelder [and others].</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Vol. 1. The site and the excavations / by Avner Raban ; with contributions by R.L. Hohlfelder [and others]. 1989.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Harbors</subfield>
+      <subfield code="z">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="z">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Underwater archaeology</subfield>
+      <subfield code="z">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Caesarea (Israel)</subfield>
+      <subfield code="x">Antiquities.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Antiquities.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00810745</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00917564</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Harbors.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00951219</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Underwater archaeology.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01161071</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01212441</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Oleson, John Peter.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Raban, Avner.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Hohlfelder, Robert L.</subfield>
+    </datafield>
+  </record>
+  <record xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <leader>00000caa a2200000Mi 4500</leader>
+    <controlfield tag="001">887237739</controlfield>
+    <controlfield tag="008">080715s2008    xx            000 0 eng d</controlfield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Porath, Yosef.</subfield>
+      <subfield code="0">(DE-588)135928087</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="245">
+      <subfield code="a">The "bird mosaic" mansion in the suburbs of "Caesarea Maritima", Israel.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="c">2008.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Zsfassung in engl. Sprache.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="651">
+      <subfield code="a">Caesarea Maritima</subfield>
+      <subfield code="x">Mosaik</subfield>
+      <subfield code="x">Vögel</subfield>
+      <subfield code="h">Motiv</subfield>
+      <subfield code="x">Opus sectile</subfield>
+      <subfield code="x">Ausgrabung</subfield>
+      <subfield code="y">Geschichte 2005.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="651">
+      <subfield code="a">Hafen Caesarea (Palästina)</subfield>
+      <subfield code="x">Geschichte.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Ausgrabung.</subfield>
+      <subfield code="0">(DE-588)4129464-6</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Geschichte.</subfield>
+      <subfield code="0">(DE-588)4020517-4</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Mosaik.</subfield>
+      <subfield code="0">(DE-588)4040311-7</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Opus sectile.</subfield>
+      <subfield code="0">(DE-588)4205407-2</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Vögel (Motiv)</subfield>
+      <subfield code="0">(DE-588)4121878-4</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Caesarea Maritima.</subfield>
+      <subfield code="0">(DE-588)4088936-1</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Hafen Caesarea (Palästina)</subfield>
+      <subfield code="0">(DE-588)7682707-0</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Gorin-Rosen, Yael.</subfield>
+      <subfield code="0">(DE-588)135928133</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Neguer, Jacques.</subfield>
+      <subfield code="0">(DE-588)135928176</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="773">
+      <subfield code="t">Musiva et sectilia.</subfield>
+      <subfield code="d">Pisa ; Roma, 2008.</subfield>
+      <subfield code="g">2/3.2005/06(2008), 171-189</subfield>
+      <subfield code="x">1724-9104</subfield>
+      <subfield code="o">ZDB: 2179363-3</subfield>
+      <subfield code="w">(DE-604)BV019715519</subfield>
+    </datafield>
+  </record>
+  <record xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <leader>00000cam a2200000Ma 4500</leader>
+    <controlfield tag="001">234110776</controlfield>
+    <controlfield tag="008">080811s1962    is abef       000 0 eng d</controlfield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Selected articles on archaeological discoveries in Israel.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Jerusalem :</subfield>
+      <subfield code="b">Prime Minister's Office,</subfield>
+      <subfield code="c">[1962]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">26 pages, 16 pages of plates :</subfield>
+      <subfield code="b">illustrations, facsimiles, map, plans ;</subfield>
+      <subfield code="c">25 cm</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">"Excerpts from "Christian news from Israel."</subfield>
+    </datafield>
+    <datafield ind1="8" ind2=" " tag="505">
+      <subfield code="a">Caesarea Maritima / by A. Negev -- Archaeological activities in Israel, 1961/62 / by Abraham Biran -- The refectory of the Order of St. John in Acre / by Zeev Goldmann.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Israel</subfield>
+      <subfield code="x">Antiquities.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Antiquities.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00810745</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Israel.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01204236</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="651">
+      <subfield code="a">Eretz Israel</subfield>
+      <subfield code="x">Antiquities.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Negev, Avraham.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Biran, Avraham.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Goldmann, Zeev.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="710">
+      <subfield code="a">Israel.</subfield>
+      <subfield code="b">Misrad rosh ha-memshala.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="740">
+      <subfield code="a">Christian news from Israel.</subfield>
+    </datafield>
+  </record>
+  <record xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <leader>00000cam a2200000Mi 4500</leader>
+    <controlfield tag="001">797924212</controlfield>
+    <controlfield tag="008">970514s1996    ne a   e      000 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9004103783</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9789004103788</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Caesarea Maritima :</subfield>
+      <subfield code="b">a retrospective after two millennia /</subfield>
+      <subfield code="c">edited by Avner Raban and Kenneth G. Holum.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Leiden :</subfield>
+      <subfield code="b">Brill,</subfield>
+      <subfield code="c">1996.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">XLIV, 694 p., [3] c. geogr. ripieg. :</subfield>
+      <subfield code="b">illustrations ;</subfield>
+      <subfield code="c">30 cm</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="490">
+      <subfield code="a">Documenta et monumenta orientis antiqui ;</subfield>
+      <subfield code="v">21</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="650">
+      <subfield code="a">Scavi archeologici</subfield>
+      <subfield code="x">Cesarea (Israele)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="651">
+      <subfield code="a">Cesarea (Israele)</subfield>
+      <subfield code="x">Antichità</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Raban, Avner.</subfield>
+      <subfield code="4">edt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Holum, Kenneth G.</subfield>
+      <subfield code="4">edt</subfield>
+    </datafield>
+  </record>
+</collection>

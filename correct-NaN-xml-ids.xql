@@ -34,7 +34,7 @@ for $person-record in $persons[descendant-or-self::*[contains(@xml:id,'NaN')]]
     let $person := $person-record/text/body/listPerson/person
     let $person-id := replace($person/idno[@type='URI' and matches(.,'http://syriaca\.org')],'http://syriaca\.org/person/','')
     let $update-node := 
-        for $node in $person/descendant-or-self::*[contains(@xml:id,'NaN')]
+        for $node at $i in $person/descendant-or-self::*[contains(@xml:id,'NaN')]
         let $prefix := 
             if ($node/name()='persName') then concat('name',$person-id,'-')
             else if ($node/name()='bibl') then concat('bib',$person-id,'-')
@@ -42,9 +42,9 @@ for $person-record in $persons[descendant-or-self::*[contains(@xml:id,'NaN')]]
         let $xml-id := 
             if ($prefix) then 
                 syriaca:next-id
-                    ($person/descendant-or-self::*[name()=$node/name()]/@xml:id[not(contains(.,'NaN'))], 
-                    $prefix, 
-                    1) 
+                    ($person/descendant-or-self::*[name()=$node/name()]/@xml:id[matches(.,'\d$')], 
+                    $prefix[1], 
+                    $i) 
             else()
         return update replace $node with syriaca:update-attribute($node, 'xml:id', $xml-id)
     return $update-node

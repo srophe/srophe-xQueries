@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oclcterms="http://purl.org/oclc/terms/">
+    <leader>00000caa a2200000Mi 4500</leader>
+    <controlfield tag="001">887237739</controlfield>
+    <controlfield tag="008">080715s2008    xx            000 0 eng d</controlfield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Porath, Yosef.</subfield>
+      <subfield code="0">(DE-588)135928087</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="245">
+      <subfield code="a">The "bird mosaic" mansion in the suburbs of "Caesarea Maritima", Israel.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="c">2008.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Zsfassung in engl. Sprache.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="651">
+      <subfield code="a">Caesarea Maritima</subfield>
+      <subfield code="x">Mosaik</subfield>
+      <subfield code="x">Vögel</subfield>
+      <subfield code="h">Motiv</subfield>
+      <subfield code="x">Opus sectile</subfield>
+      <subfield code="x">Ausgrabung</subfield>
+      <subfield code="y">Geschichte 2005.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="651">
+      <subfield code="a">Hafen Caesarea (Palästina)</subfield>
+      <subfield code="x">Geschichte.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Ausgrabung.</subfield>
+      <subfield code="0">(DE-588)4129464-6</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Geschichte.</subfield>
+      <subfield code="0">(DE-588)4020517-4</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Mosaik.</subfield>
+      <subfield code="0">(DE-588)4040311-7</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Opus sectile.</subfield>
+      <subfield code="0">(DE-588)4205407-2</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Vögel (Motiv)</subfield>
+      <subfield code="0">(DE-588)4121878-4</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Caesarea Maritima.</subfield>
+      <subfield code="0">(DE-588)4088936-1</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Hafen Caesarea (Palästina)</subfield>
+      <subfield code="0">(DE-588)7682707-0</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Gorin-Rosen, Yael.</subfield>
+      <subfield code="0">(DE-588)135928133</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Neguer, Jacques.</subfield>
+      <subfield code="0">(DE-588)135928176</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="773">
+      <subfield code="t">Musiva et sectilia.</subfield>
+      <subfield code="d">Pisa ; Roma, 2008.</subfield>
+      <subfield code="g">2/3.2005/06(2008), 171-189</subfield>
+      <subfield code="x">1724-9104</subfield>
+      <subfield code="o">ZDB: 2179363-3</subfield>
+      <subfield code="w">(DE-604)BV019715519</subfield>
+    </datafield>
+  </record>
+</collection>

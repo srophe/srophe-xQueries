@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oclcterms="http://purl.org/oclc/terms/">
+    <leader>00000cam a2200000 a 4500</leader>
+    <controlfield tag="001">34557572</controlfield>
+    <controlfield tag="008">960404s1996    ne ab    b    001 0 eng  </controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">   96017561 </subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9004103783</subfield>
+      <subfield code="q">(cloth)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9789004103788</subfield>
+      <subfield code="q">(cloth)</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Caesarea Maritima :</subfield>
+      <subfield code="b">a retrospective after two millenia /</subfield>
+      <subfield code="c">edited by Avner Raban and Kenneth G. Holum.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Leiden ;</subfield>
+      <subfield code="a">New York :</subfield>
+      <subfield code="b">E.J. Brill,</subfield>
+      <subfield code="c">1996.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">xliv, 694 pages :</subfield>
+      <subfield code="b">illustrations (some color), maps ;</subfield>
+      <subfield code="c">30 cm.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="490">
+      <subfield code="a">Documenta et monumenta Orientis antiqui ;</subfield>
+      <subfield code="v">v. 21</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Includes three folded plates.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">pt. 1. Ancient harbors: geomorphological challenge and technological response. Caesarea: unique evidence for faulting patterns and sea level fluctuations in the late Holocene / Yossi Mart and Ilana Perecman. -- Cements, concrete, and settling barges at Sebastos: comparisons with other Roman harbor examples and the descriptions of Vitruvius / Christopher Brandon. -- Further evidence for the use of concrete in ancient harbor construction / David J. Blackman. -- pt. 2. Caesarea and comparative harbor studies. The Hellenistic harbor of Phalasarna in western Crete: a comparison with the Hellenistic inner harbor of Straton's tower / Elpida Hadjidaki. -- Harbor structures of the Augustan age in Italy / Piero A. Gianfrotta. -- Caesarea's master harbor builders: lessons learned, lessons applied? / Robert L. Hohlfelder. pt. 3. Caesarea's city plan and urban architecture. The evolution of the urban plan of Caesarea's southwest zone: new evidence from the current excavations / Yosef Porath. -- "Amphitheatrical" Hippo-Stadia / John H. Humphrey. -- King Herod's Temple of Roma and Augustus at Caesarea Maritima / Lisa C. Kahn.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Warehouses and granaries in Caesarea maritima / Joseph Patrich. -- A sixth-century bath in Caesarea's suburbs and the transformation of bathing culture in late antiquity / Fred L. Horton, Jr. -- pt. 4. The promontory Palace: architecture and power. The promontory palace / Ehud Netzer. -- Ruler and spectacle: the promontory palace / Kathryn Louise Gleason. -- Palace to praetorium: the romanization of Caesarea / Barbara Burrell. -- pt. 5. Sculpture from Caesarea, public and private. Marble, urbanism, and ideology in Roman Palestine: the Caesarea example / Mosche Fischer. -- Miscellaneous ornamented architectural elements in Roman Caesarea / Yehudit Turnheim and Asher Ovadiah. -- Representations of deities and the cults of Caesarea / Rivka Gersht. -- pt. 6. Caesarea's economy and society: the evidence of objects. Toward the study of economics at Caesarea Maritima / Jeffrey A. Blakely. -- Caesarea illuminated by its lamps / Varda Sussman. -- Articactual evidence for the history of the harbors of Caesarea / John Peter Oleson, with contributions by Robert L. Hohlfelder, Andrew N. Sherwood, and Steven E. Sidebotham.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">pt. 7. Caesarea and its people in the light of inscriptions. The city and the text / Clayton M. Lehmann. -- Synagogue officials: the evidence from Caesarea and its implications for Palestine and the Diaspora / Lee I. Levine. -- Arabic inscriptions from Caesarea maritima: a publication of the Corpus Inscriptionum Arabicarum Palaestinae / Moshe Sharon. -- pt. 8. The Jewish and Christian communities: society and thought. The Jews and the games in Roman Caesarea / Ze'ev Weiss. -- The Halachic status of Caesarea as reflected in the Talmudic literature / Ephrat Habas. -- Reflections on the Aggada of Caesarea / Marc Hirshman. -- Caesarea maritima and the survival of Hellenistic-Jewish literature / David T. Runia. -- Jewish and Christian academics in Roman Palestine: some preliminary observations / Hayim Lapin. -- pt. 9. Origen, Eusebius, and their influence. Eusebius of Caesarea as a Christian writer / Lorenzo Perrone. -- The idea of the city in early Christian thought: Caesarean perspectives / David Satran. -- Eusebius of Caesarea and the imperial Christian idea / Héléne Ahrweiler.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">pt. 10. Caesarea and Palaestina. Roman roads to Caesarea maritima / Israel Roll. -- The See of Caesarea in conflict with Jerusalem from Nicaea (325) to Chalcedon (451) / Ze'ev Rubin. -- Metropolis and Provincia in Byzantine Palestine / Leah Di Segni. -- pt. 11. Issues in the archaeology and history of Caesarea. Stratonos Pyrgos -- Migdal Śar -- Sebastos: history and archaeology / Robert R. Stieglitz. -- The legal and administrative status of the Port of Sebastos during the early Roman period / Dan Barag. -- The survival of the Bouleutic Class at Caesarea in late antiquity / Kenneth G. Holum. -- The inner harbor basin of Caesarea: archaeological evidence for its gradual demise / Avner Raban. -- pt. 12. Archaeological research and public response. The roles of the amateur and the professional in maritime archaeological research / Alexander Flinder. -- The Genesis of scientific underwater exploration in Israel centered at Caesarea, under the patronage of Baron Edmond de Rothschild / Elisha Linder.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Caesarea (Israel)</subfield>
+      <subfield code="x">Antiquities.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="z">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">15.75 history of Asia.</subfield>
+      <subfield code="0">(NL-LeOCL)077599616</subfield>
+      <subfield code="2">bcl</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">15.39 archaeology: other.</subfield>
+      <subfield code="0">(NL-LeOCL)077609514</subfield>
+      <subfield code="2">bcl</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Antiquities.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00810745</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Excavations (Archaeology)</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00917564</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Israel</subfield>
+      <subfield code="z">Caesarea.</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst01212441</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Ausgrabung.</subfield>
+      <subfield code="0">(DE-588)4129464-6</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Geschichte.</subfield>
+      <subfield code="0">(DE-588)4020517-4</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Caesarea Maritima.</subfield>
+      <subfield code="0">(DE-588)4088936-1</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Caesarea (Palaestine)</subfield>
+      <subfield code="2">gtt</subfield>
+      <subfield code="0">(NL-LeOCL)108159728</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Fouilles archéologiques</subfield>
+      <subfield code="z">Israël</subfield>
+      <subfield code="z">Césarée maritime (ville ancienne)</subfield>
+      <subfield code="x">Congrès.</subfield>
+      <subfield code="2">ram</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Israël</subfield>
+      <subfield code="x">Antiquités</subfield>
+      <subfield code="x">Congrès.</subfield>
+      <subfield code="2">ram</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Césarée maritime (ville ancienne)</subfield>
+      <subfield code="x">Congrès.</subfield>
+      <subfield code="2">ram</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Ausgrabung.</subfield>
+      <subfield code="2">swd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Caesarea &lt;Palästina, 1995&gt;</subfield>
+      <subfield code="2">swd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="651">
+      <subfield code="a">Caesarea &lt;Palästina&gt;</subfield>
+      <subfield code="2">swd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="655">
+      <subfield code="a">Kongress</subfield>
+      <subfield code="z">Caesarea (Palästina)</subfield>
+      <subfield code="y">1995.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Congresses (form)</subfield>
+      <subfield code="0">(NL-LeOCL)088142469</subfield>
+      <subfield code="2">gtt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Raban, Avner.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Holum, Kenneth G.</subfield>
+    </datafield>
+  </record>
+</collection>
