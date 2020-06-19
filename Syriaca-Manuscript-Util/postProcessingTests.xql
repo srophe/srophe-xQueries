@@ -409,15 +409,15 @@ return $newMsContents
 let $editor := "srophe-util"
 let $changeLog := "CHANGED: Added project metadata; metadata from Wright Decoder; msItem, handDesc, and additions enumeration; Wright Taxonomy designation"
 let $change := <change xmlns="http://www.tei-c.org/ns/1.0" who="http://syriaca.org/documentation/editors.xml#{$editor}" when="{fn:current-date()}">{$changeLog}</change>
-let $inputDirectory := "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/3_drafts/AnnaKelly/"
-let $outputFilePath := "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/"
+let $inputDirectory := "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/3_drafts/LindsayRuth/"
+let $outputFilePath := "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/"
 let $empty := file:create-dir($outputFilePath)
-let $wrightDecoderCsv := file:read-text("C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\miscellany\wrightDecoderSimple.csv")
-let $wrightTaxonomyCsvUri := "C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\miscellany\wrightTaxonomyTable.csv"
+let $wrightDecoderCsv := file:read-text("/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Syriaca-Manuscript-Util/wrightDecoderSimple.csv")
+let $wrightTaxonomyCsvUri := "/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Syriaca-Manuscript-Util/wrightTaxonomyTable.csv"
 let $wrightTaxonomyTable := local:createTaxonomyTable($wrightTaxonomyCsvUri)
 let $lookupLines := tokenize($wrightDecoderCsv, "\n")
 (:The following lines enable the script to verify if a record has already been generated and placed in one of the folders specified :)
-let $existingRecordPathList := ("C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/TransferredToDevServer/")
+let $existingRecordPathList := ("/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/", "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/", "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/", "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/TransferredToDevServer/")
 let $existingDocUris := 
 fn:distinct-values(for $coll in $existingRecordPathList
   for $doc in fn:collection($coll)
