@@ -14,8 +14,8 @@ Known issues:
 @version 1.0
 :)
 
-let $collectionUri := "C:\Users\anoni\Documents\GitHub\srophe\caesarea-data\data\testimonia\tei\"
-let $jsonUri := "C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\Caesarea-Testimonia-Tsv-Transforms\processTsvData\Caesarea-Maritima-Bibl-Module.json"
+let $collectionUri := "/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Caesarea-Testimonia-Tsv-Transforms/processTsvOutput/tsvOutput-2020-06-19"
+let $jsonUri := "/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Caesarea-Testimonia-Tsv-Transforms/processTsvData/Caesarea-Maritima-Bibl-Module.json"
 let $jsonFile := file:read-text($jsonUri)
 let $json := json:parse($jsonFile)
 
