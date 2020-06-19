@@ -49,7 +49,7 @@ declare function local:create-indirect-abstract($doc){
   else <desc type="abstract" xml:id="abstract{$docId}-1">Caesarea Maritima is indirectly attested in {$title}&#x20;{$citedRange}. This testimonium was written circa&#x20;{$origDate}. This work was likely written in&#x20;{$origPlace}.</desc>
 };
 
-let $inUrl := "C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\Caesarea-Testimonia-Tsv-Transforms\processTsvOutput\2020-06-10\"
+let $inUrl := "/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Caesarea-Testimonia-Tsv-Transforms/processTsvOutput/tsvOutput-2020-06-19"
 for $doc in collection($inUrl)
   let $abstract := if($doc/TEI/text/body/desc[@type="abstract"]/text() = "indirect") then local:create-indirect-abstract($doc) else local:create-abstract($doc)
   return replace node $doc//body/desc[@type="abstract"] with $abstract

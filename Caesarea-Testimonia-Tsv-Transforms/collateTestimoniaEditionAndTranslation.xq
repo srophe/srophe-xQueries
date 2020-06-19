@@ -53,7 +53,7 @@ return $newRecord
 (: return $edition, $translation :)
 };
 let $options := map {'header': true(), 'separator': 'tab', 'quotes': 'no'}
-let $input := file:read-text("/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Caesarea-Testimonia-Tsv-Transforms/tsvSources/testimoniaTsvInput-2020-06-10.csv")
+let $input := file:read-text("/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Caesarea-Testimonia-Tsv-Transforms/tsvSources/6-19-20CaesareaMaritimaTestimoniaData.csv")
 let $inputXml := csv:parse($input, $options)
 let $editions :=
    for $rec in $inputXml/csv/record

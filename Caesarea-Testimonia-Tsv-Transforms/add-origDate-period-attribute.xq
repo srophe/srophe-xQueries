@@ -35,12 +35,12 @@ declare function local:lookup-period-singleDate($date as xs:string, $xmlTable as
     return $cat/*:catId/text()
 };
 let $delimiter := ","
-let $inputFileString := "C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\Caesarea-Testimonia-Tsv-Transforms\NEAEH-CM-TaxonomyTable.csv"
+let $inputFileString := "/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Caesarea-Testimonia-Tsv-Transforms/NEAEH-CM-TaxonomyTable.csv"
 let $inputFile := file:read-text($inputFileString)
 let $xmlFile := csv:parse($inputFile, map{"header": "true", "separator": $delimiter, "quotes": "no"})
 
 
-for $doc in fn:collection("C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\Caesarea-Testimonia-Tsv-Transforms\processTsvOutput\2020-06-10\")
+for $doc in fn:collection("/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Caesarea-Testimonia-Tsv-Transforms/processTsvOutput/tsvOutput-2020-06-19")
   let $docId := fn:substring-after($doc//text/body/ab/idno/text(), "testimonia/")
   let $lower := string($doc//creation/origDate/@notBefore)
   let $upper := string($doc//creation/origDate/@notAfter)
