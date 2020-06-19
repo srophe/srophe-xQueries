@@ -1,0 +1,67 @@
+matchUri,Place Names,Nov17Long,Nov17Lat,FinalDDCoord,FinalLong,FinalLat,status,comments
+syriaca.org/place/5,Adharbayjan,47.57207772,37.89826311,"47.5720777192,37.8982631128",,,rounding mis-match,
+syriaca.org/place/993,Adiabene#Ḥadyab,43.71776195,36.10697103,"43.7177619468,36.1069710342",,,rounding mis-match,
+syriaca.org/place/96,Ahvaz#Hormuz-Ardashir,48.68416667,31.31888889,"48.6841666667,31.3188888889",,,question,"Ahvaz in E; Hormuz coord are: 56.9790459000,27.0819012000. But this is a different place, right? (place/4158)"
+syriaca.org/place/796,Almaliq,80.53305556,44.24,"80.5330555556,44.2400000000",,,rounding mis-match,
+syriaca.org/place/716,Arabia,44.02676235,26.70104456,"44.0267623480,26.7010445593",,,rounding mis-match,
+syriaca.org/place/4282,Aral Sea,59.39082646,44.7134365,"59.3908264590,44.7134365009",,,rounding mis-match,
+syriaca.org/place/4231,Badghis,62.70188707,35.28916983,"62.7018870697,35.2891698291",,,rounding mis-match,
+syriaca.org/place/254,Barwari Bala,43.45106166,37.16802858,"43.4510616570,37.1680285800",,,rounding mis-match,
+syriaca.org/place/4111,Baskinta,33.944167,35.7875,"35.7878646000,33.9429260000",,,change,lat and long switched in one of them; numbers are different
+syriaca.org/place/4113,Beqaa Valley,33.833333,36,"36.3083944699,34.1082058716",,,change,lat and long switched in one of them; numbers are different
+syriaca.org/place/717,Beth Aramaye,44.98818607,33.26257839,"44.6181882154,32.3282427407",,,change,
+syriaca.org/place/738,Beth Dasen,43.54285834,37.05350627,"43.4303829381,37.3984692595",,,change,
+syriaca.org/place/84,Beth Parsaye#Fars,53.45683971,29.05903419,"53.4568397093,29.0590341918",,,rounding mis-match,
+syriaca.org/place/37,Beth Qaṭraye,50.56309713,25.96106595,"50.5630971255,25.9610659507",,,rounding mis-match,
+syriaca.org/place/503,Black Sea,35.12100942,43.38131658,"35.1210094169,43.3813165780",,,rounding mis-match,
+syriaca.org/place/54,Cappadocia,35.94225545,38.91622906,"35.9422554468,38.9162290613",,,rounding mis-match,
+syriaca.org/place/61,Caspian Sea,51.7291839,39.75519793,"51.7291838959,39.7551979301",,,rounding mis-match,
+syriaca.org/place/55,Cilicia,35.4358891,37.14217632,"35.4358890965,37.1421763236",,,rounding mis-match,
+syriaca.org/place/4015,Commagene,38.13680472,37.66359202,"38.1368047166,37.6635920234",,,rounding mis-match,
+syriaca.org/place/637,Cudi Daği,42.4519976,37.38264666,"42.4519975983,37.3826466584",,,rounding mis-match,
+syriaca.org/place/4239,Dailam,50.0266709,36.814046,"50.0266708971,36.8140460017",,,rounding mis-match,
+syriaca.org/place/270,Dayr Qannubin,34.25,35.95,"35.9571791000,34.2484193000",,,change,lat and long switched; much lower precision level in Nov17
+syriaca.org/place/4432,Diamper#Udayamperur,76.363333,9.913889,"76.3616860000,9.9184719000",,,change,different values in final
+syriaca.org/place/715,Egypt,31.55376091,29.22048273,"31.5537609097,29.2204827287",,,rounding mis-match,
+syriaca.org/place/271,Ehden#Mar Sargis,34.291111,35.965,"35.9822765000,34.2900068000",,,change,lat and long switched in one of them; numbers are different
+syriaca.org/place/284,Erzincan#Erznka,39.4891977,39.7294026,"39.4891976944,39.7294026111",,,rounding mis-match,
+syriaca.org/place/4358,Ferghana,71.20186253,40.6222462,"71.2018625264,40.6222461978",,,rounding mis-match,
+syriaca.org/place/4022,Gilan,49.20869449,37.47798789,"49.2086944851,37.4779878946",,,rounding mis-match,
+syriaca.org/place/4360,Gobi Desert,108.8098895,43.40918225,"108.8098894588,43.4091822526",,,rounding mis-match,
+syriaca.org/place/4458,Ḥrbath Glal,44.34806412,36.18959491,"44.3480641171,36.1895949142",,,rounding mis-match,
+syriaca.org/place/500,India,77.65053879,25.21517949,"77.6505387874,25.2151794887",,,rounding mis-match,
+syriaca.org/place/4159,Indian Ocean,63.36882106,22.21776156,"63.3688210556,22.2177615587",,,rounding mis-match,
+syriaca.org/place/100,Mount Izla,41.4687814,37.20396963,"41.4687813954,37.2039696339",,,rounding mis-match,
+syriaca.org/place/321,Jazira,41.0353491,36.06837941,"41.0353490962,36.0683794117",,,rounding mis-match,
+syriaca.org/place/4130,Judean Desert,35.07182301,31.3358016,"35.3046917911,31.4596847739",,,change,final values are different
+syriaca.org/place/4255,Karakum Desert,60.26324611,40.29656306,"60.2632461062,40.2965630587",,,rounding mis-match,
+syriaca.org/place/4065,Khorramshahr#Muḥammara,48.18416667,30.44055556,"48.1841666667,30.4405555556",,,rounding mis-match,
+syriaca.org/place/4475,Khwarazm,59.77874226,41.96075305,"59.7787422598,41.9607530539",,,rounding mis-match,
+syriaca.org/place/4104,Kormakitis#Kurmajit,35.342778,33.010833,"33.0102414000,35.3437301000",,,change,lat and long switched in one of them; numbers are different
+syriaca.org/place/4122,Mount Lebanon,34.3,36.116667,"36.1148071000,34.3014363000",,,change,lat and long switched in one of them; numbers are different
+syriaca.org/place/4439,Mantai#Mantota,79.966667,8.95,"79.9662423000,8.9507439000",,,change,final values are different
+syriaca.org/place/4116,Mar Antonios#Qozhaya,34.283056,35.947222,"35.9465280000,34.2830947000",,,change,lat and long switched in one of them; numbers are different
+syriaca.org/place/4118,Mar Elishaʿ,34.247998,36.003098,"36.0012156000,34.2483218000",,,change,lat and long switched in one of them; numbers are different
+syriaca.org/place/4119,Mar Sharbel,34.1077799,35.7353824,"35.7537067000,34.1209623000",,,change,lat and long switched in one of them; numbers are different
+syriaca.org/place/4120,Mar Yuḥanon Maron,34.24833,35.75306,"35.7530600000,34.2483300000",,,change,lat and long switched in one of them; otherwise rounding mis-match
+syriaca.org/place/135,Mediterranean Sea,31.85564904,33.48751125,"31.8556490383,33.4875112481",,,rounding mis-match,
+syriaca.org/place/4385,Mongolia,102.3338328,45.68006332,"102.3338327670,45.6800633235",,,rounding mis-match,
+syriaca.org/place/4080,Muqan,48.64618816,39.92867119,"48.6461881592,39.9286711924",,,rounding mis-match,
+syriaca.org/place/4121,Our Lady of Mayfuq,34.1820579,35.7814447,"35.7768703000,34.1831129000",,,change,lat and long switched in one of them; numbers are different
+syriaca.org/place/4123,Qadisha Valley,34.24333,36.04889,"35.9518147000,34.2544497000",,,change,lat and long switched in one of them (I think); numbers are different
+syriaca.org/place/2362,Salakh,44.92562799,36.64228853,"44.9256279894,36.6422885298",,,rounding mis-match,
+syriaca.org/place/778,Šammәsdin,44.55667701,37.28717017,"44.5566770050,37.2871701749",,,rounding mis-match,
+syriaca.org/place/4488,Semirechye#Yeti Su,76.22007598,45.27817561,"76.2200759792,45.2781756072",,,rounding mis-match,
+syriaca.org/place/524,Mount Sinjar,41.85253799,36.3957954,"41.8525379880,36.3957953965",,,rounding mis-match,
+syriaca.org/place/642,Socotra,53.89750348,12.44953183,"53.8975034764,12.4495318291",,,rounding mis-match,
+syriaca.org/place/4273,Sogdiana#Transoxiana,66.16976393,39.40573866,"66.1697639277,39.4057386647",,,question,"The final coordinates for TRANSOXIANA (MAWARA'N-NAHR) are 65.6650773465,40.4818028468"
+syriaca.org/place/4409,Tarim Basin,81.0275386,39.35544507,"81.0275385989,39.3554450663",,,rounding mis-match,
+syriaca.org/place/4410,Tenduc,109.2775584,40.28038989,"109.2775583965,40.2803898943",,,rounding mis-match,
+syriaca.org/place/250,Tergawar,44.7631281,37.42495451,"44.7631280972,37.4249545113",,,rounding mis-match,
+syriaca.org/place/4411,Thar Desert,70.37301407,26.87582726,"70.3730140659,26.8758272626",,,rounding mis-match,
+syriaca.org/place/4445,Thiruvalla,76.574891,9.381603,"76.5758765000,9.3848472000",,,change,different values in final
+syriaca.org/place/789,Ṭirhan,44.04681623,34.43402855,"44.0468162254,34.4340285524",,,rounding mis-match,
+syriaca.org/place/761,Lower Ṭiyari,43.45030391,37.31549836,"43.4503039071,37.3154983623",,,rounding mis-match,
+syriaca.org/place/790,Upper Ṭiyari,43.41568057,37.496484,"43.4156805669,37.4964840042",,,rounding mis-match,
+syriaca.org/place/647,Turkistan,65.65076424,41.30298951,"65.6507642386,41.3029895092",,,rounding mis-match,
+syriaca.org/place/4124,Yanuḥ,34.100583,35.884036,"35.8846307000,34.1035075000",,,change,lat and long switched in one of them; numbers are different

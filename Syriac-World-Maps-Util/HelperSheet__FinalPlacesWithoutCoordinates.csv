@@ -1,0 +1,79 @@
+URI,placeName,coordinates,status,comments
+syriaca.org/place/4025,al-Jabiya,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/4076,al-Jawf,,check,should have a point...a town in Libya
+syriaca.org/place/4058,al-Madaʾin#Maḥoze#Medinata,,label not point,
+syriaca.org/place/4215,al-Nuʿmaniyya,,label not point,a district in Iraq
+syriaca.org/place/504,Anatolia#Asia Minor,,label not point,
+syriaca.org/place/4338,Arabian Sea,,label not point,
+syriaca.org/place/4006,Araxes River,,label not point,
+syriaca.org/place/4010,Atropatene,,label not point,
+syriaca.org/place/4101,Balinea#Baniyas,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/4303,Lake Balkhash,,label not point,
+syriaca.org/place/154,Baniyas#Caesarea Philippi,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/4149,Bay of Aden,,label not point,
+syriaca.org/place/4341,Bay of Bengal,,label not point,
+syriaca.org/place/2274,Beth Daron,,label not point,
+syriaca.org/place/34,Beth Ḥuzaye,,label not point,
+syriaca.org/place/4464,Beth Kartwaye,,label not point,
+syriaca.org/place/36,Beth Nuhadra,"42.9958481000,36.8616822000",done,
+syriaca.org/place/31,Beth ʿArbaye,,label not point,
+syriaca.org/place/4452,Biye,"44.1557693000,36.9617745000",done,
+syriaca.org/place/4237,Bost,,not in kml,
+syriaca.org/place/4347,Burma,,label not point,
+syriaca.org/place/4350,Cambodia,,label not point,
+syriaca.org/place/4523,Cardamom Hills,,label not point,
+syriaca.org/place/4023,Castabala,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/4427,Ceylon#Sri Lanka,,label not point,
+syriaca.org/place/4351,Champa,,label not point,
+syriaca.org/place/4241,Dasht-e Kavir,,label not point,
+syriaca.org/place/4242,Dasht-e Lut,,label not point,
+syriaca.org/place/706,Elam,"48.5164710000,32.2836180000",done,
+syriaca.org/place/4134,Lake Fayyum,,label not point,
+syriaca.org/place/4019,Galatia,,label not point,
+syriaca.org/place/4434,Gulf of Mannar,,label not point,
+syriaca.org/place/4365,Hainan,,not in kml,
+syriaca.org/place/4026,Ḥirta d-Ṭayyaye,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/4291,Ili River,,label not point,
+syriaca.org/place/4073,Iran,"52.3542074321,33.4302985146",done,
+syriaca.org/place/4476,Lake Issyk Kul,,label not point,
+syriaca.org/place/4075,Janza,,not in kml,
+syriaca.org/place/4077,Jibal,,not in kml,
+syriaca.org/place/4027,Joppa,,not in kml,
+syriaca.org/place/4253,Karaj#Kuj,"48.4084225000,34.5512105000",done,
+syriaca.org/place/108,Karka d-Beth Slokh#Kirkuk,"44.3953000000,35.4680990000",done,
+syriaca.org/place/4534,Karkha River,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/929,Khuzistan,,label not point,
+syriaca.org/place/4256,Kirman,"57.0949602000,30.2920525000",done,
+syriaca.org/place/4373,Korea,,label not point,
+syriaca.org/place/4375,Krishna River,,label not point,
+syriaca.org/place/4030,Kura River,,label not point,
+syriaca.org/place/119,Larissa,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/4533,Leontes River#Litani River,,label not point,
+syriaca.org/place/4257,Makran,,not in kml,
+syriaca.org/place/462,Manzikert,,not in kml,
+syriaca.org/place/4457,Maʿaltha,,check,not the same as place/2316? Same coordinates though?
+syriaca.org/place/4034,Media,,label not point,
+syriaca.org/place/4389,Nepal,,label not point,
+syriaca.org/place/4528,Ningxia,"106.2680054000,38.4691809000",done,
+syriaca.org/place/4037,Nippur,,not in kml,
+syriaca.org/place/4084,Rafaḥ,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/4522,Ramapuram,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/4046,Raphia,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/4487,Rima,"47.8185081000,30.5269270000",done,
+syriaca.org/place/4031,Lake Sevan,,label not point,
+syriaca.org/place/4271,Shahr-e Piroz,"58.2114458000,37.9514904000",done,
+syriaca.org/place/4089,Shayzar,,done,multiple potential matches; see “match by hand” Helper sheet
+syriaca.org/place/4142,Sinai Peninsula,,label not point,
+syriaca.org/place/4402,South China Sea,,label not point,
+syriaca.org/place/4051,Syrian Desert,,label not point,
+syriaca.org/place/4408,Taiwan,,label not point,
+syriaca.org/place/4492,Tambraparani River,,done,potential match; see “match by hand” Helper sheet
+syriaca.org/place/4108,Ṭartuṣ,,not in kml,
+syriaca.org/place/4032,Lake Tatta#Lake Tuz ,,label not point,
+syriaca.org/place/4106,Taurus Mountains,,label not point,
+syriaca.org/place/509,Wasiṭ,,not in kml,
+syriaca.org/place/4527,Xingqing,"106.2680054000,38.4691809000",done,
+syriaca.org/place/4422,Yellow Sea,,label not point,
+syriaca.org/place/4520,Zabdicene,,label not point,
+syriaca.org/place/4200,Zagros Mountains,,label not point,
+syriaca.org/place/4525,Zhangye,"100.4550362000,38.9363126000",done,

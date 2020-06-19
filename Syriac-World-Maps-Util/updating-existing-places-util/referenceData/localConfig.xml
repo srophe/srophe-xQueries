@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <inputFileUri>C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\Syriac-World-Maps-Util\xmlMasterTrees\oldRecordsMaster.xml</inputFileUri>
+  <delimiter xml:space="preserve">&#9;</delimiter>
+  <indexCsvUri>C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\Syriac-World-Maps-Util\updating-existing-places-util\referenceData\SyriacWorldPlacesIndexData.csv</indexCsvUri>
+  <updateDirectory>C:\Users\anoni\Documents\GitHub\srophe\srophe-app-data\data\places\tei\</updateDirectory>
+  <outputPath>C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\Syriac-World-Maps-Util\existingPlacesOutput\</outputPath>
+  <outputTo>file</outputTo>
+</configuration>

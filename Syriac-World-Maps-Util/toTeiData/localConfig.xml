@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration> <inputFileUri>C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\Syriac-World-Maps-Util\xmlMasterTrees\newRecordsMaster.xml</inputFileUri>
+  <delimiter xml:space="preserve">&#9;</delimiter> <outputPath>C:\Users\anoni\Documents\GitHub\miscellaneous-util-scripts\Syriac-World-Maps-Util\newPlacesOutput\</outputPath>
+  <outputTo>file</outputTo>
+</configuration>
