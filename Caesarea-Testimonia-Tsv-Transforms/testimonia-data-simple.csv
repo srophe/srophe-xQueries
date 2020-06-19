@@ -1,0 +1,395 @@
+projectID,testimoniaID,Author,Work_Title,Rife_Cited_Range,Source_Cited_Range,Container?,Citation_URN,Citation_Link,Language
+334,173,Josephus,Antiquitates Judaeorum,13.12. 4,13.12.4,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:13.12.4,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:13.12.4,en
+336,174,Josephus,Antiquitates Judaeorum,14.4.4,14.4.4,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:14.4.4,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:14.4.4,en
+4,2,Josephus,Antiquities of the Jews,14.76,14.76,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:14.76,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:14.69,en
+6,3,Josephus,Antiquities of the Jews,15.293,15.293,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:15.293,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:15.292,en
+8,4,Josephus,Antiquities of the Jews,15.331-341,15.331-15.341,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:15.331-15.341,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:15.331-15.341,en
+338,175,Josephus,Antiquitates Judaeorum,15.7.3,15.7.3,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:15.7.3,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:15.7.3,en
+10,5,Josephus,Antiquities of the Jews,16.13,16.12,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:16.12,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:16.12,en
+12,6,Josephus,Antiquities of the Jews,16.136-16.141,16.136-16.141,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:16.136-16.141,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:16.136,en
+14,7,Josephus,Antiquities of the Jews,16.373-16.394,16.373-16.394,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:16.373-16.394,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:16.373-392,en
+18,9,Josephus,Antiquities of the Jews,17.219-17.223,17.219-17.223,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:17.219-17.223,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:17.213,en
+16,8,Josephus,Antiquities of the Jews,17.77-17.78,17.77-17.78,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:17.77-17.78,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:17.68,en
+20,10,Josephus,Antiquities of the Jews,18.55-18.59,18.55-18.59,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:18.55-18.59,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:18.55,en
+22,11,Josephus,Antiquities of the Jews,19.332-19.334,19.332-19.334,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:19.332-19.334,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:19.332,en
+24,12,Josephus,Antiquities of the Jews,19.343-19.352,19.343-19.352,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:19.343-19.352,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:19.343,en
+26,13,Josephus,Antiquities of the Jews,19.356-19.366,19.356-19.366,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:19.356-19.366,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:19.360,en
+28,14,Josephus,Antiquities of the Jews,20.113-20.124,20.113-20.124,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:20.118; urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:20.113,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:20.118; http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:20.113,en
+30,15,Josephus,Antiquities of the Jews,20.173,20.173,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:20.173,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:20.173,en
+32,16,Josephus,Antiquities of the Jews,20.176,20.176,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:20.176,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:20.173,en
+34,17,Josephus,Antiquities of the Jews,20.182-20.184,20.182-20.184,,urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:20.182-20.184,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-eng1:20.182,en
+333,173,Josephus,Antiquitates Judaeorum,13.12. 4,13.12.4,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:13.12.4,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:13.12.4,grc
+335,174,Josephus,Antiquitates Judaeorum,14.4.4,14.4.4,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:14.4.4,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:14.4.4,grc
+3,2,Josephus,Antiquitates Judaeorum,14.76,14.76,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:14.76,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:14.76,grc
+5,3,Josephus,Antiquitates Judaeorum,15.293,15.293,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:15.293,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:15.293,grc
+7,4,Josephus,Antiquitates Judaeorum,15.331-341,15.331-15.341,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:15.331-15.341,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:15.331,grc
+337,175,Josephus,Antiquitates Judaeorum,15.7.3,15.7.3,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:15.7.3,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:15.7.3,grc
+9,5,Josephus,Antiquitates Judaeorum,16.13,16.13,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:16.13,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:16.13,grc
+11,6,Josephus,Antiquitates Judaeorum,16.136-16.141,16.136-16.141,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:16.136-16.141,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:16.136-16.141,grc
+13,7,Josephus,Antiquitates Judaeorum,16.373-16.394,16.373-16.394,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:16.373-16.394,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:16.373-16.394,grc
+17,9,Josephus,Antiquitates Judaeorum,17.219-17.223,17.219-17.223,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:17.219-17.223,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:17.219-17.223,grc
+15,8,Josephus,Antiquitates Judaeorum,17.77-17.78,17.77-17.78,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:17.77-17.78,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:17.77-17.78,grc
+19,10,Josephus,Antiquitates Judaeorum,18.55-18.59,18.55-18.59,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:18.55-18.59,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:18.55-18.59,grc
+21,11,Josephus,Antiquitates Judaeorum,19.332-19.334,19.332-19.334,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:19.332-19.334,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:19.332-19.334,grc
+23,12,Josephus,Antiquitates Judaeorum,19.343-19.352,19.343-19.352,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:19.343-19.352,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:19.343-19.352,grc
+25,13,Josephus,Antiquitates Judaeorum,19.356-19.366,19.356-19.366,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:19.356-19.366,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:19.356-19.366,grc
+27,14,Josephus,Antiquitates Judaeorum,20.113-20.124,20.113-20.124,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:20.113-20.124,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:20.113-20.124,grc
+29,15,Josephus,Antiquitates Judaeorum,20.173,20.173,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:20.173,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:20.173,grc
+31,16,Josephus,Antiquitates Judaeorum,20.176,20.176,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:20.176,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:20.176,grc
+33,17,Josephus,Antiquitates Judaeorum,20.182-20.184,20.182-20.184,,urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:20.182-20.184,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg001.perseus-grc1:20.182-20.184,grc
+82,41,Josephus,Vita,52-61,52-61,,urn:cts:greekLit:tlg0526.tlg002.perseus-eng1:52-61,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg002.perseus-eng1:52-61,en
+84,42,Josephus,Vita,65-68,65-68,,urn:cts:greekLit:tlg0526.tlg002.perseus-eng1:65-68,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg002.perseus-eng1:65-68,en
+81,41,Josephus,Vita,52-61,52-61,,urn:cts:greekLit:tlg0526.tlg002.perseus-grc1:52-61,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg002.perseus-grc1:52-61,grc
+83,42,Josephus,Vita,65-68,65-68,,urn:cts:greekLit:tlg0526.tlg002.perseus-grc1:65-68,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg002.perseus-grc1:65-68,grc
+36,18,Josephus,The Wars of the Jews,1.156,1.156,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.156,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.155,en
+342,177,Josephus,Bellum Judaicum,1.20.3,1.20.3,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.20.3,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.20.3,en
+344,178,Josephus,Bellum Judaicum,1.21.5,1.21.5,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.21.5,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.21.5,en
+38,19,Josephus,The Wars of the Jews,1.408-1.415,1.408-1.415,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.408-1.415,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.408-1.415,en
+40,20,Josephus,The Wars of the Jews,1.543-1.551,1.543-1.551,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.543-1.551,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.550,en
+42,21,Josephus,The Wars of the Jews,1.613-1.616,1.613-1.616,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.613-1.616,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.608-1.614,en
+340,176,Josephus,Bellum Judaicum,1.7.7,1.7.7,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.7.7,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:1.7.7,en
+44,22,Josephus,The Wars of the Jews,2.14-2.19,2.14-2.19,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.14-2.19,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.14-2.16,en
+46,23,Josephus,The Wars of the Jews,2.169-2.174,2.169-2.174,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.169-2.174,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.169-2.172,en
+48,24,Josephus,The Wars of the Jews,2.228-2.312,2.228-2.312,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.228-2.312,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.228-2.309,en
+50,25,Josephus,The Wars of the Jews,2.232-2.244,2.232-2.244,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.232-2.244,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.232-2.41,en
+52,26,Josephus,The Wars of the Jews,2.266,2.266,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.266,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.266,en
+54,27,Josephus,The Wars of the Jews,2.277-2.292,2.277-2.292,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.277-2.292,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.277-2.289,en
+56,28,Josephus,The Wars of the Jews,2.409-2.413,2.409-2.413,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.409-2.413,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.409-2.411,en
+58,29,Josephus,The Wars of the Jews,2.449-2.460,2.449-2.460,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.449-2.460,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.449-457,en
+60,30,Josephus,The Wars of the Jews,2.507-2.513,2.507-2.513,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.507-2.513,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:2.507-2.513,en
+62,31,Josephus,The Wars of the Jews,3.410.,3.410.,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:3.410,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:3.409,en
+64,32,Josephus,The Wars of the Jews,4.663,4.663,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:4.663,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:4.656,en
+66,33,Josephus,The Wars of the Jews,5.1,5.1,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:5.1,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:5.1,en
+68,34,Josephus,The Wars of the Jews,5.40.,5.40.,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:5.40,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:5.39,en
+70,35,Josephus,The Wars of the Jews,7.20.,7.20.,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.20,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.13,en
+72,36,Josephus,The Wars of the Jews,7.23,7.23,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.23,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.21,en
+74,37,Josephus,The Wars of the Jews,7.36,7.36,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.36,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.26,en
+78,39,Josephus,The Wars of the Jews,7.361-7.376,7.361-7.376,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.361-7.376,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.337,en
+76,38,Josephus,The Wars of the Jews,7.37,7.37,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.37,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.37,en
+80,40,Josephus,The Wars of the Jews,7.407,7.407,,urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.407,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-eng1:7.407,en
+35,18,Josephus,Bellum Judaicum,1.156,1.156,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.156,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.156,grc
+341,177,Josephus,Bellum Judaicum,1.20.3,1.20.3,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.20.3,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.20.3,grc
+343,178,Josephus,Bellum Judaicum,1.21.5,1.21.5,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.21.5,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.21.5,grc
+37,19,Josephus,Bellum Judaicum,1.408-1.415,1.408-1.415,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.408-1.415,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.408-1.415,grc
+39,20,Josephus,Bellum Judaicum,1.543-1.551,1.543-1.551,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.543-1.551,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.543-1.551,grc
+41,21,Josephus,Bellum Judaicum,1.613-1.616,1.613-1.616,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.613-1.616,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.613-1.616,grc
+339,176,Josephus,Bellum Judaicum,1.7.7,1.7.7,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.7.7,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:1.7.7,grc
+43,22,Josephus,Bellum Judaicum,2.14-2.19,2.14-2.19,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.14-2.19,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.14-2.19,grc
+45,23,Josephus,Bellum Judaicum,2.169-2.174,2.169-2.174,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.169-2.174,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.169-174,grc
+47,24,Josephus,Bellum Judaicum,2.228-2.312,2.228-2.312,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.228-2.312,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.228-2.312,grc
+49,25,Josephus,Bellum Judaicum,2.232-2.244,2.232-2.244,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.232-2.244,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.232-2.244,grc
+51,26,Josephus,Bellum Judaicum,2.266,2.266,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.266,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.266,grc
+53,27,Josephus,Bellum Judaicum,2.277-2.292,2.277-2.292,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.277-2.292,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.277-2.292,grc
+55,28,Josephus,Bellum Judaicum,2.409-2.413,2.409-2.413,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.409-2.413,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.409-2.413,grc
+57,29,Josephus,Bellum Judaicum,2.449-2.460,2.449-2.460,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.449-2.460,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.449-2.460,grc
+59,30,Josephus,Bellum Judaicum,2.507-2.513,2.507-2.513,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.507-2.513,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:2.507-2.513,grc
+61,31,Josephus,Bellum Judaicum,3.410.,3.410.,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:3.410,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:3.410,grc
+63,32,Josephus,Bellum Judaicum,4.663,4.663,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:4.663,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:4.663,grc
+65,33,Josephus,Bellum Judaicum,5.1,5.1,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:5.1,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:5.1,grc
+67,34,Josephus,Bellum Judaicum,5.40.,5.40.,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:5.40,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:5.40,grc
+69,35,Josephus,Bellum Judaicum,7.20.,7.20.,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.2,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.2,grc
+71,36,Josephus,Bellum Judaicum,7.23,7.23,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.23,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.23,grc
+73,37,Josephus,Bellum Judaicum,7.36,7.36,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.36,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.36,grc
+77,39,Josephus,Bellum Judaicum,7.361-7.376,7.361-7.376,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.361-7.376,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.361-7.376,grc
+75,38,Josephus,Bellum Judaicum,7.37,7.37,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.37,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.37,grc
+79,40,Josephus,Bellum Judaicum,7.407,7.407,,urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.407,http://data.perseus.org/citations/urn:cts:greekLit:tlg0526.tlg004.perseus-grc1:7.407,grc
+98,53,Procopius,Historia Arcana,11.25,11.25,,urn:cts:greekLit:tlg4029.tlg002.perseus-grc1:11.25,http://data.perseus.org/citations/urn:cts:greekLit:tlg4029.tlg002.perseus-grc1:11.25,grc
+99,54,Procopius,Historia Arcana,11.29,11.29,,urn:cts:greekLit:tlg4029.tlg002.perseus-grc1:11.29,http://data.perseus.org/citations/urn:cts:greekLit:tlg4029.tlg002.perseus-grc1:11.29,grc
+100,55,Procopius,Historia Arcana,27.26-27.31,27.26-27.31,,urn:cts:greekLit:tlg4029.tlg002.perseus-grc1:27.26-27.31,http://data.perseus.org/citations/urn:cts:greekLit:tlg4029.tlg002.perseus-grc1:27.26-27.31,grc
+100.1,200,Procopius ,Historia Arcana,,29.17-29.18,,urn:cts:greekLit:tlg4029.tlg002.perseus-grc1:29.17,http://data.perseus.org/citations/urn:cts:greekLit:tlg4029.tlg002.perseus-grc1:29.17,grc
+100.2,201,Procopius,Historia Arcana,,30.18,,urn:cts:greekLit:tlg4029.tlg002.perseus-grc1:30.18,http://data.perseus.org/citations/urn:cts:greekLit:tlg4029.tlg002.perseus-grc1:30.18,grc
+86,43,Pliny,Natural History,5.14.69,5.13,,urn:cts:latinLit:phi0978.phi001.perseus-eng1:5.13,http://data.perseus.org/citations/urn:cts:latinLit:phi0978.phi001.perseus-eng1:5.13,en
+87,44,Tacitus,Histories,2.79,2.79,,urn:cts:latinLit:phi1351.phi004.perseus-eng1:2.79,http://data.perseus.org/citations/urn:cts:latinLit:phi1351.phi004.perseus-eng1:2.79,en
+303,158,Palladius,Dialoga de vita s. Ioannis Chrysostomi,73,"Page 131, line 7",,#N/A,http://stephanus.tlg.uci.edu.proxy.library.vanderbilt.edu/Iris/Cite?2111:004:254737,grc
+263,138,Theodoros Anagnostes,Historia ecclesiastica,336,336,,#N/A,http://stephanus.tlg.uci.edu.proxy.library.vanderbilt.edu/Iris/Cite?2869:003:0,grc
+297,155,Theodoret,Epistles,110,110,,#N/A,http://stephanus.tlg.uci.edu.proxy.library.vanderbilt.edu/Iris/Cite?4089:007:22581,grc
+314,163,Evagrius,Historia ecclesiastica,4.7,4.7,,#N/A,http://www.tertullian.org/fathers/evagrius_4_book4.htm,en
+282,147,Photius,Bibliotheca,89,89,,#N/A,http://www.tertullian.org/fathers/photius_03bibliotheca.htm,en
+284,148,Photius,Bibliotheca,118,118,,#N/A,http://www.tertullian.org/fathers/photius_03bibliotheca.htm,en
+138,62,,Itinerarium Antonini Piacentini,46,46,,#N/A,https://archive.org/details/cu31924028534232/page/n55/mode/2up,en
+265,139,Jerome,De viris illustribus,75,75,,#N/A,https://archive.org/details/hieronymusundge00berngoog/page/n103/mode/2up,la
+267,140,Jerome,De viris illustribus,98,98,,#N/A,https://archive.org/details/hieronymusundge00berngoog/page/n109/mode/2up,la
+269,141,Jerome,De viris illustribus,100,100,,#N/A,https://archive.org/details/hieronymusundge00berngoog/page/n109/mode/2up,la
+271,142,Jerome,De viris illustribus,113,113,,#N/A,https://archive.org/details/hieronymusundge00berngoog/page/n113/mode/2up,la
+273,143,Jerome,De viris illustribus,130,130,,#N/A,https://archive.org/details/hieronymusundge00berngoog/page/n117/mode/2up,la
+285,149,Isidore of Seville,Etymologiae,6.6,6.6,,#N/A,https://archive.org/details/isidori01isiduoft/page/n233/mode/2up,la
+163,88,Origen,De oratione,II.27.12,27.12,,#N/A,https://ccel.org/ccel/origen/prayer/prayer.xviii.html,en
+246,129,Eusebius,Onomasticon,s.v.Βηθανάθα,s.v.Βηθανάθα,,#N/A,https://ccel.org/ccel/pearse/morefathers/files/eusebius_onomasticon_02_trans.htm#B_EXODUS,en
+167,90,,Apostolicae constitutiones,46,46,,#N/A,https://ccel.org/ccel/schaff/anf07/anf07.ix.viii.iv.html,en
+149,81,(Psuedo-)Clement,Homilies,1.15,1.15,,#N/A,https://ccel.org/ccel/schaff/anf08/anf08.vi.iv.iv.xv.html,en
+151,82,(Psuedo-)Clement,Homilies,1.2,1.2,,#N/A,https://ccel.org/ccel/schaff/anf08/anf08.vi.iv.iv.xx.html,en
+155,84,(Psuedo-)Clement,Homilies,6.26,6.26,,#N/A,https://ccel.org/ccel/schaff/anf08/anf08.vi.iv.ix.xxvi.html,en
+153,83,(Psuedo-)Clement,Homilies,4.1-2,4.1-4.2,,#N/A,https://ccel.org/ccel/schaff/anf08/anf08.vi.iv.vii.i.html ; https://ccel.org/ccel/schaff/anf08/anf08.vi.iv.vii.ii.html ,en
+157,85,(Psuedo-)Clement,Homilies,12.5,12.5,,#N/A,https://ccel.org/ccel/schaff/anf08/anf08.vi.iv.xv.v.html,en
+161,87,(Psuedo-)Clement,Homilies,20.13,20.13,,#N/A,https://ccel.org/ccel/schaff/anf08/anf08.vi.iv.xxiii.xiii.html,en
+230,121,Eusebius,Martyrae Palestinae,1.1,1.1-1.2,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.ii.html,en
+230.02,185,Eusebius,Martyrae Palestinae,,1.3,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.ii.html,en
+232.02,186,Eusebius,Martyrae Palestinae,,2.1,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.iii.html,en
+232.03,187,Eusebius,Martyrae Palestinae,,2.4,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.iii.html,en
+234,123,Eusebius,Martyrae Palestinae,3.2,3.2,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.iv.html,en
+240.08,191,Eusebius,Martyrae Palestinae,,8.3,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.ix.html,en
+240.1,192,Eusebius,Martyrae Palestinae,,8.8,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.ix.html,en
+234.02,188,Eusebius,Martyrae Palestinae,,4.2,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.v.html,en
+236,124,Eusebius,Martyrae Palestinae,4.8,4.8,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.v.html,en
+236.02,189,Eusebius,Martyrae Palestinae,,4.14-4.15,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.v.html,en
+236.2,181,Eusebius,Martyrae Palestinae,,6.1,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.vi.html,en 
+238,125,Eusebius,Martyrae Palestinae,6.2,6.2,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.vii.html,en
+240,126,Eusebius,Martyrae Palestinae,6.3,6.3,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.vii.html,en
+240.02,183,Eusebius,Martyrae Palestinae,,6.5,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.vii.html,en
+240.04,184,Eusebius,Martyrae Palestinae,,6.7,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.vii.html,en
+240.06,190,Eusebius,Martyrae Palestinae,,7.1,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.viii.html,en
+240.3,193,Eusebius,Martyrae Palestinae,,9.6-9.7,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.x.html,en
+242,127,Eusebius,Martyrae Palestinae,9.12,9.12,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.x.html,en
+242.2,194,Eusebius,Martyrae Palestinae,,10.2,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.xi.html,en
+244,128,Eusebius,Martyrae Palestinae,11,11,Y,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.xii.html,en
+244.02,195,Eusebius,Martyrae Palestinae,,11.2,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.xii.html,en
+244.04,196,Eusebius,Martyrae Palestinae,,11.6,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.xii.html,en
+244.06,197,Eusebius,Martyrae Palestinae,,11.29,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.xii.html,en
+244.08,198,Eusebius,Martyrae Palestinae,,11.3,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.xii.html,en
+244.1,199,Eusebius,Martyrae Palestinae,,11.31,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iii.xiv.xii.html,en
+248,130,Eusebius,Vita Constantini,1.19,1.19,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iv.vi.i.xix.html,en
+250,131,Eusebius,Vita Constantini,4.36-37,4.36-4.37,,#N/A,https://ccel.org/ccel/schaff/npnf201/npnf201.iv.vi.iv.xxxvi.html,en
+288,150,Socrates,Historia ecclesiastica,2.4,2.4,,#N/A,https://ccel.org/ccel/schaff/npnf202/npnf202.ii.v.iv.html,en
+290,151,Socrates,Historia ecclesiastica,4.4,4.4,,#N/A,https://ccel.org/ccel/schaff/npnf202/npnf202.ii.vii.iv.html,en
+292,152,Sozomenus,Historia ecclesiastica,3.2,3.2,,#N/A,https://ccel.org/ccel/schaff/npnf202/npnf202.iii.viii.ii.html,en
+296,154,Theodoret,Historia ecclesiastica,5.8,5.8,,#N/A,https://ccel.org/ccel/schaff/npnf203/npnf203.iv.viii.v.viii.html,en
+298,155,Theodoret,Epistles,110,110,,#N/A,https://ccel.org/ccel/schaff/npnf203/npnf203.iv.x.cx.html,en
+268,140,Jerome,De viris illustribus,98,98,,#N/A,https://ccel.org/ccel/schaff/npnf203/npnf203.v.iii.c.html,en
+270,141,Jerome,De viris illustribus,100,100,,#N/A,https://ccel.org/ccel/schaff/npnf203/npnf203.v.iii.cii.html,en
+272,142,Jerome,De viris illustribus,113,113,,#N/A,https://ccel.org/ccel/schaff/npnf203/npnf203.v.iii.cxv.html,en
+274,143,Jerome,De viris illustribus,130,130,,#N/A,https://ccel.org/ccel/schaff/npnf203/npnf203.v.iii.cxxxii.html,en
+266,139,Jerome,De viris illustribus,75,75,,#N/A,https://ccel.org/ccel/schaff/npnf203/npnf203.v.iii.lxxvii.html,en
+131,57,Justinian I,Digesta L,15.1.6,15.1.6,,#N/A,https://droitromain.univ-grenoble-alpes.fr/Anglica/D50_Scott.htm#XV,en
+132,79,Justinian I,Digesta L,15.8.7,15.8.7,,#N/A,https://droitromain.univ-grenoble-alpes.fr/Anglica/D50_Scott.htm#XV,en
+316,164,Justinian,Novella,129,129,,#N/A,https://droitromain.univ-grenoble-alpes.fr/Anglica/N129_Scott.htm,en
+105,57,Justinian I,Digesta L,15.1.6,15.1.6,,#N/A,https://droitromain.univ-grenoble-alpes.fr/Corpus/d-50.htm#15,la
+105,79,Justinian I,Digesta L,15.8.7,15.8.7,,#N/A,https://droitromain.univ-grenoble-alpes.fr/Corpus/d-50.htm#15,la
+166,90,,Apostolicae constitutiones,46,46,,#N/A,https://hdl.handle.net/2027/coo1.ark:/13960/t3gx4wd8s?urlappend=%3Bseq=518,grc
+259,136,,Chronicon paschale,327,327,,#N/A,https://hdl.handle.net/2027/hvd.32044025985615?urlappend=%3Bseq=623,grc
+253,133,John Malalas,Chronographia,10.338,,,#N/A,https://hdl.handle.net/2027/hvd.ah64nm?urlappend=%3Bseq=379,grc
+255,134,John Malalas,Chronographia,11.367,,,#N/A,https://hdl.handle.net/2027/hvd.ah64nm?urlappend=%3Bseq=398,grc
+257,135,John Malalas,Chronographia,15,,,#N/A,https://hdl.handle.net/2027/hvd.ah64nm?urlappend=%3Bseq=506,grc
+283,148,Photius,Bibliotheca,118,118,,#N/A,https://hdl.handle.net/2027/inu.32000000323156?urlappend=%3Bseq=102,grc
+281,147,Photius,Bibliotheca,89,89,,#N/A,https://hdl.handle.net/2027/inu.32000000323156?urlappend=%3Bseq=77,grc
+261,137,Procopius of Gaza,Pangyricus in imperatorem Anastasium,3.2817 section 19,section 19,,#N/A,https://hdl.handle.net/2027/mdp.39015027430845?urlappend=%3Bseq=41,grc
+315,164,Justinian,Novella,129,129,,#N/A,https://hdl.handle.net/2027/mdp.39015030536232?urlappend=%3Bseq=683,la
+110,62,,Itinerarium Antonini Piacentini,46,46,,#N/A,https://hdl.handle.net/2027/mdp.39015047696789?urlappend=%3Bseq=63,la
+327,170,Stephanus of Byzantium,Ethnika,s.v. Δῶρος,,,#N/A,https://hdl.handle.net/2027/njp.32101032929968?urlappend=%3Bseq=146,grc
+89,45,Aelius Herodian,Partitiones (ed. Boissonade 1963)v,I s.v. και- ,I s.v. και-,,#N/A,https://hdl.handle.net/2027/nyp.33433081637765?urlappend=%3Bseq=82,grc
+107,59,Theophanes,Chronographia,a.M. 6048,a.M. 6048,,#N/A,https://hdl.handle.net/2027/osu.32435077388536?urlappend=%3Bseq=254,grc
+135,80,Theophanes,Chronographia,a.M. 6124,a.M. 6124,,#N/A,https://hdl.handle.net/2027/osu.32435077388536?urlappend=%3Bseq=360,grc
+304,158,Palladius,Dialoga de vita s. Ioannis Chrysostomi,73,73,,#N/A,https://hdl.handle.net/2027/wu.89097193015?urlappend=%3Bseq=209,en
+300,156,Mark the Deacon,Vita Porphyrii,33-34,33-34,,#N/A,https://hdl.handle.net/2027/yale.39002001054973?urlappend=%3Bseq=89,en
+2,1,Philo,Embassy to Gaius,276-327,276-327,,#N/A,https://ryanfb.github.io/loebolus-data/L379.pdf,en
+97,52,Eutropius,Breviarium,7.11,7.11,,urn:cts:greekLit:stoa0121.stoa001.opp-grc1:7.11,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:stoa0121.stoa001.opp-grc1:7.11,grc
+129,67,Luke the Evangelist,Acts,10:01:00 AM,10.1,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:10.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:10.1,en
+130,68,Luke the Evangelist,Acts,10:24:00 AM,10.24,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:10.24,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:10.24,en
+131,69,Luke the Evangelist,Acts,10:34:00 AM,10.34,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:10.34,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:10.34,en
+132,70,Luke the Evangelist,Acts,10:44-10:48,10.44-10.48,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:10.44-10.48,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:10.44-10.48,en
+140,71,Luke the Evangelist,Acts,11:1-18,11.1-11.18,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:11.1-11.18,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:11.1-11.18,en
+141,72,Luke the Evangelist,Acts,12:19-23,12.19-12.23,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:12.19-12.23,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:12.19-12.23,en
+142,73,Luke the Evangelist,Acts,06:22:00 PM,18.22,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:18.22,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:18.22,en
+144,75,Luke the Evangelist,Acts,09:16:00 PM,21.16,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:21.16,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:21.16,en
+143,74,Luke the Evangelist,Acts,21:8-9,21.8-21.9,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:21.8-21.9,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:21.8-21.9,en
+145,76,Luke the Evangelist,Acts,11:23:00 PM,23.23,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:23.23,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:23.23,en
+146,77,Luke the Evangelist,Acts,24:1-27,24.1-24.27,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:24.1-24.27,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:24.1-24.27,en
+147,78,Luke the Evangelist,Acts,25:6-26:32,25.6-26.32,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:25.6-26.32,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:25.6-26.32,en
+127,65,Luke the Evangelist,Acts,06:05:00 AM,6.5,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:6.5,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:6.5,en
+128,66,Luke the Evangelist,Acts,09:30:00 AM,9.30.,,urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:9.30,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-eng2:9.30,en
+118,70,Luke the Evangelist,Acts,10:44-10:48,10.44-10.48,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:10.44-10.48,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:10.44-10.48,grc
+119,71,Luke the Evangelist,Acts,11:1-18,11.1-11.18,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:11.1-11.18,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:11.1-11.18,grc
+120,72,Luke the Evangelist,Acts,12:19-23,12.19-12.23,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:12.19-12.23,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:12.19-12.23,grc
+121,73,Luke the Evangelist,Acts,06:22:00 PM,18.22,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:18.22,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:18.22,grc
+123,75,Luke the Evangelist,Acts,09:16:00 PM,21.16,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:21.16,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:21.16,grc
+122,74,Luke the Evangelist,Acts,21:8-9,21.8-21.9,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:21.8-21.9,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:21.8-21.9,grc
+124,76,Luke the Evangelist,Acts,11:23:00 PM,23.23,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:23.23,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:23.23,grc
+125,77,Luke the Evangelist,Acts,24:1-27,24.1-24.27,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:24.1-24.27,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:24.1-24.27,grc
+126,78,Luke the Evangelist,Acts,25:6-26:32,25.6-26.32,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:25.6-26.32,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:25.6-26.32,grc
+173,93,Eusebius,Historia ecclesiastica,2.10.1,2.1,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:2.10,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:2.10,en
+176,94,Eusebius,Historia ecclesiastica,2.10.3,2.1,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:2.10,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:2.10,en
+171,92,Eusebius,Historia ecclesiastica,2.3.3,2.3,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:2.3,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:2.3,en
+178,95,Eusebius,Historia ecclesiastica,3.31.5,3.31,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:3.31,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:3.31,en
+182,97,Eusebius,Historia ecclesiastica,5.22.1,5.22,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:5.22,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:5.22,en
+184,98,Eusebius,Historia ecclesiastica,5.23.3,5.23,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:5.23,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:5.23,en
+192,102,Eusebius,Historia ecclesiastica,6.18.1,6.18,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.18,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.18,en
+194,103,Eusebius,Historia ecclesiastica,6.19.16,6.19,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.19,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.19,en
+196,104,Eusebius,Historia ecclesiastica,6.23.1-4,6.23,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.23,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.23,en
+198,105,Eusebius,Historia ecclesiastica,6.26.1,6.26,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.26,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.26,en
+200,106,Eusebius,Historia ecclesiastica,6.27.1,6.27,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.27,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.27,en
+202,107,Eusebius,Historia ecclesiastica,6.28.1,6.28,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.28,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.28,en
+203,108,Eusebius,Historia ecclesiastica,6.30.1,6.30.1,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.30,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.30,grc
+204,108,Eusebius,Historia ecclesiastica,6.30.1,6.3,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.30,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.30,en
+206,109,Eusebius,Historia ecclesiastica,6.32.2,6.32,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.32,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.32,en
+208,110,Eusebius,Historia ecclesiastica,6.39.1-5,6.39,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.39,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.39,en
+190,101,Eusebius,Historia ecclesiastica,6.8.4,6.8,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.8,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:6.8,en
+214,113,Eusebius,Historia ecclesiastica,7.12.1,7.12,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.12,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.12,en
+216,114,Eusebius,Historia ecclesiastica,7.14.1,7.14,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.14,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.14,en
+218,115,Eusebius,Historia ecclesiastica,7.15.1-5,7.15,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.15,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.15,en
+220,116,Eusebius,Historia ecclesiastica,7.28.1,7.28,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.28,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.28,en
+222,117,Eusebius,Historia ecclesiastica,7.32.21,7.32,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.32,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.32,en
+224,118,Eusebius,Historia ecclesiastica,7.32.24,7.32,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.32,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.32,en
+212,112,Eusebius,Historia ecclesiastica,7.5.1,7.5,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.5,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.5,en
+228,120,Eusebius,Historia ecclesiastica,8.13.6,8.13,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:8.13,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:8.13,en
+226,119,Eusebius,Historia ecclesiastica,8.7.1,8.7.,,urn:cts:greekLit:tlg2018.tlg002.opp-eng1:8.7,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-eng1:8.7,en
+172,93,Eusebius,Historia ecclesiastica,2.10.1,2.10.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:2.10.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:2.10.1,grc
+175,94,Eusebius,Historia ecclesiastica,2.10.3,2.10.3,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:2.10.3,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:2.10.3,grc
+170,92,Eusebius,Historia ecclesiastica,2.3.3,2.3.3,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:2.3,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:2.3,grc
+177,95,Eusebius,Historia ecclesiastica,3.31.5,3.31.5,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:3.31.5,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:3.31.5,grc
+181,97,Eusebius,Historia ecclesiastica,5.22.1,5.22.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:5.22.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:5.22.1,grc
+183,98,Eusebius,Historia ecclesiastica,5.23.3,5.23.3,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:5.23.3,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:5.23.3,grc
+191,102,Eusebius,Historia ecclesiastica,6.18.1,6.18.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.18.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.18.1,grc
+193,103,Eusebius,Historia ecclesiastica,6.19.16,6.19.16,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.19.16,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.19.16,grc
+195,104,Eusebius,Historia ecclesiastica,6.23.1-4,6.23,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.23,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.23,grc
+197,105,Eusebius,Historia ecclesiastica,6.26.1,6.26.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.26.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.26.1,grc
+199,106,Eusebius,Historia ecclesiastica,6.27.1,6.27.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.27.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.27.1,grc
+201,107,Eusebius,Historia ecclesiastica,6.28.1,6.28.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.28.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.28.1,grc
+205,109,Eusebius,Historia ecclesiastica,6.32.2,6.32.2,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.32.2,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.32.2,grc
+207,110,Eusebius,Historia ecclesiastica,6.39.1-5,6.39,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.39,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.39,grc
+189,101,Eusebius,Historia ecclesiastica,6.8.4,6.8.4,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.8.4,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:6.8.4,grc
+213,113,Eusebius,Historia ecclesiastica,7.12.1,7.12.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.12.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.12.1,grc
+215,114,Eusebius,Historia ecclesiastica,7.14.1,7.14.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.14.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.14.1,grc
+217,115,Eusebius,Historia ecclesiastica,7.15.1-5,7.15,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.15,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.15,grc
+219,116,Eusebius,Historia ecclesiastica,7.28.1,7.28.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.28.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.28.1,grc
+221,117,Eusebius,Historia ecclesiastica,7.32.21,7.32.21,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.32.21,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.32.21,grc
+223,118,Eusebius,Historia ecclesiastica,7.32.24,7.32.24,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.32.24,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.32.24,grc
+211,112,Eusebius,Historia ecclesiastica,7.5.1,7.5.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.5.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.5.1,grc
+227,120,Eusebius,Historia ecclesiastica,8.13.6,8.13.6,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:8.13.6,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:8.13.6,grc
+225,119,Eusebius,Historia ecclesiastica,8.7.1,8.7.1,,urn:cts:greekLit:tlg2018.tlg002.opp-grc2:8.7.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg002.opp-grc2:8.7.1,grc
+229,121,Eusebius,Martyrae Palestinae,1.1,1.1-1.2,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:1.1-1.2,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:1.1-1.2,grc
+230.01,185,Eusebius,Martyrae Palestinae,,1.3,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:1.3,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:1.3,grc
+242.1,194,Eusebius,Martyrae Palestinae,,10.2,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:10.2,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:10.2,grc
+243,128,Eusebius,Martyrae Palestinae,11,11,Y,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11,grc
+244.01,195,Eusebius,Martyrae Palestinae,,11.2,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11.2,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11.2,grc
+244.05,197,Eusebius,Martyrae Palestinae,,11.29,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11.29,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11.29,grc
+244.07,198,Eusebius,Martyrae Palestinae,,11.3,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11.30,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11.30,grc
+244.09,199,Eusebius,Martyrae Palestinae,,11.31,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11.31,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11.31,grc
+244.03,196,Eusebius,Martyrae Palestinae,,11.6,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11.6,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:11.6,grc
+232.01,186,Eusebius,Martyrae Palestinae,,2.1,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:2.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:2.1,grc
+232.03,187,Eusebius,Martyrae Palestinae,,2.4,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:2.4,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:2.4,grc
+233,123,Eusebius,Martyrae Palestinae,3.2,3.2,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:3.2,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:3.2,grc
+236.01,189,Eusebius,Martyrae Palestinae,,4.14-4.15,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:4.14-4.15,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:4.14-4.15,grc
+234.01,188,Eusebius,Martyrae Palestinae,,4.2,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:4.2,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:4.2,grc
+235,124,Eusebius,Martyrae Palestinae,4.8,4.8,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:4.8,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:4.8,grc
+236.1,181,Eusebius,Martyrae Palestinae,,6.1,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:6.1-6.2,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:6.1-6.2,grc
+237,125,Eusebius,Martyrae Palestinae,6.2,6.2,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:6.2,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:6.2,grc
+239,126,Eusebius,Martyrae Palestinae,6.3,6.3,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:6.3,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:6.3,grc
+240.01,183,Eusebius,Martyrae Palestinae,,6.5,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:6.5,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:6.5,grc
+240.03,184,Eusebius,Martyrae Palestinae,,6.7,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:6.7,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:6.7,grc
+240.05,190,Eusebius,Martyrae Palestinae,,7.1,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:7.1,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:7.1,grc
+240.07,191,Eusebius,Martyrae Palestinae,,8.3,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:8.3,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:8.3,grc
+240.09,192,Eusebius,Martyrae Palestinae,,8.8,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:8.8,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:8.8,grc
+241,127,Eusebius,Martyrae Palestinae,9.12,9.12,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:9.12,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:9.12,grc
+240.2,193,Eusebius,Martyrae Palestinae,,9.6-9.7,,urn:cts:greekLit:tlg2018.tlg003.opp-grc1:9.6-9.7,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg003.opp-grc1:9.6-9.7,grc
+168,91,Eusebius,De theophania,fr. 6.89,6,,urn:cts:greekLit:tlg2018.tlg010.opp-grc1:6,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg010.opp-grc1:6,grc
+245,129,Eusebius,Onomasticon,s.v.Βηθανάθα,s.v.Βηθανάθα,,urn:cts:greekLit:tlg2018.tlg011.opp-grc1:2,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg011.opp-grc1:2,grc
+247,130,Eusebius,Vita Constantini,1.19,1.19,,urn:cts:greekLit:tlg2018.tlg020.opp-grc1:1.19,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg020.opp-grc1:1.19,grc
+249,131,Eusebius,Vita Constantini,4.36-37,4.36-4.37,,urn:cts:greekLit:tlg2018.tlg020.opp-grc1:4.36-4.37,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2018.tlg020.opp-grc1:4.36-4.37,grc
+162,88,Origen,De oratione,II.27.12,27.12,,urn:cts:greekLit:tlg2042.tlg008.perseus-grc1:27.12,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2042.tlg008.perseus-grc1:27.12,grc
+291,152,Sozomenus,Historia ecclesiastica,3.2,3.2,,urn:cts:greekLit:tlg2048.tlg001.1st1K-grc1:3.2,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2048.tlg001.1st1K-grc1:3.2,grc
+287,150,Socrates,Historia ecclesiastica,2.4,2.4,,urn:cts:greekLit:tlg2057.tlg002.1st1K-grc1:2.4,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2057.tlg002.1st1K-grc1:2.4,grc
+289,151,Socrates,Historia ecclesiastica,4.4,4.4,,urn:cts:greekLit:tlg2057.tlg002.1st1K-grc1:4.4,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2057.tlg002.1st1K-grc1:4.4,grc
+313,163,Evagrius,Historia ecclesiastica,4.7,4.7,,urn:cts:greekLit:tlg2733.tlg001.1st1K-grc1:4.7,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg2733.tlg001.1st1K-grc1:4.7,grc
+295,154,Theodoret,Historia ecclesiastica,5.8,5.8,,urn:cts:greekLit:tlg4089.tlg003.opp-grc1:5.8,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:greekLit:tlg4089.tlg003.opp-grc1:5.8,grc
+277,145,Jerome,Epistulae,34,34.1.1-34.1.3,,urn:cts:latinLit:stoa0162.stoa004.opp-lat1:34.1.1-34.1.3,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:latinLit:stoa0162.stoa004.opp-lat1:34.1.1-34.1.3,la
+279,146,Jerome,Epistulae,92,92.1.1-92.1.4,,urn:cts:latinLit:stoa0162.stoa004.opp-lat2:92.1.1-92.1.4,https://scaife-cts.perseus.org/api/cts?request=GetPassage&urn=urn:cts:latinLit:stoa0162.stoa004.opp-lat2:92.1.1-92.1.4,la
+90,46,Aelius Herodian,Grammatici Graeci (ed. Lentz 1965),3.2,,,urn:cts:greekLit:tlg0087.tlg006.1st1K-grc1,https://scaife.perseus.org/library/urn:cts:greekLit:tlg0087.tlg006/,grc
+286,149,Isidore of Seville,Etymologiae,6.6,6.6,,#N/A,https://sfponline.org/Uploads/2002/st%20isidore%20in%20english.pdf,en
+101,53,Procopius,Historia Arcana,11.25,11,,#N/A,https://sourcebooks.fordham.edu/basis/procop-anec.asp#atwater,en
+102,54,Procopius,Historia Arcana,11.29,11.29,,#N/A,https://sourcebooks.fordham.edu/basis/procop-anec.asp#atwater,en
+103,55,Procopius,Historia Arcana,27.26-27.31,27.26-27.31,,#N/A,https://sourcebooks.fordham.edu/basis/procop-anec.asp#atwater,en
+103.1,200,Procopius,Historia Arcana,,29,,#N/A,https://sourcebooks.fordham.edu/basis/procop-anec.asp#atwater,en
+103.2,201,Procopius,Historia Arcana,,30,,#N/A,https://sourcebooks.fordham.edu/basis/procop-anec.asp#atwater,en
+92,48,Epistles,Apollonius of Tyana,11,11,,#N/A,https://www-loebclassics-com.proxy.library.vanderbilt.edu/view/apollonius_tyana-letters/2006/pb_LCL458.17.xml?mainRsKey=Ti6YQQ&result=1&rskey=t5gvpn,grc
+174,48,Epistles,Apollonius of Tyana,11,11,,,https://www-loebclassics-com.proxy.library.vanderbilt.edu/view/apollonius_tyana-letters/2006/pb_LCL458.17.xml?mainRsKey=Ti6YQQ&result=1&rskey=t5gvpn,en
+91,47,Philostratus,Vita Apollonii Tyanensis,2.11,2.11,,#N/A,https://www-loebclassics-com.proxy.library.vanderbilt.edu/view/philostratus_athens-life_apollonius_tyana/2005/pb_LCL016.151.xml?result=1&rskey=e5DSqt,grc
+129,47,Philostratus,Vita Apollonii Tyanensis,2.11,2.11,,#N/A,https://www-loebclassics-com.proxy.library.vanderbilt.edu/view/philostratus_athens-life_apollonius_tyana/2005/pb_LCL016.151.xml?result=1&rskey=e5DSqt,en
+1,1,Philo,Embassy to Gaius,276-327,276-327,,urn:cts:greekLit:tlg0018.tlg031.opp-grc1:276-327,urn:cts:greekLit:tlg0018.tlg031.opp-grc1:276-327,grc
+115,67,Luke the Evangelist,Acts,10:01:00 AM,10.1,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:10.1,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:10.1,grc
+116,68,Luke the Evangelist,Acts,10:24:00 AM,10.24,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:10.24,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:10.24,grc
+117,69,Luke the Evangelist,Acts,10:34:00 AM,10.34,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:10.34,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:10.34,grc
+113,65,Luke the Evangelist,Acts,06:05:00 AM,6.5,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:6.5,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:6.5,grc
+114,66,Luke the Evangelist,Acts,09:30:00 AM,9.30.,,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:9.30,urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:9.30,grc
+85,43,Pliny,Natural History,5.14.69,5.13,,urn:cts:latinLit:phi0978.phi001.perseus-lat1:5.13,urn:cts:latinLit:phi0978.phi001.perseus-lat1:5.13,la
+88,44,Tacitus,Historiae,2.79,2.82-2.83,,urn:cts:latinLit:phi1351.phi004.perseus-lat2:2.82-2.83,urn:cts:latinLit:phi1351.phi004.perseus-lat2:2.82-2.83,la
+95,50,Ammianus Marcellinus,History,14.11,14.11,,urn:cts:latinLit:stoa0023.stoa001.perseus-eng2:14.11,urn:cts:latinLit:stoa0023.stoa001.perseus-eng2:14,en
+94,50,Ammianus Marcellinus,Res Gestae,14.11,14.11,,urn:cts:latinLit:stoa0023.stoa001.perseus-lat2:14.11,urn:cts:latinLit:stoa0023.stoa001.perseus-lat2:14.11,la
+127,45,Aelius Herodian,Partitiones (ed. Boissonade 1963)v,I s.v. και-,,,,,en
+128,46,Aelius Herodian,Grammatici Graeci (ed. Lentz 1965),3.2,,,,,en
+93,49,Papiri Greci e Latini,Publicazioni della Società Italiana,9.36f,,,#N/A,,
+96,51,Jerome,,,,,#N/A,,
+130,52,Eutropius,Breviarium,7.11,,,,,en
+104,56,Julian of Ascalon,xxx,,,,#N/A,,
+106,58,Choricius of Gaza,,45,,,#N/A,,grc
+133,58,Choricius of Gaza,,45,,,#N/A,,en
+134,59,Theophanes,Chronographia,a.M. 6048,,,#N/A,,en
+136,80,Theophanes,Chronographia,a.M. 6124,,,#N/A,,en
+108,60,The Pilgrim of Bordeaux,Itinerarium Burdigalense,,,,#N/A,,la
+137,60,The Pilgrim of Bordeaux,Itinerarium Burdigalense,,,,#N/A,,en
+109,61,Peregrinatio Sanctae Paulae,Itinera et Descriptiones Terrae Sancta,,,,#N/A,,
+111,63,Le Bas and Waddington III,,,,,#N/A,,
+112,64,Michael the Syrian,Chronicle,9.1,,,#N/A,,syr
+139,64,Michael the Syrian,Chronicle,9.1,,,#N/A,,en
+148,81,(Psuedo-)Clement,Homilies,1.15,,,#N/A,,grc
+150,82,(Psuedo-)Clement,Homilies,1.2,,,#N/A,,grc
+152,83,(Psuedo-)Clement,Homilies,4.1-2,,,#N/A,,grc
+154,84,(Psuedo-)Clement,Homilies,6.26,,,#N/A,,grc
+156,85,(Psuedo-)Clement,Homilies,12.5,,,#N/A,,grc
+158,86,(Psuedo-)Clement,Homilies,13,,,#N/A,,grc
+159,86,(Psuedo-)Clement,Homilies,13,,Y,#N/A,,en
+160,87,(Psuedo-)Clement,Homilies,20.13,,,#N/A,,grc
+164,89,Hippolytus,Chronicon ,2.527,,,#N/A,,grc
+165,89,Hippolytus,Chronicon ,2.527,,,#N/A,,en
+169,91,Eusebius,De theophania,fr. 6.89,,,#N/A,,en
+179,96,Eusebius,Historia ecclesiastica,3.39,3.39,,#N/A,,grc
+180,96,Eusebius,Historia ecclesiastica,3.39,3.39,,#N/A,,en
+185,99,Eusebius,Historia ecclesiastica,5.24,,,#N/A,,grc
+186,99,Eusebius,Historia ecclesiastica,5.24,,,#N/A,,en
+187,100,Eusebius,Historia ecclesiastica,6.intro.1,,,#N/A,,grc
+188,100,Eusebius,Historia ecclesiastica,6.intro.1,,,#N/A,,en
+209,111,Eusebius,Historia ecclesiastica,7.intro.1,,,#N/A,,grc
+210,111,Eusebius,Historia ecclesiastica,7.intro.1,,,#N/A,,en
+251,132,Nicetas the Paphlagonian,,,,,#N/A,,
+252,132,Nicetas the Paphlagonian,,,,,#N/A,,
+254,133,John Malalas,Chronographia,10.338,,,#N/A,,en
+256,134,John Malalas,Chronographia,11.367,,,#N/A,,en
+258,135,John Malalas,Chronographia,15,,,#N/A,,en
+260,136,,Chronicon paschale,327,,,#N/A,,en
+262,137,Procopius of Gaza,Pangyricus in imperatorem Anastasium,3.2817 section 19,,,#N/A,,en
+264,138,Theodoros Anagnostes,Historia ecclesiastica,336,,,#N/A,,en
+275,144,Jerome,Contra Rufinum,19,,,#N/A,,la
+276,144,Jerome,Contra Rufinum,19,,,#N/A,,en
+278,145,Jerome,Epistulae,34,,,#N/A,,en
+280,146,Jerome,Epistulae,92,,,#N/A,,en
+293,153,Epiphanius,Haereses ,73.37,,,#N/A,,grc
+294,153,Epiphanius,Haereses,73.37,,,#N/A,,en
+299,156,Mark the Deacon,Vita Porphyrii,33-34,,,#N/A,,grc
+301,157,John Chrysostom,Epistles,87,,,#N/A,,grc
+302,157,John Chrysostom,Epistles,87,,,#N/A,,en
+305,159,Augustine,Contra Iulianum,1.19,,,#N/A,,la
+306,159,Augustine,Contra Iulianum,1.19,,,#N/A,,en
+307,160,Augustine,Contra Iulianum,1.32,,,#N/A,,la
+308,160,Augustine,Contra Iulianum,1.32,,,#N/A,,en
+309,161,John Rufus,Plerophoriae,8.24,,,#N/A,,grc
+310,161,John Rufus,Plerophoriae,8.24,,,#N/A,,en
+311,162,John Rufus,Plerophoriae,8.111-113,,,#N/A,,grc
+312,162,John Rufus,Plerophoriae,8.111-113,,,#N/A,,en
+317,165,Mansi,Conciliae,8 col. 1171,,,#N/A,,
+318,165,Mansi,Conciliae,8 col. 1171,,,#N/A,,en
+319,166,Mansi,Conciliae,9 coll. 174B,,,#N/A,,
+320,166,Mansi,Conciliae,9 coll. 174B,,,#N/A,,en
+321,167,Mansi,Conciliae,9 coll. 191A,,,#N/A,,
+322,167,Mansi,Conciliae,9 coll. 191A,,,#N/A,,en
+323,168,Mansi,Conciliae,9 coll. 192B,,,#N/A,,
+324,168,Mansi,Conciliae,9 coll. 192B,,,#N/A,,en
+325,169,Mansi,Conciliae,9 coll. 389E,,,#N/A,,
+326,169,Mansi,Conciliae,9 coll. 389E,,,#N/A,,en
+328,170,Stephanus of Byzantium,Ethnika,s.v. Δῶρος,,,#N/A,,en
+329,171,Scylax of Caryanda,Periplus,104.3,,,#N/A,,grc
+330,171,Scylax of Caryanda,Periplus,104.3,,,#N/A,,en
+331,172,,T. Sheviʿit,4.11,,,#N/A,,he
+332,172,,T. Sheviʿit,4.11,,,#N/A,,en
+345,179,,Expositio totius mundi et gentium,26.1-2,,,#N/A,,grc
+346,179,,Expositio totius mundi et gentium,26.1-2,,,#N/A,,en
+347,180,,Expositio totius mundi et gentium,32,,,#N/A,,grc
+348,180,,Expositio totius mundi et gentium,32,,,#N/A,,en
+"***NOTE: includes through Christian sources (and also Matthew of Edessa...), except for those which need more research or more accurate passage references",,,,,,,,,
