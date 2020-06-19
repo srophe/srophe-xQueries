@@ -52,9 +52,10 @@ In several cases, the global BaseX options need to be changed depending on the s
   - Chop: off
 - **BaseX Modules Used**: [file](https://docs.basex.org/wiki/File_Module) and [csv](https://docs.basex.org/wiki/CSV_Module)
 - **Process**
-  - Set input file: change variable $input at line 48.
+  - Prepare input file by removing "[Next ID \d+]" from the field header "testimoniaID [Next ID 202]"
+  - Set input file: change variable $input at line 56.
     - The xs:string input of the "file:read-text" function should be the URI of the TSV file containing the raw testimonia data. This will usually be a file inside the tsvSources folder.
-    - Note: the input file's separator character is controlled by line 47
+    - Note: the input file's separator character is controlled by line 55
   - Run script
   - Copy output to a blank spreadhseet and save as a CSV file in the processTsvData folder.
 
