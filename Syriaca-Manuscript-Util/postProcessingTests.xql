@@ -429,7 +429,7 @@ let $newSchema := <?oxygen RNGSchema="http://syriaca.org/documentation/syriaca-t
 let $newStylesheet := <?xml-stylesheet type="text/css" href="https://raw.githubusercontent.com/srophe/wright-catalogue/master/parameters/tei.css"?>
 
 for $doc in fn:collection($inputDirectory)
-  where not($doc//@*[name()="xml:id"]) (:This selects only those which were encoded the 'new' way, i.e. with the CSS form :)
+  
   let $recordExists := for $id in $existingDocUris
     where $id = $doc/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/idno[@type="URI"]/text()
     return "true"
@@ -446,10 +446,10 @@ for $doc in fn:collection($inputDirectory)
     replace node $doc//titleStmt with local:updateTitleStmt($doc), 
     replace node $doc//editionStmt with $editionStmt, 
     replace node $doc//publicationStmt with local:updatePublicationStmt($doc, $docUri),
-    insert node attribute xml:id {fn:concat("manuscript-", fn:substring-after($docUri, "http://syriaca.org/manuscript/"))} into $doc//msDesc,
+    if ($doc//msDesc/@xml:id) then replace value of node $doc//msDesc/@xml:id with fn:concat("manuscript-", fn:substring-after($docUri, "http://syriaca.org/manuscript/")) else insert node attribute xml:id {fn:concat("manuscript-", fn:substring-after($docUri, "http://syriaca.org/manuscript/"))} into $doc//msDesc,
     replace node $doc//msDesc/msIdentifier with local:updateMsIdentifier($doc, $docUri, $lookupData),
     replace node $doc//msDesc/msContents with local:updateMsContents($doc//msDesc/msContents),
-    replace node $doc//supportDesc/extent with local:updateExtent($doc//supportDesc/extent),
+    (: replace node $doc//supportDesc/extent with local:updateExtent($doc//supportDesc/extent), :)
     replace node $doc//objectDesc/layoutDesc with local:updateContentPending($doc//objectDesc/layoutDesc),
     replace node $doc//handDesc with local:updateHandDesc($doc),
     replace node $doc//additions with local:updateAdditions($doc),
