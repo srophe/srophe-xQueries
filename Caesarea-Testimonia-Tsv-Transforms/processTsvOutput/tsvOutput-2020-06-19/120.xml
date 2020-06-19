@@ -251,15 +251,13 @@
         <idno type="URI">https://caesarea-maritima.org/testimonia/120</idno>
       </ab>
       <desc type="abstract" xml:id="abstract120-1">
-        <quote>
-          <placeName xml:lang="grc">Καισαρέων</placeName>
-        </quote>,  and <quote>
-          <placeName xml:lang="en">Caesarea</placeName>
-        </quote> are place names attested in <persName ref="http://viaf.org/viaf/4929593" role="author">Eusebius</persName>'s <title ref="urn:cts:greekLit:tlg2018.tlg002" type="uniform" level="m">Historia ecclesiastica</title> 8.13.6. This testimonium was written circa <origDate period="#lateRoman #byzantine" notBefore="0312" notAfter="0324">312 - 324 CE</origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/678401">Caesarea</origPlace>.</desc>
+        <quote><placeName xml:lang="grc">Καισαρέων</placeName></quote>,  and <quote><placeName xml:lang="en">Caesarea</placeName></quote> are place names attested in <persName ref="http://viaf.org/viaf/4929593" role="author">Eusebius</persName>'s <title ref="urn:cts:greekLit:tlg2018.tlg002" type="uniform" level="m">Historia ecclesiastica</title> 8.13.6. This testimonium was written circa <origDate period="#lateRoman #byzantine" notBefore="0312" notAfter="0324">312 - 324 CE</origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/678401">Caesarea</origPlace>.</desc>
       <ab type="edition" xml:lang="grc" xml:id="quote120-1" source="#bib120-1">
-        <anchor xml:id="testimonia-120.grc.1" corresp="testimonia-120.en.1"/>καὶ τὸ μέγα δὲ κλέος τῆς <placeName xml:lang="grc">Καισαρέων</placeName> παροικίας ἐν τούτοις ἡμῖν μνημονευέσθω Πάμφιλος πρεσβύτερος, τῶν καθ’ ἡμᾶς θαυμασιώτατος, οὗ τῶν ἀνδραγαθημάτων τὴν ἀρετὴν κατὰ τὸν δέοντα καιρὸν ἀνεγράψαμεν.</ab>
+        <anchor xml:id="testimonia-120.grc.1" corresp="testimonia-120.en.1"/>καὶ τὸ μέγα δὲ κλέος τῆς <placeName xml:lang="grc">Καισαρέων</placeName> παροικίας ἐν τούτοις ἡμῖν μνημονευέσθω Πάμφιλος πρεσβύτερος, τῶν καθ’ ἡμᾶς θαυμασιώτατος, οὗ τῶν ἀνδραγαθημάτων τὴν ἀρετὴν κατὰ τὸν δέοντα καιρὸν ἀνεγράψαμεν.<idno xml:base="https://scaife.perseus.org/reader/">urn:cts:greekLit:tlg2018.tlg002.opp-grc2:8.13.6</idno>
+      </ab>
       <ab type="translation" xml:lang="en" xml:id="quote120-2" source="#bib120-2">
-        <anchor xml:id="testimonia-120.en.1" corresp="testimonia-120.grc.1"/>Αnd among these we must mention the great glory of the community of <placeName xml:lang="en">Caesarea</placeName>, Pamphilus, a presbyter, the most marvellous man of οur day; the merit of whose brave and good deeds we shall record at the proper time.</ab>
+        <anchor xml:id="testimonia-120.en.1" corresp="testimonia-120.grc.1"/>Αnd among these we must mention the great glory of the community of <placeName xml:lang="en">Caesarea</placeName>, Pamphilus, a presbyter, the most marvellous man of οur day; the merit of whose brave and good deeds we shall record at the proper time.<idno xml:base="https://scaife.perseus.org/reader/">urn:cts:greekLit:tlg2018.tlg002.opp-eng1:8.13.6</idno>
+      </ab>
       <listBibl>
         <bibl xml:id="bib120-1">
           <ptr target="https://caesarea-maritima.org/bibl/TC772CD7"/>

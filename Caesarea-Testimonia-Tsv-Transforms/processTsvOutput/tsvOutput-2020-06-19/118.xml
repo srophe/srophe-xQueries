@@ -251,15 +251,13 @@
         <idno type="URI">https://caesarea-maritima.org/testimonia/118</idno>
       </ab>
       <desc type="abstract" xml:id="abstract118-1">
-        <quote>
-          <placeName xml:lang="grc">Καισαρείᾳ</placeName>
-        </quote>,  and <quote>
-          <placeName xml:lang="en">Caesarea</placeName>
-        </quote> are place names attested in <persName ref="http://viaf.org/viaf/4929593" role="author">Eusebius</persName>'s <title ref="urn:cts:greekLit:tlg2018.tlg002" type="uniform" level="m">Historia ecclesiastica</title> 7.32.24. This testimonium was written circa <origDate period="#lateRoman #byzantine" notBefore="0312" notAfter="0324">312 - 324 CE</origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/678401">Caesarea</origPlace>.</desc>
+        <quote><placeName xml:lang="grc">Καισαρείᾳ</placeName></quote>,  and <quote><placeName xml:lang="en">Caesarea</placeName></quote> are place names attested in <persName ref="http://viaf.org/viaf/4929593" role="author">Eusebius</persName>'s <title ref="urn:cts:greekLit:tlg2018.tlg002" type="uniform" level="m">Historia ecclesiastica</title> 7.32.24. This testimonium was written circa <origDate period="#lateRoman #byzantine" notBefore="0312" notAfter="0324">312 - 324 CE</origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/678401">Caesarea</origPlace>.</desc>
       <ab type="edition" xml:lang="grc" xml:id="quote118-1" source="#bib118-1">
-        <anchor xml:id="testimonia-118.grc.1" corresp="testimonia-118.en.1"/>ἐν <placeName xml:lang="grc">Καισαρείᾳ</placeName> δὲ τῆς Παλαιστίνης Θεότεκνον σπουδαιότατα τὴν ἐπισκοπὴν διελθόντα Ἀγάπιος διαδέχεται, ὃν καὶ πολλὰ καμεῖν, γνησιωτάτην τε πρόνοιαν τῆς τοῦ λαοῦ προστασίας ἴσμεν πεποιημένον, πλουσίᾳ τε χειρὶ πάντων μάλιστα πενήτων ἐπιμεμελημένον</ab>
+        <anchor xml:id="testimonia-118.grc.1" corresp="testimonia-118.en.1"/>ἐν <placeName xml:lang="grc">Καισαρείᾳ</placeName> δὲ τῆς Παλαιστίνης Θεότεκνον σπουδαιότατα τὴν ἐπισκοπὴν διελθόντα Ἀγάπιος διαδέχεται, ὃν καὶ πολλὰ καμεῖν, γνησιωτάτην τε πρόνοιαν τῆς τοῦ λαοῦ προστασίας ἴσμεν πεποιημένον, πλουσίᾳ τε χειρὶ πάντων μάλιστα πενήτων ἐπιμεμελημένον<idno xml:base="https://scaife.perseus.org/reader/">urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.32.24</idno>
+      </ab>
       <ab type="translation" xml:lang="en" xml:id="quote118-2" source="#bib118-2">
-        <anchor xml:id="testimonia-118.en.1" corresp="testimonia-118.grc.1"/>But at <placeName xml:lang="en">Caesarea</placeName> in Palestine Theotecnus, after exercising his episcopal office in the most zealous fashion, was suceeeded by Agapius, whom also we know to have laboured much, displaying a most genuine regard for the government of his people, and with a liberal hand caring especially for all the poor.</ab>
+        <anchor xml:id="testimonia-118.en.1" corresp="testimonia-118.grc.1"/>But at <placeName xml:lang="en">Caesarea</placeName> in Palestine Theotecnus, after exercising his episcopal office in the most zealous fashion, was suceeeded by Agapius, whom also we know to have laboured much, displaying a most genuine regard for the government of his people, and with a liberal hand caring especially for all the poor.<idno xml:base="https://scaife.perseus.org/reader/">urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.32.24</idno>
+      </ab>
       <listBibl>
         <bibl xml:id="bib118-1">
           <ptr target="https://caesarea-maritima.org/bibl/TC772CD7"/>

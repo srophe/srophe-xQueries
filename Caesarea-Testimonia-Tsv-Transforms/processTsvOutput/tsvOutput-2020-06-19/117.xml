@@ -251,15 +251,13 @@
         <idno type="URI">https://caesarea-maritima.org/testimonia/117</idno>
       </ab>
       <desc type="abstract" xml:id="abstract117-1">
-        <quote>
-          <placeName xml:lang="grc">Καισαρείας</placeName>
-        </quote>,  and <quote>
-          <placeName xml:lang="en">Caesarea</placeName>
-        </quote> are place names attested in <persName ref="http://viaf.org/viaf/4929593" role="author">Eusebius</persName>'s <title ref="urn:cts:greekLit:tlg2018.tlg002" type="uniform" level="m">Historia ecclesiastica</title> 7.32.21. This testimonium was written circa <origDate period="#lateRoman #byzantine" notBefore="0312" notAfter="0324">312 - 324 CE</origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/678401">Caesarea</origPlace>.</desc>
+        <quote><placeName xml:lang="grc">Καισαρείας</placeName></quote>,  and <quote><placeName xml:lang="en">Caesarea</placeName></quote> are place names attested in <persName ref="http://viaf.org/viaf/4929593" role="author">Eusebius</persName>'s <title ref="urn:cts:greekLit:tlg2018.tlg002" type="uniform" level="m">Historia ecclesiastica</title> 7.32.21. This testimonium was written circa <origDate period="#lateRoman #byzantine" notBefore="0312" notAfter="0324">312 - 324 CE</origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/678401">Caesarea</origPlace>.</desc>
       <ab type="edition" xml:lang="grc" xml:id="quote117-1" source="#bib117-1">
-        <anchor xml:id="testimonia-117.grc.1" corresp="testimonia-117.en.1"/>τούτῳ πρῶτος ὁ τῆς Παλαιστινῶν <placeName xml:lang="grc">Καισαρείας</placeName> ἐπίσκοπος Θεότεκνος χεῖρας εἰς ἐπισκοπὴν ἐπιτέθεικε, διάδοχον ἑαυτοῦ μετὰ τελευτὴν ποριεῖσθαι τῇ ἰδίᾳ παροικίᾳ προμνώμενος. καὶ δὴ ἐπὶ σμικρόν τινα χρόνον ἄμφω τῆς αὐτῆς προύστησαν ἐκκλησίας, ἀλλὰ γὰρ ἐπὶ τὴν Ἀντιόχειαν τῆς κατὰ Παῦλον συνόδου καλούσης, τὴν Λαοδικέων πόλιν παριὼν πρὸς τῶν ἀδελφῶν αὐτόθι κοιμηθέντος Εὐσεβίου κεκράτηται· </ab>
+        <anchor xml:id="testimonia-117.grc.1" corresp="testimonia-117.en.1"/>τούτῳ πρῶτος ὁ τῆς Παλαιστινῶν <placeName xml:lang="grc">Καισαρείας</placeName> ἐπίσκοπος Θεότεκνος χεῖρας εἰς ἐπισκοπὴν ἐπιτέθεικε, διάδοχον ἑαυτοῦ μετὰ τελευτὴν ποριεῖσθαι τῇ ἰδίᾳ παροικίᾳ προμνώμενος. καὶ δὴ ἐπὶ σμικρόν τινα χρόνον ἄμφω τῆς αὐτῆς προύστησαν ἐκκλησίας, ἀλλὰ γὰρ ἐπὶ τὴν Ἀντιόχειαν τῆς κατὰ Παῦλον συνόδου καλούσης, τὴν Λαοδικέων πόλιν παριὼν πρὸς τῶν ἀδελφῶν αὐτόθι κοιμηθέντος Εὐσεβίου κεκράτηται· <idno xml:base="https://scaife.perseus.org/reader/">urn:cts:greekLit:tlg2018.tlg002.opp-grc2:7.32.21</idno>
+      </ab>
       <ab type="translation" xml:lang="en" xml:id="quote117-2" source="#bib117-2">
-        <anchor xml:id="testimonia-117.en.1" corresp="testimonia-117.grc.1"/>Theotecnus, bishop of <placeName xml:lang="en">Caesarea</placeName> in Palestine, first had ordained him to the episcopate, seeking to procure him as his successor in his own community after his death, and indeed for some short time both presided over the same church. But, the synod with reference to Ρaul summoning him to Antioch, as he was passing by the city οf the Laodiceans he was retained there by the brethren, Eusebius having fallen asleep.</ab>
+        <anchor xml:id="testimonia-117.en.1" corresp="testimonia-117.grc.1"/>Theotecnus, bishop of <placeName xml:lang="en">Caesarea</placeName> in Palestine, first had ordained him to the episcopate, seeking to procure him as his successor in his own community after his death, and indeed for some short time both presided over the same church. But, the synod with reference to Ρaul summoning him to Antioch, as he was passing by the city οf the Laodiceans he was retained there by the brethren, Eusebius having fallen asleep.<idno xml:base="https://scaife.perseus.org/reader/">urn:cts:greekLit:tlg2018.tlg002.opp-eng1:7.32.21</idno>
+      </ab>
       <listBibl>
         <bibl xml:id="bib117-1">
           <ptr target="https://caesarea-maritima.org/bibl/TC772CD7"/>
