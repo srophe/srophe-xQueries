@@ -137,6 +137,8 @@ declare function local:create-teiBody($rec, $uri){
   let $translationCitedRange := $rec/*:translation1CitedRange/text()
   let $editionPrintUri := $rec/*:printedEdition1Uri/text()
   let $translationPrintUri := $rec/*:printedTranslation1Uri/text()
+  let $editionCitationLink := $rec/*:edition1Link/text()
+  let $translationCitationLink := $rec/*:translation1Link/text()
   
   (:creating components of the teiBody:)
   let $identifier := <ab type="identifier" xmlns="http://www.tei-c.org/ns/1.0"><idno type="URI">{$uri}</idno></ab>
@@ -144,8 +146,8 @@ declare function local:create-teiBody($rec, $uri){
   let $abstract := <desc type="abstract" xmlns="http://www.tei-c.org/ns/1.0">{$abstractText}</desc>(: local:create-abstract($docId, $editionText, $translationText, $workTitle, $workUrn, $workSection, $authorString, $authorUri) :)
   let $editionAnchor := if($editionText != "" and $translationText != "") then <anchor xmlns="http://www.tei-c.org/ns/1.0" xml:id="testimonia-{$docId}.{$editionLang}.1" corresp="testimonia-{$docId}.{$translationLang}.1"/> else ()
   let $translationAnchor := if($editionText != "" and $translationText != "") then <anchor xmlns="http://www.tei-c.org/ns/1.0" xml:id="testimonia-{$docId}.{$translationLang}.1" corresp="testimonia-{$docId}.{$editionLang}.1"/> else ()
-  let $edition := local:create-quote($docId, "edition", $editionText, $editionLang, $editionTypoCorr, $editionAnchor)
-  let $translation := local:create-quote($docId, "translation", $translationText, $translationLang, $translationTypoCorr, $translationAnchor)
+  let $edition := local:create-quote($docId, "edition", $editionText, $editionLang, $editionTypoCorr, $editionAnchor, $editionCitationLink)
+  let $translation := local:create-quote($docId, "translation", $translationText, $translationLang, $translationTypoCorr, $translationAnchor, $translationCitationLink)
   
   let $bibls := local:create-listBibl($docId, $editionUri, $editionCitedRange, $translationUri, $translationCitedRange, $editionPrintUri, $translationPrintUri)
   return <text xmlns="http://www.tei-c.org/ns/1.0">
@@ -175,10 +177,11 @@ declare function local:create-placeNames-sequence($namesSequence){
   return $nameElementSequence
 };
 
-declare function local:create-quote($docId, $quoteType, $quoteText, $quoteLang, $typoCorr, $anchor) {
+declare function local:create-quote($docId, $quoteType, $quoteText, $quoteLang, $typoCorr, $anchor, $citationLink) {
   let $sourceBase := "#bib"||$docId||"-"
   let $quoteSeq := if($quoteType = "edition") then "1" else "2"
   let $quoteId := "quote"||$docId||"-"||$quoteSeq
+  let $idnoAndRef := local:create-idno-and-ref($citationLink)
   let $sourceAttr := $sourceBase||$quoteSeq
   return if ($quoteText != '') then <ab type="{$quoteType}" xml:lang="{$quoteLang}" xml:id="{$quoteId}" source="{$sourceAttr}" xmlns="http://www.tei-c.org/ns/1.0">
 {
@@ -190,8 +193,23 @@ declare function local:create-quote($docId, $quoteType, $quoteText, $quoteLang, 
       else <placeName xml:lang="{$quoteLang}">{$subString}</placeName>
 
 }
+{$idnoAndRef}
 {if ($typoCorr != '') then <note type="corrigenda" xmlns="http://www.tei-c.org/ns/1.0">Inaccuracies found in the transcription of the electronic text compared to its printed source have been corrected.</note>}</ab>
   else ()
+};
+
+declare function local:create-idno-and-ref($citationLink){
+ let $urn := "urn:cts:"||fn:substring-after($citationLink, "urn:cts:")
+ let $urnClean := if ($urn = "urn:cts:") then () else if (substring($urn, string-length($urn)) = "/") then substring($urn, 1, string-length($urn)-1) else $urn
+ let $xmlBase := if($urnClean != "") then fn:substring-before($citationLink, "urn:cts:") else ()
+ let $xmlBaseEdited := if ($xmlBase != "https://scaife-cts.perseus.org/api/cts?request=GetPassage&amp;urn=") then $xmlBase else "https://scaife.perseus.org/reader/"
+ 
+ return if(empty($xmlBase)) then 
+ (<idno xmlns="http://www.tei-c.org/ns/1.0" type="CTS-URN">{$urnClean}</idno>,
+ <ref xmlns="http://www.tei-c.org/ns/1.0" target="{$citationLink}"/>)
+ else 
+ (<idno xmlns="http://www.tei-c.org/ns/1.0" type="CTS-URN" xml:base="{$xmlBaseEdited}">{$urnClean}</idno>,
+ <ref xmlns="http://www.tei-c.org/ns/1.0" target="{$citationLink}"/>)
 };
 
 declare function local:create-bibl($docId, $uri, $citedRange, $seq as xs:string?){
