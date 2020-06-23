@@ -36,7 +36,7 @@ declare function local:remove-empty-attributes($element as element()) as element
 let $editor := "srophe-util"
 let $changeLog := "CHANGED: deleted empty elements and attributes"
 let $change := <change xmlns="http://www.tei-c.org/ns/1.0" who="http://syriaca.org/documentation/editors.xml#{$editor}" when="{fn:current-date()}">{$changeLog}</change>
-let $inputDirectory := "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/"
+let $inputDirectory := "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/"
 (: let $doc := fn:doc(fn:concat($inputDirectory, "49.xml")) :)
 for $doc in fn:collection($inputDirectory)
   where not($doc//msPart) and count($doc//revisionDesc/change[@who="http://syriaca.org/documentation/editors.xml#srophe-util"]) < 2
