@@ -409,7 +409,7 @@ return $newMsContents
 let $editor := "srophe-util"
 let $changeLog := "CHANGED: Added project metadata; metadata from Wright Decoder; msItem, handDesc, and additions enumeration; Wright Taxonomy designation"
 let $change := <change xmlns="http://www.tei-c.org/ns/1.0" who="http://syriaca.org/documentation/editors.xml#{$editor}" when="{fn:current-date()}">{$changeLog}</change>
-let $inputDirectory := "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/3_drafts/LindsayRuth/"
+let $inputDirectory := "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/3_drafts/JessiePagan/"
 let $outputFilePath := "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/"
 let $empty := file:create-dir($outputFilePath)
 let $wrightDecoderCsv := file:read-text("/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Syriaca-Manuscript-Util/wrightDecoderSimple.csv")
