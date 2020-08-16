@@ -167,7 +167,7 @@ declare function local:updateHandDesc($doc as node()){
   let $newHandDesc := <handDesc hands="{$handNoteCount}">
   {
     for $handNote in $oldHandDesc/handNote
-      let $newHandNote := functx:add-or-update-attributes($handNote, xs:QName('xml:id'), fn:concat("handNote", fn:index-of($oldHandDesc/handNote, $handNote)))
+      let $newHandNote := functx:add-or-update-attributes($handNote, xs:QName('xml:id'), fn:concat("handNote", functx:index-of-deep-equal-node($oldHandDesc/handNote, $handNote)))
       return if ($newHandNote/@medium != '') then $newHandNote else functx:add-or-update-attributes($newHandNote, fn:QName("", 'medium'), "unknown")
   }
   </handDesc>
