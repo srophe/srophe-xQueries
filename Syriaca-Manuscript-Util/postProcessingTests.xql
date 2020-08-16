@@ -155,7 +155,7 @@ declare function local:updateExtent($extent as node()*) {
   else $extent
 };
 
-declare function local:updateContentPending($nodes as element()+){
+declare function local:updateContentPending($nodes as element()*){
   let $returnItems := for $n in $nodes
     return if ($n/p/text()="Content pending") then ()
     else $n
@@ -409,7 +409,7 @@ return $newMsContents
 let $editor := "srophe-util"
 let $changeLog := "CHANGED: Added project metadata; metadata from Wright Decoder; msItem, handDesc, and additions enumeration; Wright Taxonomy designation"
 let $change := <change xmlns="http://www.tei-c.org/ns/1.0" who="http://syriaca.org/documentation/editors.xml#{$editor}" when="{fn:current-date()}">{$changeLog}</change>
-let $inputDirectory := "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/3_drafts/JessiePagan/"
+let $inputDirectory := "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/3_drafts/LindsayRuth/"
 let $outputFilePath := "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/"
 let $empty := file:create-dir($outputFilePath)
 let $wrightDecoderCsv := file:read-text("/Users/michelda/Documents/GitHub/srophe/srophe-xQueries/Syriaca-Manuscript-Util/wrightDecoderSimple.csv")
@@ -450,11 +450,11 @@ for $doc in fn:collection($inputDirectory)
     replace node $doc//msDesc/msIdentifier with local:updateMsIdentifier($doc, $docUri, $lookupData),
     replace node $doc//msDesc/msContents with local:updateMsContents($doc//msDesc/msContents),
     (: replace node $doc//supportDesc/extent with local:updateExtent($doc//supportDesc/extent), :)
-    replace node $doc//objectDesc/layoutDesc with local:updateContentPending($doc//objectDesc/layoutDesc),
+    if (not(empty(local:updateContentPending($doc//objectDesc/layoutDesc)))) then replace node $doc//objectDesc/layoutDesc with local:updateContentPending($doc//objectDesc/layoutDesc),
     replace node $doc//handDesc with local:updateHandDesc($doc),
     replace node $doc//additions with local:updateAdditions($doc),
-    replace node $doc//msDesc/physDesc/bindingDesc with local:updateContentPending($doc//msDesc/physDesc/bindingDesc),
-    replace node  $doc//msDesc/physDesc/sealDesc with local:updateContentPending($doc//msDesc/physDesc/sealDesc),
+    if (not(empty(local:updateContentPending($doc//msDesc/physDesc/bindingDesc)))) then replace node $doc//msDesc/physDesc/bindingDesc with local:updateContentPending($doc//msDesc/physDesc/bindingDesc),
+    if (not(empty(local:updateContentPending($doc//msDesc/physDesc/sealDesc)))) then replace node  $doc//msDesc/physDesc/sealDesc with local:updateContentPending($doc//msDesc/physDesc/sealDesc),
     replace node $doc//additional with local:updateAdditional($doc, $lookupData),
     replace node $doc//encodingDesc with local:updateEncodingDesc($doc),
     replace node $doc//profileDesc with local:updateProfileDesc($doc, $lookupData, $wrightTaxonomyTable),
