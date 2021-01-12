@@ -228,52 +228,46 @@
             <p/>
          </abstract>
          <creation>
-            <title xml:lang="en" ref="" type="uniform" level="m"/>
+            <title
+               xml:lang="en"
+               ref=""
+               type="uniform"
+               level="m"/>
             <ref/>
             <persName ref="" role="author"/>
             <origDate/>
             <origPlace ref=""/>
          </creation>
-         <!-- Elements needed here:
-            - title
-            - URN for title (or get the full one and machine out the work-level?)
-            - Section citation range
-            - persName text node
-            - persName VIAF ID
-            - dates (in the right format, or adapt script to ignore that format)
-            - origPlace
-            - origPlace Pleiades link
-            -->
          <langUsage>
             <language ident="grc"/>
-         </langUsage><!-- FORM: drop-down list with labels; machine with lookup table the code to the text node (or can you use the same drop-down to affect two nodes?) -->
+         </langUsage>
          <textClass>
             <classCode scheme="https://distributed-text-services.github.io/specifications/">
-               <idno xml:base="" type="CTS-URN">:15.8.7</idno>
-            </classCode> <!--???-->
+               <idno type="CTS-URN"/>
+            </classCode>
          </textClass>
       </profileDesc>
       <revisionDesc status="draft">
-         <change who="https://caesarea-maritima.org/documentation/editors.xml#wpotter" when="">CREATED: testimonium</change>
-      </revisionDesc><!-- encoder-specific template but use date-piker for @when attribute -->
+         <change
+            who=""
+            when="">CREATED: testimonium</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <ab type="identifier">
-            <idno type="URI"/><!-- just add number?? -->
+            <idno type="URI"/>
          </ab>
          <desc type="abstract"/>
          <ab type="edition">
-            <!-- still just tag place names as $name%. The script can extract -->
-            <idno type="CTS-URN"/><!--add the full link if there is a URN? Or are we past ones we can add by URN?-->
-            <ref target=""/><!-- add as a field-->
+            <idno type="CTS-URN"/>
+            <ref target=""/>
          </ab>
          <ab type="translation">
-            <!-- still just tag place names as $name%. The script can extract -->
-            <idno type="CTS-URN"/><!--add the full link if there is a URN? Or are we past ones we can add by URN?-->
-            <ref target=""/><!-- add as a field-->
+            <idno type="CTS-URN"/>
+            <ref target=""/>
          </ab>
-         <listBibl><!-- each of these can be labeled by CSS and have a text box for the target attribute. Will also need to train on entering the Zotero record and getting the URI. Probably enter as Zotero URIs and then machine change to C-M bibls. -->
+         <listBibl>
             <bibl>
                <ptr target=""/>
                <citedRange/>
