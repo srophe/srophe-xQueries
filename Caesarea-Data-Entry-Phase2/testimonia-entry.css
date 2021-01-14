@@ -15,7 +15,8 @@ display: block;
  profileDesc > abstract,
  textClass,
  desc,
- ab[type="identifier"]
+ ab[type="identifier"],
+ ab > ref
  {
 display: none;
 }
@@ -24,7 +25,7 @@ display: none !important
 }
 
 title,
-ref,
+creation > ref,
 persName,
 origDate,
 origPlace,
@@ -187,6 +188,15 @@ ab[type="translation"]:before(9){
 }
 ab:not([type="identifier"]) > idno{
   display:none;
+}
+
+ab > note {
+  border: 1px green solid;
+  margin-left: 10px;
+  background-color: lightyellow;
+  content: attr(type) " note " oxy_textfield(
+    edit, "#text", columns, 50
+    ) '\A';
 }
 /*
 ab > ref{
