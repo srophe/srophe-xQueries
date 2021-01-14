@@ -53,6 +53,7 @@ title:before(9)
   content: "Standardized English Title: ";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 /* title:after(1)
 {
@@ -64,12 +65,14 @@ creation > ref:before(9)
   content: "Cited Range of Testimonium";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 
 persName:before(9) {
   content: "Standardized Author Name";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 persName:after(1) {
   content: "VIAF URI: " oxy_textfield(edit, "@ref",  columns, 30)
@@ -80,6 +83,7 @@ origDate:before(9)
   content: "Date of Testimonium's Composition";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 origDate:before(8)
 {
@@ -93,6 +97,7 @@ origPlace:before(9)
   content: "Standardized Place Name of Testimonium's Composition";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 origPlace:after(1)
 {
@@ -109,6 +114,7 @@ labels, 'Ancient Greek, Latin, Arabic, Hebrew, Syriac, Jewish Palestinian Aramai
 );
   color: black;
   font-size: 18px;
+font-weight: bold;
   background-color: lightyellow;
 }
 langUsage{
@@ -131,6 +137,7 @@ catRef[scheme="#CM-NEAEH"]:before(9){
   content: 'Historical Period Discussed by Testimonium:';
   color: black;
   font-size: 18px;
+font-weight: bold;
   background-color: lightyellow;
 }
 catRef[scheme="#CM-NEAEH"]:before(8){
@@ -182,6 +189,7 @@ desc[type="context"]:before(9){
   content: "Context of Testimonium";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 /* ab[type="identifier"] {
   border: 1px green solid;
@@ -192,6 +200,7 @@ ab[type="identifier"] > idno:before(9) {
   Content: "Testimonium ID";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 ab[type="identifier"] > idno:before(8) {
   Content: "\A Enter the ID number for the current testimonium as assigned in the project spreadsheet: $$LINK";
@@ -210,6 +219,7 @@ ab[type="edition"]:before(9){
   content: "1. Excerpt from Edition";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 /* ab:not([type="identifier"]):before(8){
   content: "\A Tag the references to Caesarea as follows: $name%, e.g. $Caesarea% or $Strato's Tower%";
@@ -220,6 +230,7 @@ ab[type="translation"]:before(9){
   content: "2. Excerpt from Translation";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 ab:not([type="identifier"]) > idno{
   display:none;
@@ -243,36 +254,42 @@ listBibl:first-of-type > bibl:nth-child(2):before(9) {
   content: "Source for:\A    1. Excerpt from Edition";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 
 listBibl:first-of-type > bibl:nth-child(3):before(9) {
   content: "Source for:\A    2. Excerpt from Translation";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 
 listBibl:last-of-type > bibl:nth-child(2):before(9) {
   content: "Additional Bibl 1";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 
 listBibl:last-of-type > bibl:nth-child(3):before(9) {
   content: "Additional Bibl 2";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 
 listBibl:last-of-type > bibl:nth-child(4):before(9) {
   content: "Additional Bibl 3";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 
 listBibl:last-of-type > bibl:nth-child(5):before(9) {
   content: "Additional Bibl 4";
   color: black;
   font-size: 18px;
+font-weight: bold;
 }
 
 ptr{
