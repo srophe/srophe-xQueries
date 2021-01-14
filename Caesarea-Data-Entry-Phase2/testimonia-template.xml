@@ -246,7 +246,7 @@
                <idno type="CTS-URN"/>
             </classCode>
             <catRef scheme="testimonia-type" target="#direct"/>
-            <catRef scheme="#CM-NEAEH"/>
+            <catRef scheme="#CM-NEAEH" target=""/>
          </textClass>
       </profileDesc>
       <revisionDesc status="draft">
