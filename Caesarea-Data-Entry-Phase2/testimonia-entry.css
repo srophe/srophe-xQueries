@@ -99,27 +99,20 @@ origPlace:after(1)
   content: "Pleiades URI: " oxy_textfield(edit, "@ref", columns, 30)
 }
 
-langUsage:before(9)
+langUsage > language
 {
-  content: "Original Language of Testimonium";
+  content: "Original Language of Testimonium: " oxy_combobox(
+edit, '@ident',
+editable, false,
+values, 'grc, la, ar, he, syr, jpa, tmr',
+labels, 'Ancient Greek, Latin, Arabic, Hebrew, Syriac, Jewish Palestinian Aramaic, Jewish Babylonian Aramaic'
+);
   color: black;
   font-size: 18px;
   background-color: lightyellow;
 }
 langUsage{
   background-color: lightyellow;
-}
-langUsage > language
-{
-  border: 1px green solid;
-  background-color: lightyellow;
-  color: black;
-  content: 'language: ' oxy_combobox(
-edit, '@ident',
-editable, false,
-values, 'grc, la, ar, he, syr, jpa, tmr',
-labels, 'Ancient Greek, Latin, Arabic, Hebrew, Syriac, Jewish Palestinian Aramaic, Jewish Babylonian Aramaic'
-)
 }
 
 catRef[scheme="testimonia-type"]{
