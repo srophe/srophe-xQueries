@@ -13,7 +13,7 @@ display: block;
  fileDesc > *,
  encodingDesc,
  profileDesc > abstract,
- textClass,
+ textClass > classCode,
  desc[type="abstract"],
  ab[type="identifier"],
  ab > ref
@@ -121,6 +121,19 @@ values, 'grc, la, ar, he, syr, jpa, tmr',
 labels, 'Ancient Greek, Latin, Arabic, Hebrew, Syriac, Jewish Palestinian Aramaic, Jewish Babylonian Aramaic'
 )
 }
+
+catRef[scheme="testimonia-type"]{
+  border: 1px green solid;
+  background-color: lightyellow;
+  color: black;
+  content: 'Testimonium Type: ' oxy_combobox(
+edit, '@target',
+editable, false,
+values, '#direct, #indirect, #allusion, #toponymic-epithet',
+labels, 'Direct Reference to Caesarea, Indirect Reference to Caesarea, Allusion to Caesarea lacking historical specifics, Toponymic Epithet which Includes Caesarea'
+)
+}
+
 revisionDesc {
   border: 1px green solid;
   background-color: lightyellow;
