@@ -259,6 +259,7 @@
             <idno type="URI"/>
          </ab>
          <desc type="abstract"/>
+         <desc type="context"/>
          <ab type="edition">
             <note type="translation"/>
             <note type="discussion"/>
