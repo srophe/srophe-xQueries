@@ -260,10 +260,16 @@
          </ab>
          <desc type="abstract"/>
          <ab type="edition">
+            <note type="translation"/>
+            <note type="discussion"/>
+            <note type="corrigenda"/>
             <idno type="CTS-URN"/>
             <ref target=""/>
          </ab>
          <ab type="translation">
+            <note type="translation"/>
+            <note type="discussion"/>
+            <note type="corrigenda"/>
             <idno type="CTS-URN"/>
             <ref target=""/>
          </ab>
