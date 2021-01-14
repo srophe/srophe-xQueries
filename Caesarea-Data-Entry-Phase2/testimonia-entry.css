@@ -134,6 +134,30 @@ labels, 'Direct Reference to Caesarea, Indirect Reference to Caesarea, Allusion 
 )
 }
 
+catRef[scheme="#CM-NEAEH"]:before(9){
+  content: 'Historical Period Discussed by Testimonium:';
+  color: black;
+  font-size: 18px;
+  background-color: lightyellow;
+}
+catRef[scheme="#CM-NEAEH"]:before(8){
+  content: '\ANote: This field captures the historical periods **about** which the testimonium relates information, **not** the historical period in which the testimonium was composed (this is generated automatically based on the \"Date of Testimonium\'s Composition\" field above)';
+  color: black;
+  font-size: 13px;
+  background-color: lightyellow;
+}
+catRef[scheme="#CM-NEAEH"]{
+  border: 1px green solid;
+  background-color: lightyellow;
+  color: black;
+  content: oxy_checkbox(
+edit, '@target',
+values, '#babylonianAndPersian, #earlyHellenistic, #hellenistic, #earlyNabatean, #nabateanKingdom, #lateHellenistic, #earlyRoman, #herodian, #middleNabatean, #lateRoman, #byzantine, #earlyIslamic, #crusader, #lateIslamic, #ottoman, #britishTerritorialAdministration, #britishMandate, #modernState',
+labels, "Babylonian and Persian Periods:  585-331 BCE, Early Hellenistic Period:  331-166 BCE, Hellenistic Period:  331-36 BCE, Early Nabatean Period:  331-36 BCE, Nabatean Kingdom:  167 BCE-106 CE, Late Hellenistic Period:  166-36 BCE, Early Roman Period:  36 BCE-132 CE, Herodian Period:  36 BCE-70 CE, Middle Nabatean Period:  24 BCE-50 CE, Late Roman Period:  132-324 CE, Byzantine Period:  324-638 CE, Early Islamic Period:  638-1099 CE, Crusader Period:  1099-1291 CE, Late Islamic Period:  1291-1516 CE, Ottoman Period:  1516-1917 CE, British Territorial Administration Period:  1970-1920 CE, British Mandate Period:  1920-1948 CE, Modern State:  1948- CE",
+columns, 3
+)
+}
+
 revisionDesc {
   border: 1px green solid;
   background-color: lightyellow;
