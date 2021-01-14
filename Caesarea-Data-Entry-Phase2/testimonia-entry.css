@@ -59,7 +59,7 @@ title:before(9)
 
 creation > ref:before(9)
 {
-  content: "Cited Range of Testimonium Excerpt";
+  content: "Cited Range of Testimonium";
   color: black;
   font-size: 18px;
 }
@@ -88,7 +88,7 @@ origDate:before(8)
 
 origPlace:before(9)
 {
-  content: "Place of Testimonium's Composition";
+  content: "Standardized Place Name of Testimonium's Composition";
   color: black;
   font-size: 18px;
 }
@@ -171,7 +171,7 @@ ab[type="identifier"] > idno {
 } */
 
 ab[type="edition"]:before(9){
-  content: "Excerpt from Edition";
+  content: "1. Excerpt from Edition";
   color: black;
   font-size: 18px;
 }
@@ -181,38 +181,51 @@ ab[type="edition"]:before(9){
   font-size: 14px;
 } */
 ab[type="translation"]:before(9){
-  content: "Excerpt from Translation";
+  content: "2. Excerpt from Translation";
   color: black;
   font-size: 18px;
 }
 ab:not([type="identifier"]) > idno{
   display:none;
-/* }
+}
+/*
 ab > ref{
   content: "Link to Excerpt: " oxy_textfield(edit, "@target", columns, 30);
   font-size: 14px;
 } */
 
-listBibl:first-of-type > bibl:nth-child(1):before(9) {
-  content: "Electronic Edition";
-  color: black;
-  font-size: 18px;
-}
-
 listBibl:first-of-type > bibl:nth-child(2):before(9) {
-  content: "Electronic Translation";
+  content: "Source for:\A    1. Excerpt from Edition";
   color: black;
   font-size: 18px;
 }
 
-listBibl:last-of-type > bibl:nth-child(1):before(9) {
-  content: "Print Edition";
+listBibl:first-of-type > bibl:nth-child(3):before(9) {
+  content: "Source for:\A    2. Excerpt from Translation";
   color: black;
   font-size: 18px;
 }
 
 listBibl:last-of-type > bibl:nth-child(2):before(9) {
-  content: "Print Translation";
+  content: "Additional Bibl 1";
+  color: black;
+  font-size: 18px;
+}
+
+listBibl:last-of-type > bibl:nth-child(3):before(9) {
+  content: "Additional Bibl 2";
+  color: black;
+  font-size: 18px;
+}
+
+listBibl:last-of-type > bibl:nth-child(4):before(9) {
+  content: "Additional Bibl 3";
+  color: black;
+  font-size: 18px;
+}
+
+listBibl:last-of-type > bibl:nth-child(5):before(9) {
+  content: "Additional Bibl 4";
   color: black;
   font-size: 18px;
 }
