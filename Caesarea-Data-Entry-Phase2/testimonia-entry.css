@@ -14,7 +14,8 @@ display: block;
  encodingDesc,
  profileDesc > abstract,
  textClass,
- desc
+ desc,
+ ab[type="identifier"]
  {
 display: none;
 }
@@ -51,10 +52,10 @@ title:before(9)
   color: black;
   font-size: 18px;
 }
-title:after(1)
+/* title:after(1)
 {
   content: 'URI: ' oxy_textfield(edit, "@ref",  columns, 30)
-}
+} */
 
 creation > ref:before(9)
 {
@@ -122,13 +123,13 @@ revisionDesc {
   border: 1px green solid;
   background-color: lightyellow;
 }
-change[when]:before(8) {
+/* change[when]:before(8) {
     content: "Date Encoded: "oxy_datePicker(
 edit, "@when",
 format, "yyyy-MM-dd") "\A"
-}
+} */
 change[when]:before(7) {
-  content: "Entered by: " oxy_combobox(
+  content: "Testimonium entered by: " oxy_combobox(
 edit, '@who',
 editable, true,
 values, 'dmichelson, jrife, plieberman, wpotter',
@@ -146,7 +147,7 @@ change{
 }
 
 
-ab[type="identifier"] {
+/* ab[type="identifier"] {
   border: 1px green solid;
   background-color: lightyellow;
   content: "";
@@ -167,18 +168,18 @@ ab[type="identifier"] > idno {
   content: '\A' oxy_textfield(
     edit, "#text", columns, 50
     ) '\A';
-}
+} */
 
 ab[type="edition"]:before(9){
   content: "Excerpt from Edition";
   color: black;
   font-size: 18px;
 }
-ab:not([type="identifier"]):before(8){
+/* ab:not([type="identifier"]):before(8){
   content: "\A Tag the references to Caesarea as follows: $name%, e.g. $Caesarea% or $Strato's Tower%";
   color: black;
   font-size: 14px;
-}
+} */
 ab[type="translation"]:before(9){
   content: "Excerpt from Translation";
   color: black;
@@ -186,11 +187,11 @@ ab[type="translation"]:before(9){
 }
 ab:not([type="identifier"]) > idno{
   display:none;
-}
+/* }
 ab > ref{
   content: "Link to Excerpt: " oxy_textfield(edit, "@target", columns, 30);
   font-size: 14px;
-}
+} */
 
 listBibl:first-of-type > bibl:nth-child(1):before(9) {
   content: "Electronic Edition";
