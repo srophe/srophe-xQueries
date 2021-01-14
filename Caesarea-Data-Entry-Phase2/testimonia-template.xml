@@ -245,6 +245,8 @@
             <classCode scheme="https://distributed-text-services.github.io/specifications/">
                <idno type="CTS-URN"/>
             </classCode>
+            <catRef scheme="testimonia-type" target="#direct"/>
+            <catRef scheme="#CM-NEAEH"/>
          </textClass>
       </profileDesc>
       <revisionDesc status="draft">
