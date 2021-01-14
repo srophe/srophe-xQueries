@@ -141,7 +141,7 @@ catRef[scheme="#CM-NEAEH"]:before(9){
   background-color: lightyellow;
 }
 catRef[scheme="#CM-NEAEH"]:before(8){
-  content: '\ANote: This field captures the historical periods **about** which the testimonium relates information, **not** the historical period in which the testimonium was composed (this is generated automatically based on the \"Date of Testimonium\'s Composition\" field above)';
+  content: '\ANote: This field captures the historical periods **about** which the testimonium relates information, **not** the historical period in which the testimonium was composed (the latter information is generated automatically based on the \"Date of Testimonium\'s Composition\" field above)';
   color: black;
   font-size: 13px;
   background-color: lightyellow;
