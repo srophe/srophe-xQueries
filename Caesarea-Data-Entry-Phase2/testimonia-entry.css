@@ -14,7 +14,7 @@ display: block;
  encodingDesc,
  profileDesc > abstract,
  textClass,
- desc,
+ desc[type="abstract"],
  ab[type="identifier"],
  ab > ref
  {
@@ -29,6 +29,7 @@ creation > ref,
 persName,
 origDate,
 origPlace,
+desc[type="context"],
 ab
 {
   border: 1px green solid;
@@ -147,7 +148,11 @@ change{
   visibility: -oxy-collapse-text
 }
 
-
+desc[type="context"]:before(9){
+  content: "Context of Testimonium";
+  color: black;
+  font-size: 18px;
+}
 /* ab[type="identifier"] {
   border: 1px green solid;
   background-color: lightyellow;
