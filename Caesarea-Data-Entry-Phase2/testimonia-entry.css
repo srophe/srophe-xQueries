@@ -253,3 +253,8 @@ citedRange:before(9){
   font-size: 14px;
   background-color: lightyellow;
 }
+body > note {
+  border: 1px green solid;
+  background-color: lightyellow;
+  content: attr(type) ": \A"
+}
