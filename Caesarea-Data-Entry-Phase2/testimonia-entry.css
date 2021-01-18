@@ -125,11 +125,10 @@ catRef[scheme="testimonia-type"]{
   border: 1px green solid;
   background-color: lightyellow;
   color: black;
-  content: 'Testimonium Type: ' oxy_combobox(
+  content: 'Testimonium Type: ' oxy_checkbox(
 edit, '@target',
-editable, false,
-values, '#direct, #indirect, #allusion, #toponymic-epithet',
-labels, 'Direct Reference to Caesarea, Indirect Reference to Caesarea, Allusion to Caesarea lacking historical specifics, Toponymic Epithet which Includes Caesarea'
+values, '#direct, #indirect, #toponymic-epithet',
+labels, 'Direct Reference to Caesarea, Indirect Reference to Caesarea, Toponymic Epithet which Includes Caesarea'
 )
 }
 
