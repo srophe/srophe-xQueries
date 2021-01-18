@@ -248,6 +248,11 @@ ab > ref{
   content: "Link to Excerpt: " oxy_textfield(edit, "@target", columns, 30);
   font-size: 14px;
 } */
+listBibl:first-of-type > head:after(1) {
+    content: "\A Add in this section the bibliographic data for the sources of the testimonium excerpts, starting with the edition followed by the translation.";
+  color: black;
+  font-size: 14px;
+}
 
 listBibl:first-of-type > bibl:nth-child(2):before(9) {
   content: "Source for:\A    1. Excerpt from Edition";
@@ -299,7 +304,13 @@ ptr{
 }
 
 citedRange:before(9){
-  content: "Source Cited Range: " oxy_textfield(edit, "#text", columns, 30);
+  content: "Source Cited Range: " oxy_textfield(edit, "#text", columns, 30) " " 
+  oxy_combobox(
+  edit, "@unit",
+  editable, "false",
+  values, "section, p, col, fol, line, entry, vol, map",
+  labels, "section, page, column, folio, line, entry, volume, map"
+  );
   color: black;
   font-size: 14px;
   background-color: lightyellow;

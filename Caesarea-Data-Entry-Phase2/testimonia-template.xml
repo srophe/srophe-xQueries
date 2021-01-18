@@ -279,30 +279,30 @@
             <head>Works Cited</head>
             <bibl>
                <ptr target=""/>
-               <citedRange/>
+               <citedRange unit=""/>
             </bibl>
             <bibl>
                <ptr target=""/>
-               <citedRange/>
+               <citedRange unit=""/>
             </bibl>
          </listBibl>
          <listBibl>
             <head>Related Bibliography</head>
             <bibl>
                <ptr target=""/>
-               <citedRange/>
+               <citedRange unit=""/>
             </bibl>
             <bibl>
                <ptr target=""/>
-               <citedRange/>
+               <citedRange unit=""/>
             </bibl>
             <bibl>
                <ptr target=""/>
-               <citedRange/>
+               <citedRange unit=""/>
             </bibl>
             <bibl>
                <ptr target=""/>
-               <citedRange/>
+               <citedRange unit=""/>
             </bibl>
          </listBibl>
          <note type="related-texts"/>
