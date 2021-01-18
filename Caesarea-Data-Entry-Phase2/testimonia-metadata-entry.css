@@ -1,0 +1,326 @@
+@namespace tan "tag:textalign.net,2015:ns";
+@namespace tei "http://www.tei-c.org/ns/1.0";
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+@namespace xml "http://www.w3.org/XML/1998/namespace";
+/* CSS file for oXygen Author Mode form for inputing metadata into TEI XML records of Testimonia for Caesaria-Maritima.org
+ * author: William L. Potter
+ * version: 0.1
+ * 
+ * This CSS file is for the second stage of data entry once the "testimonia-entry.css" form has been completed. Here researchers can enter the testimonium ID and other key metadata not included in the initial data gathering stage
+ *  */
+/* GENERAL DISPLAY */
+
+* {
+display: block;
+}
+ fileDesc,
+ fileDesc > *,
+ encodingDesc,
+ profileDesc > abstract,
+ textClass > classCode,
+ desc[type="abstract"],
+ ab[type="identifier"],
+ ab > ref
+ {
+display: none;
+}
+oxy|processing-instruction, oxy|comment {
+display: none !important
+}
+
+title,
+creation > ref,
+persName,
+origDate,
+origPlace,
+desc[type="context"],
+ab
+{
+  border: 1px green solid;
+  background-color: lightyellow;
+  content: '\A' oxy_textfield(
+    edit, "#text", columns, 50
+    ) '\A';
+}
+bibl {
+  border: 1px green solid;
+  background-color: lightyellow;
+}
+bibl:after(9){
+  content: "\A";
+  font-size: 10px;
+}
+/* EXCEPTIONS TO THE ABOVE */
+
+title:before(9)
+{
+  content: "Standardized English Title: ";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+/* title:after(1)
+{
+  content: 'URI: ' oxy_textfield(edit, "@ref",  columns, 30)
+} */
+
+creation > ref:before(9)
+{
+  content: "Cited Range of Testimonium";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+
+persName:before(9) {
+  content: "Standardized Author Name";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+persName:after(1) {
+  content: "VIAF URI: " oxy_textfield(edit, "@ref",  columns, 30)
+}
+
+origDate:before(9)
+{
+  content: "Date of Testimonium's Composition";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+origDate:before(8)
+{
+  content: "\A Format dates as follows, using a negative for BCE: YYYY-MM-DD. Month and Day may be omitted if unknown. If specifying a range of dates, separate the lower bound from the upper bound by a single space, e.g. 0200 0455 represents 200-455 CE.";
+  color: black;
+  font-size: 14px;
+}
+
+origPlace:before(9)
+{
+  content: "Standardized Place Name of Testimonium's Composition";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+origPlace:after(1)
+{
+  content: "Pleiades URI: " oxy_textfield(edit, "@ref", columns, 30)
+}
+
+langUsage > language
+{
+  content: "Original Language of Testimonium: " oxy_combobox(
+edit, '@ident',
+editable, false,
+values, 'grc, la, ar, he, syr, jpa, tmr',
+labels, 'Ancient Greek, Latin, Arabic, Hebrew, Syriac, Jewish Palestinian Aramaic, Jewish Babylonian Aramaic'
+);
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+  background-color: lightyellow;
+}
+langUsage{
+  background-color: lightyellow;
+}
+
+catRef[scheme="testimonia-type"]{
+  border: 1px green solid;
+  background-color: lightyellow;
+  color: black;
+  content: 'Testimonium Type: ' oxy_checkbox(
+edit, '@target',
+values, '#direct, #indirect, #toponymic-epithet',
+labels, 'Direct Reference to Caesarea, Indirect Reference to Caesarea, Toponymic Epithet which Includes Caesarea'
+)
+}
+
+catRef[scheme="#CM-NEAEH"]:before(9){
+  content: 'Historical Period Discussed by Testimonium:';
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+  background-color: lightyellow;
+}
+catRef[scheme="#CM-NEAEH"]:before(8){
+  content: '\ANote: This field captures the historical periods **about** which the testimonium relates information, **not** the historical period in which the testimonium was composed (the latter information is generated automatically based on the \"Date of Testimonium\'s Composition\" field above)';
+  color: black;
+  font-size: 13px;
+  background-color: lightyellow;
+}
+catRef[scheme="#CM-NEAEH"]{
+  border: 1px green solid;
+  background-color: lightyellow;
+  color: black;
+  content: oxy_checkbox(
+edit, '@target',
+values, '#babylonianAndPersian, #earlyHellenistic, #hellenistic, #earlyNabatean, #nabateanKingdom, #lateHellenistic, #earlyRoman, #herodian, #middleNabatean, #lateRoman, #byzantine, #earlyIslamic, #crusader, #lateIslamic, #ottoman, #britishTerritorialAdministration, #britishMandate, #modernState',
+labels, "Babylonian and Persian Periods:  585-331 BCE, Early Hellenistic Period:  331-166 BCE, Hellenistic Period:  331-36 BCE, Early Nabatean Period:  331-36 BCE, Nabatean Kingdom:  167 BCE-106 CE, Late Hellenistic Period:  166-36 BCE, Early Roman Period:  36 BCE-132 CE, Herodian Period:  36 BCE-70 CE, Middle Nabatean Period:  24 BCE-50 CE, Late Roman Period:  132-324 CE, Byzantine Period:  324-638 CE, Early Islamic Period:  638-1099 CE, Crusader Period:  1099-1291 CE, Late Islamic Period:  1291-1516 CE, Ottoman Period:  1516-1917 CE, British Territorial Administration Period:  1970-1920 CE, British Mandate Period:  1920-1948 CE, Modern State:  1948- CE",
+columns, 3
+)
+}
+
+revisionDesc {
+  border: 1px green solid;
+  background-color: lightyellow;
+}
+/* change[when]:before(8) {
+    content: "Date Encoded: "oxy_datePicker(
+edit, "@when",
+format, "yyyy-MM-dd") "\A"
+} */
+change[when]:before(7) {
+  content: "Testimonium entered by: " oxy_combobox(
+edit, '@who',
+editable, true,
+values, 'dmichelson, jrife, plieberman, wpotter',
+labels, 'David A. Michelson, Joseph L. Rife, Phillip I. Lieberman, William L. Potter'
+) "\A"
+}
+
+change[when]:before(6) {
+  content: "Enter your first initial followed by your last name, e.g. 'dmichelson', or select from the drop-down menu above\A";
+  color: black;
+  font-size: 14px;
+}
+change{
+  visibility: -oxy-collapse-text
+}
+
+desc[type="context"]:before(9){
+  content: "Context of Testimonium";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+/* ab[type="identifier"] {
+  border: 1px green solid;
+  background-color: lightyellow;
+  content: "";
+}
+ab[type="identifier"] > idno:before(9) {
+  Content: "Testimonium ID";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+ab[type="identifier"] > idno:before(8) {
+  Content: "\A Enter the ID number for the current testimonium as assigned in the project spreadsheet: $$LINK";
+  color: black;
+  font-size: 14px;
+}
+ab[type="identifier"] > idno {
+  border: 1px green solid;
+  background-color: lightyellow;
+  content: '\A' oxy_textfield(
+    edit, "#text", columns, 50
+    ) '\A';
+} */
+
+ab[type="edition"]:before(9){
+  content: "1. Excerpt from Edition";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+/* ab:not([type="identifier"]):before(8){
+  content: "\A Tag the references to Caesarea as follows: $name%, e.g. $Caesarea% or $Strato's Tower%";
+  color: black;
+  font-size: 14px;
+} */
+ab[type="translation"]:before(9){
+  content: "2. Excerpt from Translation";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+ab:not([type="identifier"]) > idno{
+  display:none;
+}
+
+ab > note {
+  border: 1px green solid;
+  margin-left: 10px;
+  background-color: lightyellow;
+  content: attr(type) " note " oxy_textfield(
+    edit, "#text", columns, 50
+    ) '\A';
+}
+/*
+ab > ref{
+  content: "Link to Excerpt: " oxy_textfield(edit, "@target", columns, 30);
+  font-size: 14px;
+} */
+listBibl:first-of-type > head:after(1) {
+    content: "\A Add in this section the bibliographic data for the sources of the testimonium excerpts, starting with the edition followed by the translation.";
+  color: black;
+  font-size: 14px;
+}
+
+listBibl:first-of-type > bibl:nth-child(2):before(9) {
+  content: "Source for:\A    1. Excerpt from Edition";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+
+listBibl:first-of-type > bibl:nth-child(3):before(9) {
+  content: "Source for:\A    2. Excerpt from Translation";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+
+listBibl:last-of-type > bibl:nth-child(2):before(9) {
+  content: "Additional Bibl 1";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+
+listBibl:last-of-type > bibl:nth-child(3):before(9) {
+  content: "Additional Bibl 2";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+
+listBibl:last-of-type > bibl:nth-child(4):before(9) {
+  content: "Additional Bibl 3";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+
+listBibl:last-of-type > bibl:nth-child(5):before(9) {
+  content: "Additional Bibl 4";
+  color: black;
+  font-size: 18px;
+font-weight: bold;
+}
+
+ptr{
+  content: "Zotero URI: " oxy_textfield(edit, "@target", columns, 30);
+  color: black;
+  font-size: 14px;
+  background-color: lightyellow;
+}
+
+citedRange:before(9){
+  content: "Source Cited Range: " oxy_textfield(edit, "#text", columns, 30) " " 
+  oxy_combobox(
+  edit, "@unit",
+  editable, "false",
+  values, "section, p, col, fol, line, entry, vol, map",
+  labels, "section, page, column, folio, line, entry, volume, map"
+  );
+  color: black;
+  font-size: 14px;
+  background-color: lightyellow;
+}
+body > note {
+  border: 1px green solid;
+  background-color: lightyellow;
+  content: attr(type) ": \A"
+}
