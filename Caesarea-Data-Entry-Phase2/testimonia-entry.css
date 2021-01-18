@@ -176,7 +176,7 @@ labels, 'David A. Michelson, Joseph L. Rife, Phillip I. Lieberman, William L. Po
 }
 
 change[when]:before(6) {
-  content: "If your name is not listed in the drop-down, please enter your first initial followed by your last name, e.g. 'dmichelson'\A";
+  content: "Enter your first initial followed by your last name, e.g. 'dmichelson', or select from the drop-down menu above\A";
   color: black;
   font-size: 14px;
 }
