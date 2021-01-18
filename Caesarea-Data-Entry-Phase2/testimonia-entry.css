@@ -2,7 +2,12 @@
 @namespace tei "http://www.tei-c.org/ns/1.0";
 @namespace oxy url('http://www.oxygenxml.com/extensions/author');
 @namespace xml "http://www.w3.org/XML/1998/namespace";
-/* CSS file intended to be used to configure how Wright catalog manuscripts are rendered by oXygen Author */
+/* CSS file for oXygen Author Mode form for inputing TEI XML records of Testimonia for Caesaria-Maritima.org
+ * author: William L. Potter
+ * version: 1.0
+ * 
+ * This CSS file is for the first stage of data entry and does not include entry of a testimonium's URI, CTS-URN, or other metadata, for which see the "testimonia-metadata-entry.css" file
+ *  */
 
 /* GENERAL DISPLAY */
 
