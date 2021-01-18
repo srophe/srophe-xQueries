@@ -263,7 +263,6 @@
          <desc type="abstract"/>
          <desc type="context"/>
          <ab type="edition">
-            <note type="translation"/>
             <note type="discussion"/>
             <note type="corrigenda"/>
             <idno type="CTS-URN"/>
@@ -288,7 +287,7 @@
             </bibl>
          </listBibl>
          <listBibl>
-            <head>Related Editions</head>
+            <head>Related Bibliography</head>
             <bibl>
                <ptr target=""/>
                <citedRange/>
