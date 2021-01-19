@@ -114,8 +114,8 @@ langUsage > language
   content: "Original Language of Testimonium: " oxy_combobox(
 edit, '@ident',
 editable, false,
-values, 'grc, la, ar, he, syr, jpa, tmr',
-labels, 'Ancient Greek, Latin, Arabic, Hebrew, Syriac, Jewish Palestinian Aramaic, Jewish Babylonian Aramaic'
+values, 'grc, la, ar, he, syr, jpa, tmr, fro, hy',
+labels, 'Ancient Greek, Latin, Arabic, Hebrew, Syriac, Jewish Palestinian Aramaic, Jewish Babylonian Aramaic, Old French, Armenian'
 );
   color: black;
   font-size: 18px;
