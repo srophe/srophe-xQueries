@@ -320,6 +320,9 @@ citedRange:before(9){
   font-size: 14px;
   background-color: lightyellow;
 }
+bibl:after(1) {
+    content: "Full-text Citation: " oxy_textfield(edit, "#text", columns, 30);
+}
 body > note {
   border: 1px green solid;
   background-color: lightyellow;
