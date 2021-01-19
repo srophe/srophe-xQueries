@@ -80,7 +80,7 @@ persName:before(9) {
 font-weight: bold;
 }
 persName:after(1) {
-  content: "VIAF URI: " oxy_textfield(edit, "@ref",  columns, 30)
+  content: "\A VIAF URI: " oxy_textfield(edit, "@ref",  columns, 30)
 }
 
 origDate:before(9)
