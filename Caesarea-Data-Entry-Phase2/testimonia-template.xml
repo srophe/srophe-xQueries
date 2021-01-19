@@ -1,5 +1,5 @@
 <?xml-model type="application/xml" href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/css" href="testimonia-entry.css"?>
+<?xml-stylesheet type="text/css" href="https://raw.githubusercontent.com/srophe/srophe-xQueries/master/Caesarea-Data-Entry-Phase2/testimonia-entry.css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -262,27 +262,18 @@
          </ab>
          <desc type="abstract"/>
          <desc type="context"/>
-         <ab type="edition">
-            <note type="discussion"/>
-            <note type="corrigenda"/>
-            <idno type="CTS-URN"/>
-            <ref target=""/>
-         </ab>
-         <ab type="translation">
-            <note type="translation"/>
-            <note type="discussion"/>
-            <note type="corrigenda"/>
-            <idno type="CTS-URN"/>
-            <ref target=""/>
-         </ab>
+         <ab type="edition"><note type="discussion"/> <note type="corrigenda"/><idno type="CTS-URN"/><ref target=""/></ab>
+         <ab type="translation"><note type="translation"/><note type="discussion"/><note type="corrigenda"/><idno type="CTS-URN"/><ref target=""/></ab>
          <listBibl>
             <head>Works Cited</head>
             <bibl>
                <ptr target=""/>
                <citedRange unit=""/>
+               <citedRange unit=""/>
             </bibl>
             <bibl>
                <ptr target=""/>
+               <citedRange unit=""/>
                <citedRange unit=""/>
             </bibl>
          </listBibl>
@@ -291,17 +282,21 @@
             <bibl>
                <ptr target=""/>
                <citedRange unit=""/>
-            </bibl>
-            <bibl>
-               <ptr target=""/>
                <citedRange unit=""/>
             </bibl>
             <bibl>
                <ptr target=""/>
                <citedRange unit=""/>
+               <citedRange unit=""/>
             </bibl>
             <bibl>
                <ptr target=""/>
+               <citedRange unit=""/>
+               <citedRange unit=""/>
+            </bibl>
+            <bibl>
+               <ptr target=""/>
+               <citedRange unit=""/>
                <citedRange unit=""/>
             </bibl>
          </listBibl>
