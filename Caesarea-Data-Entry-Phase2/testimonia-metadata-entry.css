@@ -18,14 +18,14 @@ placeName {
     display: inline;
     text-decoration: underline;
 }
- fileDesc,
- fileDesc > *,
+ fileDesc > titleStmt,
+ fileDesc > editionStmt,
+ fileDesc > seriesStmt,
+ fileDesc > sourceDesc,
  encodingDesc,
  profileDesc > abstract,
- textClass > classCode,
  desc[type="abstract"],
- ab[type="identifier"],
- ab > ref
+ ab[type="identifier"]
  {
 display: none;
 }
@@ -57,17 +57,39 @@ bibl:after(9){
 }
 /* EXCEPTIONS TO THE ABOVE */
 
-title:before(9)
+publicationStmt > * {
+    display: none;
+}
+
+publicationStmt > idno:before(9){
+    content: "Testimonium ID:";
+    font-size: 18px;
+    font-weight: bold;
+}
+publicationStmt > idno {
+    border: 1px green solid;
+    background-color: lightyellow;
+    display: block;
+    content: oxy_textfield(edit, "#text", columns, 30);
+}
+
+creation > title:before(9)
 {
   content: "Standardized English Title: ";
   color: black;
   font-size: 18px;
 font-weight: bold;
 }
-/* title:after(1)
+title:after(1)
 {
-  content: 'URI: ' oxy_textfield(edit, "@ref",  columns, 30)
-} */
+  content: '\A Work URN: ' oxy_textfield(edit, "@ref",  columns, 30);
+  font-size: 18px;
+  font-weight: bold;
+}
+title:after(2) {
+    content: "\A Work-level URNs should be of the form, 'urn:cts:greekLit:tlg0526.tlg001'";
+    font-size:14px;
+}
 
 creation > ref:before(9)
 {
@@ -166,16 +188,29 @@ columns, 5
 )
 }
 
+classCode {
+    border: 1px green solid;
+    background-color: lightyellow;
+}
+textClass > classCode > idno[type="CTS-URN"]{
+    background-color: lightyellow;
+    color: black;
+}
+
 revisionDesc {
   border: 1px green solid;
   background-color: lightyellow;
 }
-/* change[when]:before(8) {
-    content: "Date Encoded: "oxy_datePicker(
-edit, "@when",
-format, "yyyy-MM-dd") "\A"
-} */
-change[when]:before(7) {
+
+change[when]:first-of-type:before(7) {
+    content: "Testimonium metadata entered by: " oxy_combobox(
+edit, '@who',
+editable, true,
+values, 'dmichelson, jrife, plieberman, wpotter',
+labels, 'David A. Michelson, Joseph L. Rife, Phillip I. Lieberman, William L. Potter'
+) "\A";
+}
+change[when]:last-of-type:before(7) {
   content: "Testimonium entered by: " oxy_combobox(
 edit, '@who',
 editable, true,
@@ -199,29 +234,6 @@ desc[type="context"]:before(9){
   font-size: 18px;
 font-weight: bold;
 }
-/* ab[type="identifier"] {
-  border: 1px green solid;
-  background-color: lightyellow;
-  content: "";
-}
-ab[type="identifier"] > idno:before(9) {
-  Content: "Testimonium ID";
-  color: black;
-  font-size: 18px;
-font-weight: bold;
-}
-ab[type="identifier"] > idno:before(8) {
-  Content: "\A Enter the ID number for the current testimonium as assigned in the project spreadsheet: $$LINK";
-  color: black;
-  font-size: 14px;
-}
-ab[type="identifier"] > idno {
-  border: 1px green solid;
-  background-color: lightyellow;
-  content: '\A' oxy_textfield(
-    edit, "#text", columns, 50
-    ) '\A';
-} */
 
 ab[type="edition"]:before(9){
   content: "1. Excerpt from Edition";
@@ -229,20 +241,14 @@ ab[type="edition"]:before(9){
   font-size: 18px;
 font-weight: bold;
 }
-/* ab:not([type="identifier"]):before(8){
-  content: "\A Tag the references to Caesarea as follows: $name%, e.g. $Caesarea% or $Strato's Tower%";
-  color: black;
-  font-size: 14px;
-} */
+
 ab[type="translation"]:before(9){
   content: "2. Excerpt from Translation";
   color: black;
   font-size: 18px;
 font-weight: bold;
 }
-ab:not([type="identifier"]) > idno{
-  display:none;
-}
+
 
 ab > note {
   border: 1px green solid;
@@ -252,11 +258,16 @@ ab > note {
     edit, "#text", columns, 50
     ) '\A';
 }
-/*
+
+ab:not([type="identifier"]) > idno{
+  content: "URN of Excerpt: " oxy_textfield(edit, "#text", columns, 30) " (of the form, 'urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:11.1-11.18')";
+  font-size: 14px;
+}
+
 ab > ref{
   content: "Link to Excerpt: " oxy_textfield(edit, "@target", columns, 30);
   font-size: 14px;
-} */
+}
 listBibl:first-of-type > head:after(1) {
     content: "\A Add in this section the bibliographic data for the sources of the testimonium excerpts, starting with the edition followed by the translation.";
   color: black;
