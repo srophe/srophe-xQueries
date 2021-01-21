@@ -8,10 +8,15 @@
  * 
  * This CSS file is for the second stage of data entry once the "testimonia-entry.css" form has been completed. Here researchers can enter the testimonium ID and other key metadata not included in the initial data gathering stage
  *  */
+
 /* GENERAL DISPLAY */
 
 * {
 display: block;
+}
+placeName {
+    display: inline;
+    text-decoration: underline;
 }
  fileDesc,
  fileDesc > *,
@@ -79,7 +84,7 @@ persName:before(9) {
 font-weight: bold;
 }
 persName:after(1) {
-  content: "VIAF URI: " oxy_textfield(edit, "@ref",  columns, 30)
+  content: "\A VIAF URI: " oxy_textfield(edit, "@ref",  columns, 30)
 }
 
 origDate:before(9)
@@ -105,7 +110,7 @@ font-weight: bold;
 }
 origPlace:after(1)
 {
-  content: "Pleiades URI: " oxy_textfield(edit, "@ref", columns, 30)
+  content: "\A Pleiades URI: " oxy_textfield(edit, "@ref", columns, 30)
 }
 
 langUsage > language
@@ -113,8 +118,8 @@ langUsage > language
   content: "Original Language of Testimonium: " oxy_combobox(
 edit, '@ident',
 editable, false,
-values, 'grc, la, ar, he, syr, jpa, tmr',
-labels, 'Ancient Greek, Latin, Arabic, Hebrew, Syriac, Jewish Palestinian Aramaic, Jewish Babylonian Aramaic'
+values, 'grc, la, ar, he, syr, jpa, tmr, fro, hy',
+labels, 'Ancient Greek, Latin, Arabic, Hebrew, Syriac, Jewish Palestinian Aramaic, Jewish Babylonian Aramaic, Old French, Armenian'
 );
   color: black;
   font-size: 18px;
@@ -155,9 +160,9 @@ catRef[scheme="#CM-NEAEH"]{
   color: black;
   content: oxy_checkbox(
 edit, '@target',
-values, '#babylonianAndPersian, #earlyHellenistic, #hellenistic, #earlyNabatean, #nabateanKingdom, #lateHellenistic, #earlyRoman, #herodian, #middleNabatean, #lateRoman, #byzantine, #earlyIslamic, #crusader, #lateIslamic, #ottoman, #britishTerritorialAdministration, #britishMandate, #modernState',
-labels, "Babylonian and Persian Periods:  585-331 BCE, Early Hellenistic Period:  331-166 BCE, Hellenistic Period:  331-36 BCE, Early Nabatean Period:  331-36 BCE, Nabatean Kingdom:  167 BCE-106 CE, Late Hellenistic Period:  166-36 BCE, Early Roman Period:  36 BCE-132 CE, Herodian Period:  36 BCE-70 CE, Middle Nabatean Period:  24 BCE-50 CE, Late Roman Period:  132-324 CE, Byzantine Period:  324-638 CE, Early Islamic Period:  638-1099 CE, Crusader Period:  1099-1291 CE, Late Islamic Period:  1291-1516 CE, Ottoman Period:  1516-1917 CE, British Territorial Administration Period:  1970-1920 CE, British Mandate Period:  1920-1948 CE, Modern State:  1948- CE",
-columns, 3
+values, '#lowerPaleolithic, #upperAcheulean, #acheulean, #mousterian, #middlePaleolithic, #upperPaleolithic, #kebaran, #epipaleolithic, #geometricKebaran, #natufianCulture, #pre-potteryNeolithic, #potteryNeolithic, #chalcolithic, #earlyBronzeAge, #bronzeAge, #earlyBronzeAgeIa-b, #earlyBronzeAgeIi, #earlyBronzeAgeIii, #middleBronzeAge, #middleBronzeAgeI, #middleBronzeAgeIia, #middleBronzeAgeIib, #lateBronzeAge, #lateBronzeAgeI, #lateBronzeAgeIia, #lateBronzeAgeIib, #ironAge, #ironAgeIa, #ironAgeIb, #ironAgeIia, #ironAgeIib, #ironIic, #ironAgeIic, #babylonianAndPersian, #earlyHellenistic, #hellenistic, #earlyNabatean, #nabateanKingdom, #lateHellenistic, #earlyRoman, #herodian, #middleNabatean, #lateRoman, #byzantine, #earlyIslamic, #crusader, #lateIslamic, #ottoman, #britishTerritorialAdministration, #britishMandate, #modernState',
+labels, "Lower Paleolithic: 999999-119999 BCE, Upper Acheulean: 498050-148050 BP, Acheulean: 298050-148050 BP, Mousterian: 138050-38050 BP, Middle Paleolithic: 119999-44999 BCE, Upper Paleolithic: 44999-17999 BCE, Kebaran : 18050-13050 BP, Epipaleolithic: 17999-8299 BCE, Geometric Kebaran: 12499-10899 BCE, Natufian Culture: 10799-8499 BCE, Pre-Pottery Neolithic: 8299-5499 BCE, Pottery Neolithic: 5499-4499 BCE, Chalcolithic: 4499-3299 BCE, Early Bronze Age: 3299-2199 BCE, Bronze Age: 3299-1199 BCE, Early Bronze Age IA-B: 3299-2999 BCE, Early Bronze Age II: 2999-2699 BCE, Early Bronze Age III: 2699-2199 BCE, Middle Bronze Age: 2199-1549 BCE, Middle Bronze Age I: 2199-1999 BCE, Middle Bronze Age IIA: 1999-1749 BCE, Middle Bronze Age IIB: 1749-1549 BCE, Late Bronze Age: 1599-1200 BCE, Late Bronze Age I: 1549-1399 BCE, Late Bronze Age IIA: 1399-1299 BCE, Late Bronze Age IIB: 1299-1199 BCE, Iron Age: 1199-585 BCE, Iron Age IA: 1199-1149 BCE, Iron Age IB: 1149-999 BCE, Iron Age IIA: 999-899 BCE, Iron Age IIB: 899-699 BCE, Iron IIC: 799-731 BCE, Iron Age IIC: 699-585 BCE, Babylonian and Persian Periods:  585-331 BCE, Early Hellenistic Period:  331-166 BCE, Hellenistic Period:  331-36 BCE, Early Nabatean Period:  331-36 BCE, Nabatean Kingdom:  167 BCE-106 CE, Late Hellenistic Period:  166-36 BCE, Early Roman Period:  36 BCE-132 CE, Herodian Period:  36 BCE-70 CE, Middle Nabatean Period:  24 BCE-50 CE, Late Roman Period:  132-324 CE, Byzantine Period:  324-638 CE, Early Islamic Period:  638-1099 CE, Crusader Period:  1099-1291 CE, Late Islamic Period:  1291-1516 CE, Ottoman Period:  1516-1917 CE, British Territorial Administration Period:  1970-1920 CE, British Mandate Period:  1920-1948 CE, Modern State:  1948- CE",
+columns, 5
 )
 }
 
@@ -318,6 +323,9 @@ citedRange:before(9){
   color: black;
   font-size: 14px;
   background-color: lightyellow;
+}
+bibl:after(1) {
+    content: "Full-text Citation: " oxy_textfield(edit, "#text", columns, 30);
 }
 body > note {
   border: 1px green solid;
