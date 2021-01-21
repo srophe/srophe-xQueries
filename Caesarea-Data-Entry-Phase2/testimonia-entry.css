@@ -175,7 +175,10 @@ revisionDesc {
 edit, "@when",
 format, "yyyy-MM-dd") "\A"
 } */
-change[when]:before(7) {
+change[when]:first-of-type{
+    display: none;
+}
+change[when]:last-of-type:before(7) {
   content: "Testimonium entered by: " oxy_combobox(
 edit, '@who',
 editable, true,
