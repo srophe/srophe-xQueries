@@ -106,7 +106,7 @@ font-weight: bold;
 }
 origPlace:after(1)
 {
-  content: "Pleiades URI: " oxy_textfield(edit, "@ref", columns, 30)
+  content: "\A Pleiades URI: " oxy_textfield(edit, "@ref", columns, 30)
 }
 
 langUsage > language
