@@ -38,12 +38,19 @@ To do:
 - are we doing anything with the notes under body?
 :)
 (: GLOBAL PARAMETERS :)
-(:
-- C-M URI base
-- C-M editors URI base
-- C-M editors.xml for lookup for editors string
+let $projectUriBase := "https://caesarea-maritima.org/"
+let $editorUriBase := "https://caesarea-maritima.org/documentation/editors.xml#"
+let $editorsXmlDocUri := "https://raw.githubusercontent.com/srophe/caesarea/master/documentation/editors.xml"
+let $folderUri := "C:\Users\anoni\Documents\GitHub\srophe\caesarea-data\draft-data\"
+(:Collection URI!!! (Will have to point to a local folder containing files to be edited):)
+
+(: functions
+
 :)
 
 (: START MAIN SCRIPT :)
-let $docUri := "testimonia-template.xml"
-return fn:doc($docUri)
+
+
+(: Main Loop through Folder of Records to Process :)
+for $doc in fn:collection($folderUri)
+  return $doc
