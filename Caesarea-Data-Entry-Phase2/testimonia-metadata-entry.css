@@ -260,7 +260,7 @@ ab > note {
 }
 
 ab:not([type="identifier"]) > idno{
-  content: "URN of Excerpt: " oxy_textfield(edit, "#text", columns, 30) " (of the form, 'urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:11.1-11.18')";
+  content: "URN of Excerpt: " oxy_textfield(edit, "#text", columns, 30) " (of the form, 'urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:11.1-11.18')\A";
   font-size: 14px;
 }
 
