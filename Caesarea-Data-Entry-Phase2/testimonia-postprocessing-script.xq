@@ -4,19 +4,6 @@ declare namespace functx = "http://www.functx.com";
 declare namespace csv = "http://basex.org/modules/csv";
 (:
 To do:
-
-- add abstract, compiled from creation elements with xml:id and type, etc.
-- add attributes to ab for edition and translation
-  - xml:lang (en for translation; from langUsage/lang/@ident for edition)
-  - xml:id of form "quote\d+-1" or "-2" for second quote.
-  - source referring sequentially to the first two bibls
-- add anchor elements as first child below ab with edition and translation referring to each other
-- bibls
-  - add xml:id attributes to the first two (under Works Cited)
-  - Replace Zotero URIs in bibls with C-M.org bibl module URIs
-  - refs to bibls in creation/ref/@target; and the two testimonia quotes
-  - replace Zotero URIs with C-M.org ones
-  - deal with note elements in bibls if we add those
   - add title and author/editors based on Zotero records?? (this was a previous functionality)  
 - are we doing anything with empty elements?
 - are we doing anything with the notes under body?
@@ -31,6 +18,32 @@ declare function functx:substring-after-if-contains
    if (contains($arg,$delim))
    then substring-after($arg,$delim)
    else $arg
+ } ;
+ declare function functx:is-node-in-sequence-deep-equal
+  ( $node as node()? ,
+    $seq as node()* )  as xs:boolean {
+
+   some $nodeInSeq in $seq satisfies deep-equal($nodeInSeq,$node)
+ } ;
+declare function functx:distinct-deep
+  ( $nodes as node()* )  as node()* {
+
+    for $seq in (1 to count($nodes))
+    return $nodes[$seq][not(functx:is-node-in-sequence-deep-equal(
+                          .,$nodes[position() < $seq]))]
+ } ;
+ declare function functx:add-or-update-attributes
+  ( $elements as element()* ,
+    $attrNames as xs:QName* ,
+    $attrValues as xs:anyAtomicType* )  as element()? {
+
+   for $element in $elements
+   return element { node-name($element)}
+                  { for $attrName at $seq in $attrNames
+                    return attribute {$attrName}
+                                     {$attrValues[$seq]},
+                    $element/@*[not(node-name(.) = $attrNames)],
+                    $element/node() }
  } ;
 
 (: CUSTOM FUNCTIONS :)
@@ -126,6 +139,40 @@ declare function local:create-langString($langUsage){
    default return ""
 };
 
+declare function local:create-abstract($creation as node(), $placeNameSeq, $recType as xs:string, $docId as xs:string) {
+  let $placeNameSeqDistinct := functx:distinct-deep(for $placeName in $placeNameSeq
+    return <quote>{$placeName}</quote>)
+  let $isOrAre := if(fn:count($placeNameSeqDistinct) >  1) then "are" else "is"
+  return if(fn:contains($recType, "#direct")) then <desc type="abstract" xml:id="abstract{$docId}-1">{local:node-join($placeNameSeqDistinct, ", ", "and ")}&#x20;{$isOrAre}&#x20;directly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.</desc>
+  else <desc type="abstract" xml:id="abstract{$docId}-1">Caeasrea Maritima is indirectly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.</desc>
+  (: EXAMPLE "Καισάρεια is directly attested at Aelius Herodian, On Orthography 2.2.4=GG III.2.451.22-27.
+This passage was written circa 150-200 C.E. possibly in Alexandria. Evidence for Greek
+Language; Geography." :)
+  
+};
+
+declare function local:node-join($seq, $delim as xs:string, $finalDelim as xs:string?)  {
+  let $nothing := ""
+  for $el in $seq
+    return if ($el != $seq[last()]) then ($el, $delim)
+    else ($finalDelim, $el)
+};
+
+declare function local:update-excerpt($excerpt as node(), $excerptLangCode as xs:string, $docId as xs:string, $docLangCode as xs:string) as node() {
+  let $quoteSeq := if(fn:string($excerpt/@type) = "edition") then "1" else "2"
+  let $correspLangCode := if($excerptLangCode = "en") then $docLangCode else "en"
+  let $anchor := <anchor xml:id="testimonia-{$docId}.{$excerptLangCode}.1" corresp="testimonia-{$docId}.{$correspLangCode}.1"/>
+  let $otherElements := $excerpt/child::node()
+  return element ab {attribute type {fn:string($excerpt/@type)}, attribute xml:lang {$excerptLangCode}, attribute xml:id {"quote"||$docId||"-"||$quoteSeq}, attribute source {"#bib"||$docId||"-"||$quoteSeq}, $anchor, $otherElements}
+};
+
+declare function local:update-bibls($listBibl as node(), $docId as xs:string, $isWorksCited as xs:string, $projectUriBase as xs:string){
+  let $bibls := for $bibl at $i in $listBibl/bibl
+    let $newPtr := if (fn:string($bibl/ptr/@target) !="") then <ptr target="{$projectUriBase}bibl/{fn:substring-after(fn:string($bibl/ptr/@target), "items/")}"/> else <ptr target=""/>
+    return if ($isWorksCited = "yes") then element bibl {attribute xml:id {"bib"||$docId||"-"||$i}, $newPtr, $bibl/*[not(self::ptr)]} else element bibl {$newPtr, $bibl/*[not(self::ptr)]}
+  return element listBibl {$listBibl/head, $bibls}
+};
+
 (: GLOBAL PARAMETERS :)
 let $projectUriBase := "https://caesarea-maritima.org/"
 let $editorUriBase := "https://caesarea-maritima.org/documentation/editors.xml#"
@@ -135,10 +182,6 @@ let $inputDirectoryUri := "C:\Users\anoni\Documents\GitHub\srophe\caesarea-data\
 let $outputDirectoryUri := "C:\Users\anoni\Desktop\caesarea-script-outputs\"
 let $currentDate := fn:current-date()
 (:Collection URI!!! (Will have to point to a local folder containing files to be edited):)
-
-(: functions
-
-:)
 
 (: START MAIN SCRIPT :)
 let $editorsDoc := fn:doc($editorsXmlDocUri)
@@ -155,6 +198,11 @@ for $doc in fn:collection($inputDirectoryUri)
   let $newCreation := local:create-creation($doc//creation, $docId, $periodTaxonomyDoc)
   let $langString := local:create-langString($doc//profileDesc/langUsage)
   let $docUrn := fn:string($doc//profileDesc/creation/title/@ref)||":"||$doc//profileDesc/creation/ref/text()
+  let $abstract := local:create-abstract($newCreation, $doc//ab/placeName, fn:string($doc//catRef[@scheme="#CM-Testimonia-Type"]/@target), $docId)
+  let $edition := local:update-excerpt($doc//body/ab[@type="edition"], fn:string($doc//profileDesc/langUsage/language/@ident), $docId, fn:string($doc//profileDesc/langUsage/language/@ident))
+  let $translation := local:update-excerpt($doc//body/ab[@type="translation"], "en", $docId, fn:string($doc//profileDesc/langUsage/language/@ident))
+  let $newWorksCited := local:update-bibls($doc//listBibl[1], $docId, "yes", $projectUriBase)
+  let $newAdditionalBibl := local:update-bibls($doc//listBibl[2], $docId, "no", $projectUriBase)
   
   return if($docId != "") then (
     insert node $docTitle before $doc//titleStmt/title,
@@ -167,5 +215,11 @@ for $doc in fn:collection($inputDirectoryUri)
     replace value of node $doc//profileDesc/textClass/classCode/idno with $docUrn,
     replace value of node $doc//revisionDesc/change[1]/@when with $currentDate,
     replace value of node $doc//revisionDesc/change[2]/@when with $currentDate,
+    replace value of node $doc//body/ab[@type="identifier"]/idno with $docUri,
+    replace node $doc//body/desc[@type="abstract"] with $abstract,
+    replace node $doc//body/ab[@type="edition"] with $edition,
+    replace node $doc//body/ab[@type="translation"] with $translation,
+    replace node $doc//listBibl[1] with $newWorksCited,
+    replace node $doc//listBibl[2] with $newAdditionalBibl,
     fn:put($doc, fn:concat($outputDirectoryUri, $docId, ".xml"), map{'omit-xml-declaration': 'no'})
 )
