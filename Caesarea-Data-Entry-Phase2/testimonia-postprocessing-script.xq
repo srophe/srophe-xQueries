@@ -139,16 +139,24 @@ declare function local:create-langString($langUsage){
    default return ""
 };
 
-declare function local:create-abstract($creation as node(), $placeNameSeq, $recType as xs:string, $docId as xs:string) {
+declare function local:create-abstract($creation as node(), $placeNameSeq, $recType as xs:string, $docId as xs:string, $themesNote as node()) {
   let $placeNameSeqDistinct := functx:distinct-deep(for $placeName in $placeNameSeq
     return <quote>{$placeName}</quote>)
   let $isOrAre := if(fn:count($placeNameSeqDistinct) >  1) then "are" else "is"
-  return if(fn:contains($recType, "#direct")) then <desc type="abstract" xml:id="abstract{$docId}-1">{local:node-join($placeNameSeqDistinct, ", ", "and ")}&#x20;{$isOrAre}&#x20;directly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.</desc>
-  else <desc type="abstract" xml:id="abstract{$docId}-1">Caeasrea Maritima is indirectly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.</desc>
+  let $themesList := local:create-themes-list($themesNote)
+  return if(fn:contains($recType, "#direct")) then <desc type="abstract" xml:id="abstract{$docId}-1">{local:node-join($placeNameSeqDistinct, ", ", "and ")}&#x20;{$isOrAre}&#x20;directly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.{$themesList}</desc>
+  else <desc type="abstract" xml:id="abstract{$docId}-1">Caeasrea Maritima is indirectly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.{$themesList}</desc>
   (: EXAMPLE "Καισάρεια is directly attested at Aelius Herodian, On Orthography 2.2.4=GG III.2.451.22-27.
 This passage was written circa 150-200 C.E. possibly in Alexandria. Evidence for Greek
 Language; Geography." :)
   
+};
+
+declare function local:create-themes-list($themesNote as node()) {
+  let $compareNode := <note type="theme"/>
+  let $themeSeq := for $theme in $themesNote/p
+    return fn:normalize-space($theme/text())
+  return if ($compareNode != $themesNote) then " Evidence for "||fn:string-join($themeSeq, "; ")||"."
 };
 
 declare function local:node-join($seq, $delim as xs:string, $finalDelim as xs:string?)  {
@@ -198,7 +206,7 @@ for $doc in fn:collection($inputDirectoryUri)
   let $newCreation := local:create-creation($doc//creation, $docId, $periodTaxonomyDoc)
   let $langString := local:create-langString($doc//profileDesc/langUsage)
   let $docUrn := fn:string($doc//profileDesc/creation/title/@ref)||":"||$doc//profileDesc/creation/ref/text()
-  let $abstract := local:create-abstract($newCreation, $doc//ab/placeName, fn:string($doc//catRef[@scheme="#CM-Testimonia-Type"]/@target), $docId)
+  let $abstract := local:create-abstract($newCreation, $doc//ab/placeName, fn:string($doc//catRef[@scheme="#CM-Testimonia-Type"]/@target), $docId, $doc//body/note[@type="themes"])
   let $edition := local:update-excerpt($doc//body/ab[@type="edition"], fn:string($doc//profileDesc/langUsage/language/@ident), $docId, fn:string($doc//profileDesc/langUsage/language/@ident))
   let $translation := local:update-excerpt($doc//body/ab[@type="translation"], "en", $docId, fn:string($doc//profileDesc/langUsage/language/@ident))
   let $newWorksCited := local:update-bibls($doc//listBibl[1], $docId, "yes", $projectUriBase)
