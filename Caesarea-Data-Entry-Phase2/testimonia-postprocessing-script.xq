@@ -189,7 +189,6 @@ let $periodTaxonomyDocUri := "https://raw.githubusercontent.com/srophe/caesarea/
 let $inputDirectoryUri := "C:\Users\anoni\Documents\GitHub\srophe\caesarea-data\draft-data\"
 let $outputDirectoryUri := "C:\Users\anoni\Desktop\caesarea-script-outputs\"
 let $currentDate := fn:current-date()
-(:Collection URI!!! (Will have to point to a local folder containing files to be edited):)
 
 (: START MAIN SCRIPT :)
 let $editorsDoc := fn:doc($editorsXmlDocUri)
@@ -212,6 +211,7 @@ for $doc in fn:collection($inputDirectoryUri)
   let $newWorksCited := local:update-bibls($doc//listBibl[1], $docId, "yes", $projectUriBase)
   let $newAdditionalBibl := local:update-bibls($doc//listBibl[2], $docId, "no", $projectUriBase)
   
+  (:Updating Expressions:)
   return if($docId != "") then (
     insert node $docTitle before $doc//titleStmt/title,
     insert nodes $editors after $doc//titleStmt/editor[last()],
