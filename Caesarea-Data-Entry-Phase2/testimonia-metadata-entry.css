@@ -152,7 +152,7 @@ langUsage{
   background-color: lightyellow;
 }
 
-catRef[scheme="testimonia-type"]{
+catRef[scheme="#CM-Testimonia-Type"]{
   border: 1px green solid;
   background-color: lightyellow;
   color: black;
