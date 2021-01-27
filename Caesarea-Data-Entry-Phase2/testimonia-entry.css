@@ -320,8 +320,8 @@ citedRange:before(9){
   oxy_combobox(
   edit, "@unit",
   editable, "false",
-  values, "section, p, col, fol, line, entry, vol, map",
-  labels, "section, page, column, folio, line, entry, volume, map"
+  values, "bk, ch, section, p, col, fol, line, entry, vol, letter, map",
+  labels, "book, chapter, section, page, column, folio, line, entry, volume, letter, map"
   );
   color: black;
   font-size: 14px;
