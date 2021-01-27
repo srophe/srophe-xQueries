@@ -229,5 +229,6 @@ for $doc in fn:collection($inputDirectoryUri)
     replace node $doc//body/ab[@type="translation"] with $translation,
     replace node $doc//listBibl[1] with $newWorksCited,
     replace node $doc//listBibl[2] with $newAdditionalBibl,
+    delete node $doc//comment(),
     fn:put($doc, fn:concat($outputDirectoryUri, $docId, ".xml"), map{'omit-xml-declaration': 'no'})
 )
