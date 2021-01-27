@@ -17,7 +17,7 @@ The process for preparing new data for deployment on the server are as follows, 
 
 ## Batch Update CSS Link
 
-New data should have the following xml stylesheet assocation in the xml prolog: `<?xml-stylesheet type="text/css" href="https://raw.githubusercontent.com/srophe/srophe-xQueries/master/Caesarea-Data-Entry-Phase2/testimonia-entry.css"?>`. The CSS form referred to in this line of code provided a stream-lined view of the data template enabling project editors to quickly and efficiently create new testimonia records. This link needs to be updated to connect records to the metadata-entry-phase CSS file.
+New data should have the following xml stylesheet assocation in the xml prolog: `<?xml-stylesheet type="text/css" href="https://raw.githubusercontent.com/srophe/srophe-xQueries/master/Caesarea-Data-Entry-Phase2/testimonia-metadata-entry.css"?>`. The CSS form referred to in this line of code provided a stream-lined view of the data template enabling project editors to quickly and efficiently create new testimonia records. This link needs to be updated to connect records to the metadata-entry-phase CSS file.
 
 Replace `<?xml-stylesheet type="text/css" href="https://raw.githubusercontent.com/srophe/srophe-xQueries/master/Caesarea-Data-Entry-Phase2/testimonia-entry.css"?>`
 
