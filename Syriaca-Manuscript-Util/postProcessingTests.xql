@@ -40,7 +40,7 @@ return $table
 
 declare function local:add-title($doc as node()) {
   let $blShelfMark := $doc//msIdentifier/altIdentifier/idno[@type="BL-Shelfmark"]/text()
-  let $blShelfMarkClean := fn:replace($blShelfMark, "[\D*]", "")
+  let $blShelfMarkClean := if (fn:contains($blShelfMark, "foll")) then fn:replace(fn:substring($blShelfMark, functx:index-of-match-first($blShelfMark, "\d"), 1)||functx:substring-after-match($blShelfMark, "\d"), ",", "") else fn:replace($blShelfMark, "[\D*]", "")
   let $title := <title level="a" xml:lang="en">{fn:concat("BL Add MS ", $blShelfMarkClean)}</title>
   (: insert node $title into $doc//titleStmt/ :)
   return $title  (:This should instead update the title of the original document:)
@@ -125,7 +125,7 @@ declare function local:updatePublicationStmt($doc as node(), $docUri as xs:strin
 
 declare function local:updateMsIdentifier($doc as node(), $docUri as xs:string, $lookupData) {
   let $blShelfMark := $doc//msIdentifier/altIdentifier/idno[@type="BL-Shelfmark"]/text()
-  let $blShelfMarkClean := fn:replace($blShelfMark, "[\D*]", "")
+  let $blShelfMarkClean := if (fn:contains($blShelfMark, "foll")) then fn:replace(fn:substring($blShelfMark, functx:index-of-match-first($blShelfMark, "\d"), 1)||functx:substring-after-match($blShelfMark, "\d"), ",", "") else fn:replace($blShelfMark, "[\D*]", "")
   let $arabicNumber := $lookupData[4]
   let $romanNumeral := $lookupData[3]
   let $msIdentifier := <msIdentifier>
