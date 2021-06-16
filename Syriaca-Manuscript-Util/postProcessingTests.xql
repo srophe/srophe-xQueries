@@ -53,8 +53,8 @@ declare function local:editorIdLookup($editorUri as xs:string?) {
   else if ($editorId = "dmichelson") then "David A. Michelson"
   else if($editorId = "akelly") then "Anna Kelly"
   else if ($editorId = "jpagan") then "Jessica Pagan"
-  else if ($editorId = "lruth") then "Lindsay Ruth"
-  else ()
+  else if ($editorId = "lruth") then "Lindsay Ruth" else if ($editorId = "eyonan") then "Eliana Yonan" else if ($editorId = "rbrasoveanu") then "Roman Brasoveanu" else if ($editorId = "ecgeitner") then "Emma Claire Geitner"
+  else () (:Note: the above line is structured as such to prevent line number references in the instructions from breaking. This is a change among many for refactoring. :)
 };
 
 declare function local:updateTitleStmt($doc as node()) {
