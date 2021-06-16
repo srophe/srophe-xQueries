@@ -452,7 +452,7 @@ for $doc in fn:collection($inputDirectory)
     (: replace node $doc//supportDesc/extent with local:updateExtent($doc//supportDesc/extent), :)
     if (not(empty(local:updateContentPending($doc//objectDesc/layoutDesc)))) then replace node $doc//objectDesc/layoutDesc with local:updateContentPending($doc//objectDesc/layoutDesc),
     replace node $doc//handDesc with local:updateHandDesc($doc),
-    replace node $doc//additions with local:updateAdditions($doc),
+    if ($doc//additions) then replace node $doc//additions with local:updateAdditions($doc),
     if (not(empty(local:updateContentPending($doc//msDesc/physDesc/bindingDesc)))) then replace node $doc//msDesc/physDesc/bindingDesc with local:updateContentPending($doc//msDesc/physDesc/bindingDesc),
     if (not(empty(local:updateContentPending($doc//msDesc/physDesc/sealDesc)))) then replace node  $doc//msDesc/physDesc/sealDesc with local:updateContentPending($doc//msDesc/physDesc/sealDesc),
     replace node $doc//additional with local:updateAdditional($doc, $lookupData),
