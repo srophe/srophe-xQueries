@@ -40,7 +40,7 @@ return $table
 
 declare function local:add-title($doc as node()) {
   let $blShelfMark := $doc//msIdentifier/altIdentifier/idno[@type="BL-Shelfmark"]/text()
-  let $blShelfMarkClean := if (fn:contains($blShelfMark, "foll")) then fn:replace(fn:substring($blShelfMark, functx:index-of-match-first($blShelfMark, "\d"), 1)||functx:substring-after-match($blShelfMark, "\d"), ",", "") else fn:replace($blShelfMark, "[\D*]", "")
+  let $blShelfMarkClean := fn:replace(fn:substring($blShelfMark, functx:index-of-match-first($blShelfMark, "\d"), 1)||functx:substring-after-match($blShelfMark, "\d"), ",", "")
   let $title := <title level="a" xml:lang="en">{fn:concat("BL Add MS ", $blShelfMarkClean)}</title>
   (: insert node $title into $doc//titleStmt/ :)
   return $title  (:This should instead update the title of the original document:)
@@ -125,7 +125,7 @@ declare function local:updatePublicationStmt($doc as node(), $docUri as xs:strin
 
 declare function local:updateMsIdentifier($doc as node(), $docUri as xs:string, $lookupData) {
   let $blShelfMark := $doc//msIdentifier/altIdentifier/idno[@type="BL-Shelfmark"]/text()
-  let $blShelfMarkClean := if (fn:contains($blShelfMark, "foll")) then fn:replace(fn:substring($blShelfMark, functx:index-of-match-first($blShelfMark, "\d"), 1)||functx:substring-after-match($blShelfMark, "\d"), ",", "") else fn:replace($blShelfMark, "[\D*]", "")
+  let $blShelfMarkClean := fn:replace(fn:substring($blShelfMark, functx:index-of-match-first($blShelfMark, "\d"), 1)||functx:substring-after-match($blShelfMark, "\d"), ",", "")
   let $arabicNumber := $lookupData[4]
   let $romanNumeral := $lookupData[3]
   let $msIdentifier := <msIdentifier>
@@ -409,7 +409,7 @@ return $newMsContents
 let $editor := "srophe-util"
 let $changeLog := "CHANGED: Added project metadata; metadata from Wright Decoder; msItem, handDesc, and additions enumeration; Wright Taxonomy designation"
 let $change := <change xmlns="http://www.tei-c.org/ns/1.0" who="http://syriaca.org/documentation/editors.xml#{$editor}" when="{fn:current-date()}">{$changeLog}</change>
-let $inputDirectory := "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/3_drafts/ElianaYonan/"
+let $inputDirectory := "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/3_drafts/EmmaClaireGeitner/"
 let $outputFilePath := "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/"
 let $empty := file:create-dir($outputFilePath)
 let $wrightDecoderCsv := file:read-text("C:\Users\anoni\Documents\GitHub\srophe\srophe-xQueries\Syriaca-Manuscript-Util\wrightDecoderSimple.csv")
@@ -417,7 +417,7 @@ let $wrightTaxonomyCsvUri := "C:\Users\anoni\Documents\GitHub\srophe\srophe-xQue
 let $wrightTaxonomyTable := local:createTaxonomyTable($wrightTaxonomyCsvUri)
 let $lookupLines := tokenize($wrightDecoderCsv, "\n")
 (:The following lines enable the script to verify if a record has already been generated and placed in one of the folders specified :)
-let $existingRecordPathList := ("C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/TransferredToDevServer/")
+let $existingRecordPathList := ("C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/need-ms-parts/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/TransferredToDevServer/")
 let $existingDocUris := 
 fn:distinct-values(for $coll in $existingRecordPathList
   for $doc in fn:collection($coll)
