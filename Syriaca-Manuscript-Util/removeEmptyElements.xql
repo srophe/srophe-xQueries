@@ -36,7 +36,7 @@ declare function local:remove-empty-attributes($element as element()) as element
 let $editor := "srophe-util"
 let $changeLog := "CHANGED: deleted empty elements and attributes"
 let $change := <change xmlns="http://www.tei-c.org/ns/1.0" who="http://syriaca.org/documentation/editors.xml#{$editor}" when="{fn:current-date()}">{$changeLog}</change>
-let $inputDirectory := "/Users/michelda/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/"
+let $inputDirectory := "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/"
 (: let $doc := fn:doc(fn:concat($inputDirectory, "49.xml")) :)
 for $doc in fn:collection($inputDirectory)
   where not($doc//msPart) and count($doc//revisionDesc/change[@who="http://syriaca.org/documentation/editors.xml#srophe-util"]) < 2
@@ -54,9 +54,9 @@ for $doc in fn:collection($inputDirectory)
       return $el
   }
   </msContents>
-  let $additionsUpdatedNoEmptyAttributes := local:remove-empty-attributes($doc//physDesc/additions)
-  let $noEmptyAttributeOrigin := local:remove-empty-attributes($doc//msDesc/history/origin)
+  let $additionsUpdatedNoEmptyAttributes := if($doc//physDesc/additions) then local:remove-empty-attributes($doc//physDesc/additions) else ()
+  let $noEmptyAttributeOrigin := if($doc//msDesc/history/origin) then local:remove-empty-attributes($doc//msDesc/history/origin) else ()
   return (replace node $doc//msContents with $revisedMsContents,
-      replace node $doc//physDesc/additions with $additionsUpdatedNoEmptyAttributes,
-      replace node $doc//msDesc/history/origin with $noEmptyAttributeOrigin,
+      if ($additionsUpdatedNoEmptyAttributes != "") then replace node $doc//physDesc/additions with $additionsUpdatedNoEmptyAttributes,
+      if ($noEmptyAttributeOrigin != "") then replace node $doc//msDesc/history/origin with $noEmptyAttributeOrigin,
       insert node $change before $doc//revisionDesc/change[1])
