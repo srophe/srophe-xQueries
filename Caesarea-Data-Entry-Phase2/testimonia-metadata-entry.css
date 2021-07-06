@@ -5,7 +5,7 @@
 /* CSS file for oXygen Author Mode form for inputing metadata into TEI XML records of Testimonia for Caesaria-Maritima.org
  * author: William L. Potter
  * version: 0.1
- * 
+ *
  * This CSS file is for the second stage of data entry once the "testimonia-entry.css" form has been completed. Here researchers can enter the testimonium ID and other key metadata not included in the initial data gathering stage
  *  */
 
@@ -324,12 +324,12 @@ ptr{
 }
 
 citedRange:before(9){
-  content: "Source Cited Range: " oxy_textfield(edit, "#text", columns, 30) " " 
+  content: "Source Cited Range: " oxy_textfield(edit, "#text", columns, 30) " "
   oxy_combobox(
   edit, "@unit",
   editable, "false",
-  values, "bk, ch, section, p, col, fol, line, entry, vol, letter, map",
-  labels, "book, chapter, section, page, column, folio, line, entry, volume, letter, map"
+  values, "bk, ch, section, p, col, fol, line, entry, vol, letter, map, part, fragment",
+  labels, "book, chapter, section, page, column, folio, line, entry, volume, letter, map, part, fragment"
   );
   color: black;
   font-size: 14px;
