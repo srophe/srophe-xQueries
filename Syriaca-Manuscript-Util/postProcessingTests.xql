@@ -308,7 +308,7 @@ declare function local:updateProfileDesc($doc as node(), $lookupData, $table){
         <language ident="grc">Ancient Greek</language>
         <language ident="cop">Coptic</language>
       </langUsage>
-  let $arabicNumeral := xs:integer($lookupData[4])
+  let $arabicNumeral := if ($lookupData[4] != "") then xs:integer($lookupData[4]) else -1
   let $taxonomyId := for $line in $table/line[@n>1]
     let $lineNum := $line/@n
     where $arabicNumeral ge xs:integer($line/field[4]/text()) and $arabicNumeral lt xs:integer($table/line[@n=$lineNum+1]/field[4]/text())
