@@ -54,7 +54,7 @@ declare function local:editorIdLookup($editorUri as xs:string?) {
   else if($editorId = "akelly") then "Anna Kelly"
   else if ($editorId = "jpagan") then "Jessica Pagan"
   else if ($editorId = "lruth") then "Lindsay Ruth" else if ($editorId = "eyonan") then "Eliana Yonan" else if ($editorId = "rbrasoveanu") then "Roman Brasoveanu" else if ($editorId = "ecgeitner") then "Emma Claire Geitner"
-  else () (:Note: the above line is structured as such to prevent line number references in the instructions from breaking. This is a change among many for refactoring. :)
+  else () (:Note: the above line is structured as such to prevent line number references in the instructions from breaking. This is a candidate among many for refactoring. :)
 };
 
 declare function local:updateTitleStmt($doc as node()) {
@@ -409,7 +409,7 @@ return $newMsContents
 let $editor := "srophe-util"
 let $changeLog := "CHANGED: Added project metadata; metadata from Wright Decoder; msItem, handDesc, and additions enumeration; Wright Taxonomy designation"
 let $change := <change xmlns="http://www.tei-c.org/ns/1.0" who="http://syriaca.org/documentation/editors.xml#{$editor}" when="{fn:current-date()}">{$changeLog}</change>
-let $inputDirectory := "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/3_drafts/EmmaClaireGeitner/"
+let $inputDirectory := "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/3_drafts/LindsayRuth/"
 let $outputFilePath := "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/"
 let $empty := file:create-dir($outputFilePath)
 let $wrightDecoderCsv := file:read-text("C:\Users\anoni\Documents\GitHub\srophe\srophe-xQueries\Syriaca-Manuscript-Util\wrightDecoderSimple.csv")
@@ -417,7 +417,7 @@ let $wrightTaxonomyCsvUri := "C:\Users\anoni\Documents\GitHub\srophe\srophe-xQue
 let $wrightTaxonomyTable := local:createTaxonomyTable($wrightTaxonomyCsvUri)
 let $lookupLines := tokenize($wrightDecoderCsv, "\n")
 (:The following lines enable the script to verify if a record has already been generated and placed in one of the folders specified :)
-let $existingRecordPathList := ("C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/need-ms-parts/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/TransferredToDevServer/")
+let $existingRecordPathList := ("C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/postProcessingOutputs/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/need-ms-parts/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/5_finalized/TransferredToDevServer/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/406-msParts/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/652-msParts/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/190-to-be-edited/", "C:/Users/anoni/Documents/GitHub/srophe/wright-catalogue/data/4_to_be_checked/852-ms-parts/")
 let $existingDocUris := 
 fn:distinct-values(for $coll in $existingRecordPathList
   for $doc in fn:collection($coll)
