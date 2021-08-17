@@ -186,8 +186,8 @@ let $projectUriBase := "https://caesarea-maritima.org/"
 let $editorUriBase := "https://caesarea-maritima.org/documentation/editors.xml#"
 let $editorsXmlDocUri := "https://raw.githubusercontent.com/srophe/caesarea/master/documentation/editors.xml"
 let $periodTaxonomyDocUri := "https://raw.githubusercontent.com/srophe/caesarea/master/documentation/caesarea-maritima-historical-era-taxonomy.xml"
-let $inputDirectoryUri := "C:\Users\anoni\Desktop\CAESAREA-FILES\post-processed_2021-07-06\"
-let $outputDirectoryUri := "C:\Users\anoni\Desktop\CAESAREA-FILES\test-output2\"
+let $inputDirectoryUri := "C:\Users\anoni\Desktop\CAESAREA-FILES\July-files\"
+let $outputDirectoryUri := "C:\Users\anoni\Desktop\CAESAREA-FILES\july-output\"
 let $currentDate := fn:current-date()
 
 (: START MAIN SCRIPT :)
