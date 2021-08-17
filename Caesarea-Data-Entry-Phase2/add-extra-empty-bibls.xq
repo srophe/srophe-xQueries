@@ -5,7 +5,7 @@ declare namespace functx = "http://www.functx.com";
 
 let $inputDirectoryUri := "C:\Users\anoni\Documents\GitHub\srophe\caesarea-data\data"
 for $doc in fn:collection($inputDirectoryUri)
-  let $newBibls := for $i in (1, 2, 3, 4)
+  let $newBibls := for $i in (1, 2, 3, 4, 5, 6, 7, 8)
     return if ($i > fn:count($doc//listBibl[2]/bibl)) then <bibl><ptr target=""/><citedRange unit=""/><citedRange unit=""/></bibl>
     else $doc//listBibl[2]/bibl[$i]
   let $newListBibl := <listBibl>{$doc//listBibl[2]/head, $newBibls}</listBibl>
