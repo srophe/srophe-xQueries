@@ -1,7 +1,10 @@
 ---
 Title: Syriaca Manuscripts 2019-2020 Processing Util Readme
 Author: William L. Potter
+Status: Deprecated
 ---
+
+**N.B.** These instructions and corresponding script have been deprecated and are no longer supported. The current version of the post-processing script may be found [here](https://github.com/srophe/wright-catalogue/blob/master/drivers/mss-post-processing-driver.xq). Instructions may be found [here](https://github.com/srophe/wright-catalogue/wiki/Post-Processing-Drafted-Manuscript-Records). This deprecated script is being kept for reference and archival purposes.
 
 # Post-Processing Scripts for the 2019-2020 Phase of Syriaca Manuscript Encoding
 
