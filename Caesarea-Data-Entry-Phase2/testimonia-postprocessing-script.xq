@@ -170,15 +170,53 @@ declare function local:update-excerpt($excerpt as node(), $excerptLangCode as xs
   let $quoteSeq := if(fn:string($excerpt/@type) = "edition") then "1" else "2"
   let $correspLangCode := if($excerptLangCode = "en") then $docLangCode else "en"
   let $anchor := <anchor xml:id="testimonia-{$docId}.{$excerptLangCode}.1" corresp="testimonia-{$docId}.{$correspLangCode}.1"/>
-  let $otherElements := $excerpt/child::node()
-  return element ab {attribute type {fn:string($excerpt/@type)}, attribute xml:lang {$excerptLangCode}, attribute xml:id {"quote"||$docId||"-"||$quoteSeq}, attribute source {"#bib"||$docId||"-"||$quoteSeq}, $anchor, $otherElements}
+  let $nonEmptyChildNodes := 
+    for $node in $excerpt/child::node()
+    return if($node instance of element() and name($node) = "note" and not($node/text())) then () else $node (: do not return empty note elements :)
+  return element ab {$excerpt/@type, attribute xml:lang {$excerptLangCode}, attribute xml:id {"quote"||$docId||"-"||$quoteSeq}, attribute source {"#bib"||$docId||"-"||$quoteSeq}, $anchor, $nonEmptyChildNodes}
 };
 
 declare function local:update-bibls($listBibl as node(), $docId as xs:string, $isWorksCited as xs:string, $projectUriBase as xs:string){
   let $bibls := for $bibl at $i in $listBibl/bibl
-    let $newPtr := if (fn:string($bibl/ptr/@target) !="") then <ptr target="{$projectUriBase}bibl/{fn:substring-after(fn:string($bibl/ptr/@target), "items/")}"/> else <ptr target=""/>
-    return if ($isWorksCited = "yes") then element bibl {attribute xml:id {"bib"||$docId||"-"||$i}, $newPtr, $bibl/*[not(self::ptr)]} else element bibl {$newPtr, $bibl/*[not(self::ptr)]}
-  return element listBibl {$listBibl/head, $bibls}
+    where fn:string($bibl/ptr/@target) !="" (: only return bibls that have an assigned ptr :)
+    let $newUri := $projectUriBase||"bibl/"||substring-after(fn:string($bibl/ptr/@target), "items/")
+    let $newUri := if(ends-with($newUri, "/")) then substring($newUri, 1, string-length($newUri) - 1) else $newUri
+    let $newPtr := <ptr target="{$newUri}"/>
+    let $nonEmptyCitedRanges := 
+      for $citedRange in $bibl/citedRange
+      where $citedRange/text()
+      return $citedRange
+    let $biblId := if ($isWorksCited = "yes") then attribute xml:id {"bib"||$docId||"-"||$i} else ()
+    return element bibl {$biblId, $newPtr, $nonEmptyCitedRanges}
+  return if(count($bibls) > 0) then element listBibl {$listBibl/head, $bibls} (: only return a listBibl if there are non-empty bibls :)
+};
+
+(:
+Fixes https://github.com/srophe/caesarea-data/issues/108 for new data
+:)
+declare function local:normalize-related-subjects-notes($doc as node())
+as node()+
+{
+  for $note in $doc//text/body/note
+  let $relatedSubjects :=
+    (
+    $note/p/text(),
+    $note/p/list/item/p/text(),
+    $note/list/item/text(),
+    $note/p/list/item/text(),
+    $note/list/item/list/item/text(),
+    $note/list/item/p/text(),
+    $note/p/hi/text(),
+    $note/p/hi/hi/text(),
+    $note/hi/text(),
+    $note/text()
+    )
+  return element {node-name($note)} {$note/@*,
+    for $subject in $relatedSubjects
+    where normalize-space($subject) != ""
+    order by $subject
+    return element {QName("http://www.tei-c.org/ns/1.0", "p")} {normalize-space($subject)}
+  }
 };
 
 (: GLOBAL PARAMETERS :)
@@ -210,6 +248,7 @@ for $doc in fn:collection($inputDirectoryUri)
   let $translation := local:update-excerpt($doc//body/ab[@type="translation"], "en", $docId, fn:string($doc//profileDesc/langUsage/language/@ident))
   let $newWorksCited := local:update-bibls($doc//listBibl[1], $docId, "yes", $projectUriBase)
   let $newAdditionalBibl := local:update-bibls($doc//listBibl[2], $docId, "no", $projectUriBase)
+  let $normalizedRelatedSubjectsNotes := local:normalize-related-subjects-notes($doc)
   
   (:Updating Expressions:)
   return if($docId != "") then (
@@ -227,6 +266,9 @@ for $doc in fn:collection($inputDirectoryUri)
     replace node $doc//body/ab[@type="translation"] with $translation,
     replace node $doc//listBibl[1] with $newWorksCited,
     replace node $doc//listBibl[2] with $newAdditionalBibl,
+    if(not($doc//body/desc[@type="contet"]/text())) then delete node $doc//body/desc[@type="context"],
     delete node $doc//comment(),
+    delete node $doc//body/note,
+    insert node $normalizedRelatedSubjectsNotes as last into $doc//body,
     fn:put($doc, fn:concat($outputDirectoryUri, $docId, ".xml"), map{'omit-xml-declaration': 'no'})
 )
