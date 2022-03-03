@@ -19,9 +19,9 @@ let $records :=
   (: there are cases where more than one record has been merged in, resulting in multiple deprecated URIs. :)
   (: get all the text nodes, strip the "/tei" part, and join them with a separating pipe character, "|" :)
   let $deprecatedUri := $doc//publicationStmt/idno[@type="deprecated"]/text()
-  let $deprecratedUri := 
+  let $deprecatedUri := 
     for $uri in $deprecatedUri
-    return substring-before($deprecatedUri, "/tei")
+    return substring-before($uri, "/tei")
   let $deprecatedUri := string-join($deprecatedUri, "|")
   
   let $recordTitle := $doc//titleStmt/title[@level="a"]//text() (: using the a-level title from the titleStmt for now; headwords are currently not consistent across entity types (waiting on SBD and NHSL batch changes... :)
