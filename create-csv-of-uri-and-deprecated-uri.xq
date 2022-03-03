@@ -1,5 +1,11 @@
 xquery version "3.1";
 
+
+(:~ 
+: @author William L. Potter
+: @version 1.0
+:)
+
 declare default element namespace "http://www.tei-c.org/ns/1.0";
 
 
