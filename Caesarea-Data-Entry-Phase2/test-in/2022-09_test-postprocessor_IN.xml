@@ -24,7 +24,7 @@
          </editionStmt><!-- Static metadata -->
          <publicationStmt>
             <authority>Caesarea City and Port Exploration Project</authority><!-- Static metadata -->
-            <idno type="URI"/><!-- Just need numerical sequence -->
+            <idno type="URI">x9999</idno><!-- Just need numerical sequence -->
             <availability>
                <licence target="http://creativecommons.org/licenses/by/4.0">
                   <p>Except for materials quoted from other sources, this entry is copyright 2021 by the contributors (Joseph L. Rife, et al.) and the Caesarea City and Port Exploration Project. It is licensed under the Attribution 4.0 International (CC BY 4.0) license.</p> <p>Some texts quoted in this entry may be in the public domain in the United States. No copyright is asserted for these quotations.</p> <p>Some texts quoted in this entry may have copyright restrictions and are reused under Section 107 of the Copyright Act of 1976 (Title 17 of the United States Code) which permits “fair use” of copyrighted materials for purposes such as criticism, comment, scholarship, and research. These texts remain under copyright of their owners. No copyright infringement is intended.</p>
