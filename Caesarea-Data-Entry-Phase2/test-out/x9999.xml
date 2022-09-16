@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model type="application/xml" href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/css" href="testimonia-metadata-entry.css"?>
+<?xml-stylesheet type="text/css" href="https://raw.githubusercontent.com/srophe/srophe-xQueries/master/Caesarea-Data-Entry-Phase2/testimonia-metadata-entry.css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -29,9 +29,6 @@
                ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L.
                Rife</editor>
             <editor role="creator"
-               ref="https://caesarea-maritima.org/documentation/editors.xml#wpotter">William L.
-               Potter</editor>
-            <editor role="creator"
                ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L.
                Rife</editor>
 
@@ -42,13 +39,11 @@
             </respStmt>
             <respStmt>
                <resp>URNs and other metadata added by</resp>
-               <name ref="https://caesarea-maritima.org/documentation/editors.xml#wpotter">William
-                  L. Potter</name>
+               <name ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L.
+                  Rife</name>
             </respStmt>
             <respStmt>
                <resp>Electronic text added by</resp>
-               <name ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L.
-                  Rife</name>
             </respStmt>
             <respStmt>
                <resp>Testimonia identified by</resp>
@@ -321,10 +316,9 @@
                >Book of Places</title>
             <ref target="#bibx9999-1">137</ref> written by <persName
                ref="http://viaf.org/viaf/95147024" role="author">Jerome</persName> in <origDate
-               notBefore="0390" notAfter="420"
-               period="#byzantine #earlyIslamic #crusader #lateIslamic #ottoman #britishTerritorialAdministration #britishMandate"
-               >390-420 CE</origDate>. This work was likely written in <origPlace
-               ref="https://pleiades.stoa.org/places/687856">Bethlehem</origPlace>.</creation>
+               notBefore="0390" notAfter="0420" period="#byzantine">390-420 CE</origDate>. This work
+            was likely written in <origPlace ref="https://pleiades.stoa.org/places/687856"
+               >Bethlehem</origPlace>.</creation>
          <langUsage>
             <language ident="la">Latin</language>
          </langUsage>
@@ -337,8 +331,6 @@
          </textClass>
       </profileDesc>
       <revisionDesc status="draft">
-         <change who="wpotter" when="">ADDED: testimonium ID, URNs, URLs to edition and translation,
-            and Bibl URIs</change>
          <change who="jrife" when="">CREATED: testimonium</change>
       </revisionDesc>
    </teiHeader>
@@ -347,16 +339,18 @@
          <ab type="identifier">
             <idno type="URI">https://caesarea-maritima.org/testimonia/x9999</idno>
          </ab>
-         <desc type="abstract" xml:id="abstractx9999-1">and <quote>
+         <desc type="abstract" xml:id="abstractx9999-1">
+            <quote>
+               <placeName>Caesareae</placeName>
+            </quote>, and <quote>
                <placeName>Caesarea</placeName>
-            </quote> is directly attested at <persName ref="http://viaf.org/viaf/95147024"
+            </quote> are directly attested at <persName ref="http://viaf.org/viaf/95147024"
                role="author">Jerome</persName>, <title xml:lang="en" ref="" type="uniform" level="m"
                >Book of Places</title>
             <ref target="#bibx9999-1">137</ref>. This passage was written circa <origDate
-               notBefore="0390" notAfter="420"
-               period="#byzantine #earlyIslamic #crusader #lateIslamic #ottoman #britishTerritorialAdministration #britishMandate"
-               >390-420 CE</origDate> possibly in <origPlace
-               ref="https://pleiades.stoa.org/places/687856">Bethlehem</origPlace>.</desc>
+               notBefore="0390" notAfter="0420" period="#byzantine">390-420 CE</origDate> possibly
+            in <origPlace ref="https://pleiades.stoa.org/places/687856"
+            >Bethlehem</origPlace>.</desc>
          <desc type="context">In his lexicon of place names in Hebrew Scripture, Jerome wrote that
             Nafeddor named at <title>Joshua 11:12</title> was located near Caesarea Maritima on the
             road to Ptolemais (Akko), repeating his lemma under Dor Nafeth (79). He also cited the
@@ -364,11 +358,10 @@
             information is recorded in the parallel passage at <title>Eusebius, Dictionary of Place
                Names 136</title>, written roughly one century before Jerome’s work.</desc>
          <ab type="edition" xml:lang="la" xml:id="quotex9999-1" source="#bibx9999-1">
-            <anchor xml:id="testimonia-x9999.la.1" corresp="#testimonia-x9999.en.1"/>
-            <note type="textual">Nefeddor, quod Symmachus interpretatur Maritimam. Dor autem est
-               oppidum iam desertum in nono miliario <placeName>Caesareae</placeName> pergentibus
-               Ptolomaïdem.</note>
-            <note type="textual">Ed. Klosterman 1904</note>
+            <anchor xml:id="testimonia-x9999.la.1" corresp="#testimonia-x9999.en.1"/>Nefeddor, quod
+            Symmachus interpretatur Maritimam. Dor autem est oppidum iam desertum in nono miliario
+               <placeName>Caesareae</placeName> pergentibus Ptolomaïdem.<note type="textual">Ed.
+               Klosterman 1904</note>
             <idno type="CTS-URN"/>
             <ref target=""/>
          </ab>
@@ -393,10 +386,6 @@
                <ptr target="https://caesarea-maritima.org/bibl/66T989F7"/>
             </bibl>
          </listBibl>
-
-
-
-
          <note type="related-texts">
             <p>Eusebius, Dictionary of Place Names 136</p>
             <p>Joshua 11:12</p>
