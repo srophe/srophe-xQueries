@@ -24,11 +24,11 @@
          </editionStmt><!-- Static metadata -->
          <publicationStmt>
             <authority>Caesarea City and Port Exploration Project</authority><!-- Static metadata -->
-            <idno type="URI">x9999</idno><!-- Just need numerical sequence -->
+            <idno type="URI"/><!-- Just need numerical sequence -->
             <availability>
                <licence target="http://creativecommons.org/licenses/by/4.0">
-                  <p>Distributed under a Creative Commons Attribution 4.0 Unported License.</p>
-               </licence><!-- Static metadata -->
+                  <p>Except for materials quoted from other sources, this entry is copyright 2021 by the contributors (Joseph L. Rife, et al.) and the Caesarea City and Port Exploration Project. It is licensed under the Attribution 4.0 International (CC BY 4.0) license.</p> <p>Some texts quoted in this entry may be in the public domain in the United States. No copyright is asserted for these quotations.</p> <p>Some texts quoted in this entry may have copyright restrictions and are reused under Section 107 of the Copyright Act of 1976 (Title 17 of the United States Code) which permits “fair use” of copyrighted materials for purposes such as criticism, comment, scholarship, and research. These texts remain under copyright of their owners. No copyright infringement is intended.</p>
+               </licence>
             </availability>
             <date/><!-- add via post-processing -->
          </publicationStmt>
@@ -56,8 +56,7 @@
                   <title>Caesarea-Maritima.org Chronology</title>: This chronology is adapted from the chronology used in <bibl>
                      <title>The New Encyclopedia of Archaeological Excavations in the Holy Land</title>
                      <ptr target="https://caesarea-maritima.org/bibl/HG492LV3"/>
-                  </bibl>.  This taxonomy is used in the <gi>catRef</gi> encoding to classify the testimonia according to the time period(s) of the events described, rather than the date of composition of the testimonium. For example, Josephus may describe events occuring well before the period of his writing.
-               </desc>
+                  </bibl>. This taxonomy is used in the <gi>catRef</gi> encoding to classify the testimonia according to the time period(s) of the events described, rather than the date of composition of the testimonium. For example, Josephus may describe events occuring well before the period of his writing.</desc>
                <category xml:id="lowerPaleolithic">
                   <catDesc>Lower Paleolithic, 999999-119999 BCE</catDesc>
                </category>
@@ -158,7 +157,7 @@
                   <catDesc>Babylonian and Persian Periods, 585-331 BCE</catDesc>
                </category>
                <category xml:id="classicalPeriod">
-                   <catDesc>Classical Period, 480-336 BCE</catDesc>
+                  <catDesc>Classical Period, 480-336 BCE</catDesc>
                </category>
                <category xml:id="earlyHellenistic">
                   <catDesc>Early Hellenistic Period, 331-166 BCE</catDesc>
@@ -213,18 +212,18 @@
                </category>
             </taxonomy>
             <taxonomy xml:id="CM-Testimonia-Type">
-                <desc>
-                <title>Caesarea-Maritima.org Testimonia Typology</title>: This typology defines three subsets of testimonia employed by the project and is used in the <gi>catRef</gi> below to further categorize a given testimonia record.
-                </desc>
-                <category xml:id="direct">
-                    <catDesc>A "direct testimonium" contains a word or phrase that is a direct reference to, or name for, the conceptual place Caeseara Maritima or its environs in part or in whole. When a "direct testimonium" also contains indirect references, the classification by type is nevertheless marked only as "direct".</catDesc>
-                </category>
-                <category xml:id="indirect">
-                    <catDesc>An "indirect testimonium" makes only an indirect reference to the conceptual place Caeseara Maritima or its environs in part or in whole. This indirect reference may take the form of a common noun or may be implied by context.</catDesc>
-                </category>
-                <category xml:id="toponymic-epithet">
-                    <catDesc>A "toponymic testimonium" contains a toponymic epithet related to the conceptual place Caeseara Maritima or its environs. When a "direct testimonium" also contain a "toponymic testimonium", the testimonium is marked as belonging to both types. These two types do not always overlap and thus our data set also includes "toponymic testimonia" which are not "direct testimonia".</catDesc>
-                </category> 
+               <desc>
+                  <title>Caesarea-Maritima.org Testimonia Typology</title>: This typology defines three subsets of testimonia employed by the project and is used in the <gi>catRef</gi> below to further categorize a given testimonia record.
+               </desc>
+               <category xml:id="direct">
+                  <catDesc>A "direct testimonium" contains a word or phrase that is a direct reference to, or name for, the conceptual place Caeseara Maritima or its environs in part or in whole. When a "direct testimonium" also contains indirect references, the classification by type is nevertheless marked only as "direct".</catDesc>
+               </category>
+               <category xml:id="indirect">
+                  <catDesc>An "indirect testimonium" makes only an indirect reference to the conceptual place Caeseara Maritima or its environs in part or in whole. This indirect reference may take the form of a common noun or may be implied by context.</catDesc>
+               </category>
+               <category xml:id="toponymic-epithet">
+                  <catDesc>A "toponymic testimonium" contains a toponymic epithet related to the conceptual place Caeseara Maritima or its environs. When a "direct testimonium" also contain a "toponymic testimonium", the testimonium is marked as belonging to both types. These two types do not always overlap and thus our data set also includes "toponymic testimonia" which are not "direct testimonia".</catDesc>
+               </category> 
             </taxonomy>
          </classDecl>
       </encodingDesc>
@@ -251,8 +250,7 @@
          </textClass>
       </profileDesc>
       <revisionDesc status="draft">
-         <change who="wpotter" when="">ADDED: testimonium ID, URNs, URLs to edition and translation,
-            and Bibl URIs</change>
+         <change who="jrife" when="">ADDED: testimonium ID, URNs, URLs to edition and translation, and Bibl URIs</change>
          <change who="jrife" when="">CREATED: testimonium</change>
       </revisionDesc>
    </teiHeader>
