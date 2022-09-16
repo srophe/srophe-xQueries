@@ -31,6 +31,9 @@
             <editor role="creator"
                ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L.
                Rife</editor>
+            <editor role="creator"
+               ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L.
+               Rife</editor>
 
             <respStmt>
                <resp>TEI encoding by</resp>
@@ -44,6 +47,8 @@
             </respStmt>
             <respStmt>
                <resp>Electronic text added by</resp>
+               <name ref="https://caesarea-maritima.org/documentation/editors.xml#jrife">Joseph L.
+                  Rife</name>
             </respStmt>
             <respStmt>
                <resp>Testimonia identified by</resp>
@@ -59,7 +64,17 @@
             <idno type="URI">https://caesarea-maritima.org/testimonia/x9999/tei</idno>
             <availability>
                <licence target="http://creativecommons.org/licenses/by/4.0">
-                  <p>Distributed under a Creative Commons Attribution 4.0 Unported License.</p>
+                  <p>Except for materials quoted from other sources, this entry is copyright 2021 by
+                     the contributors (Joseph L. Rife, et al.) and the Caesarea City and Port
+                     Exploration Project. It is licensed under the Attribution 4.0 International (CC
+                     BY 4.0) license.</p>
+                  <p>Some texts quoted in this entry may be in the public domain in the United
+                     States. No copyright is asserted for these quotations.</p>
+                  <p>Some texts quoted in this entry may have copyright restrictions and are reused
+                     under Section 107 of the Copyright Act of 1976 (Title 17 of the United States
+                     Code) which permits “fair use” of copyrighted materials for purposes such as
+                     criticism, comment, scholarship, and research. These texts remain under
+                     copyright of their owners. No copyright infringement is intended.</p>
                </licence>
             </availability>
             <date>2022-09-16-05:00</date>
@@ -125,7 +140,7 @@
                   </bibl>. This taxonomy is used in the <gi>catRef</gi> encoding to classify the
                   testimonia according to the time period(s) of the events described, rather than
                   the date of composition of the testimonium. For example, Josephus may describe
-                  events occuring well before the period of his writing. </desc>
+                  events occuring well before the period of his writing.</desc>
                <category xml:id="lowerPaleolithic">
                   <catDesc>Lower Paleolithic, 999999-119999 BCE</catDesc>
                </category>
@@ -331,6 +346,8 @@
          </textClass>
       </profileDesc>
       <revisionDesc status="draft">
+         <change who="jrife" when="">ADDED: testimonium ID, URNs, URLs to edition and translation,
+            and Bibl URIs</change>
          <change who="jrife" when="">CREATED: testimonium</change>
       </revisionDesc>
    </teiHeader>
