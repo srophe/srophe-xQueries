@@ -116,13 +116,13 @@ declare function local:lookup-period-range($lower as xs:string, $upper as xs:str
   let $periodSeq := for $cat in $xmlTable//*:record
     where ($lower >= $cat/*:notBefore/text() and $lower <= $cat/*:notAfter/text()) or ($upper >= $cat/*:notBefore/text() and $upper <= $cat/*:notAfter/text()) or ($lower <= $cat/*:notBefore/text() and $upper >= $cat/*:notAfter/text())
     return $cat/*:catId/text()
-  return "#"||fn:string-join($periodSeq, "# ")
+  return "#"||fn:string-join($periodSeq, " #")
 };
 declare function local:lookup-period-singleDate($date as xs:string, $xmlTable as node()) as xs:string+ {
   let $periodSeq := for $cat in $xmlTable//*:record
     where $date >= $cat/*:notBefore/text() and $date <= $cat/*:notAfter/text()
     return $cat/*:catId/text()
-  return "#"||fn:string-join($periodSeq, "# ")
+  return "#"||fn:string-join($periodSeq, " #")
 };
 
 declare function local:create-langString($langUsage){
