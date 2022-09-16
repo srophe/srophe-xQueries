@@ -5,7 +5,7 @@
 /* CSS file for oXygen Author Mode form for inputing TEI XML records of Testimonia for Caesaria-Maritima.org
  * author: William L. Potter
  * version: 1.0
- * 
+ *
  * This CSS file is for the first stage of data entry and does not include entry of a testimonium's URI, CTS-URN, or other metadata, for which see the "testimonia-metadata-entry.css" file
  *  */
 
@@ -13,6 +13,7 @@
 
 * {
 display: block;
+color: black;
 }
 placeName {
     display: inline;
@@ -119,9 +120,9 @@ langUsage > language
 edit, '@ident',
 editable, false,
 values, 'grc, ar, hy, cop, gez, he, tmr, jpa, la, fro, pro, syr',
-labels, 'Ancient Greek, Arabic, Armenian, Coptic, Geʿez, Hebrew, Jewish Babylonian Aramaic, Jewish Palestinian Aramaic, Latin, Old French, Old Provençal, Syriac'
+labels, 'Ancient Greek, Arabic, Armenian, Coptic, Geʿez, Hebrew, Jewish Babylonian Aramaic, Jewish Palestinian Aramaic, Latin, Old French, Old Provençal, Syriac',
+color, 'inherit'
 );
-  color: black;
   font-size: 18px;
 font-weight: bold;
   background-color: lightyellow;
@@ -137,7 +138,8 @@ catRef[scheme="testimonia-type"]{
   content: 'Testimonium Type: ' oxy_checkbox(
 edit, '@target',
 values, '#direct, #indirect, #toponymic-epithet',
-labels, 'Direct Reference to Caesarea, Indirect Reference to Caesarea, Toponymic Epithet which Includes Caesarea'
+labels, 'Direct Reference to Caesarea, Indirect Reference to Caesarea, Toponymic Epithet which Includes Caesarea',
+color, "black"
 )
 }
 
@@ -162,7 +164,8 @@ catRef[scheme="#CM-NEAEH"]{
 edit, '@target',
 values, '#lowerPaleolithic, #upperAcheulean, #acheulean, #mousterian, #middlePaleolithic, #upperPaleolithic, #kebaran, #epipaleolithic, #geometricKebaran, #natufianCulture, #pre-potteryNeolithic, #potteryNeolithic, #chalcolithic, #earlyBronzeAge, #bronzeAge, #earlyBronzeAgeIa-b, #earlyBronzeAgeIi, #earlyBronzeAgeIii, #middleBronzeAge, #middleBronzeAgeI, #middleBronzeAgeIia, #middleBronzeAgeIib, #lateBronzeAge, #lateBronzeAgeI, #lateBronzeAgeIia, #lateBronzeAgeIib, #ironAge, #ironAgeIa, #ironAgeIb, #ironAgeIia, #ironAgeIib, #ironIic, #ironAgeIic, #babylonianAndPersian, #classicalPeriod, #earlyHellenistic, #hellenistic, #earlyNabatean, #nabateanKingdom, #lateHellenistic, #earlyRoman, #herodian, #middleNabatean, #lateRoman, #byzantine, #earlyIslamic, #crusader, #lateIslamic, #ottoman, #britishTerritorialAdministration, #britishMandate, #modernState',
 labels, "Lower Paleolithic: 999999-119999 BCE, Upper Acheulean: 498050-148050 BP, Acheulean: 298050-148050 BP, Mousterian: 138050-38050 BP, Middle Paleolithic: 119999-44999 BCE, Upper Paleolithic: 44999-17999 BCE, Kebaran : 18050-13050 BP, Epipaleolithic: 17999-8299 BCE, Geometric Kebaran: 12499-10899 BCE, Natufian Culture: 10799-8499 BCE, Pre-Pottery Neolithic: 8299-5499 BCE, Pottery Neolithic: 5499-4499 BCE, Chalcolithic: 4499-3299 BCE, Early Bronze Age: 3299-2199 BCE, Bronze Age: 3299-1199 BCE, Early Bronze Age IA-B: 3299-2999 BCE, Early Bronze Age II: 2999-2699 BCE, Early Bronze Age III: 2699-2199 BCE, Middle Bronze Age: 2199-1549 BCE, Middle Bronze Age I: 2199-1999 BCE, Middle Bronze Age IIA: 1999-1749 BCE, Middle Bronze Age IIB: 1749-1549 BCE, Late Bronze Age: 1599-1200 BCE, Late Bronze Age I: 1549-1399 BCE, Late Bronze Age IIA: 1399-1299 BCE, Late Bronze Age IIB: 1299-1199 BCE, Iron Age: 1199-585 BCE, Iron Age IA: 1199-1149 BCE, Iron Age IB: 1149-999 BCE, Iron Age IIA: 999-899 BCE, Iron Age IIB: 899-699 BCE, Iron IIC: 799-731 BCE, Iron Age IIC: 699-585 BCE, Babylonian and Persian Periods:  585-331 BCE, Classical Period: 480-336 BCE, Early Hellenistic Period:  331-166 BCE, Hellenistic Period:  331-36 BCE, Early Nabatean Period:  331-36 BCE, Nabatean Kingdom:  167 BCE-106 CE, Late Hellenistic Period:  166-36 BCE, Early Roman Period:  36 BCE-132 CE, Herodian Period:  36 BCE-70 CE, Middle Nabatean Period:  24 BCE-50 CE, Late Roman Period:  132-324 CE, Byzantine Period:  324-638 CE, Early Islamic Period:  638-1099 CE, Crusader Period:  1099-1291 CE, Late Islamic Period:  1291-1516 CE, Ottoman Period:  1516-1917 CE, British Territorial Administration Period:  1970-1920 CE, British Mandate Period:  1920-1948 CE, Modern State:  1948- CE",
-columns, 5
+columns, 5,
+color, 'black'
 )
 }
 
@@ -263,6 +266,7 @@ ab > ref{
 listBibl:first-of-type > head:after(1) {
     content: "\A Add in this section the bibliographic data for the sources of the testimonium excerpts, starting with the edition followed by the translation.";
   color: black;
+  background-color: lightyellow;
   font-size: 14px;
 }
 
@@ -316,7 +320,7 @@ ptr{
 }
 
 citedRange:before(9){
-  content: "Source Cited Range: " oxy_textfield(edit, "#text", columns, 30) " " 
+  content: "Source Cited Range: " oxy_textfield(edit, "#text", columns, 30) " "
   oxy_combobox(
   edit, "@unit",
   editable, "false",
