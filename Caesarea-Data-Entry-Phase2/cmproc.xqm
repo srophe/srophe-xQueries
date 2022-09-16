@@ -26,10 +26,10 @@ declare default element namespace "http://www.tei-c.org/ns/1.0";
 
 declare function cmproc:create-editor-elements($refDoc as node(), $changeStmts as node()+, $editorUriBase as xs:string) {
   for $editor in $changeStmts
-    let $editorId := fn:string($editor/@who)
+    let $editorId := string($editor/@who)
     let $editorString := for $e in $refDoc/TEI/text/body/listPerson/person
-      where $editorId = fn:string($e/@xml:id)
-      return fn:normalize-space(fn:string-join($e//text(), " "))
+      where $editorId = string($e/@xml:id)
+      return normalize-space(string-join($e//text(), " "))
     return <editor role="creator" ref="{$editorUriBase||$editorId}">{$editorString}</editor>
 };
 
@@ -40,10 +40,10 @@ declare function cmproc:create-respStmts($refDoc as node(), $changeStmts as node
   let $teiRespName := <name ref="{$editorUriBase||"wpotter"}">William L. Potter</name>
   
   let $respStmtNameSeq := for $editor in $changeStmts
-    let $editorId := fn:string($editor/@who)
+    let $editorId := string($editor/@who)
     let $editorString := for $e in $refDoc/TEI/text/body/listPerson/person
-      where $editorId = fn:string($e/@xml:id)
-      return fn:normalize-space(fn:string-join($e//text(), " "))
+      where $editorId = string($e/@xml:id)
+      return normalize-space(string-join($e//text(), " "))
     return <name ref="{$editorUriBase||$editorId}">{$editorString}</name>
   
   let $teiRespStmt := <respStmt>
@@ -69,9 +69,9 @@ declare function cmproc:create-creation($oldCreation as node(), $docId as xs:str
 };
 
 declare function cmproc:update-origDate($origDate, $periodTaxonomy) {
-  let $origDateText := fn:normalize-space(fn:string-join($origDate/text()))
-  let $lowDate := fn:substring-before($origDateText, " ")
-  let $highDate := fn:substring-after($origDateText, " ")
+  let $origDateText := normalize-space(string-join($origDate/text()))
+  let $lowDate := substring-before($origDateText, " ")
+  let $highDate := substring-after($origDateText, " ")
   let $dateString := cmproc:create-date-string($lowDate, $highDate)
   let $newOrigDate := if ($highDate != "") then <origDate notBefore="{$lowDate}" notAfter="{$highDate}" period="{cmproc:lookup-period-range($lowDate, $highDate, $periodTaxonomy)}">{$dateString}</origDate>
   else <origDate notBefore="{$lowDate}" notAfter="{$highDate}" period="{cmproc:lookup-period-singleDate($lowDate, $periodTaxonomy)}">{$dateString}</origDate>
@@ -80,29 +80,29 @@ declare function cmproc:update-origDate($origDate, $periodTaxonomy) {
 };
 
 declare function cmproc:create-date-string($low, $high){
-  let $lowEra := if (fn:starts-with($low, "-")) then "BCE" else "CE"
-  let $highEra := if (fn:starts-with($high, "-")) then "BCE" else "CE"
+  let $lowEra := if (starts-with($low, "-")) then "BCE" else "CE"
+  let $highEra := if (starts-with($high, "-")) then "BCE" else "CE"
   return if ($high = "") then
-    if (fn:starts-with($low, "-")) then fn:string(fn:number(fn:substring-after($low, "-")))||" BCE" else fn:string(fn:number($low))||" CE"
-  else if ($lowEra = $highEra) then fn:string(fn:number(functx:substring-after-if-contains($low, "-")))||"-"||fn:string(fn:number(functx:substring-after-if-contains($high, "-")))||" "||$lowEra
-  else fn:string(fn:number(fn:substring-after($low, "-")))||" BCE-"||fn:string(fn:number($high))||" CE"
+    if (starts-with($low, "-")) then string(number(substring-after($low, "-")))||" BCE" else string(number($low))||" CE"
+  else if ($lowEra = $highEra) then string(number(functx:substring-after-if-contains($low, "-")))||"-"||string(number(functx:substring-after-if-contains($high, "-")))||" "||$lowEra
+  else string(number(substring-after($low, "-")))||" BCE-"||string(number($high))||" CE"
 };
 
 declare function cmproc:lookup-period-range($lower as xs:string, $upper as xs:string, $xmlTable as node()) as xs:string+ {
   let $periodSeq := for $cat in $xmlTable//*:record
     where ($lower >= $cat/*:notBefore/text() and $lower <= $cat/*:notAfter/text()) or ($upper >= $cat/*:notBefore/text() and $upper <= $cat/*:notAfter/text()) or ($lower <= $cat/*:notBefore/text() and $upper >= $cat/*:notAfter/text())
     return $cat/*:catId/text()
-  return "#"||fn:string-join($periodSeq, " #")
+  return "#"||string-join($periodSeq, " #")
 };
 declare function cmproc:lookup-period-singleDate($date as xs:string, $xmlTable as node()) as xs:string+ {
   let $periodSeq := for $cat in $xmlTable//*:record
     where $date >= $cat/*:notBefore/text() and $date <= $cat/*:notAfter/text()
     return $cat/*:catId/text()
-  return "#"||fn:string-join($periodSeq, " #")
+  return "#"||string-join($periodSeq, " #")
 };
 
 declare function cmproc:create-langString($langUsage){
-  let $langCode := fn:string($langUsage/language/@ident)
+  let $langCode := string($langUsage/language/@ident)
   return switch ($langCode) 
    case "grc" return "Ancient Greek"
    case "la" return "Latin"
@@ -119,8 +119,8 @@ declare function cmproc:create-langString($langUsage){
 declare function cmproc:create-abstract($creation as node(), $placeNameSeq, $recType as xs:string, $docId as xs:string) {
   let $placeNameSeqDistinct := functx:distinct-deep(for $placeName in $placeNameSeq
     return <quote>{$placeName}</quote>)
-  let $isOrAre := if(fn:count($placeNameSeqDistinct) >  1) then "are" else "is"
-  return if(fn:contains($recType, "#direct")) then <desc type="abstract" xml:id="abstract{$docId}-1">{cmproc:node-join($placeNameSeqDistinct, ", ", "and ")}&#x20;{$isOrAre}&#x20;directly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.</desc>
+  let $isOrAre := if(count($placeNameSeqDistinct) >  1) then "are" else "is"
+  return if(contains($recType, "#direct")) then <desc type="abstract" xml:id="abstract{$docId}-1">{cmproc:node-join($placeNameSeqDistinct, ", ", "and ")}&#x20;{$isOrAre}&#x20;directly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.</desc>
   else <desc type="abstract" xml:id="abstract{$docId}-1">Caeasrea Maritima is indirectly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.</desc>
   (: EXAMPLE "Καισάρεια is directly attested at Aelius Herodian, On Orthography 2.2.4=GG III.2.451.22-27.
 This passage was written circa 150-200 C.E. possibly in Alexandria. Evidence for Greek
@@ -131,8 +131,8 @@ Language; Geography." :)
 (: declare function cmproc:create-themes-list($themesNote as node()) {
   let $compareNode := <note type="theme"/>
   let $themeSeq := for $theme in $themesNote/p
-    return fn:normalize-space($theme/text())
-  return if ($compareNode != $themesNote) then " Evidence for "||fn:string-join($themeSeq, "; ")||"."
+    return normalize-space($theme/text())
+  return if ($compareNode != $themesNote) then " Evidence for "||string-join($themeSeq, "; ")||"."
 }; :)
 
 declare function cmproc:node-join($seq, $delim as xs:string, $finalDelim as xs:string?)  {
@@ -143,7 +143,7 @@ declare function cmproc:node-join($seq, $delim as xs:string, $finalDelim as xs:s
 };
 
 declare function cmproc:update-excerpt($excerpt as node(), $excerptLangCode as xs:string, $docId as xs:string, $docLangCode as xs:string) as node() {
-  let $quoteSeq := if(fn:string($excerpt/@type) = "edition") then "1" else "2"
+  let $quoteSeq := if(string($excerpt/@type) = "edition") then "1" else "2"
   let $correspLangCode := if($excerptLangCode = "en") then $docLangCode else "en"
   let $anchor := <anchor xml:id="testimonia-{$docId}.{$excerptLangCode}.1" corresp="#testimonia-{$docId}.{$correspLangCode}.1"/>
   let $nonEmptyChildNodes := 
@@ -154,8 +154,8 @@ declare function cmproc:update-excerpt($excerpt as node(), $excerptLangCode as x
 
 declare function cmproc:update-bibls($listBibl as node(), $docId as xs:string, $isWorksCited as xs:string, $projectUriBase as xs:string){
   let $bibls := for $bibl at $i in $listBibl/bibl
-    where fn:string($bibl/ptr/@target) !="" (: only return bibls that have an assigned ptr :)
-    let $newUri := $projectUriBase||"bibl/"||substring-after(fn:string($bibl/ptr/@target), "items/")
+    where string($bibl/ptr/@target) !="" (: only return bibls that have an assigned ptr :)
+    let $newUri := $projectUriBase||"bibl/"||substring-after(string($bibl/ptr/@target), "items/")
     let $newUri := if(ends-with($newUri, "/")) then substring($newUri, 1, string-length($newUri) - 1) else $newUri
     let $newPtr := <ptr target="{$newUri}"/>
     let $nonEmptyCitedRanges := 
