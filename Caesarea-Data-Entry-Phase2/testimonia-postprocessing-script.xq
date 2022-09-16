@@ -224,8 +224,8 @@ let $projectUriBase := "https://caesarea-maritima.org/"
 let $editorUriBase := "https://caesarea-maritima.org/documentation/editors.xml#"
 let $editorsXmlDocUri := "https://raw.githubusercontent.com/srophe/caesarea/master/documentation/editors.xml"
 let $periodTaxonomyDocUri := "https://raw.githubusercontent.com/srophe/caesarea/master/documentation/caesarea-maritima-historical-era-taxonomy.xml"
-let $inputDirectoryUri := "C:\Users\anoni\Desktop\CAESAREA-FILES\July-files\"
-let $outputDirectoryUri := "C:\Users\anoni\Desktop\CAESAREA-FILES\july-output\"
+let $inputDirectoryUri := "/home/arren/Documents/GitHub/srophe-xQueries/Caesarea-Data-Entry-Phase2/test-in/"
+let $outputDirectoryUri := "/home/arren/Documents/GitHub/srophe-xQueries/Caesarea-Data-Entry-Phase2/test-out/"
 let $currentDate := fn:current-date()
 
 (: START MAIN SCRIPT :)
@@ -266,7 +266,7 @@ for $doc in fn:collection($inputDirectoryUri)
     replace node $doc//body/ab[@type="translation"] with $translation,
     replace node $doc//listBibl[1] with $newWorksCited,
     replace node $doc//listBibl[2] with $newAdditionalBibl,
-    if(not($doc//body/desc[@type="contet"]/text())) then delete node $doc//body/desc[@type="context"] else(),
+    if(not($doc//body/desc[@type="context"]/text())) then delete node $doc//body/desc[@type="context"] else(),
     delete node $doc//comment(),
     delete node $doc//body/note,
     insert node $normalizedRelatedSubjectsNotes as last into $doc//body,
