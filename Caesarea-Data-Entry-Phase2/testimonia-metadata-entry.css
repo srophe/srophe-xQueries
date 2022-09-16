@@ -75,7 +75,7 @@ publicationStmt > idno {
     content: oxy_textfield(edit, "#text", columns, 30);
 }
 
-title {
+desc > title {
   display: inline;
   font-style: italic;
 }
