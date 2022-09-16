@@ -188,7 +188,7 @@ declare function local:update-bibls($listBibl as node(), $docId as xs:string, $i
       return $citedRange
     let $biblId := if ($isWorksCited = "yes") then attribute xml:id {"bib"||$docId||"-"||$i} else ()
     return element bibl {$biblId, $newPtr, $nonEmptyCitedRanges}
-  return if(count($bibls) > 0) then element listBibl {$listBibl/head, $bibls} (: only return a listBibl if there are non-empty bibls :)
+  return if(count($bibls) > 0) then element listBibl {$listBibl/head, $bibls} else () (: only return a listBibl if there are non-empty bibls :)
 };
 
 (:
@@ -242,7 +242,7 @@ for $doc in fn:collection($inputDirectoryUri)
   let $respStmts := local:create-respStmts($editorsDoc, $doc//revisionDesc/change, $editorUriBase)
   let $newCreation := local:create-creation($doc//creation, $docId, $periodTaxonomyDoc)
   let $langString := local:create-langString($doc//profileDesc/langUsage)
-  let $docUrn := if(fn:string($doc//profileDesc/creation/title/@ref) != "") then fn:string($doc//profileDesc/creation/title/@ref)||":"||$doc//profileDesc/creation/ref/text()
+  let $docUrn := if(fn:string($doc//profileDesc/creation/title/@ref) != "") then fn:string($doc//profileDesc/creation/title/@ref)||":"||$doc//profileDesc/creation/ref/text() else()
   let $abstract := local:create-abstract($newCreation, $doc//ab/placeName, fn:string($doc//catRef[@scheme="#CM-Testimonia-Type"]/@target), $docId)
   let $edition := local:update-excerpt($doc//body/ab[@type="edition"], fn:string($doc//profileDesc/langUsage/language/@ident), $docId, fn:string($doc//profileDesc/langUsage/language/@ident))
   let $translation := local:update-excerpt($doc//body/ab[@type="translation"], "en", $docId, fn:string($doc//profileDesc/langUsage/language/@ident))
@@ -266,9 +266,9 @@ for $doc in fn:collection($inputDirectoryUri)
     replace node $doc//body/ab[@type="translation"] with $translation,
     replace node $doc//listBibl[1] with $newWorksCited,
     replace node $doc//listBibl[2] with $newAdditionalBibl,
-    if(not($doc//body/desc[@type="contet"]/text())) then delete node $doc//body/desc[@type="context"],
+    if(not($doc//body/desc[@type="contet"]/text())) then delete node $doc//body/desc[@type="context"] else(),
     delete node $doc//comment(),
     delete node $doc//body/note,
     insert node $normalizedRelatedSubjectsNotes as last into $doc//body,
     fn:put($doc, fn:concat($outputDirectoryUri, $docId, ".xml"), map{'omit-xml-declaration': 'no'})
-)
+) else ()
