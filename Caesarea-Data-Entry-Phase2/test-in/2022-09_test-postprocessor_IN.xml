@@ -1,5 +1,5 @@
 <?xml-model type="application/xml" href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="text/css" href="testimonia-metadata-entry.css"?>
+<?xml-stylesheet type="text/css" href="https://raw.githubusercontent.com/srophe/srophe-xQueries/master/Caesarea-Data-Entry-Phase2/testimonia-metadata-entry.css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -236,7 +236,7 @@
             <title xml:lang="en" ref="" type="uniform" level="m">Book of Places</title>
             <ref>137</ref>
             <persName ref="http://viaf.org/viaf/95147024" role="author">Jerome</persName>
-            <origDate>0390 420</origDate>
+            <origDate>0390 0420</origDate>
             <origPlace ref="https://pleiades.stoa.org/places/687856">Bethlehem</origPlace>
          </creation>
          <langUsage>
@@ -268,9 +268,9 @@
             Greek translation of Hebrew Scripture by Symmachus in the late 2nd century C.E. The same
             information is recorded in the parallel passage at <title>Eusebius, Dictionary of Place
                Names 136</title>, written roughly one century before Jerome’s work.</desc>
-         <ab type="edition"><note type="textual">Nefeddor, quod Symmachus interpretatur Maritimam. Dor autem est oppidum iam
-               desertum in nono miliario <placeName>Caesareae</placeName> pergentibus
-               Ptolomaïdem.</note><note type="textual">Ed. Klosterman 1904</note><note type="discussion"/> <note type="corrigenda"/><idno type="CTS-URN"/><ref target=""/></ab>
+         <ab type="edition">Nefeddor, quod Symmachus interpretatur Maritimam. Dor autem est oppidum iam
+            desertum in nono miliario <placeName>Caesareae</placeName> pergentibus
+            Ptolomaïdem.<note type="textual">Ed. Klosterman 1904</note><note type="discussion"/> <note type="corrigenda"/><idno type="CTS-URN"/><ref target=""/></ab>
          <ab type="translation">Nefeddor, which Symmachus translates Maritima. Dor is a city now
             deserted at milestone 9 for those travelling from <placeName>Caesarea</placeName> to
                Ptolemaïs.<note type="translation">Trans. J. L. Rife</note><note type="discussion"
