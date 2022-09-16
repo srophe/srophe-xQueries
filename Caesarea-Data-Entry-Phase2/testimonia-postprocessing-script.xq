@@ -169,7 +169,7 @@ declare function local:node-join($seq, $delim as xs:string, $finalDelim as xs:st
 declare function local:update-excerpt($excerpt as node(), $excerptLangCode as xs:string, $docId as xs:string, $docLangCode as xs:string) as node() {
   let $quoteSeq := if(fn:string($excerpt/@type) = "edition") then "1" else "2"
   let $correspLangCode := if($excerptLangCode = "en") then $docLangCode else "en"
-  let $anchor := <anchor xml:id="testimonia-{$docId}.{$excerptLangCode}.1" corresp="testimonia-{$docId}.{$correspLangCode}.1"/>
+  let $anchor := <anchor xml:id="testimonia-{$docId}.{$excerptLangCode}.1" corresp="#testimonia-{$docId}.{$correspLangCode}.1"/>
   let $nonEmptyChildNodes := 
     for $node in $excerpt/child::node()
     return if($node instance of element() and name($node) = "note" and not($node/text())) then () else $node (: do not return empty note elements :)
