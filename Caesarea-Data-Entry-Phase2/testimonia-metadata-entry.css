@@ -18,6 +18,7 @@ color: black;
 placeName {
     display: inline;
     text-decoration: underline;
+    font-weight: bold;
 }
  fileDesc > titleStmt,
  fileDesc > editionStmt,
@@ -34,7 +35,7 @@ oxy|processing-instruction, oxy|comment {
 display: none !important
 }
 
-title,
+creation > title,
 creation > ref,
 persName,
 origDate,
@@ -74,6 +75,11 @@ publicationStmt > idno {
     content: oxy_textfield(edit, "#text", columns, 30);
 }
 
+title {
+  display: inline;
+  font-style: italic;
+}
+
 creation > title:before(9)
 {
   content: "Standardized English Title: ";
@@ -81,13 +87,13 @@ creation > title:before(9)
   font-size: 18px;
 font-weight: bold;
 }
-title:after(1)
+creation > title:after(1)
 {
   content: '\A Work URN: ' oxy_textfield(edit, "@ref",  columns, 30);
   font-size: 18px;
   font-weight: bold;
 }
-title:after(2) {
+creation > title:after(2) {
     content: "\A Work-level URNs should be of the form, 'urn:cts:greekLit:tlg0526.tlg001'";
     font-size:14px;
 }
