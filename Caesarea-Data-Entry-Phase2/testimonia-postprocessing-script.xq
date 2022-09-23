@@ -1,50 +1,31 @@
 xquery version "3.0";
 
 import module namespace cmproc="http://wlpotter.github.io/ns/cmproc" at "cmproc.xqm";
+import module namespace config="http://wlpotter.github.io/ns/cm/config" at "config.xqm";
 declare default element namespace "http://www.tei-c.org/ns/1.0";
 declare namespace csv = "http://basex.org/modules/csv";
-
-(: GLOBAL PARAMETERS :)
-(: Project Metadata :)
-declare variable $local:project-uri-base := "https://caesarea-maritima.org/";
-
-declare variable $local:editor-uri-base := "https://caesarea-maritima.org/documentation/editors.xml#";
-
-(: Reference Documents :)
-
-declare variable $local:editors-doc-uri := "https://raw.githubusercontent.com/srophe/caesarea/master/documentation/editors.xml";
-declare variable $local:editors-doc := doc($local:editors-doc-uri);
-
-declare variable $local:period-taxonomy-doc-uri := "https://raw.githubusercontent.com/srophe/caesarea/master/documentation/caesarea-maritima-historical-era-taxonomy.xml";
-declare variable $local:period-taxonomy-doc := doc($local:period-taxonomy-doc-uri);
-
-(: I/O Parameters :)
-declare variable $local:input-directory := "/home/arren/Documents/GitHub/srophe-xQueries/Caesarea-Data-Entry-Phase2/test-in/";
-declare variable $local:input-collection := collection($local:input-directory);
-
-declare variable $local:output-directory := "/home/arren/Documents/GitHub/srophe-xQueries/Caesarea-Data-Entry-Phase2/test-out/";
 
 (: START MAIN SCRIPT :)
 
 (: initialize runtime :)
 let $currentDate := current-date()
-let $nothing := file:create-dir($local:output-directory)
+let $nothing := file:create-dir($config:output-directory)
 
 (: Main Loop through Folder of Records to Process :)
-for $doc in $local:input-collection
+for $doc in $config:input-collection
   let $docId := $doc//publicationStmt/idno/text()
-  let $docUri := $local:project-uri-base||"testimonia/"||$docId
+  let $docUri := $config:project-uri-base||"testimonia/"||$docId
   let $docTitle := <title xml:lang="en" level="a">{$doc/TEI/teiHeader/profileDesc/creation/persName/text()},&#x20;<title level="m">{$doc/TEI/teiHeader/profileDesc/creation/title/text()}</title>&#x20;{$doc//TEI/teiHeader/profileDesc/creation/ref/text()}</title>
-  let $editors := cmproc:create-editor-elements($local:editors-doc, $doc//revisionDesc/change, $local:editor-uri-base)
-  let $respStmts := cmproc:create-respStmts($local:editors-doc, $doc//revisionDesc/change, $local:editor-uri-base)
-  let $newCreation := cmproc:create-creation($doc//creation, $docId, $local:period-taxonomy-doc)
+  let $editors := cmproc:create-editor-elements($config:editors-doc, $doc//revisionDesc/change, $config:editor-uri-base)
+  let $respStmts := cmproc:create-respStmts($config:editors-doc, $doc//revisionDesc/change, $config:editor-uri-base)
+  let $newCreation := cmproc:create-creation($doc//creation, $docId, $config:period-taxonomy-doc)
   let $langString := cmproc:create-langString($doc//profileDesc/langUsage)
   let $docUrn := if(string($doc//profileDesc/creation/title/@ref) != "") then string($doc//profileDesc/creation/title/@ref)||":"||$doc//profileDesc/creation/ref/text() else()
   let $abstract := cmproc:create-abstract($newCreation, $doc//ab/placeName, string($doc//catRef[@scheme="#CM-Testimonia-Type"]/@target), $docId)
   let $edition := cmproc:update-excerpt($doc//body/ab[@type="edition"], string($doc//profileDesc/langUsage/language/@ident), $docId, string($doc//profileDesc/langUsage/language/@ident))
   let $translation := cmproc:update-excerpt($doc//body/ab[@type="translation"], "en", $docId, string($doc//profileDesc/langUsage/language/@ident))
-  let $newWorksCited := cmproc:update-bibls($doc//listBibl[1], $docId, "yes", $local:project-uri-base)
-  let $newAdditionalBibl := cmproc:update-bibls($doc//listBibl[2], $docId, "no", $local:project-uri-base)
+  let $newWorksCited := cmproc:update-bibls($doc//listBibl[1], $docId, "yes", $config:project-uri-base)
+  let $newAdditionalBibl := cmproc:update-bibls($doc//listBibl[2], $docId, "no", $config:project-uri-base)
   let $normalizedRelatedSubjectsNotes := cmproc:normalize-related-subjects-notes($doc)
   
   (:Updating Expressions:)
@@ -67,5 +48,5 @@ for $doc in $local:input-collection
     delete node $doc//comment(),
     delete node $doc//body/note,
     insert node $normalizedRelatedSubjectsNotes as last into $doc//body,
-    put($doc, concat($local:output-directory, $docId, ".xml"), map{'omit-xml-declaration': 'no'})
+    put($doc, concat($config:output-directory, $docId, ".xml"), map{'omit-xml-declaration': 'no'})
 ) else ()
