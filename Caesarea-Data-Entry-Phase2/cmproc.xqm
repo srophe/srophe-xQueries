@@ -20,31 +20,166 @@ xquery version "3.1";
 : @version 1.0
 :)
 module namespace cmproc="http://wlpotter.github.io/ns/cmproc";
+import module namespace config="http://wlpotter.github.io/ns/cm/config" at "config.xqm";
 import module namespace functx="http://www.functx.com";
 
 declare default element namespace "http://www.tei-c.org/ns/1.0";
 
-declare function cmproc:create-editor-elements($refDoc as node(), $changeStmts as node()+, $editorUriBase as xs:string) {
-  for $editor in $changeStmts
-    let $editorId := string($editor/@who)
-    let $editorString := for $e in $refDoc/TEI/text/body/listPerson/person
-      where $editorId = string($e/@xml:id)
-      return normalize-space(string-join($e//text(), " "))
-    return <editor role="creator" ref="{$editorUriBase||$editorId}">{$editorString}</editor>
+(:
+Functions needed:
+
+- post-process-testimonia-records = an updating script that calls additional updating scripts
+- for each update, need an updating version and a creation version
+:)
+
+declare %updating function cmproc:post-process-testimonia-record($record as node())
+{
+  let $docId := $record//publicationStmt/idno/text()
+  let $recUri := $config:project-uri-base||$docId
+  
+  return 
+  try {
+    (cmproc:update-new-testimonia-record($record, $recUri), update:output(cmproc:log-success($record)))
+  }
+  catch * {
+    let $failure :=
+      element {"failure"} {
+        element {"code"} {$err:code},
+        element {"description"} {$err:description},
+        element {"value"} {$err:value},
+        element {"module"} {$err:module},
+        element {"location"} {$err:line-number||": "||$err:column-number},
+        element {"additional"} {$err:additional},
+        cmproc:get-record-context($record)
+      }
+    return update:output($failure)
+  }
 };
 
-declare function cmproc:create-respStmts($refDoc as node(), $changeStmts as node()+, $editorUriBase as xs:string) {
+declare function cmproc:log-success($record as node())
+as node()
+{
+  element {"success"} {cmproc:get-record-context($record)}
+};
+
+declare function cmproc:get-record-context($record as node())
+as node()
+{
+  let $fileLocation := document-uri($record)
+  return element {"nodeContext"}
+    {
+      element {"fileLocation"} {$fileLocation}
+    }
+};
+
+declare %updating function cmproc:update-new-testimonia-record($record as node(), $recUri as xs:string)
+{
+  (cmproc:update-record-title($record),
+   cmproc:update-editors-list($record),
+   cmproc:update-respStmt-list($record))
+  (:
+  Updates needed:
+    insert nodes $respStmts before $doc//titleStmt/respStmt[1],
+    replace value of node $doc//publicationStmt/idno with $docUri||"/tei",
+    replace value of node $doc//publicationStmt/date with $currentDate,
+    replace node $doc//profileDesc/creation with $newCreation,
+    replace value of node $doc/TEI/teiHeader/profileDesc/langUsage/language with $langString,
+    replace value of node $doc//profileDesc/textClass/classCode/idno with $docUrn,
+    replace value of node $doc//body/ab[@type="identifier"]/idno with $docUri,
+    replace node $doc//body/desc[@type="abstract"] with $abstract,
+    replace node $doc//body/ab[@type="edition"] with $edition,
+    replace node $doc//body/ab[@type="translation"] with $translation,
+    replace node $doc//listBibl[1] with $newWorksCited,
+    replace node $doc//listBibl[2] with $newAdditionalBibl,
+    if(not($doc//body/desc[@type="context"]/text())) then delete node $doc//body/desc[@type="context"] else(),
+    delete node $doc//comment(),
+    delete node $doc//body/note,
+    insert node $normalizedRelatedSubjectsNotes as last into $doc//body,
+    put($doc, concat($config:output-directory, $docId, ".xml"), map{'omit-xml-declaration': 'no'})
+  :)
+};
+
+(: Create and update record's a-level title :)
+declare %updating function cmproc:update-record-title($record as node())
+{
+  insert node cmproc:create-record-title before $record//titleStmt/title
+};
+
+declare function cmproc:create-record-title($record as node())
+as node()
+{
+  let $author := $record/TEI/teiHeader/profileDesc/creation/persName/text()
+  let $workTitle := $record/TEI/teiHeader/profileDesc/creation/title/text()
+  let $range := $record/TEI/teiHeader/profileDesc/creation/ref/text()
+  let $recTitle := element {"title"} 
+    {
+      attribute {"xml:lang"} {"en"},
+      attribute {"level"} {"a"},
+      $author, ", ",
+      element {"title"} {attribute {"level"} {"m"}, $workTitle}, " ",
+      $range}
+  return $recTitle
+};
+
+declare %updating function cmproc:update-editors-list($record as node())
+{
+  (delete nodes $record//titleStmt/editor,
+  insert nodes cmproc:create-editors-list after $record//titleStmt/principal)
+};
+declare function cmproc:create-editors-list($record as node()) {
+  (: get the list of new editors basedon the change stmt :)
+  (: remove duplicates :)
+  (: return that updated list :)
+  let $newEditors := cmproc:create-new-editors-list($record)
+  let $editors := ($record//titleStmt/editor, $newEditors)
+  return functx:distinct-deep($editors)
+};
+
+declare function cmproc:create-new-editors-list($record as node())
+as node()*
+{
+  for $editor in $record//revisionDesc/change
+    let $editorId := string($editor/@who)
+    let $editorString := 
+      for $e in $config:editors-doc/TEI/text/body/listPerson/person
+      where $editorId = string($e/@xml:id)
+      return normalize-space(string-join($e//text(), " "))
+    return element {"editor"} 
+      {attribute {"role"} {"creator"},
+      attribute {"ref"} {$config:editor-uri-base||$editorId},
+      $editorString
+  }
+};
+
+
+declare %updating function cmproc:update-respStmt-list($record as node())
+{
+  (delete nodes $record//titleStmt/respStmt,
+  insert nodes cmproc:create-respStmt-list($record) as last into $record//titleStmt
+)
+};
+
+declare function cmproc:create-respStmt-list($record as node())
+as node()*
+{
+  let $newRespStmts := cmproc:create-new-respStmt-list($record)
+  return ($newRespStmts, $record//titleStmt/respStmt)
+};
+
+declare function cmproc:create-new-respStmt-list($record as node()) {
+  (: this should pull heavily from the config instead! :)
   let $metadataRespString := "URNs and other metadata added by"
   let $dataRespString := "Electronic text added by"
   let $teiRespString := "TEI encoding by"
-  let $teiRespName := <name ref="{$editorUriBase||"wpotter"}">William L. Potter</name>
+  let $teiRespName := <name ref="{$config:editor-uri-base||"wpotter"}">William L. Potter</name>
   
-  let $respStmtNameSeq := for $editor in $changeStmts
+  (: turn this into a recreate:)
+  let $respStmtNameSeq := for $editor in $record//revisionDesc/change
     let $editorId := string($editor/@who)
-    let $editorString := for $e in $refDoc/TEI/text/body/listPerson/person
+    let $editorString := for $e in $config:editors-doc/TEI/text/body/listPerson/person
       where $editorId = string($e/@xml:id)
       return normalize-space(string-join($e//text(), " "))
-    return <name ref="{$editorUriBase||$editorId}">{$editorString}</name>
+    return <name ref="{$config:editor-uri-base||$editorId}">{$editorString}</name>
   
   let $teiRespStmt := <respStmt>
     <resp>{$teiRespString}</resp>
