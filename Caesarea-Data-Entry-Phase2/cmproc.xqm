@@ -25,17 +25,11 @@ import module namespace functx="http://www.functx.com";
 
 declare default element namespace "http://www.tei-c.org/ns/1.0";
 
-(:
-Functions needed:
-
-- post-process-testimonia-records = an updating script that calls additional updating scripts
-- for each update, need an updating version and a creation version
-:)
 
 declare %updating function cmproc:post-process-testimonia-record($record as node())
 {
-  let $docId := $record//publicationStmt/idno/text()
-  let $recUri := $config:project-uri-base||$docId
+  let $recordId := $record//publicationStmt/idno/text()
+  let $recUri := $config:testimonia-uri-base||$recordId
   
   return 
   try {
@@ -76,33 +70,29 @@ declare %updating function cmproc:update-new-testimonia-record($record as node()
 {
   (cmproc:update-record-title($record),
    cmproc:update-editors-list($record),
-   cmproc:update-respStmt-list($record))
-  (:
-  Updates needed:
-    insert nodes $respStmts before $doc//titleStmt/respStmt[1],
-    replace value of node $doc//publicationStmt/idno with $docUri||"/tei",
-    replace value of node $doc//publicationStmt/date with $currentDate,
-    replace node $doc//profileDesc/creation with $newCreation,
-    replace value of node $doc/TEI/teiHeader/profileDesc/langUsage/language with $langString,
-    replace value of node $doc//profileDesc/textClass/classCode/idno with $docUrn,
-    replace value of node $doc//body/ab[@type="identifier"]/idno with $docUri,
-    replace node $doc//body/desc[@type="abstract"] with $abstract,
-    replace node $doc//body/ab[@type="edition"] with $edition,
-    replace node $doc//body/ab[@type="translation"] with $translation,
-    replace node $doc//listBibl[1] with $newWorksCited,
-    replace node $doc//listBibl[2] with $newAdditionalBibl,
-    if(not($doc//body/desc[@type="context"]/text())) then delete node $doc//body/desc[@type="context"] else(),
-    delete node $doc//comment(),
-    delete node $doc//body/note,
-    insert node $normalizedRelatedSubjectsNotes as last into $doc//body,
-    put($doc, concat($config:output-directory, $docId, ".xml"), map{'omit-xml-declaration': 'no'})
-  :)
+   cmproc:update-respStmt-list($record),
+   replace value of node $record//publicationStmt/idno with $recUri||"/tei",
+   replace value of node $record//publicationStmt/date with current-date(),
+   cmproc:update-historical-era-taxonomy($record),
+   cmproc:update-creation($record, $recUri),
+   cmproc:update-langUsage-language($record),
+   cmproc:update-record-urn($record),
+   replace value of node $record//body/ab[@type="identifier"]/idno with $recUri,
+   cmproc:update-abstract($record, $recUri),
+   cmproc:update-edition($record, $recUri),
+   cmproc:update-translation($record, $recUri),
+   cmproc:update-bibls($record, $recUri),
+   cmproc:update-related-subject-notes($record),
+   if(not($record//body/desc[@type="context"]/text())) then delete node $record//body/desc[@type="context"] else(),
+    delete node $record//comment(),
+    put($record, $config:output-directory||functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)||".xml", map{'omit-xml-declaration': 'no'})
+  )
 };
 
 (: Create and update record's a-level title :)
 declare %updating function cmproc:update-record-title($record as node())
 {
-  insert node cmproc:create-record-title before $record//titleStmt/title
+  insert node cmproc:create-record-title($record) before $record//titleStmt/title
 };
 
 declare function cmproc:create-record-title($record as node())
@@ -124,12 +114,11 @@ as node()
 declare %updating function cmproc:update-editors-list($record as node())
 {
   (delete nodes $record//titleStmt/editor,
-  insert nodes cmproc:create-editors-list after $record//titleStmt/principal)
+  insert nodes cmproc:create-editors-list($record) after $record//titleStmt/principal)
 };
+
+
 declare function cmproc:create-editors-list($record as node()) {
-  (: get the list of new editors basedon the change stmt :)
-  (: remove duplicates :)
-  (: return that updated list :)
   let $newEditors := cmproc:create-new-editors-list($record)
   let $editors := ($record//titleStmt/editor, $newEditors)
   return functx:distinct-deep($editors)
@@ -138,17 +127,9 @@ declare function cmproc:create-editors-list($record as node()) {
 declare function cmproc:create-new-editors-list($record as node())
 as node()*
 {
-  for $editor in $record//revisionDesc/change
-    let $editorId := string($editor/@who)
-    let $editorString := 
-      for $e in $config:editors-doc/TEI/text/body/listPerson/person
-      where $editorId = string($e/@xml:id)
-      return normalize-space(string-join($e//text(), " "))
-    return element {"editor"} 
-      {attribute {"role"} {"creator"},
-      attribute {"ref"} {$config:editor-uri-base||$editorId},
-      $editorString
-  }
+  let $role := attribute {"role"} {"creator"}
+  for $editor in $record//revisionDesc/change/@who/string()
+    return cmproc:editor-id-lookup($editor, "editor", $role)
 };
 
 
@@ -163,55 +144,116 @@ declare function cmproc:create-respStmt-list($record as node())
 as node()*
 {
   let $newRespStmts := cmproc:create-new-respStmt-list($record)
-  return ($newRespStmts, $record//titleStmt/respStmt)
+  return functx:distinct-deep(($newRespStmts, $record//titleStmt/respStmt))
 };
 
-declare function cmproc:create-new-respStmt-list($record as node()) {
-  (: this should pull heavily from the config instead! :)
-  let $metadataRespString := "URNs and other metadata added by"
-  let $dataRespString := "Electronic text added by"
-  let $teiRespString := "TEI encoding by"
-  let $teiRespName := <name ref="{$config:editor-uri-base||"wpotter"}">William L. Potter</name>
-  
-  (: turn this into a recreate:)
-  let $respStmtNameSeq := for $editor in $record//revisionDesc/change
-    let $editorId := string($editor/@who)
-    let $editorString := for $e in $config:editors-doc/TEI/text/body/listPerson/person
-      where $editorId = string($e/@xml:id)
-      return normalize-space(string-join($e//text(), " "))
-    return <name ref="{$config:editor-uri-base||$editorId}">{$editorString}</name>
-  
-  let $teiRespStmt := <respStmt>
-    <resp>{$teiRespString}</resp>
-    {$teiRespName}
-  </respStmt>  
-  let $metadataRespStmt := <respStmt>
-    <resp>{$metadataRespString}</resp>
-    {$respStmtNameSeq[1]}
-  </respStmt>
-  let $dataRespStmt := <respStmt>
-    <resp>{$dataRespString}</resp>
-    {$respStmtNameSeq[2]}
-  </respStmt>
-  return ($teiRespStmt, $metadataRespStmt, $dataRespStmt)
+declare function cmproc:create-new-respStmt-list($record as node()) 
+as node()*
+{
+  let $creatorRespStmt := cmproc:create-respStmt($record//revisionDesc/change[2]/@who/string(), $config:resp-string-for-creator)
+  let $metadataRespStmt := cmproc:create-respStmt($record//revisionDesc/change[1]/@who/string(), $config:resp-string-for-metadata)
+  let $teiRespStmt := cmproc:create-respStmt($config:editor-id-for-tei, $config:resp-string-for-tei)
+ 
+  return ($teiRespStmt, $metadataRespStmt, $creatorRespStmt)
 };
 
-declare function cmproc:create-creation($oldCreation as node(), $docId as xs:string, $periodTaxonomy as node()) {
-  let $newRef := <ref target="#bib{$docId}-1">{$oldCreation/ref/text()}</ref>
-  let $newOrigDate := cmproc:update-origDate($oldCreation/origDate, $periodTaxonomy)
-  let $newCreation := <creation xmlns="http://www.tei-c.org/ns/1.0">This entry is taken from&#x20;{$oldCreation/title}&#x20;{$newRef}&#x20;written by&#x20;{$oldCreation/persName}&#x20;in {$newOrigDate}. This work was likely written in&#x20;{$oldCreation/origPlace}.</creation>
-  return $newCreation
+declare function cmproc:create-respStmt($editorId as xs:string, $respString as xs:string)
+as node()
+{
+  let $name := cmproc:editor-id-lookup($editorId, "name", ())
+  return element {"respStmt"} {
+    element {"resp"} {$respString},
+    $name
+  }
 };
 
-declare function cmproc:update-origDate($origDate, $periodTaxonomy) {
+declare function cmproc:editor-id-lookup($editorId as xs:string, $elementName as xs:string, $attributes as attribute()*)
+as node()
+{
+  let $editor := $config:editors-doc/TEI/text/body/listPerson/person[@xml:id = $editorId]
+  let $editorNameString := $editor//text()
+  let $editorNameString := string-join($editorNameString, " ")
+  let $editorNameString := normalize-space($editorNameString)
+  return element {$elementName} {
+    attribute {"ref"} {$config:editor-uri-base||$editorId},
+    $attributes,
+    $editorNameString
+  }
+};
+
+(:
+- update-historical-era-taxonomy
+  - replace if it's there; otherwise insert as first into //classDecl
+- create-historical-era-taxonomy-node
+  - desc should come from config
+  - the categories should be constructed from the taxonomy doc
+:)
+declare %updating function cmproc:update-historical-era-taxonomy($record as node())
+{
+  let $taxonomy := cmproc:create-historical-era-taxonomy()
+  return 
+    if($record//classDecl/taxonomy[@xml:id = "CM-NEAEH"]) then
+      replace node $record//classDecl/taxonomy[@xml:id = "CM-NEAEH"] with $taxonomy
+    else 
+      insert node $taxonomy as first into $record//clasDecl
+};
+
+declare function cmproc:create-historical-era-taxonomy()
+as node()
+{
+  let $categories :=
+    for $cat in $config:period-taxonomy-doc//*:record
+    let $id := $cat/*:catId/text()
+    let $desc := $cat/*:catDesc/text()||", "||$cat/*:dateRangeLabel/text()
+    return element {"category"} {
+      attribute {"xml:id"} {$id},
+      element {"catDesc"} {$desc}
+    }
+  return element {"taxonomy"}
+  {
+    attribute {"xml:id"} {$config:period-taxonomy-id},
+    $config:period-taxonomy-description,
+    $categories
+  }
+};
+
+declare %updating function cmproc:update-creation($record, $recUri) {
+  replace node $record//profileDesc/creation with cmproc:create-creation($record, $recUri)
+};
+
+declare function cmproc:create-creation($record as node(), $recUri as xs:string) 
+as node()
+{
+  let $creation := $record//profileDesc/creation
+  let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
+  let $title := if($creation/title/text() = "") then element {"title"} {$creation/title/@*, "[Untitled]"} else $creation/title
+  let $ref := element {"ref"} {attribute {"target"} {"#bib"||$recId||"-1"}, $creation/ref/text()}
+  let $origDate := cmproc:post-process-origDate($creation/origDate)
+  return element {"creation"} {
+    "This entry is taken from ",
+    $title, " ", $ref,
+    " written by ", $creation/persName,
+    " in ",
+    $origDate,
+    ". This work was likely written in ",
+    $creation/origPlace, "."
+  }
+};
+
+declare function cmproc:post-process-origDate($origDate as node()) 
+as node() {
   let $origDateText := normalize-space(string-join($origDate/text()))
   let $lowDate := substring-before($origDateText, " ")
   let $highDate := substring-after($origDateText, " ")
   let $dateString := cmproc:create-date-string($lowDate, $highDate)
-  let $newOrigDate := if ($highDate != "") then <origDate notBefore="{$lowDate}" notAfter="{$highDate}" period="{cmproc:lookup-period-range($lowDate, $highDate, $periodTaxonomy)}">{$dateString}</origDate>
-  else <origDate notBefore="{$lowDate}" notAfter="{$highDate}" period="{cmproc:lookup-period-singleDate($lowDate, $periodTaxonomy)}">{$dateString}</origDate>
-    
-  return $newOrigDate
+  let $lowDateInt := xs:integer($lowDate)
+  let $highDateInt := xs:integer($highDate)
+  let $periodAttribute := cmproc:create-period-attribute-from-dates($lowDateInt, $highDateInt)
+  return element {"origDate"} {
+    attribute {"notBefore"} {$lowDate},
+    attribute {"notAfter"} {$highDate},
+    $periodAttribute,
+  $dateString}
 };
 
 declare function cmproc:create-date-string($low, $high){
@@ -223,61 +265,145 @@ declare function cmproc:create-date-string($low, $high){
   else string(number(substring-after($low, "-")))||" BCE-"||string(number($high))||" CE"
 };
 
-declare function cmproc:lookup-period-range($lower as xs:string, $upper as xs:string, $xmlTable as node()) as xs:string+ {
-  let $periodSeq := for $cat in $xmlTable//*:record
-    where ($lower >= $cat/*:notBefore/text() and $lower <= $cat/*:notAfter/text()) or ($upper >= $cat/*:notBefore/text() and $upper <= $cat/*:notAfter/text()) or ($lower <= $cat/*:notBefore/text() and $upper >= $cat/*:notAfter/text())
-    return $cat/*:catId/text()
-  return "#"||string-join($periodSeq, " #")
+declare function cmproc:create-period-attribute-from-dates($lowDate as xs:integer, $highDate as xs:integer?)
+as attribute()
+{
+  let $period := if($highDate) then 
+    cmproc:lookup-period-range($lowDate, $highDate)
+    else cmproc:lookup-period-single-date($lowDate)
+  let $period := distinct-values($period)
+  let $period := 
+    for $p in $period
+    where $p != "#"
+    return $p
+  return attribute {"period"} {string-join($period, " ")}
 };
-declare function cmproc:lookup-period-singleDate($date as xs:string, $xmlTable as node()) as xs:string+ {
-  let $periodSeq := for $cat in $xmlTable//*:record
-    where $date >= $cat/*:notBefore/text() and $date <= $cat/*:notAfter/text()
-    return $cat/*:catId/text()
-  return "#"||string-join($periodSeq, " #")
+
+declare function cmproc:lookup-period-range($lowDate as xs:integer, $highDate as xs:integer) as xs:string* {
+  (: returns a period if the low or high date falls within it; and if the period falls within the low-high range :)
+  (: returns a distinct value set, excluding "#", which would be returned if no matching period were found :)
+  let $lowPeriod := cmproc:lookup-period-single-date($lowDate)
+  let $highPeriod := cmproc:lookup-period-single-date($highDate)
+  let $rangePeriod :=
+    for $pd in $config:period-taxonomy-doc//*:record
+    where $lowDate <= $pd/*:notBefore/text() and $highDate >= $pd/*:notAfter/text()
+    return "#"||$pd/*:catId/text()
+  let $period := ($lowPeriod, $highPeriod, $rangePeriod)
+  let $period := distinct-values($period)
+  for $p in $period
+    where $p != "#"
+    return $p
+};
+declare function cmproc:lookup-period-single-date($date as xs:integer) as xs:string* {
+  for $pd in $config:period-taxonomy-doc//*:record
+  where $date >= xs:integer($pd/*:notBefore/text()) and $date <= xs:integer($pd/*:notAfter/text())
+  return "#"||$pd/*:catId/text()
+};
+
+declare %updating function cmproc:update-langUsage-language($record as node())
+{
+  replace value of node $record/TEI/teiHeader/profileDesc/langUsage/language with cmproc:create-langString($record//profileDesc/langUsage)
 };
 
 declare function cmproc:create-langString($langUsage){
   let $langCode := string($langUsage/language/@ident)
   return switch ($langCode) 
-   case "grc" return "Ancient Greek"
-   case "la" return "Latin"
    case "ar" return "Arabic"
-   case "he" return "Hebrew"
-   case "syr" return "Syriac"
-   case "jpa" return "Jewish Palestinian Aramaic"
-   case "tmr" return "Jewish Babylonian Aramaic"
+   case "cop" return "Coptic"
    case "fro" return "Old French"
+   case "gez" return "Geʿez"
+   case "grc" return "Ancient Greek"
+   case "he" return "Hebrew"
    case "hy" return "Armenian"
+   case "jpa" return "Jewish Palestinian Aramaic"
+   case "la" return "Latin"
+   case "pro" return "Old Provençal"
+   case "syr" return "Syriac"
+   case "tmr" return "Jewish Babylonian Aramaic"
+   case "xno" return "Anglo-Norman French"   
    default return ""
 };
 
-declare function cmproc:create-abstract($creation as node(), $placeNameSeq, $recType as xs:string, $docId as xs:string) {
-  let $placeNameSeqDistinct := functx:distinct-deep(for $placeName in $placeNameSeq
-    return <quote>{$placeName}</quote>)
-  let $isOrAre := if(count($placeNameSeqDistinct) >  1) then "are" else "is"
-  return if(contains($recType, "#direct")) then <desc type="abstract" xml:id="abstract{$docId}-1">{cmproc:node-join($placeNameSeqDistinct, ", ", "and ")}&#x20;{$isOrAre}&#x20;directly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.</desc>
-  else <desc type="abstract" xml:id="abstract{$docId}-1">Caeasrea Maritima is indirectly attested at&#x20;{$creation/persName},&#x20;{$creation/title}&#x20;{$creation/ref}. This passage was written circa&#x20;{$creation/origDate}&#x20;possibly in&#x20;{$creation/origPlace}.</desc>
-  (: EXAMPLE "Καισάρεια is directly attested at Aelius Herodian, On Orthography 2.2.4=GG III.2.451.22-27.
-This passage was written circa 150-200 C.E. possibly in Alexandria. Evidence for Greek
-Language; Geography." :)
-  
+declare %updating function cmproc:update-record-urn($record as node())
+{
+  replace value of node $record//profileDesc/textClass/classCode/idno with cmproc:create-record-urn($record)
 };
 
-(: declare function cmproc:create-themes-list($themesNote as node()) {
-  let $compareNode := <note type="theme"/>
-  let $themeSeq := for $theme in $themesNote/p
-    return normalize-space($theme/text())
-  return if ($compareNode != $themesNote) then " Evidence for "||string-join($themeSeq, "; ")||"."
-}; :)
-
-declare function cmproc:node-join($seq, $delim as xs:string, $finalDelim as xs:string?)  {
-  let $nothing := ""
-  for $el in $seq
-    return if ($el != $seq[last()]) then ($el, $delim)
-    else ($finalDelim, $el)
+declare function cmproc:create-record-urn($record as node())
+as xs:string?
+{
+  if(string($record//profileDesc/creation/title/@ref) != "") then string($record//profileDesc/creation/title/@ref)||":"||$record//profileDesc/creation/ref/text() else()
 };
 
-declare function cmproc:update-excerpt($excerpt as node(), $excerptLangCode as xs:string, $docId as xs:string, $docLangCode as xs:string) as node() {
+declare %updating function cmproc:update-abstract($record as node(), $recUri as xs:string)
+{
+  let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
+  let $recordType := $record//profileDesc/textClass/catRef[@scheme = "#CM-Testimonia-Type"]/@target/string()
+  let $abstract := cmproc:create-abstract(cmproc:create-creation($record, $recUri), $record//body/ab/placeName, $recordType, $recId)
+  return
+  if($record//body/desc[@type="abstract"]) then
+  replace node $record//body/desc[@type="abstract"] with $abstract
+  else insert node $abstract after $record//body/ab[@type="identifier"]
+};
+
+declare function cmproc:create-abstract($creation as node(), $placeNameSeq as node()*, $recType as xs:string, $recId as xs:string) {
+  let $preamble := if($recType = "#direct") then
+    cmproc:create-abstract-preamble-from-place-name-sequence($placeNameSeq)
+    (: note that this will raise an error if $placeNameSeq is empty. This is the preferred functionality to catch records that are marked with "#direct" but are missing tagged place names :)
+    else "Caesarea Maritima is indirectly"
+    
+  return element {"desc"}
+  {
+    attribute {"type"} {"abstract"},
+    attribute {"xml:id"} {"abstract"||$recId||"-1"},
+    $preamble,
+    "attested at ",
+    $creation/persName, ", ",
+    $creation/title, " ", $creation/ref,
+    ". This passage was written ca. ",
+    $creation/origDate, " possibly in ",
+    $creation/origPlace, "."
+  }
+};
+
+declare function cmproc:create-abstract-preamble-from-place-name-sequence($placeNameSeq as node()+)
+as item()+
+{
+  let $placeNamesDistinct := functx:distinct-deep($placeNameSeq)
+  let $isOrAre := if(count($placeNamesDistinct) >  1) then " are" else " is"
+  let $quotes :=
+    for $name at $i in $placeNamesDistinct
+    return if ($i < count($placeNamesDistinct) - 1) then (element {"quote"} {$name}, ", ")
+    else if ($i = count($placeNamesDistinct) - 1) then (element {"quote"} {$name}, ",")
+    else ("and ", element {"quote"} {$name})
+  return ($quotes, $isOrAre, "directly")
+};
+
+declare %updating function cmproc:update-edition($record as node(), $recUri as xs:string)
+{
+  let $workLangCode := $record//profileDesc/langUsage/language/@ident/string()
+  let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
+  let $edition := cmproc:post-process-excerpt($record//body/ab[@type="edition"], $workLangCode, $recId, $workLangCode)
+  return replace node $record//body/ab[@type="edition"] with $edition
+  (:
+    let $edition := cmproc:update-excerpt($doc//body/ab[@type="edition"], string(), $docId, string($doc//profileDesc/langUsage/language/@ident))
+  let $translation := cmproc:update-excerpt($doc//body/ab[@type="translation"], "en", $docId, string($doc//profileDesc/langUsage/language/@ident))
+  :)
+};
+
+declare %updating function cmproc:update-translation($record as node(), $recUri as xs:string)
+{
+  let $workLangCode := $record//profileDesc/langUsage/language/@ident/string()
+  let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
+  let $translation := cmproc:post-process-excerpt($record//body/ab[@type="translation"], "en", $recId, $workLangCode)
+  return replace node $record//body/ab[@type="translation"] with $translation
+  (:
+    let $edition := cmproc:update-excerpt($doc//body/ab[@type="edition"], string(), $docId, string($doc//profileDesc/langUsage/language/@ident))
+  let $translation := cmproc:update-excerpt($doc//body/ab[@type="translation"], "en", $docId, string($doc//profileDesc/langUsage/language/@ident))
+  :)
+};
+
+declare function cmproc:post-process-excerpt($excerpt as node(), $excerptLangCode as xs:string, $docId as xs:string, $docLangCode as xs:string) as node() {
   let $quoteSeq := if(string($excerpt/@type) = "edition") then "1" else "2"
   let $correspLangCode := if($excerptLangCode = "en") then $docLangCode else "en"
   let $anchor := <anchor xml:id="testimonia-{$docId}.{$excerptLangCode}.1" corresp="#testimonia-{$docId}.{$correspLangCode}.1"/>
@@ -287,28 +413,48 @@ declare function cmproc:update-excerpt($excerpt as node(), $excerptLangCode as x
   return element ab {$excerpt/@type, attribute xml:lang {$excerptLangCode}, attribute xml:id {"quote"||$docId||"-"||$quoteSeq}, attribute source {"#bib"||$docId||"-"||$quoteSeq}, $anchor, $nonEmptyChildNodes}
 };
 
-declare function cmproc:update-bibls($listBibl as node(), $docId as xs:string, $isWorksCited as xs:string, $projectUriBase as xs:string){
+declare %updating function cmproc:update-bibls($record as node(), $recUri as xs:string)
+{
+  let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
+  let $worksCited := cmproc:post-process-bibls($record//body/listBibl[head/text() = $config:works-cited-listBibl-label], $recId, true ())
+  let $additionalBibls := cmproc:post-process-bibls($record//body/listBibl[head/text() = $config:additional-bibls-listBibl-label], $recId, false ())
+  return (
+    replace node $record//body/listBibl[head/text() = $config:works-cited-listBibl-label] with $worksCited,
+    replace node $record//body/listBibl[head/text() = $config:additional-bibls-listBibl-label] with $additionalBibls
+  )
+};
+
+declare function cmproc:post-process-bibls($listBibl as node(), $docId as xs:string, $isWorksCited as xs:boolean)
+as node()?
+{
   let $bibls := for $bibl at $i in $listBibl/bibl
     where string($bibl/ptr/@target) !="" (: only return bibls that have an assigned ptr :)
-    let $newUri := $projectUriBase||"bibl/"||substring-after(string($bibl/ptr/@target), "items/")
-    let $newUri := if(ends-with($newUri, "/")) then substring($newUri, 1, string-length($newUri) - 1) else $newUri
-    let $newPtr := <ptr target="{$newUri}"/>
+    let $ptrUri := $config:bibl-uri-base||substring-after($bibl/ptr/@target/string(), "items/")
+    let $ptrUri := if(ends-with($ptrUri, "/")) then substring($ptrUri, 1, string-length($ptrUri) - 1) else $ptrUri
+    let $ptr := element {"ptr"} {attribute {"target"} {$ptrUri}}
     let $nonEmptyCitedRanges := 
       for $citedRange in $bibl/citedRange
       where $citedRange/text()
       return $citedRange
-    let $biblId := if ($isWorksCited = "yes") then attribute xml:id {"bib"||$docId||"-"||$i} else ()
-    return element bibl {$biblId, $newPtr, $nonEmptyCitedRanges}
-  return if(count($bibls) > 0) then element listBibl {$listBibl/head, $bibls} else () (: only return a listBibl if there are non-empty bibls :)
+    let $biblId := if ($isWorksCited) then attribute xml:id {"bib"||$docId||"-"||$i} else ()
+    return element {"bibl"} {$biblId, $ptr, $nonEmptyCitedRanges}
+  return if(count($bibls) > 0) then element {"listBibl"} {$listBibl/head, $bibls} else () (: only return a listBibl if there are non-empty bibls :)
 };
 
 (:
-Fixes https://github.com/srophe/caesarea-data/issues/108 for new data
+Fixes https://github.com/srophe/caesarea-data/issues/108 for new data.
+Will be deprecated once https://github.com/srophe/caesarea-data/issues/103 is implemented
 :)
-declare function cmproc:normalize-related-subjects-notes($doc as node())
+declare %updating function cmproc:update-related-subject-notes($record as node())
+{
+  (delete node $record//body/note,
+  insert node cmproc:normalize-related-subjects-notes($record) as last into $record//body)
+};
+
+declare function cmproc:normalize-related-subjects-notes($record as node())
 as node()+
 {
-  for $note in $doc//text/body/note
+  for $note in $record//text/body/note
   let $relatedSubjects :=
     (
     $note/p/text(),
