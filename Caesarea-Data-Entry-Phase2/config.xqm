@@ -44,9 +44,47 @@ declare variable $config:output-directory := "/home/arren/Documents/GitHub/sroph
 (: Project Metadata :)
 (: ~~~~~~~~~~~~~~~~ :)
 
-declare variable $config:project-uri-base := "https://caesarea-maritima.org/testimonia/";
+declare variable $config:project-uri-base := "https://caesarea-maritima.org/";
+
+declare variable $config:testimonia-uri-base := $config:project-uri-base||"testimonia/";
+
+declare variable $config:bibl-uri-base := $config:project-uri-base||"bibl/";
 
 declare variable $config:editor-uri-base := "https://caesarea-maritima.org/documentation/editors.xml#";
+
+(: Responsibility Statements :)
+
+declare variable $config:resp-string-for-creator := "Electronic text added by";
+
+declare variable $config:resp-string-for-metadata := "URNs and other metadata added by";
+
+declare variable $config:resp-string-for-tei := "TEI encoding by";
+
+(: the editors.xml id for the person responsible for creating the TEI file itself :)
+declare variable $config:editor-id-for-tei := "jrife";
+
+(: Historical Period Taxonomy Data :)
+(: Note: the categories themselves are stored in the document addressed by $config:period-taxonomy-doc-uri and are constructed on the fly by the script :)
+
+declare variable $config:period-taxonomy-id := "CM-NEAEH";
+
+declare variable $config:period-taxonomy-description :=
+  <desc xmlns="http://www.tei-c.org/ns/1.0">
+    <title>Caesarea-Maritima.org Chronology</title>: This chronology is adapted from
+                  the chronology used in <bibl>
+                     <title>The New Encyclopedia of Archaeological Excavations in the Holy
+                        Land</title>
+                     <ptr target="https://caesarea-maritima.org/bibl/HG492LV3"/>
+                  </bibl>. This taxonomy is used in the <gi>catRef</gi> encoding to classify the
+                  testimonia according to the time period(s) of the events described, rather than
+                  the date of composition of the testimonium. For example, Josephus may describe
+                  events occuring well before the period of his writing.</desc>
+;
+(: Labels for the listBibls :)
+
+declare variable $config:works-cited-listBibl-label := "Works Cited";
+
+declare variable $config:additional-bibls-listBibl-label := "Additional Bibliography";
 
 
 (: ~~~~~~~~~~~~~~~~~~~ :)
