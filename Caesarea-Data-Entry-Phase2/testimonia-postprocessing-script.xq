@@ -8,45 +8,10 @@ declare namespace csv = "http://basex.org/modules/csv";
 (: START MAIN SCRIPT :)
 
 (: initialize runtime :)
-let $currentDate := current-date()
 let $nothing := file:create-dir($config:output-directory)
 
 (: Main Loop through Folder of Records to Process :)
 for $doc in $config:input-collection
-  let $docId := $doc//publicationStmt/idno/text()
-  let $docUri := $config:project-uri-base||"testimonia/"||$docId
-  let $docTitle := <title xml:lang="en" level="a">{$doc/TEI/teiHeader/profileDesc/creation/persName/text()},&#x20;<title level="m">{$doc/TEI/teiHeader/profileDesc/creation/title/text()}</title>&#x20;{$doc//TEI/teiHeader/profileDesc/creation/ref/text()}</title>
-  let $editors := cmproc:create-editor-elements($config:editors-doc, $doc//revisionDesc/change, $config:editor-uri-base)
-  let $respStmts := cmproc:create-respStmts($config:editors-doc, $doc//revisionDesc/change, $config:editor-uri-base)
-  let $newCreation := cmproc:create-creation($doc//creation, $docId, $config:period-taxonomy-doc)
-  let $langString := cmproc:create-langString($doc//profileDesc/langUsage)
-  let $docUrn := if(string($doc//profileDesc/creation/title/@ref) != "") then string($doc//profileDesc/creation/title/@ref)||":"||$doc//profileDesc/creation/ref/text() else()
-  let $abstract := cmproc:create-abstract($newCreation, $doc//ab/placeName, string($doc//catRef[@scheme="#CM-Testimonia-Type"]/@target), $docId)
-  let $edition := cmproc:update-excerpt($doc//body/ab[@type="edition"], string($doc//profileDesc/langUsage/language/@ident), $docId, string($doc//profileDesc/langUsage/language/@ident))
-  let $translation := cmproc:update-excerpt($doc//body/ab[@type="translation"], "en", $docId, string($doc//profileDesc/langUsage/language/@ident))
-  let $newWorksCited := cmproc:update-bibls($doc//listBibl[1], $docId, "yes", $config:project-uri-base)
-  let $newAdditionalBibl := cmproc:update-bibls($doc//listBibl[2], $docId, "no", $config:project-uri-base)
-  let $normalizedRelatedSubjectsNotes := cmproc:normalize-related-subjects-notes($doc)
+  return cmproc:post-process-testimonia-record($doc)
   
-  (:Updating Expressions:)
-  return if($docId != "") then (
-    insert node $docTitle before $doc//titleStmt/title,
-    insert nodes $editors after $doc//titleStmt/editor[last()],
-    insert nodes $respStmts before $doc//titleStmt/respStmt[1],
-    replace value of node $doc//publicationStmt/idno with $docUri||"/tei",
-    replace value of node $doc//publicationStmt/date with $currentDate,
-    replace node $doc//profileDesc/creation with $newCreation,
-    replace value of node $doc/TEI/teiHeader/profileDesc/langUsage/language with $langString,
-    replace value of node $doc//profileDesc/textClass/classCode/idno with $docUrn,
-    replace value of node $doc//body/ab[@type="identifier"]/idno with $docUri,
-    replace node $doc//body/desc[@type="abstract"] with $abstract,
-    replace node $doc//body/ab[@type="edition"] with $edition,
-    replace node $doc//body/ab[@type="translation"] with $translation,
-    replace node $doc//listBibl[1] with $newWorksCited,
-    replace node $doc//listBibl[2] with $newAdditionalBibl,
-    if(not($doc//body/desc[@type="context"]/text())) then delete node $doc//body/desc[@type="context"] else(),
-    delete node $doc//comment(),
-    delete node $doc//body/note,
-    insert node $normalizedRelatedSubjectsNotes as last into $doc//body,
-    put($doc, concat($config:output-directory, $docId, ".xml"), map{'omit-xml-declaration': 'no'})
-) else ()
+  
