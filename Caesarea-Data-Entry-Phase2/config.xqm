@@ -32,12 +32,12 @@ declare default element namespace "http://www.tei-c.org/ns/1.0";
 (: Change these to reflect the location of the desired input and output directories :)
 
 (: should be a string representing the directory where input files are stored :)
-declare variable $config:input-directory := "/home/arren/Documents/GitHub/srophe-xQueries/Caesarea-Data-Entry-Phase2/test-in/";
+declare variable $config:input-directory := "/home/arren/Documents/GitHub/caesarea-data/data/testimonia/tei/";
 
 declare variable $config:input-collection := collection($config:input-directory);
 
 (: should be a string representing the directory where processed files should be stored :)
-declare variable $config:output-directory := "/home/arren/Documents/GitHub/srophe-xQueries/Caesarea-Data-Entry-Phase2/test-out/";
+declare variable $config:output-directory := "/home/arren/Documents/GitHub/caesarea-data/draft-data/out/";
 
 
 (: ~~~~~~~~~~~~~~~~ :)
