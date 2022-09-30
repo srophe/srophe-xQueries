@@ -79,7 +79,7 @@ declare %updating function cmproc:update-new-testimonia-record($record as node()
    cmproc:update-langUsage-language($record),
    cmproc:update-record-urn($record),
    replace value of node $record//body/ab[@type="identifier"]/idno with $recUri,
-   cmproc:update-abstract($record, $recUri),
+   cmproc:update-abstract($record, $recUri, false()),
    cmproc:update-edition($record, $recUri),
    cmproc:update-translation($record, $recUri),
    cmproc:update-bibls($record, $recUri),
@@ -336,11 +336,13 @@ as xs:string?
   if(string($record//profileDesc/creation/title/@ref) != "") then string($record//profileDesc/creation/title/@ref)||":"||$record//profileDesc/creation/ref/text() else()
 };
 
-declare %updating function cmproc:update-abstract($record as node(), $recUri as xs:string)
+declare %updating function cmproc:update-abstract($record as node(), $recUri as xs:string, $isCreationProcessed as xs:boolean)
 {
   let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
+  (: allows selecting if this is run to update an abstract or create while post-processing :)
+  let $creation := if($isCreationProcessed) then $record//profileDesc/creation else cmproc:create-creation($record, $recUri)
   let $recordType := $record//profileDesc/textClass/catRef[@scheme = "#CM-Testimonia-Type"]/@target/string()
-  let $abstract := cmproc:create-abstract(cmproc:create-creation($record, $recUri), $record//body/ab/placeName, $recordType, $recId)
+  let $abstract := cmproc:create-abstract($creation, $record//body/ab/placeName, $recordType, $recId)
   return
   if($record//body/desc[@type="abstract"]) then
   replace node $record//body/desc[@type="abstract"] with $abstract
@@ -348,7 +350,7 @@ declare %updating function cmproc:update-abstract($record as node(), $recUri as 
 };
 
 declare function cmproc:create-abstract($creation as node(), $placeNameSeq as node()*, $recType as xs:string, $recId as xs:string) {
-  let $preamble := if($recType = "#direct") then
+  let $preamble := if($recType = "#direct" or $recType = "") then
     cmproc:create-abstract-preamble-from-place-name-sequence($placeNameSeq)
     (: note that this will raise an error if $placeNameSeq is empty. This is the preferred functionality to catch records that are marked with "#direct" but are missing tagged place names :)
     else "Caesarea Maritima is indirectly"
