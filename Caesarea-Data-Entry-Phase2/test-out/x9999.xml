@@ -255,7 +255,7 @@
          <abstract>
             <p/>
          </abstract>
-         <creation>This entry is taken from <title xml:lang="en" ref="" type="uniform" level="m">Book of Places</title> <ref target="#bibx9999-1">137</ref> written by <persName ref="http://viaf.org/viaf/95147024" role="author">Jerome</persName> in <origDate notBefore="-0130" notAfter="0420" period="#hellenistic #earlyNabatean #nabateanKingdom #lateHellenistic #byzantine #earlyRoman #herodian #middleNabatean #lateRoman">130 BCE-420 CE</origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/687856">Bethlehem</origPlace>.</creation>
+         <creation>This entry is taken from <title xml:lang="en" ref="" type="uniform" level="m">Book of Places</title> <ref target="#bibx9999-1">137</ref> written by <persName ref="http://viaf.org/viaf/95147024" role="author">Jerome</persName> in <origDate notBefore="0390" notAfter="0420" period="#byzantine">390-420 CE</origDate>. This work was likely written in <origPlace ref="https://pleiades.stoa.org/places/687856">Bethlehem</origPlace>.</creation>
          <langUsage>
             <language ident="la">Latin</language>
          </langUsage>
@@ -264,7 +264,7 @@
                <idno type="CTS-URN"/>
             </classCode>
             <catRef scheme="#CM-Testimonia-Type" target="#direct"/>
-            <catRef scheme="#CM-NEAEH" target="#lowerPaleolithic #byzantine"/>
+            <catRef scheme="#CM-NEAEH" target="#byzantine"/>
          </textClass>
       </profileDesc>
       <revisionDesc status="draft">
@@ -282,7 +282,7 @@
           <placeName>Caesareae</placeName>
         </quote>, and <quote>
           <placeName>Caesarea</placeName>
-        </quote> are directly attested at <persName ref="http://viaf.org/viaf/95147024" role="author">Jerome</persName>, <title xml:lang="en" ref="" type="uniform" level="m">Book of Places</title> <ref target="#bibx9999-1">137</ref>. This passage was written ca. <origDate notBefore="-0130" notAfter="0420" period="#hellenistic #earlyNabatean #nabateanKingdom #lateHellenistic #byzantine #earlyRoman #herodian #middleNabatean #lateRoman">130 BCE-420 CE</origDate> possibly in <origPlace ref="https://pleiades.stoa.org/places/687856">Bethlehem</origPlace>.</desc>
+        </quote> are directly attested at <persName ref="http://viaf.org/viaf/95147024" role="author">Jerome</persName>, <title xml:lang="en" ref="" type="uniform" level="m">Book of Places</title> <ref target="#bibx9999-1">137</ref>. This passage was written ca. <origDate notBefore="0390" notAfter="0420" period="#byzantine">390-420 CE</origDate> possibly in <origPlace ref="https://pleiades.stoa.org/places/687856">Bethlehem</origPlace>.</desc>
          <desc type="context">In his lexicon of place names in Hebrew Scripture, Jerome wrote that
             Nafeddor named at <title>Joshua 11:12</title> was located near Caesarea Maritima on the
             road to Ptolemais (Akko), repeating his lemma under Dor Nafeth (79). He also cited the
@@ -304,7 +304,7 @@
       </ab>
          <listBibl>
         <head>Works Cited</head>
-        <bibl xml:id="bibx9999-1">
+        <bibl xml:id="bibx9999-2">
           <ptr target="https://caesarea-maritima.org/bibl/ARSF2XBM"/>
           <citedRange unit="p">137</citedRange>
         </bibl>
