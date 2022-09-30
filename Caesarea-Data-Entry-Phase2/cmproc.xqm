@@ -411,7 +411,28 @@ declare function cmproc:post-process-excerpt($excerpt as node(), $excerptLangCod
   let $nonEmptyChildNodes := 
     for $node in $excerpt/child::node()
     return if($node instance of element() and name($node) = "note" and not($node/text())) then () else $node (: do not return empty note elements :)
+  let $nonEmptyChildNodes := cmproc:replace-pipe-with-lb-element($nonEmptyChildNodes)
   return element ab {$excerpt/@type, attribute xml:lang {$excerptLangCode}, attribute xml:id {"quote"||$docId||"-"||$quoteSeq}, attribute source {"#bib"||$docId||"-"||$quoteSeq}, $anchor, $nonEmptyChildNodes}
+};
+
+declare function cmproc:replace-pipe-with-lb-element($items as item()+)
+as item()+
+{
+  for $node in $items
+  (: if $node is a string and contains the pattern " | ", we need to replace this pipe with a <lb/> element :)
+  return if($node instance of text() and contains($node, " | ")) then
+    let $pieces := tokenize($node, " \| ")
+    (: interweave a <lb/> element between each section divided by the presence of the " \| " regex pattern :)
+    for $piece at $i in $pieces
+    return if($i < count($pieces)) then ($piece, element {"lb"}{}) else $piece
+  else $node
+  (:
+  
+  - if an element, just return it
+  - if text, 
+    - if contains " | " then split around this and return [1], <lb/>, [2], etc.
+    - else return 
+  :)
 };
 
 declare %updating function cmproc:update-bibls($record as node(), $recUri as xs:string)
