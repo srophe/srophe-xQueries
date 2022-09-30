@@ -196,7 +196,7 @@ declare %updating function cmproc:update-historical-era-taxonomy($record as node
     if($record//classDecl/taxonomy[@xml:id = "CM-NEAEH"]) then
       replace node $record//classDecl/taxonomy[@xml:id = "CM-NEAEH"] with $taxonomy
     else 
-      insert node $taxonomy as first into $record//clasDecl
+      insert node $taxonomy as first into $record//classDecl
 };
 
 declare function cmproc:create-historical-era-taxonomy()
