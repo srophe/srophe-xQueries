@@ -453,7 +453,7 @@ as node()?
 {
   let $bibls := for $bibl at $i in $listBibl/bibl
     where string($bibl/ptr/@target) !="" (: only return bibls that have an assigned ptr :)
-    let $ptrUri := substring-after($bibl/ptr/@target/string(), "items/")
+    let $ptrUri := functx:substring-after-if-contains($bibl/ptr/@target/string(), "items/")
     let $ptrUri := functx:substring-before-if-contains($ptrUri, "/")
     let $ptrUri := $config:bibl-uri-base||$ptrUri
     let $ptr := element {"ptr"} {attribute {"target"} {$ptrUri}}
