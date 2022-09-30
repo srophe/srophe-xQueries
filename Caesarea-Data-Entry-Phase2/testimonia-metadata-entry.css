@@ -215,16 +215,16 @@ change[when]:first-of-type:before(7) {
     content: "Testimonium metadata entered by: " oxy_combobox(
 edit, '@who',
 editable, true,
-values, 'dmichelson, jrife, plieberman, wpotter',
-labels, 'David A. Michelson, Joseph L. Rife, Phillip I. Lieberman, William L. Potter'
+values, 'dmichelson, jrife, plieberman, tmarashi, wpotter',
+labels, 'David A. Michelson, Joseph L. Rife, Phillip I. Lieberman, Taryn Marashi, William L. Potter'
 ) "\A";
 }
 change[when]:last-of-type:before(7) {
   content: "Testimonium entered by: " oxy_combobox(
 edit, '@who',
 editable, true,
-values, 'dmichelson, jrife, plieberman, wpotter',
-labels, 'David A. Michelson, Joseph L. Rife, Phillip I. Lieberman, William L. Potter'
+values, 'dmichelson, jrife, plieberman, tmarashi, wpotter',
+labels, 'David A. Michelson, Joseph L. Rife, Phillip I. Lieberman, Taryn Marashi, William L. Potter'
 ) "\A"
 }
 
