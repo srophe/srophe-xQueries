@@ -243,11 +243,11 @@ as node()
 declare function cmproc:post-process-origDate($origDate as node()) 
 as node() {
   let $origDateText := normalize-space(string-join($origDate/text()))
-  let $lowDate := substring-before($origDateText, " ")
+  let $lowDate := functx:substring-before-if-contains($origDateText, " ")
   let $highDate := substring-after($origDateText, " ")
   let $dateString := cmproc:create-date-string($lowDate, $highDate)
   let $lowDateInt := xs:integer($lowDate)
-  let $highDateInt := xs:integer($highDate)
+  let $highDateInt := if($highDate != "") then xs:integer($highDate) else ()
   let $periodAttribute := cmproc:create-period-attribute-from-dates($lowDateInt, $highDateInt)
   return element {"origDate"} {
     attribute {"notBefore"} {$lowDate},
