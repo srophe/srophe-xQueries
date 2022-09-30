@@ -176,8 +176,8 @@ as node()
   let $editorNameString := string-join($editorNameString, " ")
   let $editorNameString := normalize-space($editorNameString)
   return element {$elementName} {
-    attribute {"ref"} {$config:editor-uri-base||$editorId},
     $attributes,
+    attribute {"ref"} {$config:editor-uri-base||$editorId},
     $editorNameString
   }
 };
