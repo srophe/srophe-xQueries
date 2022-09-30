@@ -177,9 +177,6 @@
           <category xml:id="ironAgeIib">
             <catDesc>Iron Age IIB, 899-699 BCE</catDesc>
           </category>
-          <category xml:id="ironIic">
-            <catDesc>Iron IIC, 799-731 BCE</catDesc>
-          </category>
           <category xml:id="ironAgeIic">
             <catDesc>Iron Age IIC, 699-585 BCE</catDesc>
           </category>
@@ -229,7 +226,7 @@
             <catDesc>Ottoman period, 1516-1917 CE</catDesc>
           </category>
           <category xml:id="britishTerritorialAdministration">
-            <catDesc>British Territorial Administration Period, 1970-1920 CE</catDesc>
+            <catDesc>British Territorial Administration Period, 1917-1920 CE</catDesc>
           </category>
           <category xml:id="britishMandate">
             <catDesc>British Mandate Period, 1920-1948 CE</catDesc>
