@@ -30,10 +30,10 @@ declare %updating function cmproc:post-process-testimonia-record($record as node
 {
   let $recordId := $record//publicationStmt/idno/text()
   let $recUri := $config:testimonia-uri-base||$recordId
-  
+  let $outputFilePath := $config:output-directory||$recordId||".xml"
   return 
   try {
-    (cmproc:update-new-testimonia-record($record, $recUri), update:output(cmproc:log-success($record)))
+    (cmproc:update-new-testimonia-record($record, $recUri, $outputFilePath), update:output(cmproc:log-success($record, $outputFilePath)))
   }
   catch * {
     let $failure :=
@@ -44,29 +44,30 @@ declare %updating function cmproc:post-process-testimonia-record($record as node
         element {"module"} {$err:module},
         element {"location"} {$err:line-number||": "||$err:column-number},
         element {"additional"} {$err:additional},
-        cmproc:get-record-context($record)
+        cmproc:get-record-context($record, "Failure: file not written to disk")
       }
     return update:output($failure)
   }
 };
 
-declare function cmproc:log-success($record as node())
+declare function cmproc:log-success($record as node(), $outputFilePath as xs:string)
 as node()
 {
-  element {"success"} {cmproc:get-record-context($record)}
+  element {"success"} {cmproc:get-record-context($record, $outputFilePath)}
 };
 
-declare function cmproc:get-record-context($record as node())
+declare function cmproc:get-record-context($record as node(), $outputFilePath as xs:string)
 as node()
 {
-  let $fileLocation := document-uri($record)
+  let $inputFileLocation := document-uri($record)
   return element {"nodeContext"}
     {
-      element {"fileLocation"} {$fileLocation}
+      element {"inputFileLocation"} {$inputFileLocation},
+      element {"outputFileLocation"} {$outputFilePath}
     }
 };
 
-declare %updating function cmproc:update-new-testimonia-record($record as node(), $recUri as xs:string)
+declare %updating function cmproc:update-new-testimonia-record($record as node(), $recUri as xs:string, $outputFilePath as xs:string)
 {
   (cmproc:update-record-title($record),
    cmproc:update-editors-list($record),
@@ -85,7 +86,7 @@ declare %updating function cmproc:update-new-testimonia-record($record as node()
    cmproc:update-related-subject-notes($record),
    if(not($record//body/desc[@type="context"]/text())) then delete node $record//body/desc[@type="context"] else(),
     delete node $record//comment(),
-    put($record, $config:output-directory||functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)||".xml", map{'omit-xml-declaration': 'no'})
+    put($record, $outputFilePath, map{'omit-xml-declaration': 'no'})
   )
 };
 
