@@ -387,11 +387,8 @@ declare %updating function cmproc:update-edition($record as node(), $recUri as x
   let $workLangCode := $record//profileDesc/langUsage/language/@ident/string()
   let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
   let $edition := cmproc:post-process-excerpt($record//body/ab[@type="edition"], $workLangCode, $recId, $workLangCode)
+  let $edition := cmproc:add-source-ab-to-excerpt($edition, $recId, "1")
   return replace node $record//body/ab[@type="edition"] with $edition
-  (:
-    let $edition := cmproc:update-excerpt($doc//body/ab[@type="edition"], string(), $docId, string($doc//profileDesc/langUsage/language/@ident))
-  let $translation := cmproc:update-excerpt($doc//body/ab[@type="translation"], "en", $docId, string($doc//profileDesc/langUsage/language/@ident))
-  :)
 };
 
 declare %updating function cmproc:update-translation($record as node(), $recUri as xs:string)
@@ -399,11 +396,10 @@ declare %updating function cmproc:update-translation($record as node(), $recUri 
   let $workLangCode := $record//profileDesc/langUsage/language/@ident/string()
   let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
   let $translation := cmproc:post-process-excerpt($record//body/ab[@type="translation"], "en", $recId, $workLangCode)
+  let $translation := if($record//body/listBibl[1]/bibl[2]/ptr/@target !="") then (: source the translation to the second works cited bibl if it has a non-empty pointer :)
+    cmproc:add-source-ab-to-excerpt($translation, $recId, "2")
+    else $translation
   return replace node $record//body/ab[@type="translation"] with $translation
-  (:
-    let $edition := cmproc:update-excerpt($doc//body/ab[@type="edition"], string(), $docId, string($doc//profileDesc/langUsage/language/@ident))
-  let $translation := cmproc:update-excerpt($doc//body/ab[@type="translation"], "en", $docId, string($doc//profileDesc/langUsage/language/@ident))
-  :)
 };
 
 declare function cmproc:post-process-excerpt($excerpt as node(), $excerptLangCode as xs:string, $docId as xs:string, $docLangCode as xs:string) as node() {
@@ -414,7 +410,7 @@ declare function cmproc:post-process-excerpt($excerpt as node(), $excerptLangCod
     for $node in $excerpt/child::node()
     return if($node instance of element() and name($node) = "note" and not($node/text())) then () else $node (: do not return empty note elements :)
   let $nonEmptyChildNodes := cmproc:replace-pipe-with-lb-element($nonEmptyChildNodes)
-  return element ab {$excerpt/@type, attribute xml:lang {$excerptLangCode}, attribute xml:id {"quote"||$docId||"-"||$quoteSeq}, attribute source {"#bib"||$docId||"-"||$quoteSeq}, $anchor, $nonEmptyChildNodes}
+  return element ab {$excerpt/@type, attribute xml:lang {$excerptLangCode}, attribute xml:id {"quote"||$docId||"-"||$quoteSeq}, $anchor, $nonEmptyChildNodes}
 };
 
 declare function cmproc:replace-pipe-with-lb-element($items as item()+)
@@ -428,13 +424,25 @@ as item()+
     for $piece at $i in $pieces
     return if($i < count($pieces)) then ($piece, element {"lb"}{}) else $piece
   else $node
-  (:
-  
-  - if an element, just return it
-  - if text, 
-    - if contains " | " then split around this and return [1], <lb/>, [2], etc.
-    - else return 
-  :)
+};
+
+declare function cmproc:add-source-ab-to-excerpt($excerpt as node(), $recId as xs:string, $biblNum as xs:string)
+as node()
+{
+  let $sourceAb := 
+    element {"ab"} {
+      attribute {"type"} {"source"}, 
+      attribute {"source"} {"#bib"||$recId||"-"||$biblNum}}
+  return 
+    element {name($excerpt)} 
+      {
+         $excerpt/@*, 
+         $excerpt/child::node()[not(name() = "idno" or name() = "ref" or name() = "note" or name() = "ab")],
+         $sourceAb,
+         $excerpt/idno,
+         $excerpt/ref,
+         $excerpt/note
+     }
 };
 
 declare %updating function cmproc:update-bibls($record as node(), $recUri as xs:string)
