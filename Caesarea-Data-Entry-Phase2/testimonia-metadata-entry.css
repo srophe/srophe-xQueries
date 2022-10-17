@@ -142,9 +142,29 @@ origPlace:after(1)
   content: "\A Pleiades URI: " oxy_textfield(edit, "@ref", columns, 30)
 }
 
+langUsage > language[ana="#caesarea-language-of-testimonia"]:before(9)
+{
+  content: "Language of Testimonium\A"
+}
+langUsage > language[ana="#caesarea-language-of-testimonia"]:before(8)
+{
+  content: "The language represented in the testimonium. For example, for an ancient Syriac translation of a Greek biblical commentary this would be 'Syriac'\A";
+  font-size: 12px;
+}
+
+langUsage > language[ana="#caesarea-language-of-original"]:before(9)
+{
+  content: "Language of Original\A"
+}
+langUsage > language[ana="#caesarea-language-of-original"]:before(8)
+{
+  content: "The original langauge of the testimonium's source. For example, for an ancient Syriac translation of a Greek biblical commentary this would be 'Greek'\A";
+  font-size: 12px;
+
+}
 langUsage > language
 {
-  content: "Original Language of Testimonium: " oxy_combobox(
+  content: oxy_combobox(
 edit, '@ident',
 editable, false,
 values, 'grc, ar, hy, cop, gez, he, tmr, jpa, la, fro, xno, pro, syr',
