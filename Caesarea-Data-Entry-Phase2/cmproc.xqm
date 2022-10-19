@@ -410,7 +410,12 @@ declare function cmproc:post-process-excerpt($excerpt as node(), $excerptLangCod
   let $anchor := <anchor xml:id="testimonia-{$docId}.{$excerptLangCode}.1" corresp="#testimonia-{$docId}.{$correspLangCode}.1"/>
   let $nonEmptyChildNodes := 
     for $node in $excerpt/child::node()
-    return if($node instance of element() and name($node) = "note" and not($node/text())) then () else $node (: do not return empty note elements :)
+    return 
+    if($node instance of element()) then 
+      if (name($node) = "note" and empty($node/text())) then () (: do not return empty note elements :)
+      else if(name($node) = "anchor") then () (: avoid reduplicating existing anchor elements :)
+      else $node
+    else $node
   let $nonEmptyChildNodes := cmproc:replace-pipe-with-lb-element($nonEmptyChildNodes)
   return element ab {$excerpt/@type, attribute xml:lang {$excerptLangCode}, attribute xml:id {"quote"||$docId||"-"||$quoteSeq}, $anchor, $nonEmptyChildNodes}
 };
