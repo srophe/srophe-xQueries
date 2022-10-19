@@ -388,6 +388,7 @@ declare %updating function cmproc:update-edition($record as node(), $recUri as x
   let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
   let $edition := cmproc:post-process-excerpt($record//body/ab[@type="edition"], $workLangCode, $recId, $workLangCode)
   let $edition := cmproc:add-source-ab-to-excerpt($edition, $recId, "1")
+  let $edition := cmproc:add-xml-lang-tags-to-excerpt-notes($edition)
   return replace node $record//body/ab[@type="edition"] with $edition
 };
 
@@ -399,6 +400,7 @@ declare %updating function cmproc:update-translation($record as node(), $recUri 
   let $translation := if($record//body/listBibl[1]/bibl[2]/ptr/@target !="") then (: source the translation to the second works cited bibl if it has a non-empty pointer :)
     cmproc:add-source-ab-to-excerpt($translation, $recId, "2")
     else $translation
+  let $translation := cmproc:add-xml-lang-tags-to-excerpt-notes($translation)
   return replace node $record//body/ab[@type="translation"] with $translation
 };
 
@@ -443,6 +445,16 @@ as node()
          $excerpt/ref,
          $excerpt/note
      }
+};
+
+declare function cmproc:add-xml-lang-tags-to-excerpt-notes($excerpt as node())
+as node()
+{
+  let $updatedChildren :=
+    for $node in $excerpt/child::node()
+      return if(name($node) = "note" and not($node/@xml:lang)) then  element {name($node)} {attribute {"xml:lang"} {"en"}, $node/@*, $node/*}(: add xml:lang tags to notes that don't have them :)
+      else $node
+  return element {name($excerpt)} {$excerpt/@*, $updatedChildren}
 };
 
 declare %updating function cmproc:update-bibls($record as node(), $recUri as xs:string)
