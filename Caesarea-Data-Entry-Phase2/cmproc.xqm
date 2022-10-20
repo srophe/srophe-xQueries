@@ -478,9 +478,12 @@ as node()?
 {
   let $bibls := for $bibl at $i in $listBibl/bibl
     where string($bibl/ptr/@target) !="" (: only return bibls that have an assigned ptr :)
-    let $ptrUri := functx:substring-after-if-contains($bibl/ptr/@target/string(), "items/")
-    let $ptrUri := functx:substring-before-if-contains($ptrUri, "/")
-    let $ptrUri := $config:bibl-uri-base||$ptrUri
+    let $ptrUri := $bibl/ptr/@target/string()
+    let $ptrUri := if(contains($ptrUri, "zotero"))
+      then let $ptrUri := functx:substring-after-if-contains($ptrUri, "/items/")
+      return functx:substring-before-if-contains($ptrUri, "/")
+    else $ptrUri
+    let $ptrUri := if(contains($ptrUri, $config:bibl-uri-base)) then $ptrUri else $config:bibl-uri-base||$ptrUri
     let $ptr := element {"ptr"} {attribute {"target"} {$ptrUri}}
     let $nonEmptyCitedRanges := 
       for $citedRange in $bibl/citedRange
