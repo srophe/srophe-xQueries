@@ -303,26 +303,33 @@ declare function cmproc:lookup-period-single-date($date as xs:integer) as xs:str
 
 declare %updating function cmproc:update-langUsage-language($record as node())
 {
-  replace value of node $record/TEI/teiHeader/profileDesc/langUsage/language with cmproc:create-langString($record//profileDesc/langUsage)
+  replace node $record/TEI/teiHeader/profileDesc/langUsage with cmproc:post-process-langUsage($record//profileDesc/langUsage)
 };
 
-declare function cmproc:create-langString($langUsage){
-  let $langCode := string($langUsage/language/@ident)
-  return switch ($langCode) 
-   case "ar" return "Arabic"
-   case "cop" return "Coptic"
-   case "fro" return "Old French"
-   case "gez" return "Geʿez"
-   case "grc" return "Ancient Greek"
-   case "he" return "Hebrew"
-   case "hy" return "Armenian"
-   case "jpa" return "Jewish Palestinian Aramaic"
-   case "la" return "Latin"
-   case "pro" return "Old Provençal"
-   case "syr" return "Syriac"
-   case "tmr" return "Jewish Babylonian Aramaic"
-   case "xno" return "Anglo-Norman French"   
-   default return ""
+declare function cmproc:post-process-langUsage($langUsage as node())
+as node()
+{
+  let $languages :=
+    for $lang in $langUsage/language
+    let $langCode := $lang/@ident/string()
+    let $langString := 
+     switch ($langCode) 
+     case "ar" return "Arabic"
+     case "cop" return "Coptic"
+     case "fro" return "Old French"
+     case "gez" return "Geʿez"
+     case "grc" return "Ancient Greek"
+     case "he" return "Hebrew"
+     case "hy" return "Armenian"
+     case "jpa" return "Jewish Palestinian Aramaic"
+     case "la" return "Latin"
+     case "pro" return "Old Provençal"
+     case "syr" return "Syriac"
+     case "tmr" return "Jewish Babylonian Aramaic"
+     case "xno" return "Anglo-Norman French"   
+     default return ""
+    return element {name($lang)} {$lang/@*, $langString}
+  return element {name($langUsage)} {$languages}
 };
 
 declare %updating function cmproc:update-record-urn($record as node())
@@ -384,7 +391,9 @@ as item()+
 
 declare %updating function cmproc:update-edition($record as node(), $recUri as xs:string)
 {
-  let $workLangCode := $record//profileDesc/langUsage/language/@ident/string()
+  let $workLangCode := if($record//profileDesc/langUsage/language[@ana="#caesarea-language-of-testimonia"]) 
+    then $record//profileDesc/langUsage/language[@ana="#caesarea-language-of-testimonia"]/@ident/string()
+    else $record//profileDesc/langUsage/language[1]/@ident/string()
   let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
   let $edition := cmproc:post-process-excerpt($record//body/ab[@type="edition"], $workLangCode, $recId, $workLangCode)
   let $edition := cmproc:add-source-ab-to-excerpt($edition, $recId, "1")
@@ -394,7 +403,9 @@ declare %updating function cmproc:update-edition($record as node(), $recUri as x
 
 declare %updating function cmproc:update-translation($record as node(), $recUri as xs:string)
 {
-  let $workLangCode := $record//profileDesc/langUsage/language/@ident/string()
+  let $workLangCode := if($record//profileDesc/langUsage/language[@ana="#caesarea-language-of-testimonia"]) 
+      then $record//profileDesc/langUsage/language[@ana="#caesarea-language-of-testimonia"]/@ident/string()
+      else $record//profileDesc/langUsage/language[1]/@ident/string()
   let $recId := functx:substring-after-if-contains($recUri, $config:testimonia-uri-base)
   let $translation := cmproc:post-process-excerpt($record//body/ab[@type="translation"], "en", $recId, $workLangCode)
   let $translation := if($record//body/listBibl[1]/bibl[2]/ptr/@target !="") then (: source the translation to the second works cited bibl if it has a non-empty pointer :)
