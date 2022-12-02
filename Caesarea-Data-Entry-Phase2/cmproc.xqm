@@ -93,7 +93,10 @@ declare %updating function cmproc:update-new-testimonia-record($record as node()
 (: Create and update record's a-level title :)
 declare %updating function cmproc:update-record-title($record as node())
 {
-  insert node cmproc:create-record-title($record) before $record//titleStmt/title
+  if($record//titleStmt/title[@level="a"]) then
+    replace node $record//titleStmt/title[@level="a"] with cmproc:create-record-title($record)
+  else
+    insert node cmproc:create-record-title($record) before $record//titleStmt/title
 };
 
 declare function cmproc:create-record-title($record as node())
