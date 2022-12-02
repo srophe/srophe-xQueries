@@ -352,7 +352,7 @@ declare %updating function cmproc:update-abstract($record as node(), $recUri as 
   (: allows selecting if this is run to update an abstract or create while post-processing :)
   let $creation := if($isCreationProcessed) then $record//profileDesc/creation else cmproc:create-creation($record, $recUri)
   let $recordType := $record//profileDesc/textClass/catRef[@scheme = "#CM-Testimonia-Type"]/@target/string()
-  let $abstract := cmproc:create-abstract($creation, $record//body/ab/placeName, $recordType, $recId)
+  let $abstract := cmproc:create-abstract($creation, $record//body/ab//placeName, $recordType, $recId)
   return
   if($record//body/desc[@type="abstract"]) then
   replace node $record//body/desc[@type="abstract"] with $abstract
