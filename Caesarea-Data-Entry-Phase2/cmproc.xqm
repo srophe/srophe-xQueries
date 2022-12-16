@@ -386,8 +386,9 @@ as item()+
   let $isOrAre := if(count($placeNamesDistinct) >  1) then " are" else " is"
   let $quotes :=
     for $name at $i in $placeNamesDistinct
-    return if ($i < count($placeNamesDistinct) - 1) then (element {"quote"} {$name}, ", ")
-    else if ($i = count($placeNamesDistinct) - 1) then (element {"quote"} {$name}, ",")
+    let $nameNormalizedSpace := element {name($name)} {normalize-space(string-join($name//text(), " "))}
+    return if ($i < count($placeNamesDistinct) - 1) then (element {"quote"} {$nameNormalizedSpace}, ", ")
+    else if ($i = count($placeNamesDistinct) - 1) then (element {"quote"} {$nameNormalizedSpace}, ",")
     else ("and ", element {"quote"} {$name})
   return ($quotes, $isOrAre, "directly")
 };
