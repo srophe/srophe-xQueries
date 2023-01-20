@@ -493,12 +493,7 @@ as node()?
 {
   let $bibls := for $bibl at $i in $listBibl/bibl
     where string($bibl/ptr/@target) !="" (: only return bibls that have an assigned ptr :)
-    let $ptrUri := $bibl/ptr/@target/string()
-    let $ptrUri := if(contains($ptrUri, "zotero"))
-      then let $ptrUri := functx:substring-after-if-contains($ptrUri, "/items/")
-      return functx:substring-before-if-contains($ptrUri, "/")
-    else $ptrUri
-    let $ptrUri := if(contains($ptrUri, $config:bibl-uri-base)) then $ptrUri else $config:bibl-uri-base||$ptrUri
+    let $ptrUri := cmproc:process-bibl-uri($bibl/ptr/@target/string()) (: processes the bibl URI into the c-m format; raises an error if item key cannot be found :)
     let $ptr := element {"ptr"} {attribute {"target"} {$ptrUri}}
     let $nonEmptyCitedRanges := 
       for $citedRange in $bibl/citedRange
@@ -507,6 +502,22 @@ as node()?
     let $biblId := if ($isWorksCited) then attribute xml:id {"bib"||$docId||"-"||$i} else ()
     return element {"bibl"} {$biblId, $ptr, $nonEmptyCitedRanges}
   return if(count($bibls) > 0) then element {"listBibl"} {$listBibl/head, $bibls} else () (: only return a listBibl if there are non-empty bibls :)
+};
+
+declare function cmproc:process-bibl-uri($uri as xs:string)
+as xs:string
+{
+  let $itemKey := 
+    if(contains($uri, "zotero")) then (: if it's a zotero URI, the item key is after the "items/" string :)
+      substring-after($uri, "items/") (: substring-after is used so that an empty string is returned if a match is not found, forcing an error to be raised :)
+    else if(contains($uri, $config:bibl-uri-base)) then (: if it's a C-M style URI, the itemKey comes after the bibl-uri-base :)
+      substring-after($uri, $config:bibl-uri-base)
+    else () (: other formats should raise an error at present :)
+  let $itemKey := functx:substring-before-if-contains($itemKey, "/") (: remove any extraneous strings following the itemKey, such as '/library', etc. :)
+  return
+    if(string-length($itemKey) > 0) then
+      $config:bibl-uri-base||$itemKey
+   else () (: this will force a type error when the itemKey cannot be extracted, which will clue us in to malformed bibl uris :)
 };
 
 (:
