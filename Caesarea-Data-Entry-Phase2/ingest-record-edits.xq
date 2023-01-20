@@ -6,8 +6,9 @@ import module namespace functx="http://www.functx.com";
 
 declare default element namespace "http://www.tei-c.org/ns/1.0";
 
+(: Update this variable and config:input-collection in the config.xqm module :)
 declare variable $local:edited-doc-collection :=
-  let $collUri := "/home/arren/Documents/caesarea_edited-files_2022-10-19"
+  let $collUri := "/home/arren/Documents/caesarea_2023-01-02_EDITED-Files"
   return collection($collUri);
   
 declare variable $local:editor-change-log :=
@@ -78,7 +79,7 @@ try {
   delete node $matchingDoc//body/note,
   insert node $relatedNotes as last into $matchingDoc//body
 )
-else ()}
+else update:output(element {"failure"} {cmproc:get-record-context($editedDoc, "Failure: No matching record found; file not written to disk")})}
 catch *{
       let $failure :=
       element {"failure"} {
