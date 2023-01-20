@@ -29,6 +29,11 @@ declare default element namespace "http://www.tei-c.org/ns/1.0";
 declare %updating function cmproc:post-process-testimonia-record($record as node())
 {
   let $recordId := $record//publicationStmt/idno/text()
+  let $recordId := 
+    if(contains($recordId, $config:testimonia-uri-base)) then (: handle cases where the full URI was already added :)
+      substring-after(functx:substring-before-if-contains($recordId, "/tei"), $config:testimonia-uri-base) (: remove the '/tei' string from the pubstmt uri, and the uri base to provide a clean record ID:)
+    else
+      $recordId
   let $recUri := $config:testimonia-uri-base||$recordId
   let $outputFilePath := $config:output-directory||$recordId||".xml"
   return 
@@ -382,14 +387,20 @@ declare function cmproc:create-abstract($creation as node(), $placeNameSeq as no
 declare function cmproc:create-abstract-preamble-from-place-name-sequence($placeNameSeq as node()+)
 as item()+
 {
-  let $placeNamesDistinct := functx:distinct-deep($placeNameSeq)
+  let $placeNameStrings := 
+    for $name in $placeNameSeq
+    let $nameString := $name//text()
+    let $nameString := normalize-space(string-join($nameString, " "))
+    let $nameString := if(contains($nameString, "|")) then replace($nameString, "\s*\|\s*", " ") else $nameString (: replaces pipe character with a single space :)
+    return $nameString
+  let $placeNamesDistinct := distinct-values($placeNameStrings)
   let $isOrAre := if(count($placeNamesDistinct) >  1) then " are" else " is"
   let $quotes :=
     for $name at $i in $placeNamesDistinct
-    let $nameNormalizedSpace := element {name($name)} {normalize-space(string-join($name//text(), " "))}
+    let $nameNormalizedSpace := element {QName("http://www.tei-c.org/ns/1.0", "placeName")} {$name}
     return if ($i < count($placeNamesDistinct) - 1) then (element {"quote"} {$nameNormalizedSpace}, ", ")
     else if ($i = count($placeNamesDistinct) - 1) then (element {"quote"} {$nameNormalizedSpace}, ",")
-    else ("and ", element {"quote"} {$name})
+    else ("and ", element {"quote"} {$nameNormalizedSpace})
   return ($quotes, $isOrAre, "directly")
 };
 
@@ -442,9 +453,12 @@ as item()+
   (: if $node is a string and contains the pattern " | ", we need to replace this pipe with a <lb/> element :)
   return if($node instance of text() and contains($node, "|")) then
     let $pieces := tokenize($node, "\s*\|\s*")
-    (: interweave a <lb/> element between each section divided by the presence of the "\s*\|\s*" regex pattern, which catches cases where the following whitespace is a new line, etc. :)
     for $piece at $i in $pieces
-    return if($i < count($pieces)) then ($piece, element {"lb"}{}) else $piece
+    (: this interweaves an <lb/> element between the tokenized string, but does not put an extra one at the end of the strings :)
+    return if($i < count($pieces)) then ($piece, element {QName("http://www.tei-c.org/ns/1.0", "lb")}{}) else $piece
+    (: if the node has any children, recursively replace pipes with lb elements :)
+  else if($node/child::node()) then 
+    element {node-name($node)} {$node/@*, cmproc:replace-pipe-with-lb-element($node/child::node())}
   else $node
 };
 
