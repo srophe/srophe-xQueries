@@ -472,7 +472,7 @@ as node()
 {
   let $updatedChildren :=
     for $node in $excerpt/child::node()
-      return if(name($node) = "note" and not($node/@xml:lang)) then  element {name($node)} {attribute {"xml:lang"} {"en"}, $node/@*, $node/text()}(: add xml:lang tags to notes that don't have them :)
+      return if(name($node) = "note" and not($node/@xml:lang)) then  element {name($node)} {attribute {"xml:lang"} {"en"}, $node/@*, $node/child::node()}(: add xml:lang tags to notes that don't have them :)
       else $node
   return element {name($excerpt)} {$excerpt/@*, $updatedChildren}
 };
