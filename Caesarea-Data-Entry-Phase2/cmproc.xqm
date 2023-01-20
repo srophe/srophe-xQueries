@@ -440,9 +440,9 @@ as item()+
 {
   for $node in $items
   (: if $node is a string and contains the pattern " | ", we need to replace this pipe with a <lb/> element :)
-  return if($node instance of text() and contains($node, " | ")) then
-    let $pieces := tokenize($node, " \| ")
-    (: interweave a <lb/> element between each section divided by the presence of the " \| " regex pattern :)
+  return if($node instance of text() and contains($node, "|")) then
+    let $pieces := tokenize($node, "\s*\|\s*")
+    (: interweave a <lb/> element between each section divided by the presence of the "\s*\|\s*" regex pattern, which catches cases where the following whitespace is a new line, etc. :)
     for $piece at $i in $pieces
     return if($i < count($pieces)) then ($piece, element {"lb"}{}) else $piece
   else $node
