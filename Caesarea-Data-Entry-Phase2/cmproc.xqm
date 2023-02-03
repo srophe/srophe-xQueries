@@ -78,6 +78,8 @@ declare %updating function cmproc:update-new-testimonia-record($record as node()
    cmproc:update-editors-list($record),
    cmproc:update-respStmt-list($record),
    replace value of node $record//publicationStmt/idno with $recUri||"/tei",
+   (: insert the current year as the copyright date into the licence text :)
+   replace value of node $record//publicationStmt/availability/licence/p[1] with replace($record//publicationStmt/availability/licence/p[1]/text(), "DATE", substring(string(current-date()), 1, 4)),
    replace value of node $record//publicationStmt/date with current-date(),
    cmproc:update-historical-era-taxonomy($record),
    cmproc:update-creation($record, $recUri),
