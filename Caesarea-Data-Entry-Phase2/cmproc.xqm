@@ -321,6 +321,11 @@ as node()
 {
   let $languages :=
     for $lang in $langUsage/language
+    (: if the language of the original is not set, assume it to be the same as the testimonia :)
+    let $lang := 
+      if($lang/@ana = "#caesarea-language-of-original" and $lang/@ident = "") then
+        element {name($lang)} {$lang/@ana, $langUsage/language[@ana="#caesarea-language-of-testimonia"]/@ident, $langUsage/language[@ana="#caesarea-language-of-testimonia"]/text()}
+      else $lang
     let $langCode := $lang/@ident/string()
     let $langString := 
      switch ($langCode) 
