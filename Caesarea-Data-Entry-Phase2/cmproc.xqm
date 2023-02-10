@@ -74,9 +74,11 @@ as node()
 
 declare %updating function cmproc:update-new-testimonia-record($record as node(), $recUri as xs:string, $outputFilePath as xs:string)
 {
+  let $record-resp-data := cmproc:collate-record-resp-data($record)
+  return
   (cmproc:update-record-title($record),
-   cmproc:update-editors-list($record),
-   cmproc:update-respStmt-list($record),
+   cmproc:update-editors-list($record, $record-resp-data[?is-creator = true ()] ?editor-element),
+   cmproc:update-respStmt-list($record, $record-resp-data),
    replace value of node $record//publicationStmt/idno with $recUri||"/tei",
    (: insert the current year as the copyright date into the licence text :)
    replace value of node $record//publicationStmt/availability/licence/p[1] with replace($record//publicationStmt/availability/licence/p[1]/text(), "DATE", substring(string(current-date()), 1, 4)),
@@ -85,6 +87,7 @@ declare %updating function cmproc:update-new-testimonia-record($record as node()
    cmproc:update-creation($record, $recUri),
    cmproc:update-langUsage-language($record),
    cmproc:update-record-urn($record),
+   cmproc:update-revisionDesc($record, $record-resp-data[?change-log-message != ""] ?change-element),
    replace value of node $record//body/ab[@type="identifier"]/idno with $recUri,
    cmproc:update-abstract($record, $recUri, false()),
    cmproc:update-edition($record, $recUri),
@@ -97,6 +100,47 @@ declare %updating function cmproc:update-new-testimonia-record($record as node()
   )
 };
 
+(:
+: Using the data from the unprocessed $record, returns a map that combines
+: $config:resp-stmt-data with the matching respStmts in record. 
+: Matches resp-text to $record//respStmt/resp/text().
+: The following keys-value pairs are added:
+: "editor-id": $record//respStmt/name/@ref/string()
+: "respStmt": cmproc:create-respStmt("editor-id", "resp-text")
+: "editor-element": if "is-creator" then cmproc:editor-id-lookup("editor-id", "editor", "creator") else ()
+: "change-element": if "change-log-message" then cmproc:create-change-element("change-log-message", $config:editor-uri-base||"editor-id", current-date())
+:
+: A map for each respStmt found in the record is returned
+:)
+declare function cmproc:collate-record-resp-data($record as node())
+as item()*
+{
+  for $respStmt in $record//titleStmt/respStmt
+  for $map in for-each(map:keys($config:resp-stmt-data), $config:resp-stmt-data)
+  where $respStmt/resp/text() = $map("resp-text")
+  let $editorId := $respStmt/name/@ref/string()
+  let $respStmtFull := if($editorId != "") then cmproc:create-respStmt($editorId, $map("resp-text")) else()
+  let $editorElement := if($map("is-creator") and $editorId != "") then cmproc:editor-id-lookup($editorId, "editor", attribute {"role"} {"creator"}) else ()
+  let $changeElement := if(not(empty($map("change-log-message"))) and $editorId != "") then cmproc:create-change-element($map("change-log-message"), $config:editor-uri-base||$editorId, current-date()) else ()
+  return
+  map:merge((
+  $map,
+  map:entry("editor-id", $editorId),
+  map:entry("respStmt", $respStmtFull),
+  map:entry("editor-element", $editorElement),
+  map:entry("change-element", $changeElement)
+))
+};
+
+declare function cmproc:create-change-element($changeLogMessage as xs:string, $editorUri as xs:string, $timeStamp as xs:date)
+as node()
+{
+  element {"change"} {
+    attribute {"who"} {$editorUri},
+    attribute {"when"} {$timeStamp},
+    $changeLogMessage
+  }
+};
 (: Create and update record's a-level title :)
 declare %updating function cmproc:update-record-title($record as node())
 {
@@ -122,50 +166,39 @@ as node()
   return $recTitle
 };
 
-declare %updating function cmproc:update-editors-list($record as node())
+declare %updating function cmproc:update-editors-list($record as node(), $creatorEditors as node()*)
 {
   (delete nodes $record//titleStmt/editor,
-  insert nodes cmproc:create-editors-list($record) after $record//titleStmt/principal)
+  insert nodes cmproc:create-editors-list($record, $creatorEditors) after $record//titleStmt/principal)
 };
 
 
-declare function cmproc:create-editors-list($record as node()) {
-  let $newEditors := cmproc:create-new-editors-list($record)
-  let $editors := ($record//titleStmt/editor, $newEditors)
+declare function cmproc:create-editors-list($record as node(), $creatorEditors as node()*) {
+  (: revise to fix so JLR is last :)
+  let $creatorEditors := functx:distinct-deep($creatorEditors)
+  let $jlrEditor := $creatorEditors[contains(./@ref, "jrife")]
+  let $creatorEditors := $creatorEditors[not(contains(./@ref, "jrife"))]
+  let $editors := ($record//titleStmt/editor, $creatorEditors, $jlrEditor)
   return functx:distinct-deep($editors)
 };
 
-declare function cmproc:create-new-editors-list($record as node())
-as node()*
-{
-  let $role := attribute {"role"} {"creator"}
-  for $editor in $record//revisionDesc/change/@who/string()
-    return cmproc:editor-id-lookup($editor, "editor", $role)
-};
 
-
-declare %updating function cmproc:update-respStmt-list($record as node())
+declare %updating function cmproc:update-respStmt-list($record as node(), $respStmtData as item()*)
 {
   (delete nodes $record//titleStmt/respStmt,
-  insert nodes cmproc:create-respStmt-list($record) as last into $record//titleStmt
+  insert nodes cmproc:create-respStmt-list($record,  $respStmtData, true ()) as last into $record//titleStmt
 )
 };
 
-declare function cmproc:create-respStmt-list($record as node())
+declare function cmproc:create-respStmt-list($record as node(), $respStmtData as item()+, $includeExistingRespStmts as xs:boolean)
 as node()*
 {
-  let $newRespStmts := cmproc:create-new-respStmt-list($record)
-  return functx:distinct-deep(($newRespStmts, $record//titleStmt/respStmt))
-};
-
-declare function cmproc:create-new-respStmt-list($record as node()) 
-as node()*
-{
-  let $creatorRespStmt := cmproc:create-respStmt($record//revisionDesc/change[2]/@who/string(), $config:resp-string-for-creator)
-  let $metadataRespStmt := cmproc:create-respStmt($record//revisionDesc/change[1]/@who/string(), $config:resp-string-for-metadata)
-  let $teiRespStmt := cmproc:create-respStmt($config:editor-id-for-tei, $config:resp-string-for-tei)
- 
-  return ($teiRespStmt, $metadataRespStmt, $creatorRespStmt)
+  let $newRespStmts := 
+    for $stmt in $respStmtData
+    order by $stmt("pos")
+    return $stmt("respStmt")
+  return if($includeExistingRespStmts) then functx:distinct-deep(($newRespStmts, $record//titleStmt/respStmt))
+  else functx:distinct-deep($newRespStmts)
 };
 
 declare function cmproc:create-respStmt($editorId as xs:string, $respString as xs:string)
@@ -359,6 +392,15 @@ declare function cmproc:create-record-urn($record as node())
 as xs:string?
 {
   if(string($record//profileDesc/creation/title/@ref) != "") then string($record//profileDesc/creation/title/@ref)||":"||$record//profileDesc/creation/ref/text() else()
+};
+
+declare %updating function cmproc:update-revisionDesc($record as node(), $changeElements as node()*)
+{
+  let $changeElements := 
+    for $change in $changeElements
+    order by $change/@when descending
+    return $change
+  return insert node $changeElements as first into $record//revisionDesc
 };
 
 declare %updating function cmproc:update-abstract($record as node(), $recUri as xs:string, $isCreationProcessed as xs:boolean)
