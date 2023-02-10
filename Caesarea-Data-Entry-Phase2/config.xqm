@@ -106,12 +106,60 @@ declare variable $config:editors-doc := doc($config:editors-doc-uri);
 declare variable $config:period-taxonomy-doc := doc($config:period-taxonomy-doc-uri);
 
 declare variable $config:data-template-doc := doc($config:data-template-doc-uri);
-(:
-additions?
-- should have
-:)
 
-(:
-- additional config options?
+(: ~~~~~~~~~~~~~~~~~~~ :)
+(: Responsibility Statements :)
+(: ~~~~~~~~~~~~~~~~~~~ :)
 
-:)
+declare variable $config:resp-stmt-data :=
+  map {
+    "identified":
+      map {
+          "pos": 5,
+          "resp-text": "Testimonium identified by",
+          "is-creator": true (),
+          "change-log-message": ()
+      },
+    "transcribed":
+      map {
+          "pos": 4,
+          "resp-text": "Testimonium transcribed by",
+          "is-creator": true (),
+          "change-log-message": ()
+      },
+      "translated":
+      map {
+          "pos": 3,
+          "resp-text": "Testimonium translated by",
+          "is-creator": true (),
+          "change-log-message": ()
+      },
+     "tei":
+      map {
+          "pos": 2,
+          "resp-text": "TEI record created by",
+          "is-creator": false (),
+          "change-log-message": "CREATED: testimonium"
+      },
+      "edited":
+      map {
+          "pos": 1,
+          "resp-text": "Testimonium edited by",
+          "is-creator": false (),
+          "change-log-message": "CHANGED: Proofreading and general edits"
+      },
+      "ed-review":
+      map {
+          "pos": 6,
+          "resp-text": "Editorial review by",
+          "is-creator": false (),
+          "change-log-message": ()
+      },
+      "res-asst":
+      map {
+          "pos": 7,
+          "resp-text": "Research assistance by",
+          "is-creator": false (),
+          "change-log-message": ()
+      }
+  };
