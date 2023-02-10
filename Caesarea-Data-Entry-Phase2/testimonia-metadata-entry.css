@@ -288,6 +288,14 @@ ab > note {
     ) '\A';
 }
 
+ab > note[type="translation"] {
+  content: attr(type) " note " oxy_combobox(edit, "#text", 
+  columns, 25,
+  editable, "true", 
+  tooltips, "Translation of text-passage retyped verbatim from a published source${comma} cited by author-date., Editor has essentially used the words of a published source${comma} as cited by author-date${comma} but has made minor adjustments for clarity or the purposes of caesarea-maritima.org${comma} such as form or spelling of names of places or persons${comma} touching up diction${comma} adjusting punctuation., Editor has rewritten in significant ways the words of a published source${comma} as cited by author-date${comma} in the interests of strict accuracy and readability., Editor has translated text-passage because published sources${comma} cited by author-date${comma} are unacceptable on grounds of strict accuracy and/or readability. However${comma} Editor considers his/her translation to have sufficiently benefited from knowledge of (an)other published translation(s) as to merit explicit reference to those sources., Editor gives new translation over which they claim full ownership. Either (most often) no published translation of text-passage exists${comma} or (very rarely) published translations have been deemed undeserving of reference or citation.",
+  values, "Trans. \{source\}, Revised from \{source\}, Adapted from \{source\}, Trans. \{editor name\} with reference to \{source(s)\}, Trans. \{editor name\}") '\A';
+}
+
 ab:not([type="identifier"]) > idno{
   content: "URN of Excerpt: " oxy_textfield(edit, "#text", columns, 30) " (of the form, 'urn:cts:greekLit:tlg0031.tlg005.perseus-grc2:11.1-11.18')\A";
   font-size: 14px;
