@@ -6,7 +6,7 @@ declare variable $local:input-directory := "/home/arren/Documents/GitHub/caesare
 
 declare variable $local:input-collection := collection($local:input-directory);
 
-declare variable $local:license-text := <p>Except for materials quoted from other sources, this entry is copyright DATE by the contributors (Joseph L. Rife, et al.) and the Caesarea City and Port Exploration Project. It is licensed under the Attribution 4.0 International (CC BY 4.0) license.</p>;
+declare variable $local:license-text := <p>Except for materials quoted from other sources, this entry is copyright DATE by the contributors (EDITOR-NAME, et al.) and the Caesarea City and Port Exploration Project. It is licensed under the Attribution 4.0 International (CC BY 4.0) license.</p>;
 
 for $doc in $local:input-collection
 let $changeDates := 
@@ -19,8 +19,11 @@ let $lastModified := if($lastModified = "") then $doc//publicationStmt/date/text
 
 let $pubYear := substring($lastModified, 1, 4)
 
+let $editorName := normalize-space($doc//titleStmt/editor[@role="creator"][1]/text())
+
 let $licenceText := $local:license-text/text()
 let $licenceText := replace($licenceText, "DATE", $pubYear)
+let $licenceText := replace($licenceText, "EDITOR-NAME", $editorName)
 let $updatedLicence := element {"p"} {$licenceText}
 return (replace node $doc//publicationStmt/availability/licence/p[1] with $updatedLicence, 
         replace value of node $doc//publicationStmt/date with $lastModified)
