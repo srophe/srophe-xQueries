@@ -254,15 +254,18 @@ as node()
 declare function cmproc:post-process-origDate($origDate as node()) 
 as node() {
   let $origDateText := normalize-space(string-join($origDate/text()))
-  let $lowDate := functx:substring-before-if-contains($origDateText, " ")
-  let $highDate := substring-after($origDateText, " ")
-  let $dateString := cmproc:create-date-string($lowDate, $highDate)
-  let $lowDateInt := xs:integer($lowDate)
-  let $highDateInt := if($highDate != "") then xs:integer($highDate) else ()
+  (: low date will come either from the @when attribute or the @notBefore attribute. Will cause an error if both attributes are present :)
+  let $lowDate := $origDate/@when|$origDate/@notBefore
+  let $highDate := $origDate/@notAfter|$origDate/@when (: if there is just a @when attribute, both dates will be the same, which will not affect later functions. It should raise an error if there is both a @notAfter and @when attribute :)
+  (: use the human readable date input by the editor, otherwise construct a date string from the normalized dates :)
+  let $dateString := if($origDateText != "") then $origDateText else cmproc:create-date-string($lowDate/string(), $highDate/string())
+  let $lowDateInt := xs:integer($lowDate/string())
+  let $highDateInt := if($highDate != "") then xs:integer($highDate/string()) else ()
   let $periodAttribute := cmproc:create-period-attribute-from-dates($lowDateInt, $highDateInt)
   return element {"origDate"} {
-    attribute {"notBefore"} {$lowDate},
-    attribute {"notAfter"} {$highDate},
+    $origDate/@notBefore,
+    $origDate/@notAfter,
+    $origDate/@when,
     $periodAttribute,
   $dateString}
 };
@@ -270,7 +273,7 @@ as node() {
 declare function cmproc:create-date-string($low, $high){
   let $lowEra := if (starts-with($low, "-")) then "BCE" else "CE"
   let $highEra := if (starts-with($high, "-")) then "BCE" else "CE"
-  return if ($high = "") then
+  return if ($high = "" or $low = $high) then (: if there is no high date, or if the dates are the same :)
     if (starts-with($low, "-")) then string(number(substring-after($low, "-")))||" BCE" else string(number($low))||" CE"
   else if ($lowEra = $highEra) then string(number(functx:substring-after-if-contains($low, "-")))||"-"||string(number(functx:substring-after-if-contains($high, "-")))||" "||$lowEra
   else string(number(substring-after($low, "-")))||" BCE-"||string(number($high))||" CE"
@@ -279,7 +282,7 @@ declare function cmproc:create-date-string($low, $high){
 declare function cmproc:create-period-attribute-from-dates($lowDate as xs:integer, $highDate as xs:integer?)
 as attribute()
 {
-  let $period := if($highDate) then 
+  let $period := if($highDate and $lowDate != $highDate) then 
     cmproc:lookup-period-range($lowDate, $highDate)
     else cmproc:lookup-period-single-date($lowDate)
   let $period := distinct-values($period)
