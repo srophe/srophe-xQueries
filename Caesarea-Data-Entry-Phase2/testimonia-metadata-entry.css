@@ -148,7 +148,7 @@ langUsage > language[ana="#caesarea-language-of-testimonia"]:before(9)
 }
 langUsage > language[ana="#caesarea-language-of-testimonia"]:before(8)
 {
-  content: "The language represented in the testimonium. For example, for an ancient Syriac translation of a Greek biblical commentary this would be 'Syriac'\A";
+  content: "The language expressed in the testimonium. For example, for an ancient Syriac translation of a Greek biblical commentary this would be 'Syriac'\A";
   font-size: 12px;
 }
 
