@@ -125,9 +125,81 @@ font-weight: bold;
 }
 origDate:before(8)
 {
-  content: "\A Format dates as follows, using a negative for BCE: YYYY-MM-DD. Month and Day may be omitted if unknown. If specifying a range of dates, separate the lower bound from the upper bound by a single space, e.g. 0200 0455 represents 200-455 CE.";
+  content: "\A Human Readable Date";
   color: black;
   font-size: 14px;
+  font-weight: bold;
+}
+
+origDate:before(7)
+{
+  content: "\A Input the date as it should appear to users of the database";
+  font-size: 13px;
+}
+
+origDate:after(0)
+{
+  content: "\ANormalized Date";
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+origDate:after(1)
+{
+  content: "\A Format dates as follows, using a negative for BCE: YYYY-MM-DD. Month and Day may be omitted if unknown.";
+  font-size: 11px;
+}
+
+origDate:after(2)
+{
+  content: "\AIf the date of composition can be specified to a precise year, use Precise Date. Otherwise use Imprecise Date";
+  font-size: 11px;
+}
+
+origDate:after(3)
+{
+  content: "\A Precise Date: ";
+  font-size: 13px;
+  font-weight: bold;
+}
+
+origDate:after(4)
+{
+  content: oxy_textfield(
+    edit, "@when",
+    columns, 30,
+    tooltip, "Of the form YYYY${comma} YYYY-MM${comma} or YYYY-MM-DD. Examples: 0050 = 50 CE; 0101-03-05 = March 5${comma} 101 CE; -0507 = 507 BCE")
+}
+
+origDate:after(5)
+{
+  content: "\A Imprecise Date: \A";
+  font-size: 13px;
+  font-weight: bold;
+}
+
+origDate:after(6)
+{
+  content: "Refer to Approximate Dates in https://syriaca.org/documentation/wiki.html?wiki-page=/Dating-Conventions&wiki-uri=https://github.com/srophe/srophe-app-data/wiki for guidelines on creating year ranges\A";
+  font-size: 11px;
+}
+
+origDate:after(7)
+{
+  content: "Not before year: " oxy_textfield(
+    edit, "@notBefore",
+    columns, 30,
+    tooltip, "Of the form YYYY. Examples: 0050 = 50 CE; -0507 = 507 BCE") '\A';
+  font-size: 13px;
+}
+origDate:after(8)
+{
+  content: "Not after year: " oxy_textfield(
+    edit, "@notAfter",
+    columns, 30,
+    tooltip, "Of the form YYYY. Examples: 0050 = 50 CE; -0507 = 507 BCE");
+  font-size: 13px;
 }
 
 origPlace:before(9)
