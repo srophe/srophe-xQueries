@@ -20,12 +20,13 @@ placeName {
     text-decoration: underline;
     font-weight: bold;
 }
- fileDesc > titleStmt,
+ fileDesc > titleStmt > *,
  fileDesc > editionStmt,
  fileDesc > seriesStmt,
  fileDesc > sourceDesc,
  encodingDesc,
  profileDesc > abstract,
+ revisionDesc,
  desc[type="abstract"],
  ab[type="identifier"]
  {
@@ -49,7 +50,8 @@ ab
     edit, "#text", columns, 50
     ) '\A';
 }
-bibl {
+bibl,
+titleStmt > respStmt {
   border: 1px green solid;
   background-color: lightyellow;
 }
@@ -58,6 +60,28 @@ bibl:after(9){
   font-size: 10px;
 }
 /* EXCEPTIONS TO THE ABOVE */
+
+titleStmt > respStmt {
+  display: block;
+}
+
+titleStmt > respStmt:first-of-type:before(9) {
+  content: "The following responsibility statements are further defined in https://github.com/srophe/caesarea-data/wiki/TEI-Encoding-Manual-for-A-Collection-of-Testimonia-for-Caesarea-Maritima#controlled-vocabulary-for-respstmts \A";
+  font-size: 11px;
+}
+titleStmt > respStmt:first-of-type:before(8) {
+  content: "If your initials do not appear in this dropdown, please supply them using the first initial of your forename followed by your surname, e.g. 'jrife'\A";
+  font-size: 11px;
+}
+
+respStmt > name {
+  content: oxy_combobox(
+    edit, '@ref',
+    editable, true,
+    values, 'dmichelson, jrife, plieberman, tmarashi, wpotter',
+    labels, 'David A. Michelson, Joseph L. Rife, Phillip I. Lieberman, Taryn Marashi, William L. Potter'
+    ) "\A"
+}
 
 publicationStmt > * {
     display: none;
@@ -296,37 +320,6 @@ classCode {
 textClass > classCode > idno[type="CTS-URN"]{
     background-color: lightyellow;
     color: black;
-}
-
-revisionDesc {
-  border: 1px green solid;
-  background-color: lightyellow;
-}
-
-change[when]:first-of-type:before(7) {
-    content: "Testimonium metadata entered by: " oxy_combobox(
-edit, '@who',
-editable, true,
-values, 'dmichelson, jrife, plieberman, tmarashi, wpotter',
-labels, 'David A. Michelson, Joseph L. Rife, Phillip I. Lieberman, Taryn Marashi, William L. Potter'
-) "\A";
-}
-change[when]:last-of-type:before(7) {
-  content: "Testimonium entered by: " oxy_combobox(
-edit, '@who',
-editable, true,
-values, 'dmichelson, jrife, plieberman, tmarashi, wpotter',
-labels, 'David A. Michelson, Joseph L. Rife, Phillip I. Lieberman, Taryn Marashi, William L. Potter'
-) "\A"
-}
-
-change[when]:before(6) {
-  content: "Enter your first initial followed by your last name, e.g. 'dmichelson', or select from the drop-down menu above\A";
-  color: black;
-  font-size: 14px;
-}
-change{
-  visibility: -oxy-collapse-text
 }
 
 desc[type="context"]:before(9){
