@@ -1,31 +1,60 @@
-xquery version "3.0";
+xquery version "3.1";
 import module namespace functx = "http://www.functx.com";
 declare default element namespace "http://www.tei-c.org/ns/1.0";
 declare option output:omit-xml-declaration "no";
 declare option output "indent=no";
 
-let $newSeriesStmt := 
+declare variable $local:sbd-series :=
 <seriesStmt>
-    <title level="s" xml:lang="en">The Syriac Gazetteer</title>
-    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">
-        <persName>David A. Michelson</persName>, <date from="2014">2014-present</date>.</editor>
-    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#wpotter">
-        <persName>William L. Potter</persName>, <date from="2020">2020-present</date>.</editor>
-    <editor role="past-general" ref="http://syriaca.org/documentation/editors.xml#tcarlson">
-        <persName>Thomas A. Carlson</persName>, <date from="2014" to="2018">2014-2018</date></editor>
-    <editor role="technical" ref="http://syriaca.org/documentation/editors.xml#dmichelson">
-        <persName>David A. Michelson</persName>, <date from="2014">2014-present</date>.</editor>
-    <editor role="technical" ref="http://syriaca.org/documentation/editors.xml#dschwartz">
-    <persName>Daniel L. Schwartz</persName>, <date from="2019">2019-present</date>.</editor>
-    <editor role="technical" ref="http://syriaca.org/documentation/editors.xml#wpotter">
-        <persName>William L. Potter</persName>, <date from="2020">2020-present</date>.</editor>
-    <idno type="URI">http://syriaca.org/geo</idno>
-</seriesStmt>
+    <title level="s" xml:lang="en">The Syriac Biographical Dictionary</title>
+    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
+    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
+    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
+    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dschwartz">Daniel L. Schwartz</editor>
+    <idno type="URI">http://syriaca.org/persons</idno>
+</seriesStmt>;
 
-let $inputCollectionUri := "C:\Users\anoni\Documents\GitHub\srophe\srophe-app-data\data\places\tei\"
-for $doc in collection($inputCollectionUri)
-  return 
-  (delete node $doc/TEI/teiHeader/fileDesc/titleStmt/title[@level="m"],
-  delete node $doc//TEI/teiHeader/fileDesc/titleStmt/editor[@role="general"],
-  if(empty($doc//seriesStmt)) then insert node $newSeriesStmt after $doc//publicationStmt
-   else replace node $doc//seriesStmt with $newSeriesStmt)
+declare variable $local:gateway-series-stmt :=
+<seriesStmt>
+  <title level="s">Gateway to the Syriac Saints</title>
+  <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
+  <idno type="URI">http://syriaca.org/saints</idno>
+</seriesStmt>;
+
+declare variable $local:qadishe-series-stmt :=
+<seriesStmt>
+    <title level="m">Qadishe: A Guide to the Syriac Saints</title>
+    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#wpotter">Will Potter</editor>
+    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
+    <editor role="general" ref="http://syriaca.org/documentation/editors.xml#jnsaint-laurent">Jeanne-Nicole Mellon Saint-Laurent</editor>
+    <idno type="URI">http://syriaca.org/q</idno>
+</seriesStmt>;
+
+declare variable $local:authors-series-stmt :=
+<seriesStmt>
+  <title level="m">A Guide to Syriac Authors</title>
+  <editor role="general" ref="http://syriaca.org/documentation/editors.xml#ngibson">Nathan P. Gibson</editor>
+  <editor role="general" ref="http://syriaca.org/documentation/editors.xml#dmichelson">David A. Michelson</editor>
+  <idno type="URI">http://syriaca.org/authors</idno>
+</seriesStmt>;
+
+declare variable $local:in-coll := collection("/home/arren/Documents/GitHub/srophe-app-data/data/persons/");
+
+for $doc in $local:in-coll
+where not(contains(document-uri($doc), "SyriacaPersons.xpr")) (: ignore the .xpr file :)
+let $newSeriesStmt := $local:sbd-series
+let $newSeriesStmt := 
+  if(contains($doc//text/body/listPerson/person/@ana/string(), "syriaca-saint")) then
+    ($newSeriesStmt, $local:gateway-series-stmt, $local:qadishe-series-stmt)
+  else
+    $newSeriesStmt
+let $newSeriesStmt := 
+  if(contains($doc//text/body/listPerson/person/@ana/string(), "syriaca-author")) then
+    ($newSeriesStmt, $local:authors-series-stmt)
+  else
+    $newSeriesStmt
+(: where $doc//publicationStmt/idno/text() = "http://syriaca.org/person/3728/tei" :) (: comment in or out for testing purposes :)
+return 
+  (delete node $doc//seriesStmt,
+   insert node $newSeriesStmt after $doc//publicationStmt
+ )
