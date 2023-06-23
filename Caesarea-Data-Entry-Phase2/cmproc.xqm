@@ -78,7 +78,7 @@ declare %updating function cmproc:update-new-testimonia-record($record as node()
   return
   (cmproc:update-record-title($record),
    cmproc:update-editors-list($record, $record-resp-data[?is-creator = true ()] ?editor-element),
-   cmproc:update-respStmt-list($record, $record-resp-data),
+   cmproc:update-respStmt-list($record, $record-resp-data, false ()),
    replace value of node $record//publicationStmt/idno with $recUri||"/tei",
    (: insert the current year as the copyright date into the licence text :)
    replace value of node $record//publicationStmt/availability/licence/p[1] with replace($record//publicationStmt/availability/licence/p[1]/text(), "DATE", substring(string(current-date()), 1, 4)),
@@ -183,14 +183,14 @@ declare function cmproc:create-editors-list($record as node(), $creatorEditors a
 };
 
 
-declare %updating function cmproc:update-respStmt-list($record as node(), $respStmtData as item()*)
+declare %updating function cmproc:update-respStmt-list($record as node(), $respStmtData as item()*, $includeExistingRespStmts as xs:boolean)
 {
   (delete nodes $record//titleStmt/respStmt,
-  insert nodes cmproc:create-respStmt-list($record,  $respStmtData, true ()) as last into $record//titleStmt
+  insert nodes cmproc:create-respStmt-list($record,  $respStmtData, $includeExistingRespStmts) as last into $record//titleStmt
 )
 };
 
-declare function cmproc:create-respStmt-list($record as node(), $respStmtData as item()+, $includeExistingRespStmts as xs:boolean)
+declare function cmproc:create-respStmt-list($record as node(), $respStmtData as item()*, $includeExistingRespStmts as xs:boolean)
 as node()*
 {
   let $newRespStmts := 
@@ -458,6 +458,12 @@ as item()+
 
 declare %updating function cmproc:update-edition($record as node(), $recUri as xs:string)
 {
+  let $edition := cmproc:create-edition($record, $recUri)
+  return replace node $record//body/ab[@type="edition"] with $edition
+};
+
+declare function cmproc:create-edition($record as node(), $recUri as xs:string) as node()
+{
   let $workLangCode := if($record//profileDesc/langUsage/language[@ana="#caesarea-language-of-testimonia"]) 
     then $record//profileDesc/langUsage/language[@ana="#caesarea-language-of-testimonia"]/@ident/string()
     else $record//profileDesc/langUsage/language[1]/@ident/string()
@@ -465,10 +471,16 @@ declare %updating function cmproc:update-edition($record as node(), $recUri as x
   let $edition := cmproc:post-process-excerpt($record//body/ab[@type="edition"], $workLangCode, $recId, $workLangCode)
   let $edition := cmproc:add-source-ab-to-excerpt($edition, $recId, "1")
   let $edition := cmproc:add-xml-lang-tags-to-excerpt-notes($edition)
-  return replace node $record//body/ab[@type="edition"] with $edition
+  return $edition
 };
 
 declare %updating function cmproc:update-translation($record as node(), $recUri as xs:string)
+{
+  let $translation := cmproc:create-translation($record, $recUri)
+  return replace node $record//body/ab[@type="translation"] with $translation
+};
+
+declare function cmproc:create-translation($record as node(), $recUri as xs:string) as node()
 {
   let $workLangCode := if($record//profileDesc/langUsage/language[@ana="#caesarea-language-of-testimonia"]) 
       then $record//profileDesc/langUsage/language[@ana="#caesarea-language-of-testimonia"]/@ident/string()
@@ -479,7 +491,7 @@ declare %updating function cmproc:update-translation($record as node(), $recUri 
     cmproc:add-source-ab-to-excerpt($translation, $recId, "2")
     else $translation
   let $translation := cmproc:add-xml-lang-tags-to-excerpt-notes($translation)
-  return replace node $record//body/ab[@type="translation"] with $translation
+  return $translation
 };
 
 declare function cmproc:post-process-excerpt($excerpt as node(), $excerptLangCode as xs:string, $docId as xs:string, $docLangCode as xs:string) as node() {
@@ -603,8 +615,10 @@ as node()+
   let $relatedSubjects :=
     (
     $note/p/text(),
+    (: normalize-space(string-join($note/p[title]//text(), " ")), :)
     $note/p/list/item/p/text(),
     $note/list/item/text(),
+    (: normalize-space(string-join($note/p/list/item[title]//text(), " ")), :)
     $note/p/list/item/text(),
     $note/list/item/list/item/text(),
     $note/list/item/p/text(),
