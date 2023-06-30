@@ -68,7 +68,7 @@ let $targetUri := $targetDoc//body/ab[@type="identifier"]/idno/text()
 
 let $respStmtDataToMerge := cmproc:collate-record-resp-data($mergeDoc)
 
-let $newLicenseText := $targetDoc//publicationStmt/availability/licence/p/text()
+let $newLicenseText := $targetDoc//publicationStmt/availability/licence/p[1]/text()
 let $licenseTextToMerge := functx:substring-before-match($newLicenseText, "this entry is copyright [\d+|DATE]")||"this entry is copyright "||substring-before(string(current-date()), "-")||functx:substring-after-match($newLicenseText,  "this entry is copyright [\d+|DATE]")
 (: need to replace the name of the person in the "by the contributors (Joseph L. Rife, et al.)" section with the first creator editor? :)
 
@@ -83,12 +83,12 @@ return
     (
   replace node $targetDoc//titleStmt/title[@level="a"] with cmproc:create-record-title($mergeDoc), (: update record title from edited doc :)
   cmproc:update-respStmt-list($targetDoc, $respStmtDataToMerge, true ()),
-  replace value of node $targetDoc//publicationStmt/licecse/p with $licenseTextToMerge,
+  replace value of node $targetDoc//publicationStmt/availability/licence/p[1] with $licenseTextToMerge,
   replace value of node $targetDoc//publicationStmt/date with current-date(),
   for $child in $targetDoc//profileDesc/creation/*   (: replace each child element in the target doc with the edited verion from the merge doc :)
     return replace node $child with $mergeDoc//profileDesc/creation/*[name() = $child/name()],
   replace node $targetDoc//profileDesc/langUsage with cmproc:post-process-langUsage($mergeDoc//profileDesc/langUsage),
-  replace node $targetDoc//profileDesc/textClass/catRef with $mergeDoc//profileDesc/textClass/catRef,
+  replace node $targetDoc//profileDesc/textClass with $mergeDoc//profileDesc/textClass,
   replace value of node $targetDoc//revisionDesc/@status with "published",
   insert node $local:change-log as first into $targetDoc//revisionDesc,
   replace node $targetDoc//body/desc[@type="abstract"] with cmproc:create-abstract(
@@ -103,7 +103,11 @@ return
   replace node $targetDoc//body/ab[@type="edition"] with $editionToMerge,
   replace node $targetDoc//body/ab[@type="translation"] with $translationToMerge,
   replace node $targetDoc//body/listBibl[head/text() = $config:works-cited-listBibl-label] with cmproc:post-process-bibls($mergeDoc//body/listBibl[head/text() = $config:works-cited-listBibl-label], substring-after($mergeUri, $config:testimonia-uri-base), true ()),
-  replace node $targetDoc//body/listBibl[head/text() = $config:additional-bibls-listBibl-label] with cmproc:post-process-bibls($mergeDoc//body/listBibl[head/text() = $config:additional-bibls-listBibl-label], substring-after($mergeUri, $config:testimonia-uri-base), false ()),
+  (: either replace the additional bibl listBibl or insert the new one following the works cited listBibl :)
+  if($targetDoc//body/listBibl[head/text() = $config:additional-bibls-listBibl-label]) then
+    replace node $targetDoc//body/listBibl[head/text() = $config:additional-bibls-listBibl-label] with cmproc:post-process-bibls($mergeDoc//body/listBibl[head/text() = $config:additional-bibls-listBibl-label], substring-after($mergeUri, $config:testimonia-uri-base), false ())
+  else
+    insert node  cmproc:post-process-bibls($mergeDoc//body/listBibl[head/text() = $config:additional-bibls-listBibl-label], substring-after($mergeUri, $config:testimonia-uri-base), false ()) after $targetDoc//body/listBibl[head/text() = $config:works-cited-listBibl-label],
   delete node $targetDoc//body/note,
   insert node $mergedRelatedSubjectNotes as last into $targetDoc//body
 )
