@@ -69,9 +69,12 @@ let $targetUri := $targetDoc//body/ab[@type="identifier"]/idno/text()
 let $respStmtDataToMerge := cmproc:collate-record-resp-data($mergeDoc)
 
 let $newLicenseText := $targetDoc//publicationStmt/availability/licence/p[1]/text()
-let $licenseTextToMerge := functx:substring-before-match($newLicenseText, "this entry is copyright [\d+|DATE]")||"this entry is copyright "||substring-before(string(current-date()), "-")||functx:substring-after-match($newLicenseText,  "this entry is copyright [\d+|DATE]")
-(: need to replace the name of the person in the "by the contributors (Joseph L. Rife, et al.)" section with the first creator editor? :)
+let $afterStartIndex := functx:index-of-string($newLicenseText, "by the contributors")
+let $beforeEndIndex := $afterStartIndex - 6 (: 4 for the DATE or year, 2 for the white spaces :)
+let $before := substring($newLicenseText, 1, $beforeEndIndex)
+let $after := substring($newLicenseText, $afterStartIndex)
 
+let $licenseTextToMerge := $before||substring-before(string(current-date()), "-")||" "||$after
 let $editionToMerge := cmproc:create-edition($mergeDoc, $mergeUri)
 let $translationToMerge := cmproc:create-translation($mergeDoc, $mergeUri)
 
