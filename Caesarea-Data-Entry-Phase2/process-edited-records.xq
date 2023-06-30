@@ -51,6 +51,27 @@ as node()*
   }
 };
 
+declare function local:pre-process-langUsage($langUsage as node()) as node()
+{
+  let $langOfTestimonia := $langUsage/language[1]
+  let $langOfOrig := if($langUsage/language[2]) then $langUsage/language[2] else $langOfTestimonia
+  
+  let $langOfTestimonia := element {"language"} {
+    attribute {"ana"} {"#caesarea-language-of-testimonia"},
+    $langOfTestimonia/@ident,
+    $langOfTestimonia/text()
+  }
+  let $langOfOrig := element {"language"} {
+    attribute {"ana"} {"#caesarea-language-of-original"},
+    $langOfOrig/@ident,
+    $langOfOrig/text()
+  }
+  
+  return element {"langUsage"} {
+    $langOfTestimonia, $langOfOrig
+  }
+};
+
 
 for $mergeDoc in $local:records-to-merge
 
@@ -73,8 +94,16 @@ let $afterStartIndex := functx:index-of-string($newLicenseText, "by the contribu
 let $beforeEndIndex := $afterStartIndex - 6 (: 4 for the DATE or year, 2 for the white spaces :)
 let $before := substring($newLicenseText, 1, $beforeEndIndex)
 let $after := substring($newLicenseText, $afterStartIndex)
-
 let $licenseTextToMerge := $before||substring-before(string(current-date()), "-")||" "||$after
+
+let $langUsageToMerge := 
+  if($mergeDoc//langUsage/language/@ana) then 
+    $mergeDoc//langUsage
+  else
+    local:pre-process-langUsage($mergeDoc//langUsage)
+
+let $langUsageToMerge := cmproc:post-process-langUsage($langUsageToMerge)
+
 let $editionToMerge := cmproc:create-edition($mergeDoc, $mergeUri)
 let $translationToMerge := cmproc:create-translation($mergeDoc, $mergeUri)
 
@@ -88,9 +117,8 @@ return
   cmproc:update-respStmt-list($targetDoc, $respStmtDataToMerge, true ()),
   replace value of node $targetDoc//publicationStmt/availability/licence/p[1] with $licenseTextToMerge,
   replace value of node $targetDoc//publicationStmt/date with current-date(),
-  for $child in $targetDoc//profileDesc/creation/*   (: replace each child element in the target doc with the edited verion from the merge doc :)
-    return replace node $child with $mergeDoc//profileDesc/creation/*[name() = $child/name()],
-  replace node $targetDoc//profileDesc/langUsage with cmproc:post-process-langUsage($mergeDoc//profileDesc/langUsage),
+  replace node $targetDoc//profileDesc/creation with cmproc:create-creation($mergeDoc, $mergeUri),
+  replace node $targetDoc//profileDesc/langUsage with $langUsageToMerge,
   replace node $targetDoc//profileDesc/textClass with $mergeDoc//profileDesc/textClass,
   replace value of node $targetDoc//revisionDesc/@status with "published",
   insert node $local:change-log as first into $targetDoc//revisionDesc,
