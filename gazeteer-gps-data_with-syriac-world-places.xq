@@ -28,23 +28,43 @@ as xs:string
   return string-join($processed, " | ")
 };
 
+declare function local:add-empty-columns-to-row($row as element(), $columnIndex as xs:string+)
+as element()
+{
+  element {"row"} {
+    for $col in $columnIndex
+    return if($row/*[name() = $col]) then $row/*[name() = $col] else element {$col} {}
+  }
+};
+
 let $existingPlaces :=
   for $doc in $tsg-coll
   let $uri := $doc//publicationStmt/idno[@type="URI"]/text() => substring-before("/tei")
   let $headword := $doc//place/placeName[@srophe:tags = "#syriaca-headword"]//text() => string-join(" | ") => normalize-space()
   let $gps := $doc//place/location[@type="gps"]/geo/text() => string-join(" | ")
+  let $tsgGpsInfo :=
+    for $loc at $i in $doc//place/location[@type="gps"]
+    let $coord := $loc/geo/text()
+    let $sourceId := $loc/@source/string() => substring-after("#")
+    let $sourceBibl := $loc/../bibl[@xml:id = $sourceId]
+    let $sourceUri := $sourceBibl/ptr/@target/string()
+    return (
+      element {"tsgCoord"||$i} {$coord},
+      element {"tsgCoordSource"||$i} {$sourceUri}
+    )
 
   let $syriacWorldRec := $old-syriac-world/*:list/*:record[*:Syriaca_URI/*:label/text() = substring-after($uri, "http://")]
   let $syriacWorldGps := local:process-syriac-world-gps($syriacWorldRec/*:KML_LongLat_DD/*:label/text())
-  let $gps := 
+  (: let $gps := 
     if ($gps = "") then $syriacWorldGps
     else if($syriacWorldGps != "") then string-join(($gps, $syriacWorldGps), " | ")
-    else $gps
+    else $gps :)
   
   return <row>
     <uri>{$uri}</uri>
     <headword>{$headword}</headword>
-    <gps>{$gps}</gps>
+    <syriacWorldCoord>{$syriacWorldGps}</syriacWorldCoord>
+    {$tsgGpsInfo}
   </row>
   
  
@@ -57,8 +77,16 @@ let $newPlaces :=
   return <row>
     <uri>{$uri}</uri>
     <headword>{$headword}</headword>
-    <gps>{$gps}</gps>
+    <syriacWorldCoord>{$gps}</syriacWorldCoord>
   </row>
 
+let $allPlaces := ($existingPlaces, $newPlaces)
+let $allElementNames := distinct-values($allPlaces/*/name())
+let $allPlaces :=
+  for $row in $allPlaces
+  return local:add-empty-columns-to-row($row, $allElementNames)
+  
 
-return csv:serialize(<csv>{($existingPlaces, $newPlaces)}</csv>, map {"header": "yes"})
+(: return $allPlaces :)
+
+return csv:serialize(<csv>{$allPlaces}</csv>, map {"header": "yes"})
