@@ -148,8 +148,7 @@ as xs:string
   let $variants :=
     for $name in $placeNames
       let $nameString := $name//text() => string-join(" ") => normalize-space()
-      let $langCode := $name/@xml:lang/string()
-      let $langCode := if($langCode = "en-x-srp1") then "en" else $langCode (: normalize the custom transliterations :)
+      let $langCode := lpcore:get-place-name-lang-code($name)
       return $nameString||"@"||$langCode
   return distinct-values($variants) => string-join(";")
 };

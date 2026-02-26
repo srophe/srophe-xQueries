@@ -162,3 +162,19 @@ http://syriaca.org/cbss/SIUIHZRW = Syria (Syria Prōtē, Syria Deuteria, Syria E
   - Unclear if the record URI can be the source for the coordinates? (maybe could use this also in cases of @resp="syriaca"?)
   :)
 :)
+
+declare function lpcore:get-place-name-lang-code($name as node())
+as xs:string {
+  let $langCode := $name/@xml:lang/string()
+  (: Handle edge cases that need to be normalized :)
+  return switch($langCode) 
+    case "en-x-srp1" return "en"
+    default return $langCode
+};
+
+declare function lpcore:get-bibl-sources($element as node())
+as node()* {
+  for $src in tokenize($element/@source/string(), " ")
+  let $bibId := substring-after($src, "#")
+  return $element/../bibl[@xml:id=$bibId]
+};
