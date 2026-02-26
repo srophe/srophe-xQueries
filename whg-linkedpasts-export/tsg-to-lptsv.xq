@@ -12,6 +12,8 @@ xquery version "3.1";
 :)
 
 import module namespace lptsv="http://syriaca.org/ns/lptsv" at "lptsv.xqm";
+import module namespace lpjson="http://syriaca.org/ns/lpjson" at "lpjson.xqm";
+
 import module namespace functx="http://www.functx.com";
 
 declare default element namespace "http://www.tei-c.org/ns/1.0";
@@ -19,10 +21,16 @@ declare namespace tei = "http://www.tei-c.org/ns/1.0";
 declare namespace srophe = "https://srophe.app";
 
 let $collection := collection("/home/arren/Documents/GitHub/syriaca-data/data/places/tei/") (: TODO: make this an external variable :)
+let $mode := "jsonld" (:TODO: Make this an external variable :)
 (:
 TODO:
 - implement an lpjson module for creating JSON-LD records following the LP spec
 - add an external $mode variable for selecting "csv" or "json"
 - add error handling and reporting
+- add output handling
 :)
-return lptsv:create-tsv-from-collection($collection)
+
+return switch($mode) 
+  case "tsv" return lptsv:create-tsv-from-collection($collection)
+  case "jsonld" return lpjson:create-jsonld-from-collection($collection)
+  default return "Incorrect mode selection: "||$mode
