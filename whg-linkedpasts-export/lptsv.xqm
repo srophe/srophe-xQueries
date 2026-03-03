@@ -120,6 +120,7 @@ as node() {
 };
 
 (: TODO: I may have misread the documentation, and additional URIs are permitted but they should just be the full URI rather than using the namespace abbreviations? :)
+
 (:~ 
 : Create the data for the matches field from the list of URIs in the Syriac place record
 : @param $uris A sequence of tei:idno elements containing URIs that are close matches to the Syriaca place record
@@ -130,11 +131,12 @@ as xs:string {
   
   (: For each URI, check it against the URI base record in the match sources :)
   (: Add the ID portion based on the pattern, prefixed with the source key :)
+  (: TODO: refactor this to an lpcore for getting the corresponding source, so it can be used by this and lpjson :)
   let $matches :=
     for $uri in $uriList
-    for $source in map:keys($lpcore:entity-match-sources)
-    where contains($uri, $lpcore:entity-match-sources?$source?base)
-    return $source||":"||substring-after($uri, $lpcore:entity-match-sources?$source?base)
+    let $source := lpcore:get-entity-source-from-uri($uri)
+    where $source?shortcode
+    return $source?shortcode||":"||substring-after($uri, $source?base)
  return string-join($matches, ";")
 };
 

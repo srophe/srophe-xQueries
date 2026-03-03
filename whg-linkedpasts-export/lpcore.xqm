@@ -32,34 +32,77 @@ declare variable $lpcore:base-uri := "http://syriaca.org/place/";
 
 declare variable $lpcore:title-source := "The Syriac Gazetteer (http://syriaca.org/geo)";
 
-declare variable $lpcore:entity-match-sources := {
-  "dbp": {
-    "name": "DBpedia", 
-    "base": "http://dbpedia.org/resource/"
+declare variable $lpcore:entity-match-sources := [
+  {
+    "name": "DBpedia",
+    "shortcode": "dbp",
+    "base": "http://dbpedia.org/resource/",
+    "type": "closeMatch"
   },
-  "pl": {
-    "name": "Pleiades", 
-    "base": "https://pleiades.stoa.org/places/"
+  {
+    "name": "Pleiades",
+    "shortcode": "pl",
+    "base": "https://pleiades.stoa.org/places/",
+    "type": "closeMatch"
   },
-  "viaf": {
-    "name": "Virtual International Authority File", 
-    "base": "http://viaf.org/viaf/"
+  {
+    "name": "Virtual International Authority File",
+    "shortcode": "viaf", 
+    "base": "http://viaf.org/viaf/",
+    "type": "closeMatch"
   },
-  "wp": {
+  {
     "name": "Wikipedia", 
-    "base": "wikipedia.org/wiki/"
-  }
-};
+    "shortcode": "wp",
+    "base": "wikipedia.org/wiki/",
+    "type": "primaryTopicOf"
+  },
+  {
+      "name": "iDAI.gazetteer",
+      "base": "https://gazetteer.dainst.org/place/",
+      "type": "closeMatch"
+    },
+    {
+      "name": "Wikimapia",
+      "base": "http://wikimapia.org",
+      "type": "closeMatch"
+    },
+    {
+      "name": "Vici",
+      "base": "https://vici.org/vici/",
+      "type": "closeMatch"
+    },
+    {
+      "name": "World Heritage Convention (WHC)",
+      "base": "http://whc.unesco.org",
+      "type": "primaryTopicOf"
+    },
+    {
+      "name": "Digital Atlas of the Roman Empire",
+      "base": "imperium.ahlfeldt.se/places/",
+      "type": "closeMatch"
+    },
+    {
+      "name": "Trismegistos",
+      "base": "http://www.trismegistos.org/place/",
+      "type": "closeMatch"
+    },
+    {
+      "name": "A Gazetteer to John of Ephesus",
+      "base": "http://syriaca.org/johnofephesus/places/",
+      "type": "closeMatch"
+    }
+];
 (:
     ?? odd format... {"gn": GeoNames, "http://www.geonames.org/"}, or data doesn't use records from GeoNames but just coordinates
     Others that could be added:
-    - BnF
-    - CERL (Consortium of Euro Res Libs)
-    - Deutschen Nationalbibliothek
-    - The Genealogical Gazeteer
-    - LoC
-    - Getty TGN
-    - WikiData
+    - BnF (closeMatch)
+    - CERL (Consortium of Euro Res Libs) (closeMatch)
+    - Deutschen Nationalbibliothek (closeMatch)
+    - The Genealogical Gazeteer (closeMatch)
+    - LoC (closeMatch)
+    - Getty TGN (closeMatch)
+    - WikiData (closeMatch)
   :)
 
 (: FUNCTIONS :)
@@ -110,10 +153,10 @@ as xs:string? {
 : @param $subtypeFilter Optional string for filtering by the location's subtype attribute
 : @return A sequence of zero or more tei:location elements containing geometries :)
 declare function lpcore:get-gps-locations($place as node(),
-                                          $subtypeFilter as xs:string := ())
+                                          $subtypeFilter as xs:string := "")
 as node()* {
   let $locations := $place/location[@type="gps"]
-  return if ($subtypeFilter and count($locations) > 1) then $locations[@subtype=$subtypeFilter] else $locations
+  return if ($subtypeFilter != "" and count($locations) > 1) then $locations[@subtype=$subtypeFilter] else $locations
 };
 
 (:~ Returns a sequence of strings representing the latitude and longitude geometries of a point
@@ -176,5 +219,12 @@ declare function lpcore:get-bibl-sources($element as node())
 as node()* {
   for $src in tokenize($element/@source/string(), " ")
   let $bibId := substring-after($src, "#")
-  return $element/../bibl[@xml:id=$bibId]
+  return $element/ancestor::listPlace/place/bibl[@xml:id=$bibId] (: using ancestor::listPlace allows it to be used for desc/quote and the listRelation/relation that are sourced :)
+};
+
+declare function lpcore:get-entity-source-from-uri($uri as xs:string)
+as map(*)? {
+  for $source in $lpcore:entity-match-sources?*
+  where contains($uri, $source?base)
+  return $source
 };
