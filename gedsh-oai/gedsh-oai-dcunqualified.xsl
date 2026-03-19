@@ -7,10 +7,15 @@
     <xsl:output method='xml'/>
     
     <xsl:template match="/">
-        <root>
+        
+      <record xmlns="http://www.openarchives.org/OAI/2.0/" >
         <header>
-            <identifier><!-- The URI --></identifier>
-            <datestamp><!-- Last Modified Date? --></datestamp>
+            <identifier>
+                <xsl:value-of select="/tei:TEI/tei:text/tei:body/tei:div/tei:ab[@type='idnos']/tei:idno[@type='URI']"/>
+            </identifier>
+            <datestamp>
+                <xsl:value-of select="substring(normalize-space(/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:date), 1, 10)"/>
+            </datestamp>
             <!-- Set Spec -->
         </header>
         <metadata>
@@ -79,6 +84,6 @@
                 -->
             </oai_dc:dc>
         </metadata>
-        </root>
+     </record>
     </xsl:template>
 </xsl:stylesheet>
