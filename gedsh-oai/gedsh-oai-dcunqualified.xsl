@@ -33,6 +33,11 @@
                             <xsl:value-of select="normalize-space(.)"/>
                     </dc:creator>
                 </xsl:for-each>
+                <xsl:for-each select="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:seriesStmt/tei:editor">
+                    <dc:contributor>
+                        <xsl:value-of select="normalize-space(.)"/>
+                    </dc:contributor>
+                </xsl:for-each>
                 <dc:description>
                     <xsl:value-of select="normalize-space(/tei:TEI/tei:text/tei:body/tei:div/tei:ab/tei:note[@type='abstract'])"/>
                 </dc:description>
