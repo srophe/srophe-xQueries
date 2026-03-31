@@ -106,12 +106,26 @@ as map(*)* {
                     => normalize-space()
   let $lang := lpcore:get-place-name-lang-code($name)
   
-  let $citations := lpjson:get-citations-for-element($name, true()) => array:build()
+  let $citations := lpjson:get-citations-for-element($name, true())
+  
+  (: Merge in temporal and citation data from the attestations of a given name form :)
+  let $nameId := $name/@xml:id/string()
+  let $attestations := $place/event[@type="attestation"][string-join(./link/@target/string()) => contains($nameId)]
+  let $attestationCitations := 
+    for $attest in $attestations 
+    let $source := lpjson:get-citations-for-element($attest, true())
+    where not(functx:is-value-in-sequence($source?"@id",$citations?"@id")) (: ignore any that are already in the citations list :)
+    return $source
+    
+  let $citations := array:build(($citations, $attestationCitations))
+  
+  let $timespans := lpjson:get-timespans-from-attestations($attestations) => array:build()
 
   return map {
     "toponym": $toponym,
     "lang": $lang,
-    "citations": $citations
+    "citations": $citations,
+    "when": map {"timespans": $timespans}
   }
 };
 
@@ -143,6 +157,19 @@ as map(*) {
   }
 };
 
+declare function lpjson:get-timespans-from-attestations($attestations as node()*)
+as map(*)* {
+  
+  for $attest in $attestations
+  let $start := if($attest/@when) then $attest/@when/string() else $attest/@notBefore/string()
+  let $end := if($attest/@when) then $attest/@when/string() else $attest/@notAfter/string()
+  (: TODO: use the precision matching to make a better timespan element? :)
+  
+  return map {
+      "start": {"earliest": $start},
+      "end": {"latest": $end}
+    }
+};
 
 declare function lpjson:get-when-from-state-sourced($existenceStates as node()*)
 as map(*)? {
